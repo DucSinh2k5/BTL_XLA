@@ -1,0 +1,16 @@
+numpy
+scipy
+matplotlib
+pillow
+scikit-image
+imageio
+imutils
+opencv-contrib-python
+torch
+torchvision
+torchaudio
+ultralytics
+albumentations
+tqdm
+pandas
+seaborn
