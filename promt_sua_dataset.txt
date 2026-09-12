@@ -1,0 +1,53 @@
+Tôi có một notebook baseline đang train theo một cấu trúc dataset cũ. 
+Bây giờ tôi muốn dùng notebook này cho dataset mới tại đường dẫn:
+
+DATASET_ROOT = "DÁN_ĐƯỜNG_DẪN_DATASET_Ở_ĐÂY"
+
+Nhiệm vụ của bạn:
+
+1. Trước hết hãy đọc kỹ cấu trúc thư mục của DATASET_ROOT:
+   - Liệt kê các file/folder cấp chính.
+   - Kiểm tra có sẵn train/test split không.
+   - Kiểm tra annotation/label nằm ở đâu.
+   - Kiểm tra class_id đang là 0-based hay 1-based.
+   - Kiểm tra ảnh nằm trực tiếp trong folder hay nằm trong subfolder theo class.
+   - Kiểm tra test set có label hay không.
+
+2. So sánh cấu trúc dataset mới với cấu trúc mà notebook hiện tại đang mong đợi.
+
+3. Nếu dataset mới đã đúng format notebook yêu cầu, không sửa loader/dataloader. 
+   Chỉ cập nhật DATASET_ROOT nếu cần.
+
+4. Nếu dataset mới khác format, hãy sửa phần dataset loader/dataloader trong notebook để:
+   - Dùng đúng standard train/test split của dataset, không tự tạo validation nếu dataset không có val.
+   - Không dùng test set để chọn epoch hoặc tune hyperparameter.
+   - Chuyển class_id về dạng 0..num_classes-1.
+   - Tạo class_names đúng thứ tự class_id.
+   - Trả về đúng dữ liệu mà model cần, ví dụ:
+     - No-Context: image, label
+     - Random Context Ret.: query_image, context_image, label, query_fname, context_fname, context_label
+   - Nếu test set có label, thêm cell tính test_accuracy.
+   - Nếu test set không có label, chỉ xuất prediction file và ghi rõ không tính được test_accuracy.
+
+5. Giữ nguyên các phần không liên quan:
+   - backbone/model nếu không cần đổi
+   - optimizer/scheduler
+   - checkpoint sau mỗi epoch
+   - output folder
+   - metric logger
+   - seed/cấu hình train
+
+6. Sau khi sửa, hãy kiểm tra:
+   - Notebook vẫn là JSON hợp lệ.
+   - Các code cell không lỗi cú pháp.
+   - Dataset đọc được số lượng train/test chính xác.
+   - Label range đúng.
+   - Không có ảnh bị thiếu.
+   - Cell test_accuracy chạy được nếu test set có label.
+
+Hãy gửi lại:
+- Tóm tắt cấu trúc dataset đã đọc được.
+- Những cell cần sửa hoặc notebook đã sửa.
+- Lý do vì sao sửa như vậy.
+- Cách chạy lại notebook.
+Lưu ý quan trọng: đây là benchmark reproduce paper, nên tuyệt đối giữ standard split của dataset. Không tự chia validation từ train trừ khi tôi yêu cầu riêng. Với các method retrieval/context, candidate pool phải được tạo từ train split, không lấy ảnh từ test để tránh leakage.
