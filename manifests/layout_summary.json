@@ -1,0 +1,17 @@
+{
+  "notebooks": 78,
+  "by_dataset": {
+    "dtd": 27,
+    "stanford_cars": 20,
+    "cub200": 4,
+    "sun397": 25,
+    "isic2017": 2
+  },
+  "paper_tables": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "notebook_content_changed": false
+}

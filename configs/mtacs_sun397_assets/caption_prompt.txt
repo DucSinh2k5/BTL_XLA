@@ -1,0 +1,11 @@
+Describe only directly visible visual attributes in this image.
+
+Strict rules:
+- Use only 5 to 8 words.
+- Describe visible color, texture, shape, structure, size, position, lighting, local patterns, or geometric characteristics.
+- Do NOT identify the class or object category.
+- Do NOT identify species, breed, make, model, disease, diagnosis, scene category, proper noun, or dataset category.
+- Do NOT guess what the image represents or use class names or their synonyms.
+- Only describe directly observable visual attributes.
+- If uncertain, describe only obvious low-level visual properties.
+- Return only one short phrase, with no explanation.

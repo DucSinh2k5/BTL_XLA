@@ -1,0 +1,37 @@
+{
+  "path_base": "project_root",
+  "note": "Raw datasets stay outside TACS; paths are optional existing local assets, not bundled data.",
+  "datasets": {
+    "dtd": {
+      "local_path": "../archive (23)/dtd",
+      "kaggle_path": "/kaggle/input/datasets/jmexpert/describable-textures-dataset-dtd/dtd",
+      "official_splits": "labels/{train,val,test}{1..10}.txt"
+    },
+    "stanford_cars": {
+      "local_paths": [
+        "../archive (10)",
+        "../archive (13)"
+      ]
+    },
+    "cub200": {
+      "local_paths": [
+        "../CUB_200_2011/CUB_200_2011",
+        "../archive (4)/CUB_200_2011"
+      ]
+    },
+    "cifar100": {
+      "local_path": "../archive (12)/cifar100"
+    },
+    "sun397": {
+      "local_path": null,
+      "kaggle_path": "/kaggle/input/datasets/hiuphmnhtrung/sun397/SUN397/SUN397"
+    }
+  },
+  "models": {
+    "dinov3_repo": null,
+    "dinov3_weights": null,
+    "clip_model": null,
+    "florence_model": null
+  },
+  "note_models": "Do not activate imported checkpoints until architecture/pool/class map compatibility is verified."
+}

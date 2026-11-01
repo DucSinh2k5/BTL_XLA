@@ -1,0 +1,145 @@
+{
+  "verified_on": "2026-11-01 Asia/Saigon",
+  "readiness": {
+    "ready": true,
+    "models": {
+      "tacs": {
+        "available": true,
+        "code": "ready",
+        "message": "Model đã nạp sẵn, có thể dự đoán.",
+        "shared_process": true,
+        "device": "cpu",
+        "backbone": "dinov3_vitl16",
+        "image_size": 384,
+        "candidate_count": 3573,
+        "caption_models_loaded": false
+      },
+      "mtacs": {
+        "available": true,
+        "code": "ready",
+        "message": "Model đã nạp sẵn, có thể dự đoán.",
+        "shared_process": true,
+        "device": "cpu",
+        "backbone": "dinov3_vitl16",
+        "image_size": 384,
+        "candidate_count": 3573,
+        "caption_models_loaded": true
+      }
+    }
+  },
+  "shared_process": true,
+  "cpu_threads": 2,
+  "precision": "float32",
+  "weight_changes": false,
+  "caption_cache": {
+    "directory": "C:\\Users\\Dell\\AppData\\Local\\TACS\\caption_fp32",
+    "bytes": 926270820,
+    "source_sha256": "03075d2d2d2bbd3e180b9ba0afae4aa8563226e2d32911656966e05b2f2ee060",
+    "cache_sha256": "5ad4401e94a5b18df82a46af938a184ce5dfff2c2761f0e46700002c0b4c8060"
+  },
+  "live_checks": {
+    "mtacs": {
+      "prediction": {
+        "class_id": 85,
+        "label": "c/cathedral/outdoor",
+        "confidence": 0.45311668515205383
+      },
+      "ground_truth": {
+        "class_id": 0,
+        "label": "a/abbey",
+        "image_id": "a/abbey/sun_arsnqaftitwcpsog.jpg",
+        "split": "val",
+        "source": "dataset_sha256",
+        "verified": true,
+        "status": "verified"
+      },
+      "comparison": {
+        "status": "incorrect",
+        "is_match": false,
+        "verified_ground_truth": true
+      },
+      "context_label": "p/palace",
+      "context_image_id": "p/palace/sun_bhmesxjrrlbjpjpz.jpg",
+      "caption_source": "verified_cache",
+      "timing": {
+        "inference_seconds": 43.288
+      },
+      "attention_roles": [
+        "query_classifier",
+        "candidate_selector"
+      ],
+      "evidence_file": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\TACS\\tmp\\web_ground_truth_mtacs_live_20261101.json"
+    },
+    "mtacs_fresh": {
+      "prediction": {
+        "class_id": 85,
+        "label": "c/cathedral/outdoor",
+        "confidence": 0.45311668515205383
+      },
+      "ground_truth": {
+        "class_id": 0,
+        "label": "a/abbey",
+        "image_id": null,
+        "split": null,
+        "source": "user_provided",
+        "verified": false,
+        "status": "user_provided"
+      },
+      "comparison": {
+        "status": "differs_from_reference",
+        "is_match": false,
+        "verified_ground_truth": false
+      },
+      "context_label": "p/palace",
+      "context_image_id": "p/palace/sun_bhmesxjrrlbjpjpz.jpg",
+      "caption_source": "fresh_florence",
+      "timing": {
+        "inference_seconds": 71.145
+      },
+      "attention_roles": [
+        "query_classifier",
+        "candidate_selector"
+      ],
+      "evidence_file": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\TACS\\tmp\\web_ground_truth_mtacs_fresh_20261101.json"
+    },
+    "tacs": {
+      "prediction": {
+        "class_id": 85,
+        "label": "c/cathedral/outdoor",
+        "confidence": 0.3424723446369171
+      },
+      "ground_truth": {
+        "class_id": 0,
+        "label": "a/abbey",
+        "image_id": "a/abbey/sun_arsnqaftitwcpsog.jpg",
+        "split": "val",
+        "source": "dataset_sha256",
+        "verified": true,
+        "status": "verified"
+      },
+      "comparison": {
+        "status": "incorrect",
+        "is_match": false,
+        "verified_ground_truth": true
+      },
+      "context_label": "p/palace",
+      "context_image_id": "p/palace/sun_bhmesxjrrlbjpjpz.jpg",
+      "caption_source": null,
+      "timing": {
+        "inference_seconds": 42.235
+      },
+      "attention_roles": [
+        "query_classifier",
+        "candidate_selector"
+      ],
+      "evidence_file": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\TACS\\tmp\\web_ground_truth_tacs_live_20261101.json"
+    }
+  },
+  "test_results": {
+    "passed": 41,
+    "warnings": [
+      "Starlette TestClient httpx deprecation"
+    ],
+    "frontend_dom_checks": "passed for TACS and M-TACS"
+  }
+}

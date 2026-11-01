@@ -1,0 +1,48 @@
+{
+  "notebooks": [
+    {
+      "path": "notebooks/04_deployment/isic2017/01_tacs_visual/isic2017-tacs-visual-vitl16-448-train-export-web.ipynb",
+      "sha256": "bf72a5c1e010eceb82a7348496f6783a310d5ae5e8935b4e08c94ded33631663",
+      "bytes": 118214,
+      "cells": 21,
+      "output_cells": 0
+    },
+    {
+      "path": "notebooks/04_deployment/isic2017/02_mtacs_full_both/isic2017-mtacs-full-both-florence-vitl16-448-train-export-web.ipynb",
+      "sha256": "eac7e61482e5dabc16d8aff5d81f433e71f37e61b5ebeb27dee6093a07a67fc5",
+      "bytes": 170764,
+      "cells": 22,
+      "output_cells": 0
+    }
+  ],
+  "configuration": {
+    "backbone": "dinov3_vitl16",
+    "image_size": 448,
+    "epochs": 100,
+    "seed": 42,
+    "effective_batch": 8,
+    "context_top_k": 1,
+    "official_counts": [
+      2000,
+      150,
+      600
+    ],
+    "pool_fraction": 0.2,
+    "caption_backend": "Florence-Prefix + CLIP ViT-B/32, float32",
+    "caption_policy": "isic_visible_attributes_v1"
+  },
+  "validation": {
+    "notebook_structure": "JSON nbformat4.5 required fields/types and unique cell IDs checked; nbformat package not installed",
+    "cell_python_syntax": "all parsed",
+    "actual_dino_tiny_cpu_training_resume_export": "15 new tests passed",
+    "final_original_folder_preflight_delta": "5 passed, 11 deselected; adds Test_v2 layout coverage",
+    "full_l16_meta_construction": "24 blocks / 28x28 grid / depths 5,11,17,23 verified in both modes",
+    "reused_caption_pipeline": "17 tests passed in the earlier combined run"
+  },
+  "not_executed": [
+    "full ISIC training on GPU",
+    "full-size pretrained L16 inference in the new segmentation runtime",
+    "real Florence/CLIP generation from Kaggle Inputs in the new notebooks"
+  ],
+  "note": "No benchmark metrics or ready production models have been fabricated. CPU export fixtures remain fixture_unverified."
+}

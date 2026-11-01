@@ -1,0 +1,995 @@
+{
+  "schema": "tacs_table3_segmentation_saved_outputs_v1",
+  "audit_date": "2026-10-24",
+  "source_notebook": "tacs_isic_segement_448.ipynb",
+  "notebook_sha256": "052b4edf0110f2caf6d1b2e9a1d8619dfdfb57d56d97c8768553b9a566215599",
+  "saved_outputs_sha256": "08cf4bd5ac12aa7b7333a8640d13c16b61f6fa1af2331d006117e27dfa79e243",
+  "source_notebook_modified": false,
+  "cells_executed_by_auditor": false,
+  "table_mapping": {
+    "table": 3,
+    "row_family": "TACS",
+    "dataset": "ISIC 2017",
+    "columns": [
+      "Dice",
+      "IoU"
+    ],
+    "report_label": "TACS reimplementation variant, 448, final-token cross-attention + DPT-lite",
+    "exact_paper_reproduction": false
+  },
+  "metrics": {
+    "test_dice": {
+      "value_displayed": 0.856,
+      "decimal_places": 4,
+      "percent_displayed": 85.6
+    },
+    "test_iou": {
+      "value_displayed": 0.7738,
+      "decimal_places": 4,
+      "percent_displayed": 77.38
+    }
+  },
+  "test_loss": null,
+  "metric_definition_from_source": "Binary foreground Dice/IoU at sigmoid probability > 0.5, computed per resized image and averaged across test images; not soft metrics or global pixel aggregation.",
+  "test_cell_index_zero_based": 20,
+  "test_stdout": "Loaded checkpoint: /kaggle/working/outputs/tacs_isic2017_segmentation/best_val_checkpoint.pt\ntest_dice: 0.8560 (85.60%)\ntest_iou: 0.7738 (77.38%)\npaper TACS ISIC2017 Dice/IoU: 0.8500 / 0.7650\nSaved test predictions: /kaggle/working/outputs/tacs_isic2017_segmentation/test_predictions.csv\nSaved metrics: /kaggle/working/outputs/tacs_isic2017_segmentation/metrics.json\n",
+  "split_sizes_from_runtime": {
+    "train": 2000,
+    "val": 150,
+    "test": 600
+  },
+  "candidate_pool_size_from_runtime": 400,
+  "configuration_from_saved_source": {
+    "SEED": 42,
+    "DINOV3_MODEL_NAME": "dinov3_vits16",
+    "FEATURE_DIM": 384,
+    "PATCH_SIZE": 16,
+    "IMAGE_SIZE": 448,
+    "EPOCHS": 100,
+    "BATCH_SIZE": 8,
+    "LEARNING_RATE": 0.0001,
+    "WEIGHT_DECAY": 0.0001,
+    "WARMUP_EPOCHS": 5,
+    "PATIENCE": 15,
+    "CANDIDATE_POOL_FRACTION": 0.2,
+    "TACS_GUMBEL_TAU": 0.1,
+    "TACS_POLICY_WEIGHT": 1.0,
+    "TACS_ENTROPY_WEIGHT": 0.01,
+    "NUM_CROSS_ATTENTION_LAYERS": 2,
+    "CROSS_ATTENTION_HEADS": 6,
+    "DICE_LOSS_WEIGHT": 1.0,
+    "BCE_LOSS_WEIGHT": 1.0,
+    "THRESHOLD": 0.5
+  },
+  "training": {
+    "epoch_limit": 100,
+    "epochs_observed": 64,
+    "best_epoch": 49,
+    "selection_criterion": "maximum validation hard Dice",
+    "best_validation_row_displayed": {
+      "epoch": 49,
+      "epoch_limit": 100,
+      "line": "Epoch 049/100 | train_loss=0.0217 train_dice=0.9610 train_iou=0.9257 reward=0.3377 policy=-0.0026 | val_loss=0.3688 val_dice=0.8731 val_iou=0.7959 best_dice=0.8731@049 bad=0/15",
+      "train_loss": 0.0217,
+      "train_dice": 0.961,
+      "train_iou": 0.9257,
+      "val_loss": 0.3688,
+      "val_dice": 0.8731,
+      "val_iou": 0.7959
+    },
+    "checkpoint_loaded_from_stdout": "/kaggle/working/outputs/tacs_isic2017_segmentation/best_val_checkpoint.pt",
+    "logs": [
+      {
+        "epoch": 1,
+        "epoch_limit": 100,
+        "line": "Epoch 001/100 | train_loss=0.8639 train_dice=0.7780 train_iou=0.6755 reward=0.0323 policy=-0.0036 | val_loss=0.9535 val_dice=0.8017 val_iou=0.7005 best_dice=0.8017@001 bad=0/15",
+        "train_loss": 0.8639,
+        "train_dice": 0.778,
+        "train_iou": 0.6755,
+        "val_loss": 0.9535,
+        "val_dice": 0.8017,
+        "val_iou": 0.7005
+      },
+      {
+        "epoch": 2,
+        "epoch_limit": 100,
+        "line": "Epoch 002/100 | train_loss=0.7670 train_dice=0.8361 train_iou=0.7447 reward=0.0291 policy=-0.0006 | val_loss=0.9356 val_dice=0.7723 val_iou=0.6616 best_dice=0.8017@001 bad=1/15",
+        "train_loss": 0.767,
+        "train_dice": 0.8361,
+        "train_iou": 0.7447,
+        "val_loss": 0.9356,
+        "val_dice": 0.7723,
+        "val_iou": 0.6616
+      },
+      {
+        "epoch": 3,
+        "epoch_limit": 100,
+        "line": "Epoch 003/100 | train_loss=0.7100 train_dice=0.8534 train_iou=0.7666 reward=0.0334 policy=-0.0006 | val_loss=0.8952 val_dice=0.8116 val_iou=0.7203 best_dice=0.8116@003 bad=0/15",
+        "train_loss": 0.71,
+        "train_dice": 0.8534,
+        "train_iou": 0.7666,
+        "val_loss": 0.8952,
+        "val_dice": 0.8116,
+        "val_iou": 0.7203
+      },
+      {
+        "epoch": 4,
+        "epoch_limit": 100,
+        "line": "Epoch 004/100 | train_loss=0.6531 train_dice=0.8620 train_iou=0.7782 reward=0.0405 policy=0.0030 | val_loss=0.8068 val_dice=0.8278 val_iou=0.7371 best_dice=0.8278@004 bad=0/15",
+        "train_loss": 0.6531,
+        "train_dice": 0.862,
+        "train_iou": 0.7782,
+        "val_loss": 0.8068,
+        "val_dice": 0.8278,
+        "val_iou": 0.7371
+      },
+      {
+        "epoch": 5,
+        "epoch_limit": 100,
+        "line": "Epoch 005/100 | train_loss=0.5816 train_dice=0.8708 train_iou=0.7890 reward=0.0468 policy=0.0010 | val_loss=0.7225 val_dice=0.8303 val_iou=0.7424 best_dice=0.8303@005 bad=0/15",
+        "train_loss": 0.5816,
+        "train_dice": 0.8708,
+        "train_iou": 0.789,
+        "val_loss": 0.7225,
+        "val_dice": 0.8303,
+        "val_iou": 0.7424
+      },
+      {
+        "epoch": 6,
+        "epoch_limit": 100,
+        "line": "Epoch 006/100 | train_loss=0.5007 train_dice=0.8789 train_iou=0.7999 reward=0.0521 policy=-0.0013 | val_loss=0.6129 val_dice=0.8357 val_iou=0.7490 best_dice=0.8357@006 bad=0/15",
+        "train_loss": 0.5007,
+        "train_dice": 0.8789,
+        "train_iou": 0.7999,
+        "val_loss": 0.6129,
+        "val_dice": 0.8357,
+        "val_iou": 0.749
+      },
+      {
+        "epoch": 7,
+        "epoch_limit": 100,
+        "line": "Epoch 007/100 | train_loss=0.4191 train_dice=0.8889 train_iou=0.8132 reward=0.0663 policy=-0.0042 | val_loss=0.5472 val_dice=0.8234 val_iou=0.7343 best_dice=0.8357@006 bad=1/15",
+        "train_loss": 0.4191,
+        "train_dice": 0.8889,
+        "train_iou": 0.8132,
+        "val_loss": 0.5472,
+        "val_dice": 0.8234,
+        "val_iou": 0.7343
+      },
+      {
+        "epoch": 8,
+        "epoch_limit": 100,
+        "line": "Epoch 008/100 | train_loss=0.3423 train_dice=0.8994 train_iou=0.8290 reward=0.0768 policy=-0.0099 | val_loss=0.4957 val_dice=0.8407 val_iou=0.7564 best_dice=0.8407@008 bad=0/15",
+        "train_loss": 0.3423,
+        "train_dice": 0.8994,
+        "train_iou": 0.829,
+        "val_loss": 0.4957,
+        "val_dice": 0.8407,
+        "val_iou": 0.7564
+      },
+      {
+        "epoch": 9,
+        "epoch_limit": 100,
+        "line": "Epoch 009/100 | train_loss=0.3031 train_dice=0.9031 train_iou=0.8334 reward=0.0904 policy=-0.0021 | val_loss=0.4369 val_dice=0.8427 val_iou=0.7602 best_dice=0.8427@009 bad=0/15",
+        "train_loss": 0.3031,
+        "train_dice": 0.9031,
+        "train_iou": 0.8334,
+        "val_loss": 0.4369,
+        "val_dice": 0.8427,
+        "val_iou": 0.7602
+      },
+      {
+        "epoch": 10,
+        "epoch_limit": 100,
+        "line": "Epoch 010/100 | train_loss=0.2591 train_dice=0.9068 train_iou=0.8394 reward=0.1044 policy=-0.0030 | val_loss=0.3758 val_dice=0.8530 val_iou=0.7712 best_dice=0.8530@010 bad=0/15",
+        "train_loss": 0.2591,
+        "train_dice": 0.9068,
+        "train_iou": 0.8394,
+        "val_loss": 0.3758,
+        "val_dice": 0.853,
+        "val_iou": 0.7712
+      },
+      {
+        "epoch": 11,
+        "epoch_limit": 100,
+        "line": "Epoch 011/100 | train_loss=0.2275 train_dice=0.9109 train_iou=0.8450 reward=0.1121 policy=-0.0007 | val_loss=0.3577 val_dice=0.8300 val_iou=0.7392 best_dice=0.8530@010 bad=1/15",
+        "train_loss": 0.2275,
+        "train_dice": 0.9109,
+        "train_iou": 0.845,
+        "val_loss": 0.3577,
+        "val_dice": 0.83,
+        "val_iou": 0.7392
+      },
+      {
+        "epoch": 12,
+        "epoch_limit": 100,
+        "line": "Epoch 012/100 | train_loss=0.2035 train_dice=0.9145 train_iou=0.8507 reward=0.1228 policy=0.0040 | val_loss=0.3771 val_dice=0.8351 val_iou=0.7538 best_dice=0.8530@010 bad=2/15",
+        "train_loss": 0.2035,
+        "train_dice": 0.9145,
+        "train_iou": 0.8507,
+        "val_loss": 0.3771,
+        "val_dice": 0.8351,
+        "val_iou": 0.7538
+      },
+      {
+        "epoch": 13,
+        "epoch_limit": 100,
+        "line": "Epoch 013/100 | train_loss=0.1857 train_dice=0.9164 train_iou=0.8535 reward=0.1469 policy=0.0041 | val_loss=0.3295 val_dice=0.8452 val_iou=0.7634 best_dice=0.8530@010 bad=3/15",
+        "train_loss": 0.1857,
+        "train_dice": 0.9164,
+        "train_iou": 0.8535,
+        "val_loss": 0.3295,
+        "val_dice": 0.8452,
+        "val_iou": 0.7634
+      },
+      {
+        "epoch": 14,
+        "epoch_limit": 100,
+        "line": "Epoch 014/100 | train_loss=0.1646 train_dice=0.9196 train_iou=0.8583 reward=0.1522 policy=0.0014 | val_loss=0.3250 val_dice=0.8535 val_iou=0.7726 best_dice=0.8535@014 bad=0/15",
+        "train_loss": 0.1646,
+        "train_dice": 0.9196,
+        "train_iou": 0.8583,
+        "val_loss": 0.325,
+        "val_dice": 0.8535,
+        "val_iou": 0.7726
+      },
+      {
+        "epoch": 15,
+        "epoch_limit": 100,
+        "line": "Epoch 015/100 | train_loss=0.1462 train_dice=0.9219 train_iou=0.8617 reward=0.1605 policy=-0.0027 | val_loss=0.3195 val_dice=0.8542 val_iou=0.7731 best_dice=0.8542@015 bad=0/15",
+        "train_loss": 0.1462,
+        "train_dice": 0.9219,
+        "train_iou": 0.8617,
+        "val_loss": 0.3195,
+        "val_dice": 0.8542,
+        "val_iou": 0.7731
+      },
+      {
+        "epoch": 16,
+        "epoch_limit": 100,
+        "line": "Epoch 016/100 | train_loss=0.1431 train_dice=0.9239 train_iou=0.8642 reward=0.1709 policy=0.0060 | val_loss=0.3142 val_dice=0.8555 val_iou=0.7765 best_dice=0.8555@016 bad=0/15",
+        "train_loss": 0.1431,
+        "train_dice": 0.9239,
+        "train_iou": 0.8642,
+        "val_loss": 0.3142,
+        "val_dice": 0.8555,
+        "val_iou": 0.7765
+      },
+      {
+        "epoch": 17,
+        "epoch_limit": 100,
+        "line": "Epoch 017/100 | train_loss=0.1280 train_dice=0.9254 train_iou=0.8669 reward=0.1683 policy=-0.0009 | val_loss=0.3072 val_dice=0.8598 val_iou=0.7783 best_dice=0.8598@017 bad=0/15",
+        "train_loss": 0.128,
+        "train_dice": 0.9254,
+        "train_iou": 0.8669,
+        "val_loss": 0.3072,
+        "val_dice": 0.8598,
+        "val_iou": 0.7783
+      },
+      {
+        "epoch": 18,
+        "epoch_limit": 100,
+        "line": "Epoch 018/100 | train_loss=0.1271 train_dice=0.9271 train_iou=0.8695 reward=0.1841 policy=0.0048 | val_loss=0.3356 val_dice=0.8497 val_iou=0.7699 best_dice=0.8598@017 bad=1/15",
+        "train_loss": 0.1271,
+        "train_dice": 0.9271,
+        "train_iou": 0.8695,
+        "val_loss": 0.3356,
+        "val_dice": 0.8497,
+        "val_iou": 0.7699
+      },
+      {
+        "epoch": 19,
+        "epoch_limit": 100,
+        "line": "Epoch 019/100 | train_loss=0.1148 train_dice=0.9308 train_iou=0.8747 reward=0.1858 policy=0.0066 | val_loss=0.3202 val_dice=0.8598 val_iou=0.7819 best_dice=0.8598@019 bad=0/15",
+        "train_loss": 0.1148,
+        "train_dice": 0.9308,
+        "train_iou": 0.8747,
+        "val_loss": 0.3202,
+        "val_dice": 0.8598,
+        "val_iou": 0.7819
+      },
+      {
+        "epoch": 20,
+        "epoch_limit": 100,
+        "line": "Epoch 020/100 | train_loss=0.1065 train_dice=0.9297 train_iou=0.8738 reward=0.1925 policy=-0.0027 | val_loss=0.3330 val_dice=0.8484 val_iou=0.7669 best_dice=0.8598@019 bad=1/15",
+        "train_loss": 0.1065,
+        "train_dice": 0.9297,
+        "train_iou": 0.8738,
+        "val_loss": 0.333,
+        "val_dice": 0.8484,
+        "val_iou": 0.7669
+      },
+      {
+        "epoch": 21,
+        "epoch_limit": 100,
+        "line": "Epoch 021/100 | train_loss=0.1022 train_dice=0.9331 train_iou=0.8783 reward=0.2009 policy=0.0029 | val_loss=0.3479 val_dice=0.8422 val_iou=0.7583 best_dice=0.8598@019 bad=2/15",
+        "train_loss": 0.1022,
+        "train_dice": 0.9331,
+        "train_iou": 0.8783,
+        "val_loss": 0.3479,
+        "val_dice": 0.8422,
+        "val_iou": 0.7583
+      },
+      {
+        "epoch": 22,
+        "epoch_limit": 100,
+        "line": "Epoch 022/100 | train_loss=0.0976 train_dice=0.9339 train_iou=0.8803 reward=0.2278 policy=0.0022 | val_loss=0.3597 val_dice=0.8430 val_iou=0.7623 best_dice=0.8598@019 bad=3/15",
+        "train_loss": 0.0976,
+        "train_dice": 0.9339,
+        "train_iou": 0.8803,
+        "val_loss": 0.3597,
+        "val_dice": 0.843,
+        "val_iou": 0.7623
+      },
+      {
+        "epoch": 23,
+        "epoch_limit": 100,
+        "line": "Epoch 023/100 | train_loss=0.0909 train_dice=0.9356 train_iou=0.8828 reward=0.2307 policy=0.0001 | val_loss=0.3731 val_dice=0.8425 val_iou=0.7615 best_dice=0.8598@019 bad=4/15",
+        "train_loss": 0.0909,
+        "train_dice": 0.9356,
+        "train_iou": 0.8828,
+        "val_loss": 0.3731,
+        "val_dice": 0.8425,
+        "val_iou": 0.7615
+      },
+      {
+        "epoch": 24,
+        "epoch_limit": 100,
+        "line": "Epoch 024/100 | train_loss=0.0872 train_dice=0.9368 train_iou=0.8843 reward=0.2487 policy=0.0001 | val_loss=0.3497 val_dice=0.8545 val_iou=0.7744 best_dice=0.8598@019 bad=5/15",
+        "train_loss": 0.0872,
+        "train_dice": 0.9368,
+        "train_iou": 0.8843,
+        "val_loss": 0.3497,
+        "val_dice": 0.8545,
+        "val_iou": 0.7744
+      },
+      {
+        "epoch": 25,
+        "epoch_limit": 100,
+        "line": "Epoch 025/100 | train_loss=0.0850 train_dice=0.9388 train_iou=0.8879 reward=0.2380 policy=0.0046 | val_loss=0.3413 val_dice=0.8574 val_iou=0.7770 best_dice=0.8598@019 bad=6/15",
+        "train_loss": 0.085,
+        "train_dice": 0.9388,
+        "train_iou": 0.8879,
+        "val_loss": 0.3413,
+        "val_dice": 0.8574,
+        "val_iou": 0.777
+      },
+      {
+        "epoch": 26,
+        "epoch_limit": 100,
+        "line": "Epoch 026/100 | train_loss=0.0747 train_dice=0.9409 train_iou=0.8914 reward=0.2452 policy=-0.0008 | val_loss=0.3323 val_dice=0.8641 val_iou=0.7834 best_dice=0.8641@026 bad=0/15",
+        "train_loss": 0.0747,
+        "train_dice": 0.9409,
+        "train_iou": 0.8914,
+        "val_loss": 0.3323,
+        "val_dice": 0.8641,
+        "val_iou": 0.7834
+      },
+      {
+        "epoch": 27,
+        "epoch_limit": 100,
+        "line": "Epoch 027/100 | train_loss=0.0704 train_dice=0.9422 train_iou=0.8934 reward=0.2352 policy=-0.0012 | val_loss=0.3441 val_dice=0.8650 val_iou=0.7848 best_dice=0.8650@027 bad=0/15",
+        "train_loss": 0.0704,
+        "train_dice": 0.9422,
+        "train_iou": 0.8934,
+        "val_loss": 0.3441,
+        "val_dice": 0.865,
+        "val_iou": 0.7848
+      },
+      {
+        "epoch": 28,
+        "epoch_limit": 100,
+        "line": "Epoch 028/100 | train_loss=0.0721 train_dice=0.9430 train_iou=0.8944 reward=0.2511 policy=0.0026 | val_loss=0.3422 val_dice=0.8601 val_iou=0.7793 best_dice=0.8650@027 bad=1/15",
+        "train_loss": 0.0721,
+        "train_dice": 0.943,
+        "train_iou": 0.8944,
+        "val_loss": 0.3422,
+        "val_dice": 0.8601,
+        "val_iou": 0.7793
+      },
+      {
+        "epoch": 29,
+        "epoch_limit": 100,
+        "line": "Epoch 029/100 | train_loss=0.0692 train_dice=0.9432 train_iou=0.8952 reward=0.2577 policy=0.0012 | val_loss=0.3582 val_dice=0.8522 val_iou=0.7707 best_dice=0.8650@027 bad=2/15",
+        "train_loss": 0.0692,
+        "train_dice": 0.9432,
+        "train_iou": 0.8952,
+        "val_loss": 0.3582,
+        "val_dice": 0.8522,
+        "val_iou": 0.7707
+      },
+      {
+        "epoch": 30,
+        "epoch_limit": 100,
+        "line": "Epoch 030/100 | train_loss=0.0637 train_dice=0.9441 train_iou=0.8969 reward=0.2492 policy=-0.0010 | val_loss=0.3233 val_dice=0.8646 val_iou=0.7857 best_dice=0.8650@027 bad=3/15",
+        "train_loss": 0.0637,
+        "train_dice": 0.9441,
+        "train_iou": 0.8969,
+        "val_loss": 0.3233,
+        "val_dice": 0.8646,
+        "val_iou": 0.7857
+      },
+      {
+        "epoch": 31,
+        "epoch_limit": 100,
+        "line": "Epoch 031/100 | train_loss=0.0518 train_dice=0.9472 train_iou=0.9018 reward=0.2815 policy=-0.0066 | val_loss=0.3560 val_dice=0.8599 val_iou=0.7808 best_dice=0.8650@027 bad=4/15",
+        "train_loss": 0.0518,
+        "train_dice": 0.9472,
+        "train_iou": 0.9018,
+        "val_loss": 0.356,
+        "val_dice": 0.8599,
+        "val_iou": 0.7808
+      },
+      {
+        "epoch": 32,
+        "epoch_limit": 100,
+        "line": "Epoch 032/100 | train_loss=0.0536 train_dice=0.9473 train_iou=0.9019 reward=0.2652 policy=-0.0043 | val_loss=0.3279 val_dice=0.8699 val_iou=0.7910 best_dice=0.8699@032 bad=0/15",
+        "train_loss": 0.0536,
+        "train_dice": 0.9473,
+        "train_iou": 0.9019,
+        "val_loss": 0.3279,
+        "val_dice": 0.8699,
+        "val_iou": 0.791
+      },
+      {
+        "epoch": 33,
+        "epoch_limit": 100,
+        "line": "Epoch 033/100 | train_loss=0.0555 train_dice=0.9492 train_iou=0.9051 reward=0.2747 policy=0.0027 | val_loss=0.3443 val_dice=0.8620 val_iou=0.7805 best_dice=0.8699@032 bad=1/15",
+        "train_loss": 0.0555,
+        "train_dice": 0.9492,
+        "train_iou": 0.9051,
+        "val_loss": 0.3443,
+        "val_dice": 0.862,
+        "val_iou": 0.7805
+      },
+      {
+        "epoch": 34,
+        "epoch_limit": 100,
+        "line": "Epoch 034/100 | train_loss=0.0519 train_dice=0.9494 train_iou=0.9059 reward=0.2871 policy=0.0000 | val_loss=0.3803 val_dice=0.8595 val_iou=0.7794 best_dice=0.8699@032 bad=2/15",
+        "train_loss": 0.0519,
+        "train_dice": 0.9494,
+        "train_iou": 0.9059,
+        "val_loss": 0.3803,
+        "val_dice": 0.8595,
+        "val_iou": 0.7794
+      },
+      {
+        "epoch": 35,
+        "epoch_limit": 100,
+        "line": "Epoch 035/100 | train_loss=0.0485 train_dice=0.9510 train_iou=0.9081 reward=0.2777 policy=-0.0002 | val_loss=0.3872 val_dice=0.8496 val_iou=0.7696 best_dice=0.8699@032 bad=3/15",
+        "train_loss": 0.0485,
+        "train_dice": 0.951,
+        "train_iou": 0.9081,
+        "val_loss": 0.3872,
+        "val_dice": 0.8496,
+        "val_iou": 0.7696
+      },
+      {
+        "epoch": 36,
+        "epoch_limit": 100,
+        "line": "Epoch 036/100 | train_loss=0.0469 train_dice=0.9517 train_iou=0.9093 reward=0.2943 policy=-0.0006 | val_loss=0.3914 val_dice=0.8618 val_iou=0.7834 best_dice=0.8699@032 bad=4/15",
+        "train_loss": 0.0469,
+        "train_dice": 0.9517,
+        "train_iou": 0.9093,
+        "val_loss": 0.3914,
+        "val_dice": 0.8618,
+        "val_iou": 0.7834
+      },
+      {
+        "epoch": 37,
+        "epoch_limit": 100,
+        "line": "Epoch 037/100 | train_loss=0.0524 train_dice=0.9528 train_iou=0.9113 reward=0.2929 policy=0.0087 | val_loss=0.3644 val_dice=0.8664 val_iou=0.7862 best_dice=0.8699@032 bad=5/15",
+        "train_loss": 0.0524,
+        "train_dice": 0.9528,
+        "train_iou": 0.9113,
+        "val_loss": 0.3644,
+        "val_dice": 0.8664,
+        "val_iou": 0.7862
+      },
+      {
+        "epoch": 38,
+        "epoch_limit": 100,
+        "line": "Epoch 038/100 | train_loss=0.0392 train_dice=0.9537 train_iou=0.9128 reward=0.2969 policy=-0.0022 | val_loss=0.4101 val_dice=0.8500 val_iou=0.7714 best_dice=0.8699@032 bad=6/15",
+        "train_loss": 0.0392,
+        "train_dice": 0.9537,
+        "train_iou": 0.9128,
+        "val_loss": 0.4101,
+        "val_dice": 0.85,
+        "val_iou": 0.7714
+      },
+      {
+        "epoch": 39,
+        "epoch_limit": 100,
+        "line": "Epoch 039/100 | train_loss=0.0409 train_dice=0.9543 train_iou=0.9138 reward=0.3061 policy=0.0007 | val_loss=0.3891 val_dice=0.8538 val_iou=0.7715 best_dice=0.8699@032 bad=7/15",
+        "train_loss": 0.0409,
+        "train_dice": 0.9543,
+        "train_iou": 0.9138,
+        "val_loss": 0.3891,
+        "val_dice": 0.8538,
+        "val_iou": 0.7715
+      },
+      {
+        "epoch": 40,
+        "epoch_limit": 100,
+        "line": "Epoch 040/100 | train_loss=0.0407 train_dice=0.9561 train_iou=0.9169 reward=0.2895 policy=0.0041 | val_loss=0.3900 val_dice=0.8588 val_iou=0.7775 best_dice=0.8699@032 bad=8/15",
+        "train_loss": 0.0407,
+        "train_dice": 0.9561,
+        "train_iou": 0.9169,
+        "val_loss": 0.39,
+        "val_dice": 0.8588,
+        "val_iou": 0.7775
+      },
+      {
+        "epoch": 41,
+        "epoch_limit": 100,
+        "line": "Epoch 041/100 | train_loss=0.0379 train_dice=0.9563 train_iou=0.9173 reward=0.3035 policy=0.0024 | val_loss=0.3879 val_dice=0.8584 val_iou=0.7785 best_dice=0.8699@032 bad=9/15",
+        "train_loss": 0.0379,
+        "train_dice": 0.9563,
+        "train_iou": 0.9173,
+        "val_loss": 0.3879,
+        "val_dice": 0.8584,
+        "val_iou": 0.7785
+      },
+      {
+        "epoch": 42,
+        "epoch_limit": 100,
+        "line": "Epoch 042/100 | train_loss=0.0356 train_dice=0.9571 train_iou=0.9189 reward=0.3108 policy=0.0024 | val_loss=0.3692 val_dice=0.8699 val_iou=0.7907 best_dice=0.8699@042 bad=0/15",
+        "train_loss": 0.0356,
+        "train_dice": 0.9571,
+        "train_iou": 0.9189,
+        "val_loss": 0.3692,
+        "val_dice": 0.8699,
+        "val_iou": 0.7907
+      },
+      {
+        "epoch": 43,
+        "epoch_limit": 100,
+        "line": "Epoch 043/100 | train_loss=0.0355 train_dice=0.9573 train_iou=0.9192 reward=0.3130 policy=0.0032 | val_loss=0.3707 val_dice=0.8679 val_iou=0.7890 best_dice=0.8699@042 bad=1/15",
+        "train_loss": 0.0355,
+        "train_dice": 0.9573,
+        "train_iou": 0.9192,
+        "val_loss": 0.3707,
+        "val_dice": 0.8679,
+        "val_iou": 0.789
+      },
+      {
+        "epoch": 44,
+        "epoch_limit": 100,
+        "line": "Epoch 044/100 | train_loss=0.0328 train_dice=0.9575 train_iou=0.9195 reward=0.3167 policy=0.0005 | val_loss=0.3705 val_dice=0.8645 val_iou=0.7883 best_dice=0.8699@042 bad=2/15",
+        "train_loss": 0.0328,
+        "train_dice": 0.9575,
+        "train_iou": 0.9195,
+        "val_loss": 0.3705,
+        "val_dice": 0.8645,
+        "val_iou": 0.7883
+      },
+      {
+        "epoch": 45,
+        "epoch_limit": 100,
+        "line": "Epoch 045/100 | train_loss=0.0291 train_dice=0.9589 train_iou=0.9219 reward=0.3187 policy=0.0000 | val_loss=0.3858 val_dice=0.8676 val_iou=0.7905 best_dice=0.8699@042 bad=3/15",
+        "train_loss": 0.0291,
+        "train_dice": 0.9589,
+        "train_iou": 0.9219,
+        "val_loss": 0.3858,
+        "val_dice": 0.8676,
+        "val_iou": 0.7905
+      },
+      {
+        "epoch": 46,
+        "epoch_limit": 100,
+        "line": "Epoch 046/100 | train_loss=0.0284 train_dice=0.9592 train_iou=0.9225 reward=0.3227 policy=0.0001 | val_loss=0.3809 val_dice=0.8573 val_iou=0.7761 best_dice=0.8699@042 bad=4/15",
+        "train_loss": 0.0284,
+        "train_dice": 0.9592,
+        "train_iou": 0.9225,
+        "val_loss": 0.3809,
+        "val_dice": 0.8573,
+        "val_iou": 0.7761
+      },
+      {
+        "epoch": 47,
+        "epoch_limit": 100,
+        "line": "Epoch 047/100 | train_loss=0.0263 train_dice=0.9597 train_iou=0.9235 reward=0.3260 policy=-0.0005 | val_loss=0.3877 val_dice=0.8680 val_iou=0.7890 best_dice=0.8699@042 bad=5/15",
+        "train_loss": 0.0263,
+        "train_dice": 0.9597,
+        "train_iou": 0.9235,
+        "val_loss": 0.3877,
+        "val_dice": 0.868,
+        "val_iou": 0.789
+      },
+      {
+        "epoch": 48,
+        "epoch_limit": 100,
+        "line": "Epoch 048/100 | train_loss=0.0254 train_dice=0.9609 train_iou=0.9255 reward=0.3263 policy=0.0009 | val_loss=0.3847 val_dice=0.8683 val_iou=0.7902 best_dice=0.8699@042 bad=6/15",
+        "train_loss": 0.0254,
+        "train_dice": 0.9609,
+        "train_iou": 0.9255,
+        "val_loss": 0.3847,
+        "val_dice": 0.8683,
+        "val_iou": 0.7902
+      },
+      {
+        "epoch": 49,
+        "epoch_limit": 100,
+        "line": "Epoch 049/100 | train_loss=0.0217 train_dice=0.9610 train_iou=0.9257 reward=0.3377 policy=-0.0026 | val_loss=0.3688 val_dice=0.8731 val_iou=0.7959 best_dice=0.8731@049 bad=0/15",
+        "train_loss": 0.0217,
+        "train_dice": 0.961,
+        "train_iou": 0.9257,
+        "val_loss": 0.3688,
+        "val_dice": 0.8731,
+        "val_iou": 0.7959
+      },
+      {
+        "epoch": 50,
+        "epoch_limit": 100,
+        "line": "Epoch 050/100 | train_loss=0.0221 train_dice=0.9614 train_iou=0.9265 reward=0.3367 policy=-0.0010 | val_loss=0.3948 val_dice=0.8662 val_iou=0.7876 best_dice=0.8731@049 bad=1/15",
+        "train_loss": 0.0221,
+        "train_dice": 0.9614,
+        "train_iou": 0.9265,
+        "val_loss": 0.3948,
+        "val_dice": 0.8662,
+        "val_iou": 0.7876
+      },
+      {
+        "epoch": 51,
+        "epoch_limit": 100,
+        "line": "Epoch 051/100 | train_loss=0.0251 train_dice=0.9624 train_iou=0.9282 reward=0.3355 policy=0.0036 | val_loss=0.3718 val_dice=0.8697 val_iou=0.7916 best_dice=0.8731@049 bad=2/15",
+        "train_loss": 0.0251,
+        "train_dice": 0.9624,
+        "train_iou": 0.9282,
+        "val_loss": 0.3718,
+        "val_dice": 0.8697,
+        "val_iou": 0.7916
+      },
+      {
+        "epoch": 52,
+        "epoch_limit": 100,
+        "line": "Epoch 052/100 | train_loss=0.0235 train_dice=0.9626 train_iou=0.9286 reward=0.3372 policy=0.0031 | val_loss=0.4169 val_dice=0.8601 val_iou=0.7775 best_dice=0.8731@049 bad=3/15",
+        "train_loss": 0.0235,
+        "train_dice": 0.9626,
+        "train_iou": 0.9286,
+        "val_loss": 0.4169,
+        "val_dice": 0.8601,
+        "val_iou": 0.7775
+      },
+      {
+        "epoch": 53,
+        "epoch_limit": 100,
+        "line": "Epoch 053/100 | train_loss=0.0200 train_dice=0.9633 train_iou=0.9299 reward=0.3439 policy=0.0015 | val_loss=0.4141 val_dice=0.8642 val_iou=0.7850 best_dice=0.8731@049 bad=4/15",
+        "train_loss": 0.02,
+        "train_dice": 0.9633,
+        "train_iou": 0.9299,
+        "val_loss": 0.4141,
+        "val_dice": 0.8642,
+        "val_iou": 0.785
+      },
+      {
+        "epoch": 54,
+        "epoch_limit": 100,
+        "line": "Epoch 054/100 | train_loss=0.0184 train_dice=0.9643 train_iou=0.9316 reward=0.3497 policy=0.0017 | val_loss=0.3939 val_dice=0.8703 val_iou=0.7918 best_dice=0.8731@049 bad=5/15",
+        "train_loss": 0.0184,
+        "train_dice": 0.9643,
+        "train_iou": 0.9316,
+        "val_loss": 0.3939,
+        "val_dice": 0.8703,
+        "val_iou": 0.7918
+      },
+      {
+        "epoch": 55,
+        "epoch_limit": 100,
+        "line": "Epoch 055/100 | train_loss=0.0176 train_dice=0.9643 train_iou=0.9316 reward=0.3500 policy=0.0010 | val_loss=0.4096 val_dice=0.8652 val_iou=0.7868 best_dice=0.8731@049 bad=6/15",
+        "train_loss": 0.0176,
+        "train_dice": 0.9643,
+        "train_iou": 0.9316,
+        "val_loss": 0.4096,
+        "val_dice": 0.8652,
+        "val_iou": 0.7868
+      },
+      {
+        "epoch": 56,
+        "epoch_limit": 100,
+        "line": "Epoch 056/100 | train_loss=0.0152 train_dice=0.9650 train_iou=0.9328 reward=0.3452 policy=-0.0000 | val_loss=0.3989 val_dice=0.8694 val_iou=0.7914 best_dice=0.8731@049 bad=7/15",
+        "train_loss": 0.0152,
+        "train_dice": 0.965,
+        "train_iou": 0.9328,
+        "val_loss": 0.3989,
+        "val_dice": 0.8694,
+        "val_iou": 0.7914
+      },
+      {
+        "epoch": 57,
+        "epoch_limit": 100,
+        "line": "Epoch 057/100 | train_loss=0.0124 train_dice=0.9653 train_iou=0.9334 reward=0.3493 policy=-0.0021 | val_loss=0.3849 val_dice=0.8717 val_iou=0.7931 best_dice=0.8731@049 bad=8/15",
+        "train_loss": 0.0124,
+        "train_dice": 0.9653,
+        "train_iou": 0.9334,
+        "val_loss": 0.3849,
+        "val_dice": 0.8717,
+        "val_iou": 0.7931
+      },
+      {
+        "epoch": 58,
+        "epoch_limit": 100,
+        "line": "Epoch 058/100 | train_loss=0.0124 train_dice=0.9649 train_iou=0.9329 reward=0.3472 policy=-0.0026 | val_loss=0.4198 val_dice=0.8649 val_iou=0.7866 best_dice=0.8731@049 bad=9/15",
+        "train_loss": 0.0124,
+        "train_dice": 0.9649,
+        "train_iou": 0.9329,
+        "val_loss": 0.4198,
+        "val_dice": 0.8649,
+        "val_iou": 0.7866
+      },
+      {
+        "epoch": 59,
+        "epoch_limit": 100,
+        "line": "Epoch 059/100 | train_loss=0.0060 train_dice=0.9656 train_iou=0.9340 reward=0.3528 policy=-0.0076 | val_loss=0.4074 val_dice=0.8642 val_iou=0.7839 best_dice=0.8731@049 bad=10/15",
+        "train_loss": 0.006,
+        "train_dice": 0.9656,
+        "train_iou": 0.934,
+        "val_loss": 0.4074,
+        "val_dice": 0.8642,
+        "val_iou": 0.7839
+      },
+      {
+        "epoch": 60,
+        "epoch_limit": 100,
+        "line": "Epoch 060/100 | train_loss=0.0096 train_dice=0.9665 train_iou=0.9356 reward=0.3617 policy=-0.0022 | val_loss=0.4128 val_dice=0.8678 val_iou=0.7899 best_dice=0.8731@049 bad=11/15",
+        "train_loss": 0.0096,
+        "train_dice": 0.9665,
+        "train_iou": 0.9356,
+        "val_loss": 0.4128,
+        "val_dice": 0.8678,
+        "val_iou": 0.7899
+      },
+      {
+        "epoch": 61,
+        "epoch_limit": 100,
+        "line": "Epoch 061/100 | train_loss=0.0095 train_dice=0.9668 train_iou=0.9362 reward=0.3618 policy=-0.0017 | val_loss=0.3996 val_dice=0.8679 val_iou=0.7887 best_dice=0.8731@049 bad=12/15",
+        "train_loss": 0.0095,
+        "train_dice": 0.9668,
+        "train_iou": 0.9362,
+        "val_loss": 0.3996,
+        "val_dice": 0.8679,
+        "val_iou": 0.7887
+      },
+      {
+        "epoch": 62,
+        "epoch_limit": 100,
+        "line": "Epoch 062/100 | train_loss=0.0096 train_dice=0.9667 train_iou=0.9361 reward=0.3642 policy=-0.0018 | val_loss=0.4259 val_dice=0.8690 val_iou=0.7915 best_dice=0.8731@049 bad=13/15",
+        "train_loss": 0.0096,
+        "train_dice": 0.9667,
+        "train_iou": 0.9361,
+        "val_loss": 0.4259,
+        "val_dice": 0.869,
+        "val_iou": 0.7915
+      },
+      {
+        "epoch": 63,
+        "epoch_limit": 100,
+        "line": "Epoch 063/100 | train_loss=0.0061 train_dice=0.9672 train_iou=0.9369 reward=0.3570 policy=-0.0042 | val_loss=0.4087 val_dice=0.8692 val_iou=0.7915 best_dice=0.8731@049 bad=14/15",
+        "train_loss": 0.0061,
+        "train_dice": 0.9672,
+        "train_iou": 0.9369,
+        "val_loss": 0.4087,
+        "val_dice": 0.8692,
+        "val_iou": 0.7915
+      },
+      {
+        "epoch": 64,
+        "epoch_limit": 100,
+        "line": "Epoch 064/100 | train_loss=0.0130 train_dice=0.9676 train_iou=0.9377 reward=0.3606 policy=0.0036 | val_loss=0.4394 val_dice=0.8684 val_iou=0.7911 best_dice=0.8731@049 bad=15/15",
+        "train_loss": 0.013,
+        "train_dice": 0.9676,
+        "train_iou": 0.9377,
+        "val_loss": 0.4394,
+        "val_dice": 0.8684,
+        "val_iou": 0.7911
+      }
+    ]
+  },
+  "paper_reference": {
+    "path": "docs/paper/18. Guo_Learning_What_Helps_Task-Aligned_Context_Selection_for_Vision_Tasks_CVPR_2026_paper.pdf",
+    "sha256": "949fbfa8588e68933ddfef2aae397704e4ad83fdfc0e117549147ffb020c8326",
+    "table_pdf_page_one_based": 6,
+    "implementation_pdf_page_one_based": 5,
+    "isic2017_tacs": {
+      "dice_percent": 85.0,
+      "iou_percent": 76.5
+    },
+    "checked_by": "local PDF text extraction and visual inspection of Table 3"
+  },
+  "limits": [
+    "Test Dice/IoU are rounded stdout values, not full-precision metrics.json values.",
+    "Only seed 42 observed; paper reports three-seed averages.",
+    "Resolution 448 rather than paper 256; final-token cross-attention and DPT-lite rather than blockwise cross-attention and lightweight DPT.",
+    "Test masks and predictions are evaluated at resized 448 resolution in source.",
+    "No standalone metrics.json, checkpoint, complete prediction CSV or split/patient manifests independently audited.",
+    "Training code masks exact self candidates; patient-associated exclusions are not independently verified.",
+    "Only five displayed per-image predictions; their repeated context ID does not establish whole-test selector collapse.",
+    "No same-protocol No-Context/Frozen baseline results supplied with this run."
+  ],
+  "generic_output_audit": {
+    "path": "tacs_isic_segement_448.ipynb",
+    "sha256": "052b4edf0110f2caf6d1b2e9a1d8619dfdfb57d56d97c8768553b9a566215599",
+    "configurations": [
+      {
+        "name": "SEED",
+        "expression": "42",
+        "cell_index": 4,
+        "line": 25
+      },
+      {
+        "name": "DINOV3_MODEL_NAME",
+        "expression": "\"dinov3_vits16\"",
+        "cell_index": 4,
+        "line": 51
+      },
+      {
+        "name": "IMAGE_SIZE",
+        "expression": "448",
+        "cell_index": 4,
+        "line": 66
+      },
+      {
+        "name": "EPOCHS",
+        "expression": "100",
+        "cell_index": 4,
+        "line": 68
+      },
+      {
+        "name": "BATCH_SIZE",
+        "expression": "8",
+        "cell_index": 4,
+        "line": 69
+      },
+      {
+        "name": "PATIENCE",
+        "expression": "15",
+        "cell_index": 4,
+        "line": 74
+      },
+      {
+        "name": "CANDIDATE_POOL_FRACTION",
+        "expression": "0.20",
+        "cell_index": 4,
+        "line": 77
+      },
+      {
+        "name": "TACS_POLICY_WEIGHT",
+        "expression": "1.0",
+        "cell_index": 4,
+        "line": 80
+      }
+    ],
+    "metric_lines": [
+      {
+        "cell_index": 18,
+        "text": "Early stopping at epoch 64. Best val dice=0.8731 at epoch 49."
+      },
+      {
+        "cell_index": 20,
+        "text": "test_dice: 0.8560 (85.60%)"
+      },
+      {
+        "cell_index": 20,
+        "text": "test_iou: 0.7738 (77.38%)"
+      }
+    ],
+    "tables": [
+      {
+        "cell_index": 20,
+        "rows": [
+          [
+            "",
+            "fname",
+            "image_id",
+            "context_pool_position",
+            "context_fname",
+            "context_image_id",
+            "tacs_score",
+            "dice",
+            "iou",
+            "soft_dice",
+            "soft_iou",
+            "loss"
+          ],
+          [
+            "0",
+            "ISIC_0012086.jpg",
+            "ISIC_0012086",
+            "98",
+            "ISIC_0002871.jpg",
+            "ISIC_0002871",
+            "0.490967",
+            "0.597775",
+            "0.426305",
+            "0.596357",
+            "0.424864",
+            "2.330966"
+          ],
+          [
+            "1",
+            "ISIC_0012092.jpg",
+            "ISIC_0012092",
+            "98",
+            "ISIC_0002871.jpg",
+            "ISIC_0002871",
+            "0.556152",
+            "0.848301",
+            "0.736565",
+            "0.848459",
+            "0.736803",
+            "0.364942"
+          ],
+          [
+            "2",
+            "ISIC_0012095.jpg",
+            "ISIC_0012095",
+            "98",
+            "ISIC_0002871.jpg",
+            "ISIC_0002871",
+            "0.551270",
+            "0.884511",
+            "0.792936",
+            "0.884911",
+            "0.793578",
+            "0.175673"
+          ],
+          [
+            "3",
+            "ISIC_0012134.jpg",
+            "ISIC_0012134",
+            "98",
+            "ISIC_0002871.jpg",
+            "ISIC_0002871",
+            "0.514160",
+            "0.839609",
+            "0.723557",
+            "0.840057",
+            "0.724223",
+            "1.521326"
+          ],
+          [
+            "4",
+            "ISIC_0012136.jpg",
+            "ISIC_0012136",
+            "98",
+            "ISIC_0002871.jpg",
+            "ISIC_0002871",
+            "0.525391",
+            "0.493946",
+            "0.327973",
+            "0.503249",
+            "0.336227",
+            "2.605509"
+          ]
+        ]
+      }
+    ],
+    "errors": [],
+    "runtime_lines": [
+      {
+        "cell_index": 4,
+        "text": "DEVICE: cuda"
+      },
+      {
+        "cell_index": 6,
+        "text": "Test images: 600"
+      },
+      {
+        "cell_index": 6,
+        "text": "Candidate pool: 400/2,000 train images (20%)"
+      }
+    ],
+    "cells_with_outputs": 11,
+    "image_outputs": 1,
+    "saved_outputs_sha256": "08cf4bd5ac12aa7b7333a8640d13c16b61f6fa1af2331d006117e27dfa79e243",
+    "source_indicators": {
+      "val_copy_of_train": false,
+      "val_copy_of_test": false,
+      "gumbel_softmax_present": true,
+      "policy_loss_present": true,
+      "candidate_self_exclusion_text_present": true,
+      "full_train_monitor_subset_pattern": false
+    },
+    "source_caution": "Static indicators/config declarations are review leads, not proof of the actual executed runtime or complete method equivalence."
+  }
+}

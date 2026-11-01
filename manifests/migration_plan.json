@@ -1,0 +1,926 @@
+[
+  {
+    "old": "baseline_no_tacs_image_classification.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/no_context/cub200/baseline_no_tacs_image_classification.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "CUB/baseline_no_tacs_image_classification (seed42).ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/no_context/cub200/baseline_no_tacs_image_classification (seed42).ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "CUB/baseline_no_tacs_image_classification (seed43).ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/no_context/cub200/baseline_no_tacs_image_classification (seed43).ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "CUB/baseline_no_tacs_image_classification_(seed_44).ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/no_context/cub200/baseline_no_tacs_image_classification_(seed_44).ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "CARS/seed44-car.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/no_context/stanford_cars/seed44-car.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "SUN/table2/baseline_no_tacs_cars.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/no_context/sun397/baseline_no_tacs_cars.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "baseline_random_context_ret_cars.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/random_context/stanford_cars/baseline_random_context_ret_cars.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "ban-cuoi-random-context-ret-car.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/random_context/stanford_cars/ban-cuoi-random-context-ret-car.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "SUN/table2/ban-cuoi-Random Context Retrieval baseline.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/random_context/stanford_cars/ban-cuoi-Random Context Retrieval baseline.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "baseline_frozen_dino_similarity_ret_cars.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/frozen_dino_similarity/stanford_cars/baseline_frozen_dino_similarity_ret_cars.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "ban-cuoi-frozen-dino-car.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/frozen_dino_similarity/stanford_cars/ban-cuoi-frozen-dino-car.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "notebook7dcd2fd8f0.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/frozen_dino_similarity/stanford_cars/notebook7dcd2fd8f0.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "baseline_feature_averaged_context_cars.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/feature_averaged_context/stanford_cars/baseline_feature_averaged_context_cars.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "baseline_tacs_cars.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/stanford_cars/baseline_tacs_cars.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "ban-cuoi-tacs-car.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/stanford_cars/ban-cuoi-tacs-car.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "notebook05aceb61b4.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/stanford_cars/notebook05aceb61b4.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "tacs-chuanpaper-car-b16.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/stanford_cars/tacs-chuanpaper-car-b16.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "tacs-chuanpaper-car-l16.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/stanford_cars/tacs-chuanpaper-car-l16.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "tacs-chuanpaper-sun-b16 (2).ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/stanford_cars/tacs-chuanpaper-sun-b16 (2).ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "SUN/table2/ban-cuoi-frozen-dino-car.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/stanford_cars/ban-cuoi-frozen-dino-car.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "ban-cuoi-tacs-sun.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/sun397/ban-cuoi-tacs-sun.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "tacs-sun-da-sua (1).ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/sun397/tacs-sun-da-sua (1).ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "tacs-sun-da-sua (2).ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/sun397/tacs-sun-da-sua (2).ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "tacs-sun-true-val-split.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/sun397/tacs-sun-true-val-split.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "tacs-vitb16-sun-true-val-split.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/sun397/tacs-vitb16-sun-true-val-split.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "tacs-chuanpaper-sun-b16 (1).ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/sun397/tacs-chuanpaper-sun-b16 (1).ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "table4_blank_image_sun.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_04_context_pairs/blank_image/sun397/table4_blank_image_sun.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "table4_duplicate_query_sun.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_04_context_pairs/duplicate_query/sun397/table4_duplicate_query_sun.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "table4_noisy_query_sun.ipynb",
+    "new": "notebooks/01_paper_reproduction/classification/table_04_context_pairs/noisy_query/sun397/table4_noisy_query_sun.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "tacs_train_with_checkpoints.ipynb",
+    "new": "notebooks/01_paper_reproduction/figure_04_attention/tacs/sun397/tacs_train_with_checkpoints.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "tacs_isic2017_segmentation.ipynb",
+    "new": "notebooks/01_paper_reproduction/segmentation/table_03_main_results/tacs/isic2017/tacs_isic2017_segmentation.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "mtacs-train-captions-vitl16.ipynb",
+    "new": "notebooks/02_improvements/query_text/sun397/mtacs-train-captions-vitl16.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "mtacs-train-captions.ipynb",
+    "new": "notebooks/02_improvements/query_text/sun397/mtacs-train-captions.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "mtacs_sun397_visual_text_context.ipynb",
+    "new": "notebooks/02_improvements/query_text/sun397/mtacs_sun397_visual_text_context.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "mtacs_sun397_visual_text_context_offline.ipynb",
+    "new": "notebooks/02_improvements/query_text/sun397/mtacs_sun397_visual_text_context_offline.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "mtacs-train-captions-vitl16-dtd.ipynb",
+    "new": "notebooks/02_improvements/query_text/dtd/mtacs-train-captions-vitl16-dtd.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "mtacs-train-captions-vitl16-context-text.ipynb",
+    "new": "notebooks/02_improvements/query_candidate_text/sun397/mtacs-train-captions-vitl16-context-text.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "mtacs-train-captions-vitl16-multimodal-top3.ipynb",
+    "new": "notebooks/02_improvements/multimodal_top3/selector_text_only/sun397/mtacs-train-captions-vitl16-multimodal-top3.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "mtacs-train-captions-vitl16-multimodal-top3-context-text.ipynb",
+    "new": "notebooks/02_improvements/multimodal_top3/context_text_fusion/sun397/mtacs-train-captions-vitl16-multimodal-top3-context-text.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "tacs-adaptive-sun.ipynb",
+    "new": "notebooks/02_improvements/adaptive_context/sun397/tacs-adaptive-sun.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "tacs_adaptive_diverse_context_sun.ipynb",
+    "new": "notebooks/02_improvements/adaptive_context/sun397/tacs_adaptive_diverse_context_sun.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "tacs-adaptive-sun-dinov3-vitb-l.ipynb",
+    "new": "notebooks/02_improvements/adaptive_context/sun397/tacs-adaptive-sun-dinov3-vitb-l.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "tacs_top3_context_sun.ipynb",
+    "new": "notebooks/02_improvements/visual_top3/sun397/tacs_top3_context_sun.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "siglip2_zero_shot_tacs_fusion_sun397.ipynb",
+    "new": "notebooks/02_improvements/zero_shot_siglip/sun397/siglip2_zero_shot_tacs_fusion_sun397.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "florence2-dtd-caption-finetune.ipynb",
+    "new": "notebooks/02_improvements/caption_generation/decoder_lora/dtd/florence2-dtd-caption-finetune.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "florence2-dtd-caption-grounded-rerank.ipynb",
+    "new": "notebooks/02_improvements/caption_generation/grounded_rerank/dtd/florence2-dtd-caption-grounded-rerank.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "mtacs-train-vitl16-dtd-ablation-01-visual-only.ipynb",
+    "new": "notebooks/02_improvements/text_context_ablation/01_visual_only/dtd/mtacs-train-vitl16-dtd-ablation-01-visual-only.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "mtacs-train-vitl16-dtd-ablation-02-query-only.ipynb",
+    "new": "notebooks/02_improvements/text_context_ablation/02_query_only/dtd/mtacs-train-vitl16-dtd-ablation-02-query-only.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "mtacs-train-vitl16-dtd-ablation-03-candidate-only.ipynb",
+    "new": "notebooks/02_improvements/text_context_ablation/03_candidate_only/dtd/mtacs-train-vitl16-dtd-ablation-03-candidate-only.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "mtacs-train-vitl16-dtd-ablation-04-both-fusion.ipynb",
+    "new": "notebooks/02_improvements/text_context_ablation/04_both_fusion/dtd/mtacs-train-vitl16-dtd-ablation-04-both-fusion.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "mtacs-train-vitl16-dtd-ablation-05-full-both.ipynb",
+    "new": "notebooks/02_improvements/text_context_ablation/05_full_both/dtd/mtacs-train-vitl16-dtd-ablation-05-full-both.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "mtacs-train-vitl16-dtd-ablation-06-full-shuffle-both.ipynb",
+    "new": "notebooks/02_improvements/text_context_ablation/06_full_shuffle_both/dtd/mtacs-train-vitl16-dtd-ablation-06-full-shuffle-both.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "mtacs-train-vitl16-dtd-ablation-07-full-unscreened.ipynb",
+    "new": "notebooks/02_improvements/text_context_ablation/07_full_unscreened/dtd/mtacs-train-vitl16-dtd-ablation-07-full-unscreened.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "mtacs-train-vitl16-dtd-ablation-08-full-redacted.ipynb",
+    "new": "notebooks/02_improvements/text_context_ablation/08_full_redacted/dtd/mtacs-train-vitl16-dtd-ablation-08-full-redacted.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "all_4_captions/mtacs-train-vitl16-dtd-caption-ablation-01-florence-prefix.ipynb",
+    "new": "notebooks/02_improvements/caption_ablation/01_florence_prefix/dtd/mtacs-train-vitl16-dtd-caption-ablation-01-florence-prefix.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "all_4_captions/mtacs-train-vitl16-dtd-caption-ablation-02-florence-firstvalid.ipynb",
+    "new": "notebooks/02_improvements/caption_ablation/02_florence_firstvalid/dtd/mtacs-train-vitl16-dtd-caption-ablation-02-florence-firstvalid.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "all_4_captions/mtacs-train-vitl16-dtd-caption-ablation-03-florence-singlegrounded.ipynb",
+    "new": "notebooks/02_improvements/caption_ablation/03_florence_singlegrounded/dtd/mtacs-train-vitl16-dtd-caption-ablation-03-florence-singlegrounded.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "all_4_captions/mtacs-train-vitl16-dtd-caption-ablation-04-florence-multigrounded.ipynb",
+    "new": "notebooks/02_improvements/caption_ablation/04_florence_multigrounded/dtd/mtacs-train-vitl16-dtd-caption-ablation-04-florence-multigrounded.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "ban-cuoi-tacs-sun_before_full_candidate_pool.ipynb",
+    "new": "notebooks/90_archive/sun397/historical_versions/ban-cuoi-tacs-sun_before_full_candidate_pool.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "ban-cuoi-tacs-sun_before_selector_paper_faithful.ipynb",
+    "new": "notebooks/90_archive/sun397/historical_versions/ban-cuoi-tacs-sun_before_selector_paper_faithful.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "notebook05aceb61b4_before_tacs_fix.ipynb",
+    "new": "notebooks/90_archive/stanford_cars/historical_versions/notebook05aceb61b4_before_tacs_fix.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "notebook7dcd2fd8f0_before_context_prior_fulltrain_epoch100.ipynb",
+    "new": "notebooks/90_archive/stanford_cars/historical_versions/notebook7dcd2fd8f0_before_context_prior_fulltrain_epoch100.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "notebook7dcd2fd8f0_before_overfit_regularization.ipynb",
+    "new": "notebooks/90_archive/stanford_cars/historical_versions/notebook7dcd2fd8f0_before_overfit_regularization.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "notebook7dcd2fd8f0_before_topk_attention_optimization.ipynb",
+    "new": "notebooks/90_archive/stanford_cars/historical_versions/notebook7dcd2fd8f0_before_topk_attention_optimization.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "notebook7dcd2fd8f0_before_val_split.ipynb",
+    "new": "notebooks/90_archive/stanford_cars/historical_versions/notebook7dcd2fd8f0_before_val_split.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "tacs_isic2017_segmentation_before_paper_faithful.ipynb",
+    "new": "notebooks/90_archive/isic2017/historical_versions/tacs_isic2017_segmentation_before_paper_faithful.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "mtacs-train-captions-vitl16-dtd-text-ablation.ipynb",
+    "new": "notebooks/90_archive/dtd/combined_ablation_suite/mtacs-train-captions-vitl16-dtd-text-ablation.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "notebookb7a9dba884.ipynb",
+    "new": "notebooks/90_archive/dtd/combined_ablation_suite/notebookb7a9dba884.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/notebookb7a9dba884.before-50-epochs.ipynb",
+    "new": "notebooks/90_archive/dtd/historical_versions/notebookb7a9dba884.before-50-epochs.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "caption-cai-tien.ipynb",
+    "new": "experiments/completed/caption_decoder_lora/dtd/caption-cai-tien.ipynb",
+    "reason": "notebook classification from source/configuration",
+    "kind": "file"
+  },
+  {
+    "old": "build_dtd_caption_method01_prefix_notebook.py",
+    "new": "tools/notebook_builders/build_dtd_caption_method01_prefix_notebook.py",
+    "reason": "notebook builder",
+    "kind": "file"
+  },
+  {
+    "old": "build_dtd_caption_method02_firstvalid_notebook.py",
+    "new": "tools/notebook_builders/build_dtd_caption_method02_firstvalid_notebook.py",
+    "reason": "notebook builder",
+    "kind": "file"
+  },
+  {
+    "old": "build_dtd_caption_method03_singlegrounded_notebook.py",
+    "new": "tools/notebook_builders/build_dtd_caption_method03_singlegrounded_notebook.py",
+    "reason": "notebook builder",
+    "kind": "file"
+  },
+  {
+    "old": "build_dtd_caption_method04_multigrounded_notebook.py",
+    "new": "tools/notebook_builders/build_dtd_caption_method04_multigrounded_notebook.py",
+    "reason": "notebook builder",
+    "kind": "file"
+  },
+  {
+    "old": "build_florence_dtd_caption_finetune_notebook.py",
+    "new": "tools/notebook_builders/build_florence_dtd_caption_finetune_notebook.py",
+    "reason": "notebook builder",
+    "kind": "file"
+  },
+  {
+    "old": "build_florence_dtd_grounded_caption_notebook.py",
+    "new": "tools/notebook_builders/build_florence_dtd_grounded_caption_notebook.py",
+    "reason": "notebook builder",
+    "kind": "file"
+  },
+  {
+    "old": "build_mtacs_context_text_top1_notebook.py",
+    "new": "tools/notebook_builders/build_mtacs_context_text_top1_notebook.py",
+    "reason": "notebook builder",
+    "kind": "file"
+  },
+  {
+    "old": "build_mtacs_context_text_top3_notebook.py",
+    "new": "tools/notebook_builders/build_mtacs_context_text_top3_notebook.py",
+    "reason": "notebook builder",
+    "kind": "file"
+  },
+  {
+    "old": "build_mtacs_dtd_ablation_notebook.py",
+    "new": "tools/notebook_builders/build_mtacs_dtd_ablation_notebook.py",
+    "reason": "notebook builder",
+    "kind": "file"
+  },
+  {
+    "old": "build_mtacs_dtd_both_fusion_notebook.py",
+    "new": "tools/notebook_builders/build_mtacs_dtd_both_fusion_notebook.py",
+    "reason": "notebook builder",
+    "kind": "file"
+  },
+  {
+    "old": "build_mtacs_dtd_candidate_only_notebook.py",
+    "new": "tools/notebook_builders/build_mtacs_dtd_candidate_only_notebook.py",
+    "reason": "notebook builder",
+    "kind": "file"
+  },
+  {
+    "old": "build_mtacs_dtd_full_both_notebook.py",
+    "new": "tools/notebook_builders/build_mtacs_dtd_full_both_notebook.py",
+    "reason": "notebook builder",
+    "kind": "file"
+  },
+  {
+    "old": "build_mtacs_dtd_full_redacted_notebook.py",
+    "new": "tools/notebook_builders/build_mtacs_dtd_full_redacted_notebook.py",
+    "reason": "notebook builder",
+    "kind": "file"
+  },
+  {
+    "old": "build_mtacs_dtd_full_shuffle_both_notebook.py",
+    "new": "tools/notebook_builders/build_mtacs_dtd_full_shuffle_both_notebook.py",
+    "reason": "notebook builder",
+    "kind": "file"
+  },
+  {
+    "old": "build_mtacs_dtd_full_unscreened_notebook.py",
+    "new": "tools/notebook_builders/build_mtacs_dtd_full_unscreened_notebook.py",
+    "reason": "notebook builder",
+    "kind": "file"
+  },
+  {
+    "old": "build_mtacs_dtd_notebook.py",
+    "new": "tools/notebook_builders/build_mtacs_dtd_notebook.py",
+    "reason": "notebook builder",
+    "kind": "file"
+  },
+  {
+    "old": "build_mtacs_dtd_query_only_notebook.py",
+    "new": "tools/notebook_builders/build_mtacs_dtd_query_only_notebook.py",
+    "reason": "notebook builder",
+    "kind": "file"
+  },
+  {
+    "old": "build_mtacs_dtd_visual_only_notebook.py",
+    "new": "tools/notebook_builders/build_mtacs_dtd_visual_only_notebook.py",
+    "reason": "notebook builder",
+    "kind": "file"
+  },
+  {
+    "old": "build_mtacs_multimodal_top3_notebook.py",
+    "new": "tools/notebook_builders/build_mtacs_multimodal_top3_notebook.py",
+    "reason": "notebook builder",
+    "kind": "file"
+  },
+  {
+    "old": "dtd_caption_finetune.py",
+    "new": "src/captioning/dtd_caption_finetune.py",
+    "reason": "caption-stage implementation",
+    "kind": "file"
+  },
+  {
+    "old": "dtd_caption_generation_cells.py",
+    "new": "src/captioning/dtd_caption_generation_cells.py",
+    "reason": "caption-stage implementation",
+    "kind": "file"
+  },
+  {
+    "old": "dtd_caption_screening.py",
+    "new": "src/captioning/dtd_caption_screening.py",
+    "reason": "caption-stage implementation",
+    "kind": "file"
+  },
+  {
+    "old": "dtd_grounded_caption.py",
+    "new": "src/captioning/dtd_grounded_caption.py",
+    "reason": "caption-stage implementation",
+    "kind": "file"
+  },
+  {
+    "old": "mtacs_dtd_ablation_cells.py",
+    "new": "src/training/mtacs_dtd_ablation_cells.py",
+    "reason": "embedded training-cell source",
+    "kind": "file"
+  },
+  {
+    "old": "generate_sun397_captions.py",
+    "new": "tools/captioning/generate_sun397_captions.py",
+    "reason": "caption generation CLI",
+    "kind": "file"
+  },
+  {
+    "old": "run_figure4_random5.py",
+    "new": "tools/visualization/run_figure4_random5.py",
+    "reason": "Figure 4 visualization tool",
+    "kind": "file"
+  },
+  {
+    "old": "visualize_figure4.py",
+    "new": "tools/visualization/visualize_figure4.py",
+    "reason": "Figure 4 visualization tool",
+    "kind": "file"
+  },
+  {
+    "old": "_inspect_cell_11.py",
+    "new": "tools/archive/extracted_cells/_inspect_cell_11.py",
+    "reason": "historical inspection fragment",
+    "kind": "file"
+  },
+  {
+    "old": "_inspect_cell_13.py",
+    "new": "tools/archive/extracted_cells/_inspect_cell_13.py",
+    "reason": "historical inspection fragment",
+    "kind": "file"
+  },
+  {
+    "old": "_inspect_cell_17.py",
+    "new": "tools/archive/extracted_cells/_inspect_cell_17.py",
+    "reason": "historical inspection fragment",
+    "kind": "file"
+  },
+  {
+    "old": "_inspect_cell_7.py",
+    "new": "tools/archive/extracted_cells/_inspect_cell_7.py",
+    "reason": "historical inspection fragment",
+    "kind": "file"
+  },
+  {
+    "old": "test_transformer.py",
+    "new": "tools/archive/captioning_prototype/test_transformer.py",
+    "reason": "early captioning prototype; not a test",
+    "kind": "file"
+  },
+  {
+    "old": "tests",
+    "new": "tests",
+    "reason": "project regression tests",
+    "kind": "directory"
+  },
+  {
+    "old": "sun397_demo",
+    "new": "apps/sun397_demo",
+    "reason": "backend/frontend package, kept together",
+    "kind": "directory"
+  },
+  {
+    "old": "output_ablation",
+    "new": "experiments/completed/text_context_ablation/dtd",
+    "reason": "eight saved notebooks and immutable evidence",
+    "kind": "directory"
+  },
+  {
+    "old": "model_TACS",
+    "new": "artifacts/checkpoints/imported_unverified/model_TACS",
+    "reason": "imported assets; compatibility not verified",
+    "kind": "directory"
+  },
+  {
+    "old": "mtacs_sun397_assets",
+    "new": "configs/mtacs_sun397_assets",
+    "reason": "existing SUN397 assets",
+    "kind": "directory"
+  },
+  {
+    "old": "best_val_checkpoint (3).pt",
+    "new": "artifacts/checkpoints/imported_unverified/root/best_val_checkpoint (3).pt",
+    "reason": "preserve original artifact and provenance, no deduplication",
+    "kind": "file"
+  },
+  {
+    "old": "final_tacs_full_pool_dinov3_vits16_sun397.pt",
+    "new": "artifacts/checkpoints/imported_unverified/root/final_tacs_full_pool_dinov3_vits16_sun397.pt",
+    "reason": "preserve original artifact and provenance, no deduplication",
+    "kind": "file"
+  },
+  {
+    "old": "tacs_selector_cache.pt",
+    "new": "artifacts/checkpoints/imported_unverified/root/tacs_selector_cache.pt",
+    "reason": "preserve original artifact and provenance, no deduplication",
+    "kind": "file"
+  },
+  {
+    "old": "trained_tacs_full_pool_candidate_feature_bank.pt",
+    "new": "artifacts/checkpoints/imported_unverified/root/trained_tacs_full_pool_candidate_feature_bank.pt",
+    "reason": "preserve original artifact and provenance, no deduplication",
+    "kind": "file"
+  },
+  {
+    "old": "all_4_captions/captions_first_valid_control.csv",
+    "new": "data/captions/dtd/grounded_controls/captions_first_valid_control.csv",
+    "reason": "caption experiment input, content unchanged",
+    "kind": "file"
+  },
+  {
+    "old": "all_4_captions/captions_multibeam_grounded.csv",
+    "new": "data/captions/dtd/grounded_controls/captions_multibeam_grounded.csv",
+    "reason": "caption experiment input, content unchanged",
+    "kind": "file"
+  },
+  {
+    "old": "all_4_captions/captions_prefix_control.csv",
+    "new": "data/captions/dtd/grounded_controls/captions_prefix_control.csv",
+    "reason": "caption experiment input, content unchanged",
+    "kind": "file"
+  },
+  {
+    "old": "all_4_captions/captions_single_grounded_control.csv",
+    "new": "data/captions/dtd/grounded_controls/captions_single_grounded_control.csv",
+    "reason": "caption experiment input, content unchanged",
+    "kind": "file"
+  },
+  {
+    "old": "all_4_captions/caption_methods_manifest.json",
+    "new": "data/captions/dtd/grounded_controls/caption_methods_manifest.json",
+    "reason": "caption input documentation",
+    "kind": "file"
+  },
+  {
+    "old": "all_4_captions/README_CAPTION_ABLATIONS.md",
+    "new": "data/captions/dtd/grounded_controls/README_CAPTION_ABLATIONS.md",
+    "reason": "caption input documentation",
+    "kind": "file"
+  },
+  {
+    "old": "all_4_captions.zip",
+    "new": "data/archives/all_4_captions.zip",
+    "reason": "original caption bundle snapshot",
+    "kind": "file"
+  },
+  {
+    "old": "captions (5).csv",
+    "new": "data/captions/dtd/decoder_lora/captions (5).csv",
+    "reason": "decoder-LoRA caption output",
+    "kind": "file"
+  },
+  {
+    "old": "caption_references.csv",
+    "new": "data/annotations/dtd/caption_references.csv",
+    "reason": "teacher reference annotations and provenance",
+    "kind": "file"
+  },
+  {
+    "old": "caption_references.annotation_notes.md",
+    "new": "data/annotations/dtd/caption_references.annotation_notes.md",
+    "reason": "teacher reference annotations and provenance",
+    "kind": "file"
+  },
+  {
+    "old": "caption_references.annotation_report.json",
+    "new": "data/annotations/dtd/caption_references.annotation_report.json",
+    "reason": "teacher reference annotations and provenance",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/after.png",
+    "new": "reports/annotation_review/dtd/after.png",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/annotate.mjs",
+    "new": "reports/annotation_review/dtd/annotate.mjs",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/before.png",
+    "new": "reports/annotation_review/dtd/before.png",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/captions.json",
+    "new": "reports/annotation_review/dtd/captions.json",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/export_csv.py",
+    "new": "reports/annotation_review/dtd/export_csv.py",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/image_manifest.json",
+    "new": "reports/annotation_review/dtd/image_manifest.json",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/original_caption_references.csv",
+    "new": "reports/annotation_review/dtd/original_caption_references.csv",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/prepare_review.py",
+    "new": "reports/annotation_review/dtd/prepare_review.py",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/sheet_01.jpg",
+    "new": "reports/annotation_review/dtd/sheet_01.jpg",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/sheet_02.jpg",
+    "new": "reports/annotation_review/dtd/sheet_02.jpg",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/sheet_03.jpg",
+    "new": "reports/annotation_review/dtd/sheet_03.jpg",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/sheet_04.jpg",
+    "new": "reports/annotation_review/dtd/sheet_04.jpg",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/sheet_05.jpg",
+    "new": "reports/annotation_review/dtd/sheet_05.jpg",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/sheet_06.jpg",
+    "new": "reports/annotation_review/dtd/sheet_06.jpg",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/sheet_07.jpg",
+    "new": "reports/annotation_review/dtd/sheet_07.jpg",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/sheet_08.jpg",
+    "new": "reports/annotation_review/dtd/sheet_08.jpg",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/sheet_09.jpg",
+    "new": "reports/annotation_review/dtd/sheet_09.jpg",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/sheet_10.jpg",
+    "new": "reports/annotation_review/dtd/sheet_10.jpg",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/sheet_11.jpg",
+    "new": "reports/annotation_review/dtd/sheet_11.jpg",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/sheet_12.jpg",
+    "new": "reports/annotation_review/dtd/sheet_12.jpg",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/sheet_13.jpg",
+    "new": "reports/annotation_review/dtd/sheet_13.jpg",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/sheet_14.jpg",
+    "new": "reports/annotation_review/dtd/sheet_14.jpg",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/sheet_15.jpg",
+    "new": "reports/annotation_review/dtd/sheet_15.jpg",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/sheet_16.jpg",
+    "new": "reports/annotation_review/dtd/sheet_16.jpg",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/validate_annotations.py",
+    "new": "reports/annotation_review/dtd/validate_annotations.py",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/annotate_dtd_references/workbook_values.json",
+    "new": "reports/annotation_review/dtd/workbook_values.json",
+    "reason": "annotation evidence, original backup, contact sheets",
+    "kind": "file"
+  },
+  {
+    "old": "tmp/caption_cai_tien_inspection",
+    "new": "reports/caption_decoder_lora/dtd",
+    "reason": "saved learning curve inspection",
+    "kind": "directory"
+  },
+  {
+    "old": "HUONG_DAN_FINETUNE_CAPTION_DTD.md",
+    "new": "docs/guides/HUONG_DAN_FINETUNE_CAPTION_DTD.md",
+    "reason": "caption experiment guide",
+    "kind": "file"
+  },
+  {
+    "old": "HUONG_DAN_CAPTION_DTD_GROUNDED.md",
+    "new": "docs/guides/HUONG_DAN_CAPTION_DTD_GROUNDED.md",
+    "reason": "caption experiment guide",
+    "kind": "file"
+  },
+  {
+    "old": "TONG_HOP_CAI_TIEN_MTACS_SO_VOI_TACS.md",
+    "new": "reports/TONG_HOP_CAI_TIEN_MTACS_SO_VOI_TACS.md",
+    "reason": "historical research summary",
+    "kind": "file"
+  },
+  {
+    "old": "PROJECT_CONTEXT.md",
+    "new": "docs/history/PROJECT_CONTEXT.md",
+    "reason": "historical handover, preserve old path statements",
+    "kind": "file"
+  },
+  {
+    "old": "18. Guo_Learning_What_Helps_Task-Aligned_Context_Selection_for_Vision_Tasks_CVPR_2026_paper.pdf",
+    "new": "docs/paper/18. Guo_Learning_What_Helps_Task-Aligned_Context_Selection_for_Vision_Tasks_CVPR_2026_paper.pdf",
+    "reason": "paper reference",
+    "kind": "file"
+  }
+]

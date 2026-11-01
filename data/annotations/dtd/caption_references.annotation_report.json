@@ -1,0 +1,28 @@
+{
+  "rows": 188,
+  "unique_captions": 188,
+  "classes": 47,
+  "per_class": 4,
+  "word_counts": {
+    "7": 63,
+    "8": 125
+  },
+  "direct_class_or_root_hits": 0,
+  "unreadable_images": 0,
+  "image_bytes_verified": 188,
+  "official_train1_only": true,
+  "header_and_row_order_preserved": true,
+  "exact_model_id_available": false,
+  "teacher_model_recorded": "openai-codex:model-id-unavailable",
+  "annotation_origin": "AI visual annotation requested by ducsinh",
+  "reviewer_id_semantics": "ducsinh is the requesting owner who authorized AI annotation, not an assertion of per-image human inspection",
+  "approved_semantics": "AI annotation completed and structurally validated, not independently human verified",
+  "independent_human_review_performed": false,
+  "human_gold_standard": false,
+  "semantic_label_leakage_absence_certified": false,
+  "source_sha256": "ac9550350481deb39ca9da002c28b987ade6aa6441447d35016e79ac1e77febd",
+  "training_reference_guard_passed": true,
+  "fit_images": 141,
+  "holdout_images": 47,
+  "output_sha256": "850c037a17a0c8595a4a689fefb6822354b910bbc205f8dd40a2400b2180abd6"
+}

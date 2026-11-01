@@ -1,0 +1,103 @@
+{
+  "methods": [
+    {
+      "number": 1,
+      "display_name": "Florence-Prefix",
+      "generation_method": "prefix_control",
+      "filename": "captions_prefix_control.csv",
+      "sha256": "b71de4b211f5232b9f0aba85e874ddf293cbc8e770d83613719c1368f7ed5011",
+      "rows": 5640,
+      "split_counts": {
+        "train": 1880,
+        "val": 1880,
+        "test": 1880
+      },
+      "stored_valid_by_split": {
+        "train": 1573,
+        "val": 1585,
+        "test": 1591
+      },
+      "stored_valid_total": 4749,
+      "captioner_fingerprint": "c768be69004fc41e31214eeef4c6a7a4d8176912e21cd72f77a3ff2d23fbdb01",
+      "prompt_version": "florence_dtd_grounded_spans_v1",
+      "vlm_model": "microsoft/Florence-2-base+frozen-grounded-selection:c768be69004fc41e",
+      "policy": "dtd_lexical_v2"
+    },
+    {
+      "number": 2,
+      "display_name": "Florence-FirstValid",
+      "generation_method": "first_valid_control",
+      "filename": "captions_first_valid_control.csv",
+      "sha256": "37645afc643aaf632cf7226f5cfab25de75a8250156fb366eb42aaf3e8655187",
+      "rows": 5640,
+      "split_counts": {
+        "train": 1880,
+        "val": 1880,
+        "test": 1880
+      },
+      "stored_valid_by_split": {
+        "train": 1880,
+        "val": 1880,
+        "test": 1880
+      },
+      "stored_valid_total": 5640,
+      "captioner_fingerprint": "c768be69004fc41e31214eeef4c6a7a4d8176912e21cd72f77a3ff2d23fbdb01",
+      "prompt_version": "florence_dtd_grounded_spans_v1",
+      "vlm_model": "microsoft/Florence-2-base+frozen-grounded-selection:c768be69004fc41e",
+      "policy": "dtd_lexical_v2"
+    },
+    {
+      "number": 3,
+      "display_name": "Florence-SingleGrounded",
+      "generation_method": "single_grounded_control",
+      "filename": "captions_single_grounded_control.csv",
+      "sha256": "6dc67d548014d1a8bb4f0af9c124b26025e20382262c3e2fc9d4d00f682fbcbd",
+      "rows": 5640,
+      "split_counts": {
+        "train": 1880,
+        "val": 1880,
+        "test": 1880
+      },
+      "stored_valid_by_split": {
+        "train": 1880,
+        "val": 1880,
+        "test": 1880
+      },
+      "stored_valid_total": 5640,
+      "captioner_fingerprint": "c768be69004fc41e31214eeef4c6a7a4d8176912e21cd72f77a3ff2d23fbdb01",
+      "prompt_version": "florence_dtd_grounded_spans_v1",
+      "vlm_model": "microsoft/Florence-2-base+frozen-grounded-selection:c768be69004fc41e",
+      "policy": "dtd_lexical_v2"
+    },
+    {
+      "number": 4,
+      "display_name": "Florence-MultiGrounded",
+      "generation_method": "multibeam_grounded",
+      "filename": "captions_multibeam_grounded.csv",
+      "sha256": "82bfd187c1c69a3727d79bbfd46834fa335077a379e79da7f9c8ef06593bd78f",
+      "rows": 5640,
+      "split_counts": {
+        "train": 1880,
+        "val": 1880,
+        "test": 1880
+      },
+      "stored_valid_by_split": {
+        "train": 1880,
+        "val": 1880,
+        "test": 1880
+      },
+      "stored_valid_total": 5640,
+      "captioner_fingerprint": "c768be69004fc41e31214eeef4c6a7a4d8176912e21cd72f77a3ff2d23fbdb01",
+      "prompt_version": "florence_dtd_grounded_spans_v1",
+      "vlm_model": "microsoft/Florence-2-base+frozen-grounded-selection:c768be69004fc41e",
+      "policy": "dtd_lexical_v2"
+    }
+  ],
+  "created_training_notebooks": {
+    "prefix_control": "notebooks/02_improvements/caption_ablation/01_florence_prefix/dtd/mtacs-train-vitl16-dtd-caption-ablation-01-florence-prefix.ipynb",
+    "first_valid_control": "notebooks/02_improvements/caption_ablation/02_florence_firstvalid/dtd/mtacs-train-vitl16-dtd-caption-ablation-02-florence-firstvalid.ipynb",
+    "single_grounded_control": "notebooks/02_improvements/caption_ablation/03_florence_singlegrounded/dtd/mtacs-train-vitl16-dtd-caption-ablation-03-florence-singlegrounded.ipynb",
+    "multibeam_grounded": "notebooks/02_improvements/caption_ablation/04_florence_multigrounded/dtd/mtacs-train-vitl16-dtd-caption-ablation-04-florence-multigrounded.ipynb"
+  },
+  "no_training_executed": true
+}

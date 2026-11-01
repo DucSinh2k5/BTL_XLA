@@ -1,0 +1,7 @@
+[
+  {
+    "old": "all_4_captions",
+    "new": "data/captions/dtd/grounded_controls",
+    "reason": "Logical data-directory alias; each notebook has a more specific method/dataset mapping."
+  }
+]

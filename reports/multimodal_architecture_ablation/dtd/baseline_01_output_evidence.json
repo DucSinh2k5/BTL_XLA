@@ -1,0 +1,112 @@
+{
+  "schema": "dtd_architecture_baseline_saved_output_v1",
+  "observed_date": "2026-10-25",
+  "source_notebook": "dtd-architecture-study-01.ipynb",
+  "source_notebook_sha256": "3254ec626634f7922472963e4ccb64c5016cdc2f43730ba6c3fb411e739e5e07",
+  "notebook_cells_executed_by_audit": false,
+  "source_change_vs_template": "Only the default CAPTIONS_INPUT_PATH was changed to the attached Prefix CSV path",
+  "function_and_class_ast_identical_to_template": true,
+  "template": "notebooks/02_improvements/multimodal_architecture_ablation/01_candidate_only_prefix/dtd/mtacs-dtd-vitl16-prefix-candidate-only-baseline.ipynb",
+  "caption_csv": {
+    "method": "prefix_control",
+    "policy": "dtd_lexical_v2",
+    "local_path": "data/captions/dtd/grounded_controls/captions_prefix_control.csv",
+    "sha256": "b71de4b211f5232b9f0aba85e874ddf293cbc8e770d83613719c1368f7ed5011",
+    "runtime_hash_matches_local_bytes": true,
+    "candidate_pool_rows": 376,
+    "valid_candidate_pool_captions": 324,
+    "semantic_flag_is_diagnostic_only": true
+  },
+  "protocol_observed": {
+    "experiment": "candidate_only",
+    "dtd_split": 1,
+    "train_images": 1880,
+    "val_images": 1880,
+    "test_images": 1880,
+    "training_seed": 42,
+    "backbone": "dinov3_vitl16",
+    "image_size": 384,
+    "context_k": 1,
+    "query_fusion": false,
+    "candidate_fusion": true,
+    "semantic_selector": false,
+    "alignment": false,
+    "token_fusion": false,
+    "aswp": false,
+    "training_batch": 32,
+    "reported_gpu_memory_gib": 95.0,
+    "completed_epochs_from_status_table": 50,
+    "lr_schedule_epochs": 50,
+    "best_epoch": 38,
+    "checkpoint_criterion": "minimum_validation_loss"
+  },
+  "validation_metrics": {
+    "accuracy": 0.841489,
+    "macro_f1": 0.840162,
+    "loss": 1.178962,
+    "query_caption_rate": 0.0,
+    "candidate_caption_rate": 0.820745,
+    "mean_query_gate": 0.0,
+    "mean_candidate_gate": 0.001115
+  },
+  "test_metrics": {
+    "accuracy": 0.854255,
+    "macro_f1": 0.853032,
+    "loss": 1.160942,
+    "query_caption_rate": 0.0,
+    "candidate_caption_rate": 0.82234,
+    "mean_query_gate": 0.0,
+    "mean_candidate_gate": 0.001117
+  },
+  "saved_training_log": {
+    "epoch_line_count": 49,
+    "missing_epoch_lines": [48],
+    "best_logged_validation_loss_epoch": 38,
+    "highest_logged_validation_f1_epoch": 32,
+    "highest_logged_validation_f1_rounded": 0.8430,
+    "first_logged_candidate_gate_rounded": 0.089,
+    "last_logged_candidate_gate_rounded": 0.001
+  },
+  "references": [
+    {
+      "name": "Historical visual_only with image context",
+      "source_notebook": "experiments/completed/text_context_ablation/dtd/visual-only.ipynb",
+      "val_macro_f1": 0.846578,
+      "test_macro_f1": 0.848168,
+      "delta_test_macro_f1_percentage_points": 0.4864
+    },
+    {
+      "name": "Historical candidate_only with its own caption export",
+      "source_notebook": "experiments/completed/text_context_ablation/dtd/candidate-only.ipynb",
+      "val_macro_f1": 0.839829,
+      "test_macro_f1": 0.850321,
+      "delta_test_macro_f1_percentage_points": 0.2711
+    },
+    {
+      "name": "Historical full_both with Florence-Prefix",
+      "source_notebook": "experiments/completed/caption_ablation/dtd/01_florence_prefix/mtacs-dtd-full-both-florence-prefix-split1-seed42-50ep.ipynb",
+      "val_macro_f1": 0.802258,
+      "test_macro_f1": 0.810651,
+      "delta_test_macro_f1_percentage_points": 4.2381
+    }
+  ],
+  "runtime_warnings": [
+    "QueueFeederThread OSError Bad file descriptor and semaphore release ValueError in stderr",
+    "MultiProcessingDataLoaderIter destructor assertion can only test a child process",
+    "Text-only CLIP load reports unused vision/projection and position_ids keys",
+    "No Jupyter error output is saved, but stderr includes exceptions"
+  ],
+  "limits": [
+    "One training seed and one official split; no statistical superiority established",
+    "Saved status says 50 completed epochs, but stdout lacks epoch 48; history.csv not independently supplied",
+    "No independent best checkpoint, protocol, prediction CSV or candidate bank was loaded/audited",
+    "Mean gate is not the text contribution percentage; visual uses L2 normalization while text projection uses LayerNorm",
+    "Historical run comparisons are descriptive, not verified matched-runtime causal comparisons",
+    "Aggregate metrics displayed to six decimals are not raw full-precision prediction-derived metrics"
+  ],
+  "next_recommendation": {
+    "diagnostic": "Validation aligned/off/shuffled interventions with the same checkpoint/context images, plus weighted text-to-visual norm ratio",
+    "next_training_control": "Candidate-only with norm-calibrated fusion; keep all other protocol settings and the Prefix CSV fixed",
+    "later": "Add learned alignment as a separate ablation, then semantic selection or a separate token-fusion/pooling branch"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "dataset": "SUN397",
+  "seed": 42,
+  "candidate_pool_fraction": 0.2,
+  "train_on_full_train": false,
+  "val_fraction": 0.1,
+  "dino_model": "dinov3_vits16",
+  "clip_model": "openai/clip-vit-base-patch32",
+  "vlm_api_base": "",
+  "vlm_model": "",
+  "vlm_temperature": 0.0,
+  "vlm_max_tokens": 80,
+  "prompt_version": "visible_attributes_v1",
+  "fusion": "gated_additive_cls_representation",
+  "experiment_modes": [
+    "no_context",
+    "original_tacs",
+    "text_only",
+    "mtacs",
+    "mtacs_shuffled"
+  ],
+  "tacs_gumbel_tau": 0.1,
+  "policy_weight": 1.0,
+  "epochs": 100
+}

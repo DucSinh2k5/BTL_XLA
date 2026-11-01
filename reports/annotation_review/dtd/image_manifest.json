@@ -1,0 +1,2262 @@
+{
+  "source_sha256": "ac9550350481deb39ca9da002c28b987ade6aa6441447d35016e79ac1e77febd",
+  "dataset": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd",
+  "rows": [
+    {
+      "index": 1,
+      "review_id": "36c18754dc7e",
+      "image_id": "paisley/paisley_0091.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\paisley\\paisley_0091.jpg",
+      "sha256": "875516de645317b4a55489fafb7ce21f0ab8f9dede089cd6d1576b84011a34da",
+      "size": [
+        759,
+        701
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 2,
+      "review_id": "a49c3b817dd3",
+      "image_id": "paisley/paisley_0035.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\paisley\\paisley_0035.jpg",
+      "sha256": "111d6713e6469b4192813b104560cfb96f70406ff794409d26085e0ffb5da7e1",
+      "size": [
+        429,
+        402
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 3,
+      "review_id": "819c09a052da",
+      "image_id": "potholed/potholed_0101.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\potholed\\potholed_0101.jpg",
+      "sha256": "258efcdc35ec9ccf724c8274fcad23331e5b1e8cc750dadd82dedd074ed9dfb3",
+      "size": [
+        335,
+        340
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 4,
+      "review_id": "79d8d2dabf9c",
+      "image_id": "studded/studded_0118.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\studded\\studded_0118.jpg",
+      "sha256": "abef8104fe13c071bdccc99c19bfcda0f4796013aff312c3d615c7fab3ae9a10",
+      "size": [
+        424,
+        364
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 5,
+      "review_id": "2ae30027354b",
+      "image_id": "waffled/waffled_0115.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\waffled\\waffled_0115.jpg",
+      "sha256": "05b9f258dab369ac72a4fa0b58fe88d0fe435161340ad54c00e6f279a0896e6b",
+      "size": [
+        391,
+        403
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 6,
+      "review_id": "fb703acddf87",
+      "image_id": "knitted/knitted_0102.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\knitted\\knitted_0102.jpg",
+      "sha256": "db05c729095f045aca1d86005a1df851e785e5a06ca3b59837196d9db44963ac",
+      "size": [
+        600,
+        600
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 7,
+      "review_id": "d507919c6e84",
+      "image_id": "fibrous/fibrous_0146.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\fibrous\\fibrous_0146.jpg",
+      "sha256": "66541d93bce0a0bae940ff3b70a5cf0393da7e470c7ce5db9e47015844c238f2",
+      "size": [
+        514,
+        472
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 8,
+      "review_id": "165a8b452548",
+      "image_id": "veined/veined_0189.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\veined\\veined_0189.jpg",
+      "sha256": "ab3144757372f34153b29ddf1e2e80cbdf6079bb18233b220ad5dda594829d74",
+      "size": [
+        528,
+        640
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 9,
+      "review_id": "3b3f17b6695b",
+      "image_id": "polka-dotted/polka-dotted_0156.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\polka-dotted\\polka-dotted_0156.jpg",
+      "sha256": "1f671227eb50207c80a00ac2ff7dd3a670dbcfb681b1875b3387ea6a0c66d1f0",
+      "size": [
+        430,
+        472
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 10,
+      "review_id": "2b1266a6f94e",
+      "image_id": "blotchy/blotchy_0112.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\blotchy\\blotchy_0112.jpg",
+      "sha256": "bb826be30c53f6d901c1610fe15f3c285d8d171e1aa32b381f7fb23f7fc9ae30",
+      "size": [
+        320,
+        316
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 11,
+      "review_id": "2dc70646ebb8",
+      "image_id": "crosshatched/crosshatched_0116.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\crosshatched\\crosshatched_0116.jpg",
+      "sha256": "6c3aebe8f6a3772caa683009729d9887ef7f0482240b6c9ab6942e4a267c3a08",
+      "size": [
+        574,
+        537
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 12,
+      "review_id": "9381ef224c0d",
+      "image_id": "woven/woven_0034.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\woven\\woven_0034.jpg",
+      "sha256": "7de774478ebe62145f5ea40c32aca7a637f05cb070a58a1a6a813ef541488500",
+      "size": [
+        640,
+        480
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 13,
+      "review_id": "c165532a7785",
+      "image_id": "blotchy/blotchy_0029.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\blotchy\\blotchy_0029.jpg",
+      "sha256": "41749d0032f55537a65e77d34727bb31dc1363d0e8cbac995bc4f2f7aa5c7cd7",
+      "size": [
+        450,
+        600
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 14,
+      "review_id": "3e89021586d7",
+      "image_id": "stratified/stratified_0083.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\stratified\\stratified_0083.jpg",
+      "sha256": "72f4eae0a1ed3acf583e465c9d85545e5fc06d0311450053774deca31551776c",
+      "size": [
+        640,
+        430
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 15,
+      "review_id": "b47ce674d904",
+      "image_id": "spiralled/spiralled_0067.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\spiralled\\spiralled_0067.jpg",
+      "sha256": "7e60041dc13180519922fe0f73a1f2aa580ce0c1a21bffcc66b859f0a8cd4d55",
+      "size": [
+        481,
+        354
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 16,
+      "review_id": "a1121fe26132",
+      "image_id": "lined/lined_0165.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\lined\\lined_0165.jpg",
+      "sha256": "43a5b0cac5815936f3861155dabe6d3fbbbda4976bf5fdb1a17e203cb6d62e55",
+      "size": [
+        375,
+        343
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 17,
+      "review_id": "827c9d2d601e",
+      "image_id": "dotted/dotted_0138.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\dotted\\dotted_0138.jpg",
+      "sha256": "24935b847d803eb1cfec10e8f1b48ae20753f1bcd5a6b0c9d5eb3b1127825c8e",
+      "size": [
+        591,
+        640
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 18,
+      "review_id": "82f4e3ce84fa",
+      "image_id": "porous/porous_0165.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\porous\\porous_0165.jpg",
+      "sha256": "d3e8f9d18fafaa7951458f32abc866d85e9ca0448fd57007723bd4eaa101dd3a",
+      "size": [
+        640,
+        637
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 19,
+      "review_id": "1bf7b003c7c4",
+      "image_id": "dotted/dotted_0197.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\dotted\\dotted_0197.jpg",
+      "sha256": "02e38decaa946914a12d6d8cd1bc12ff1ce9fed8c2b5bbffd045063049dda4dc",
+      "size": [
+        640,
+        465
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 20,
+      "review_id": "68ded29ddbdc",
+      "image_id": "swirly/swirly_0069.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\swirly\\swirly_0069.jpg",
+      "sha256": "1d30ff10a60450b74a1c6938bf006a2d67b4ea96ca9d28b7800a6b7066d8720d",
+      "size": [
+        400,
+        325
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 21,
+      "review_id": "4c56501c2b04",
+      "image_id": "bumpy/bumpy_0192.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\bumpy\\bumpy_0192.jpg",
+      "sha256": "dea41a8e99ce29615bccb1c5734fc24fef916ec4ded1d0ab716988802141623e",
+      "size": [
+        370,
+        375
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 22,
+      "review_id": "79111f5cde25",
+      "image_id": "bubbly/bubbly_0075.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\bubbly\\bubbly_0075.jpg",
+      "sha256": "70d545b575e54d7c1a586850e7f58772db515157b5b35af31ee7f00bde3c7947",
+      "size": [
+        640,
+        426
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 23,
+      "review_id": "f89a5352d37f",
+      "image_id": "striped/striped_0022.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\striped\\striped_0022.jpg",
+      "sha256": "f67f0da60be954422c5c4971e397259f490f740371887e95d3caa3666879db73",
+      "size": [
+        367,
+        300
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 24,
+      "review_id": "6ff38df19054",
+      "image_id": "smeared/smeared_0062.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\smeared\\smeared_0062.jpg",
+      "sha256": "5a8f4490281cfb38b4102ec69f0c283bad84d06108de555ee8d48a16eae2dc3c",
+      "size": [
+        400,
+        300
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 25,
+      "review_id": "0116e5025a1c",
+      "image_id": "lacelike/lacelike_0058.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\lacelike\\lacelike_0058.jpg",
+      "sha256": "544fa11d0cdb8bae04c0c0d00f996fa46322083dcc0a9138e43587bc3f20f7b5",
+      "size": [
+        640,
+        480
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 26,
+      "review_id": "30427cecf498",
+      "image_id": "crosshatched/crosshatched_0160.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\crosshatched\\crosshatched_0160.jpg",
+      "sha256": "a2cd3383f88506193719b3deb9fd9bc64ea75bab82a1888ada0e5a3284184fe8",
+      "size": [
+        430,
+        379
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 27,
+      "review_id": "87d2597c2e1f",
+      "image_id": "flecked/flecked_0140.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\flecked\\flecked_0140.jpg",
+      "sha256": "2778017701958c864657b007e88dfc255112c1ec56cfa3aeedfddf3e75107d26",
+      "size": [
+        540,
+        405
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 28,
+      "review_id": "b3f80f92a468",
+      "image_id": "gauzy/gauzy_0146.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\gauzy\\gauzy_0146.jpg",
+      "sha256": "ef37fd24d7f3fee3670029c83d1c8f66228a499b32ed5de57d571cf290bed7b5",
+      "size": [
+        342,
+        300
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 29,
+      "review_id": "8229974faa0b",
+      "image_id": "gauzy/gauzy_0112.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\gauzy\\gauzy_0112.jpg",
+      "sha256": "0d8ea9208b52cbc758b86cebaf6bf048d44b9365443f8d0c7df3293d24da50c4",
+      "size": [
+        640,
+        489
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 30,
+      "review_id": "c0cd81c62004",
+      "image_id": "potholed/potholed_0168.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\potholed\\potholed_0168.jpg",
+      "sha256": "22f1f978cd960fbc3d8959cbae635eefb0a081f92e82551c48f16af2c151580f",
+      "size": [
+        640,
+        486
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 31,
+      "review_id": "021bbce1099b",
+      "image_id": "lacelike/lacelike_0026.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\lacelike\\lacelike_0026.jpg",
+      "sha256": "2cdf3db71abf170bbb5beefe0bb8a28c7faa0ce30808ce332d9d6c3978614bd2",
+      "size": [
+        306,
+        404
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 32,
+      "review_id": "b9e0916f4c84",
+      "image_id": "cobwebbed/cobwebbed_0105.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\cobwebbed\\cobwebbed_0105.jpg",
+      "sha256": "754586c1de0b7373cc9dd2618f48bce63706db8750673d6d948bfa0a1ce785a8",
+      "size": [
+        601,
+        620
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 33,
+      "review_id": "c3ba30645914",
+      "image_id": "perforated/perforated_0110.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\perforated\\perforated_0110.jpg",
+      "sha256": "ee0eed9daf085136d662799e45d0e8991af0c4b8fcc2337a415ef70e971d3110",
+      "size": [
+        326,
+        335
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 34,
+      "review_id": "784d3610524a",
+      "image_id": "swirly/swirly_0092.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\swirly\\swirly_0092.jpg",
+      "sha256": "30696b5e3bf7bc808fa8b971c7154cf9319a2c4be4d4790a119d80f5e45ff743",
+      "size": [
+        469,
+        352
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 35,
+      "review_id": "cd268cb7dc1b",
+      "image_id": "wrinkled/wrinkled_0142.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\wrinkled\\wrinkled_0142.jpg",
+      "sha256": "82e28501eb612d592bbdd004f0736067e6148025f23fc434198e6b5c787c62c9",
+      "size": [
+        320,
+        330
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 36,
+      "review_id": "3f1522147058",
+      "image_id": "scaly/scaly_0133.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\scaly\\scaly_0133.jpg",
+      "sha256": "6347d0cf283617cc3e86b73802217e83687b007c20def89746e09d3b2f2401f5",
+      "size": [
+        640,
+        426
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 37,
+      "review_id": "563d0586e6ed",
+      "image_id": "potholed/potholed_0130.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\potholed\\potholed_0130.jpg",
+      "sha256": "bc1b519752fb6fadae1ac6fba1c42022a617b57534c0a9d43c55d915e6413958",
+      "size": [
+        468,
+        312
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 38,
+      "review_id": "d753b9eeb4d4",
+      "image_id": "woven/woven_0102.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\woven\\woven_0102.jpg",
+      "sha256": "fe3ecfffa0ea025861813763f0d706ab1699d0c8baaabab67cb1901e1da9989c",
+      "size": [
+        640,
+        480
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 39,
+      "review_id": "12b34beb7af2",
+      "image_id": "studded/studded_0171.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\studded\\studded_0171.jpg",
+      "sha256": "3f9dfc29e8206fcd7a60d0aa304942f0f2ce23a6eac0c27fc648635f4915e06e",
+      "size": [
+        337,
+        320
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 40,
+      "review_id": "c1d8480fbcb3",
+      "image_id": "grooved/grooved_0091.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\grooved\\grooved_0091.jpg",
+      "sha256": "b2f4c7131f97edb6c31fa45de2bb3f681de591a7844298e4e2f080077b15731a",
+      "size": [
+        400,
+        400
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 41,
+      "review_id": "f84a6a14bae8",
+      "image_id": "blotchy/blotchy_0083.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\blotchy\\blotchy_0083.jpg",
+      "sha256": "cc58b8b3a6e0e2f5a3f8c2ec9a040a76da880399b86bc0be8109588f16178ad4",
+      "size": [
+        300,
+        300
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 42,
+      "review_id": "b8433fd6468c",
+      "image_id": "cobwebbed/cobwebbed_0106.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\cobwebbed\\cobwebbed_0106.jpg",
+      "sha256": "74337be7df2939976263db9fb1f9118fce291ebf888cce19d9d193ac5056910b",
+      "size": [
+        398,
+        400
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 43,
+      "review_id": "37589043926a",
+      "image_id": "pitted/pitted_0082.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\pitted\\pitted_0082.jpg",
+      "sha256": "81cc56d98be5edae64052f1fbc8c52913a21ce69c5848b35f4f1ea0820225c4b",
+      "size": [
+        640,
+        640
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 44,
+      "review_id": "bc19600f42de",
+      "image_id": "freckled/freckled_0095.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\freckled\\freckled_0095.jpg",
+      "sha256": "4abc3a0bcb123e630975647827c814cde815298929cbbdc6f24e54c5551f4c4b",
+      "size": [
+        500,
+        601
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 45,
+      "review_id": "fcc8a8d1cb0f",
+      "image_id": "pleated/pleated_0074.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\pleated\\pleated_0074.jpg",
+      "sha256": "12ca0efc5373348cc32c8072b13cf2070ea142ec0734f1e424d3ac5a8a825f6b",
+      "size": [
+        388,
+        311
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 46,
+      "review_id": "e14da022640c",
+      "image_id": "sprinkled/sprinkled_0012.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\sprinkled\\sprinkled_0012.jpg",
+      "sha256": "960072ca25144c90b68dcc30b2b4a1f20f8c9e764ba59928f5f8488b0dc682eb",
+      "size": [
+        568,
+        639
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 47,
+      "review_id": "cfb48bb7487f",
+      "image_id": "grid/grid_0042.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\grid\\grid_0042.jpg",
+      "sha256": "d29bdc88c040c4488c31e401687da09cda72b3626143d3019fac01b4c1f64336",
+      "size": [
+        450,
+        338
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 48,
+      "review_id": "096fff32234e",
+      "image_id": "veined/veined_0119.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\veined\\veined_0119.jpg",
+      "sha256": "91a1dd5da19d4d56c49f766a3ed9cb2dd8d5c293c18fd17ff3926679c3573f1c",
+      "size": [
+        320,
+        340
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 49,
+      "review_id": "ec1ad1e670d9",
+      "image_id": "zigzagged/zigzagged_0124.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\zigzagged\\zigzagged_0124.jpg",
+      "sha256": "b1b70119f04a5e5d4c418590bc7ec51b94c79895d105961de0786e1675ff6d25",
+      "size": [
+        593,
+        583
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 50,
+      "review_id": "5cfedf60de45",
+      "image_id": "waffled/waffled_0112.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\waffled\\waffled_0112.jpg",
+      "sha256": "ffe7c04f6e38a0a294c466e0f3ac1a8f77d27765542f3f8a74fb3fde0321cd11",
+      "size": [
+        640,
+        520
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 51,
+      "review_id": "59a40b617c29",
+      "image_id": "braided/braided_0197.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\braided\\braided_0197.jpg",
+      "sha256": "6e4ce794af5a0bb192fbc0f321076d0f848f32a8521284a9cc3b9f3849183aea",
+      "size": [
+        310,
+        300
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 52,
+      "review_id": "b944d503c2c8",
+      "image_id": "honeycombed/honeycombed_0135.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\honeycombed\\honeycombed_0135.jpg",
+      "sha256": "6f138c0af1ed506a6e181477de06729ab51f5a49e2a94a0a05458d5a5f10d973",
+      "size": [
+        395,
+        400
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 53,
+      "review_id": "155cc7b8c434",
+      "image_id": "paisley/paisley_0109.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\paisley\\paisley_0109.jpg",
+      "sha256": "ec235a7f48fdbcef207959cdbceedd11da018276a377bde2409bf8e2de954ea0",
+      "size": [
+        600,
+        567
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 54,
+      "review_id": "61035789854b",
+      "image_id": "pitted/pitted_0025.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\pitted\\pitted_0025.jpg",
+      "sha256": "2b25258f706c772a13797e706646c4895296f3b76c3e0081dd2aaff41e91515a",
+      "size": [
+        640,
+        572
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 55,
+      "review_id": "a5ec48fda81a",
+      "image_id": "cobwebbed/cobwebbed_0072.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\cobwebbed\\cobwebbed_0072.jpg",
+      "sha256": "395a4df2922bc13dc4d9583fe7c53f58c961a6126ae812b91c5e839d16f8a64c",
+      "size": [
+        639,
+        426
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 56,
+      "review_id": "e3e763d96b25",
+      "image_id": "banded/banded_0076.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\banded\\banded_0076.jpg",
+      "sha256": "5f48a942391b6ac24008bb3565d7554ed678d35fdc210252ae90a1f0bad25662",
+      "size": [
+        640,
+        360
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 57,
+      "review_id": "28da35054180",
+      "image_id": "stained/stained_0100.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\stained\\stained_0100.jpg",
+      "sha256": "7f3cf3101309b8a944efac0ce9ea556d302000b7231f80230af962c17eefca09",
+      "size": [
+        435,
+        331
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 58,
+      "review_id": "a5ceea161784",
+      "image_id": "chequered/chequered_0107.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\chequered\\chequered_0107.jpg",
+      "sha256": "7011259688ee060b81c5f8947c06c5425cc0dabb9062934342d4d34a674a354d",
+      "size": [
+        600,
+        600
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 59,
+      "review_id": "72b1ea534a85",
+      "image_id": "crosshatched/crosshatched_0091.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\crosshatched\\crosshatched_0091.jpg",
+      "sha256": "f802b76c1f3e75958a271b8935455c49c41fadebba8e7df6b96768d6a2b85ca2",
+      "size": [
+        512,
+        512
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 60,
+      "review_id": "55aa4394d4c0",
+      "image_id": "cracked/cracked_0077.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\cracked\\cracked_0077.jpg",
+      "sha256": "aac5585e2942bc7a3be72f57c4882be54570a2dce81593407472edc6596fa95e",
+      "size": [
+        640,
+        640
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 61,
+      "review_id": "b0bb217bfa4d",
+      "image_id": "gauzy/gauzy_0087.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\gauzy\\gauzy_0087.jpg",
+      "sha256": "08223446795a8fa01d10a5e3c39bd691ac7e124330daef11f6675f3ec5eb4d93",
+      "size": [
+        639,
+        426
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 62,
+      "review_id": "14543caf14af",
+      "image_id": "grid/grid_0020.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\grid\\grid_0020.jpg",
+      "sha256": "e5462c04f671196fc12eea4cc5deb9f66cba60bf8af3cd77496999b916aafc62",
+      "size": [
+        640,
+        640
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 63,
+      "review_id": "f8f09abca599",
+      "image_id": "bubbly/bubbly_0069.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\bubbly\\bubbly_0069.jpg",
+      "sha256": "265bd7b4321944b2da496777e8f911c326ed85f908975e0db181d4601b7ff22e",
+      "size": [
+        630,
+        600
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 64,
+      "review_id": "6eb9505b5661",
+      "image_id": "stratified/stratified_0087.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\stratified\\stratified_0087.jpg",
+      "sha256": "2fc703b6ab6b1eeb177959d2d5c2e6f5471a193da54b1646b9be2f9bf3a562b4",
+      "size": [
+        639,
+        390
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 65,
+      "review_id": "ab176e5be7f0",
+      "image_id": "stained/stained_0030.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\stained\\stained_0030.jpg",
+      "sha256": "170c90845f5cb846da9546d3e6038cf5d7f256b4b7a0224b5b1b5b2194f43c28",
+      "size": [
+        640,
+        485
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 66,
+      "review_id": "646b6a68418f",
+      "image_id": "knitted/knitted_0201.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\knitted\\knitted_0201.jpg",
+      "sha256": "3df07efb73883295fb1cfacf7ca1843b9cbfa3e733659da493065f9cc05d0cba",
+      "size": [
+        635,
+        588
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 67,
+      "review_id": "f70f495d579b",
+      "image_id": "banded/banded_0129.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\banded\\banded_0129.jpg",
+      "sha256": "18db9b7ec998cf0934a210061f4f02bb648d6ccd06f8e1fd84a32e676d6dc117",
+      "size": [
+        388,
+        300
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 68,
+      "review_id": "ff3d33388752",
+      "image_id": "cracked/cracked_0164.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\cracked\\cracked_0164.jpg",
+      "sha256": "cf882de4f189702fd1c45056e483142d0e92402e242e71c9759c8418601506e8",
+      "size": [
+        467,
+        410
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 69,
+      "review_id": "50081571dcca",
+      "image_id": "lacelike/lacelike_0023.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\lacelike\\lacelike_0023.jpg",
+      "sha256": "7c2c0dbe3c286c5ebef5f8c148af97ee8cc504d567e05016c8e02c9d1c7be2b4",
+      "size": [
+        500,
+        375
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 70,
+      "review_id": "9e505e174d7b",
+      "image_id": "flecked/flecked_0042.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\flecked\\flecked_0042.jpg",
+      "sha256": "05885a9fb2fc7abcc1c76e4bec34ac36bad4b3577707f1ff0196f7c64bdb606e",
+      "size": [
+        400,
+        400
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 71,
+      "review_id": "4623133048c4",
+      "image_id": "marbled/marbled_0139.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\marbled\\marbled_0139.jpg",
+      "sha256": "eed27a07706ca0af96731b8d8ed4ff24f38ec86020f485a9673eabdc234456a9",
+      "size": [
+        640,
+        426
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 72,
+      "review_id": "ee5f21540113",
+      "image_id": "fibrous/fibrous_0133.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\fibrous\\fibrous_0133.jpg",
+      "sha256": "6285fd01a7398613a4f23dc3831c2a6ceb007c5ad80bf684edd7eff60ca68ae7",
+      "size": [
+        640,
+        522
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 73,
+      "review_id": "088f994d1075",
+      "image_id": "veined/veined_0094.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\veined\\veined_0094.jpg",
+      "sha256": "b4b368f3808f2bb6847ea51d23d2b19718d25d51a47164e898cd5e0c21e70453",
+      "size": [
+        367,
+        550
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 74,
+      "review_id": "5ad47dfc0a47",
+      "image_id": "zigzagged/zigzagged_0055.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\zigzagged\\zigzagged_0055.jpg",
+      "sha256": "b15360b96e9624b2420f071de7611f9dba55dee8618f0e11fe1fe89ed8a77991",
+      "size": [
+        600,
+        300
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 75,
+      "review_id": "1338d78447ef",
+      "image_id": "cracked/cracked_0167.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\cracked\\cracked_0167.jpg",
+      "sha256": "16c196781d141959ec2fb9215867959fffe580bacda0e4597599612c02c17735",
+      "size": [
+        549,
+        600
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 76,
+      "review_id": "1f1bf9908f8d",
+      "image_id": "fibrous/fibrous_0115.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\fibrous\\fibrous_0115.jpg",
+      "sha256": "743d938c6782938d92d22b8f12d019f4766b923b213dda9120ec9cf39eb26611",
+      "size": [
+        560,
+        521
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 77,
+      "review_id": "0d1b11472dd0",
+      "image_id": "crosshatched/crosshatched_0045.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\crosshatched\\crosshatched_0045.jpg",
+      "sha256": "0bbf7b3d0ddd9b1774c34bcda7f42d8e737d2b820c8a354024c7d7404d537b35",
+      "size": [
+        600,
+        300
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 78,
+      "review_id": "5536ed424afb",
+      "image_id": "honeycombed/honeycombed_0115.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\honeycombed\\honeycombed_0115.jpg",
+      "sha256": "87a2c1591f8d282c7982b97004c09acdf2ae40bc820b32d88bab471565c07506",
+      "size": [
+        622,
+        562
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 79,
+      "review_id": "fa84c1f9721b",
+      "image_id": "sprinkled/sprinkled_0088.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\sprinkled\\sprinkled_0088.jpg",
+      "sha256": "a70f9418ad69a1bd7726ce133ebc1633cb53c628aeb947c31f5b82a13ee616ee",
+      "size": [
+        639,
+        480
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 80,
+      "review_id": "0a49a833a01c",
+      "image_id": "swirly/swirly_0082.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\swirly\\swirly_0082.jpg",
+      "sha256": "ab6ea2954b940ad10c1070048a0821287ca76e47b3ee43eda6f46966f41e5826",
+      "size": [
+        415,
+        311
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 81,
+      "review_id": "70d5509ab42f",
+      "image_id": "pitted/pitted_0026.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\pitted\\pitted_0026.jpg",
+      "sha256": "9a7ca7214a515e470e629a8d39d8287333acdb2ee548724cc7b9142f87fa93e7",
+      "size": [
+        500,
+        333
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 82,
+      "review_id": "b87963d4c222",
+      "image_id": "cracked/cracked_0057.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\cracked\\cracked_0057.jpg",
+      "sha256": "35705670fc671653b006041d2cfaa38dc010f1fd75acba3e1e2fb070e4cd669e",
+      "size": [
+        380,
+        328
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 83,
+      "review_id": "8975cf9e36d6",
+      "image_id": "interlaced/interlaced_0139.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\interlaced\\interlaced_0139.jpg",
+      "sha256": "cfa4ce5d0f5125ab11a8fa7fa389eebe5cacb3f47b693fbe51364e18b7cbac40",
+      "size": [
+        534,
+        310
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 84,
+      "review_id": "f11289e1d25c",
+      "image_id": "interlaced/interlaced_0146.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\interlaced\\interlaced_0146.jpg",
+      "sha256": "d14d72f7df87d724223091dc69a87e7988d0c05ffbe16dfe598df9ac669d3537",
+      "size": [
+        310,
+        465
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 85,
+      "review_id": "a59536580034",
+      "image_id": "zigzagged/zigzagged_0064.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\zigzagged\\zigzagged_0064.jpg",
+      "sha256": "235b83970ea904841bfa4436ad1d5b0a26a55695c4c9f97b655036f4220b49f6",
+      "size": [
+        640,
+        640
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 86,
+      "review_id": "700ae53ee3ca",
+      "image_id": "freckled/freckled_0064.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\freckled\\freckled_0064.jpg",
+      "sha256": "dca71130ac5b774f91d288ac28abb59e1210c557a068be050f5c2c7cfd7e5171",
+      "size": [
+        333,
+        500
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 87,
+      "review_id": "bc021d2392fe",
+      "image_id": "marbled/marbled_0182.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\marbled\\marbled_0182.jpg",
+      "sha256": "e4238bdef56b7f21352226bf01e00743b628f23e7f9874863b906b0c4f52c984",
+      "size": [
+        640,
+        485
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 88,
+      "review_id": "438f738ff238",
+      "image_id": "knitted/knitted_0195.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\knitted\\knitted_0195.jpg",
+      "sha256": "5d13ba4a39ac17c9c4620a8bb03777f3893ed7c4f8d1541f30de6d04c9930635",
+      "size": [
+        459,
+        470
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 89,
+      "review_id": "88249891ce62",
+      "image_id": "striped/striped_0071.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\striped\\striped_0071.jpg",
+      "sha256": "8924faef2741e571d5183fe3b521dc27c3e91b46a68b2a67389e4a10ec603ecc",
+      "size": [
+        640,
+        402
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 90,
+      "review_id": "3026b4d75f44",
+      "image_id": "wrinkled/wrinkled_0080.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\wrinkled\\wrinkled_0080.jpg",
+      "sha256": "ba88c1c4eb81b881ba736b40641f96939f55050c00b352b76ff82c5371f2159e",
+      "size": [
+        626,
+        417
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 91,
+      "review_id": "22890ec92ddf",
+      "image_id": "matted/matted_0139.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\matted\\matted_0139.jpg",
+      "sha256": "343170f425f738b4b8c8abbb7dbbc0bf13120c9df7d2ad57672a4cf9007bbace",
+      "size": [
+        345,
+        390
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 92,
+      "review_id": "807e81d7fb26",
+      "image_id": "swirly/swirly_0156.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\swirly\\swirly_0156.jpg",
+      "sha256": "b7c62827ef0741c34ffd5ed9a053874c0efb060a538c22a30d8b69ab9ff49687",
+      "size": [
+        640,
+        503
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 93,
+      "review_id": "98a4c4b33a65",
+      "image_id": "wrinkled/wrinkled_0087.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\wrinkled\\wrinkled_0087.jpg",
+      "sha256": "d209dbf7d739066827c306f34642ce9712bb196e9bda3e987473e7ea9c3a45ba",
+      "size": [
+        460,
+        639
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 94,
+      "review_id": "367b67f34832",
+      "image_id": "spiralled/spiralled_0100.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\spiralled\\spiralled_0100.jpg",
+      "sha256": "e97cfb6d2671556b41f5a9ccd508a579699f49c4729e5b71cdcc426b239b383a",
+      "size": [
+        640,
+        480
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 95,
+      "review_id": "35ec399ae23b",
+      "image_id": "paisley/paisley_0068.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\paisley\\paisley_0068.jpg",
+      "sha256": "edb0d71ce95b4d19aace5e8c42ca0d5b4df1ad18580758e21a7517f3a7558121",
+      "size": [
+        412,
+        328
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 96,
+      "review_id": "5e5c49d73c24",
+      "image_id": "pleated/pleated_0072.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\pleated\\pleated_0072.jpg",
+      "sha256": "16b8ec36fe37dbdb9a6fcbdd472d0d25f0f4271a21524870729d33025348fd1d",
+      "size": [
+        500,
+        375
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 97,
+      "review_id": "5960f084ad84",
+      "image_id": "striped/striped_0070.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\striped\\striped_0070.jpg",
+      "sha256": "2fada739ed1aacdc2bc8d1957c1b54372f89c12bcaf3cdac385d489f33332bec",
+      "size": [
+        458,
+        310
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 98,
+      "review_id": "9989c925cd76",
+      "image_id": "frilly/frilly_0117.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\frilly\\frilly_0117.jpg",
+      "sha256": "9edb472c69795193d5cd6129e4d594e320de792823cda6d9d550682ab5e8b194",
+      "size": [
+        417,
+        423
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 99,
+      "review_id": "de42c9b3af3c",
+      "image_id": "marbled/marbled_0123.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\marbled\\marbled_0123.jpg",
+      "sha256": "7d74c734add5cb34ad06d9432727284f0893766e6d3af187ea478566d2bf735a",
+      "size": [
+        640,
+        478
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 100,
+      "review_id": "4438e8bdfde6",
+      "image_id": "meshed/meshed_0102.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\meshed\\meshed_0102.jpg",
+      "sha256": "6e7846bed8e87f6588e1fc5af5168a235e89262487c3e972aba4e4827f1861be",
+      "size": [
+        640,
+        480
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 101,
+      "review_id": "49b40ff65a40",
+      "image_id": "meshed/meshed_0188.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\meshed\\meshed_0188.jpg",
+      "sha256": "8ba0cce8d817462d3e897df76de82e9245ae1667627be923b89c2bf093e6b787",
+      "size": [
+        331,
+        371
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 102,
+      "review_id": "01a349c15e15",
+      "image_id": "knitted/knitted_0134.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\knitted\\knitted_0134.jpg",
+      "sha256": "59e942aa522f00f2ae0f944e05cdfedd8c222c8de0209574308eab7383ebebf0",
+      "size": [
+        635,
+        473
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 103,
+      "review_id": "24e9605605c4",
+      "image_id": "marbled/marbled_0132.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\marbled\\marbled_0132.jpg",
+      "sha256": "ee246844f29562ba0de7e739e7c78fdc8cb5f3fbfe9a7d3c6549c06ce9e11b34",
+      "size": [
+        631,
+        640
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 104,
+      "review_id": "9abb3208ae27",
+      "image_id": "stratified/stratified_0113.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\stratified\\stratified_0113.jpg",
+      "sha256": "85d80ff0663c183670a5af21543ffb413a7e300f68aae37ef80d64f2e0aa71e7",
+      "size": [
+        527,
+        458
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 105,
+      "review_id": "c3cfc32af426",
+      "image_id": "grooved/grooved_0084.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\grooved\\grooved_0084.jpg",
+      "sha256": "1909bd909b93a468695ab21b245334a9f180025caeb546ca2863eb98badd361d",
+      "size": [
+        588,
+        441
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 106,
+      "review_id": "8f197abf6ee1",
+      "image_id": "polka-dotted/polka-dotted_0128.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\polka-dotted\\polka-dotted_0128.jpg",
+      "sha256": "51ae3b0bff9a0a7cfbabfefe7f0d27f35283e7862d34b1a3ac03ba5c5fa4b5d6",
+      "size": [
+        331,
+        370
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 107,
+      "review_id": "7415af4dc0d8",
+      "image_id": "lined/lined_0035.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\lined\\lined_0035.jpg",
+      "sha256": "35c0d8926161504ec0f782356f3e433b25e286325e2a550ab420b47f30cc6723",
+      "size": [
+        400,
+        468
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 108,
+      "review_id": "28ce96d9de06",
+      "image_id": "potholed/potholed_0109.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\potholed\\potholed_0109.jpg",
+      "sha256": "5db2b6e631949cbdcb3bd8abe8bd99aeb2c399ba054cb2729b0e731a419ee47d",
+      "size": [
+        364,
+        363
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 109,
+      "review_id": "eae518f0d7e3",
+      "image_id": "matted/matted_0050.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\matted\\matted_0050.jpg",
+      "sha256": "c93e3817404870ebe7ca06e78b08d0e90c74faabe1d80047871afa8eec43025b",
+      "size": [
+        639,
+        426
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 110,
+      "review_id": "decb9e45dc27",
+      "image_id": "porous/porous_0166.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\porous\\porous_0166.jpg",
+      "sha256": "a9fb2ac5ce86f2957350ef5d88a509fd5cab35902225ea2efe1263826ca32a33",
+      "size": [
+        600,
+        407
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 111,
+      "review_id": "3bdf709b2ecd",
+      "image_id": "spiralled/spiralled_0015.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\spiralled\\spiralled_0015.jpg",
+      "sha256": "9bfa3e13285d99c74f21bd3746bffe46a0a4c4eede71c814c27b57c6e43af3a3",
+      "size": [
+        640,
+        427
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 112,
+      "review_id": "1282b0a4eb36",
+      "image_id": "flecked/flecked_0142.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\flecked\\flecked_0142.jpg",
+      "sha256": "814cc58a92f0d8060e510da0888bd1f35e810141cf51e61d336c9e33b65c5559",
+      "size": [
+        533,
+        525
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 113,
+      "review_id": "1e626e741dec",
+      "image_id": "cobwebbed/cobwebbed_0120.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\cobwebbed\\cobwebbed_0120.jpg",
+      "sha256": "db8662ae287baf62c4f0088128b310941c630287580fde1a5f5a9ca9f2bae8f4",
+      "size": [
+        600,
+        595
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 114,
+      "review_id": "61db2c1e91eb",
+      "image_id": "pleated/pleated_0046.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\pleated\\pleated_0046.jpg",
+      "sha256": "5fbf0a8975c7b8381bb9b222900f10b03500c7092cf87aa4c0f5651b1732d3b1",
+      "size": [
+        600,
+        596
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 115,
+      "review_id": "e94617438b4c",
+      "image_id": "zigzagged/zigzagged_0073.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\zigzagged\\zigzagged_0073.jpg",
+      "sha256": "5a7be38fdc007a4b3f1431c5fef796bf1b78840ddb7d44a400ee85d260a5c7f5",
+      "size": [
+        500,
+        500
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 116,
+      "review_id": "db224dad53c5",
+      "image_id": "porous/porous_0122.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\porous\\porous_0122.jpg",
+      "sha256": "fbebe8754b75e941bde4ddb06e43512dab1548118eb4606052e645029ed71bd1",
+      "size": [
+        457,
+        511
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 117,
+      "review_id": "93a8bf434c42",
+      "image_id": "grooved/grooved_0166.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\grooved\\grooved_0166.jpg",
+      "sha256": "2db6b0c6263a5d834b0093d6a3fdb7566028a4bbf133cf3ecf55d0225539048c",
+      "size": [
+        416,
+        480
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 118,
+      "review_id": "b9801e8226c0",
+      "image_id": "bumpy/bumpy_0070.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\bumpy\\bumpy_0070.jpg",
+      "sha256": "615adcdc2dbbf1ba48c609e53a6be41bf76ce2219ea1814801e5a0729e719e6e",
+      "size": [
+        640,
+        427
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 119,
+      "review_id": "fb9fca0dceb8",
+      "image_id": "sprinkled/sprinkled_0033.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\sprinkled\\sprinkled_0033.jpg",
+      "sha256": "88cba3d97f7dc88af4e512818bc5a45f3fa1614f314ae5d702b320aa3269c41a",
+      "size": [
+        300,
+        300
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 120,
+      "review_id": "cf3e513c6f64",
+      "image_id": "flecked/flecked_0056.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\flecked\\flecked_0056.jpg",
+      "sha256": "0cb43cf38cbfc1bc12c9119146ba6c8547baaab40177e25e16c58ebe627786ff",
+      "size": [
+        426,
+        639
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 121,
+      "review_id": "fc19dc91211a",
+      "image_id": "gauzy/gauzy_0114.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\gauzy\\gauzy_0114.jpg",
+      "sha256": "b5879cc7eef396d086591c09832791ce4b4ccd0175ec7f7170d7e44a3b03e7ea",
+      "size": [
+        537,
+        373
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 122,
+      "review_id": "bf46eed52da3",
+      "image_id": "interlaced/interlaced_0144.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\interlaced\\interlaced_0144.jpg",
+      "sha256": "718dc421dd9d5bdef50c50692dec31ad9ef36ce94a65496e65978158df24b211",
+      "size": [
+        563,
+        403
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 123,
+      "review_id": "44fe000e0925",
+      "image_id": "frilly/frilly_0052.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\frilly\\frilly_0052.jpg",
+      "sha256": "55aeb3e59c27974b0df9a8b0e6fd86f070bc6e7373e5f7c47b3815335c17b7fe",
+      "size": [
+        501,
+        501
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 124,
+      "review_id": "c97bfa89814f",
+      "image_id": "bubbly/bubbly_0103.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\bubbly\\bubbly_0103.jpg",
+      "sha256": "7cabe98b243760b7e3329d7b374134b8eec4aa85f94ee760c592ec6b68b6eeca",
+      "size": [
+        640,
+        587
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 125,
+      "review_id": "860549dc1a89",
+      "image_id": "woven/woven_0120.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\woven\\woven_0120.jpg",
+      "sha256": "c0451c9cee4d8ad5cf15915698e26d55c9966ce555a4e4bb62d656a6d5ca841c",
+      "size": [
+        444,
+        375
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 126,
+      "review_id": "ae6b2f3b638f",
+      "image_id": "crystalline/crystalline_0119.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\crystalline\\crystalline_0119.jpg",
+      "sha256": "2d4d58da414610119b5789c092564e7bf4485e27797bd5f6581841b47e33b745",
+      "size": [
+        540,
+        640
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 127,
+      "review_id": "6b9ef1a02525",
+      "image_id": "veined/veined_0091.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\veined\\veined_0091.jpg",
+      "sha256": "750426a871f0f64e9e1e3459a15aa5b8dd21e61f6dfe6bd6a4a69c2df275f571",
+      "size": [
+        331,
+        440
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 128,
+      "review_id": "eecca0c172dd",
+      "image_id": "bubbly/bubbly_0104.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\bubbly\\bubbly_0104.jpg",
+      "sha256": "89f5b264cb405e1e25b1776b72162fef86335817e1dc5defe1195f0ea8a92553",
+      "size": [
+        418,
+        338
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 129,
+      "review_id": "87ce06166a96",
+      "image_id": "lined/lined_0129.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\lined\\lined_0129.jpg",
+      "sha256": "75af15ff5359e5b85d1e5969a5dca3321fe4fa7d807fdb0e073d37466a6c1b95",
+      "size": [
+        388,
+        625
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 130,
+      "review_id": "991abed56b7d",
+      "image_id": "braided/braided_0141.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\braided\\braided_0141.jpg",
+      "sha256": "b58b1f8e6df2a8295eda9265509db48b45c2109db811f66af17721803f68c145",
+      "size": [
+        640,
+        480
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 131,
+      "review_id": "1b31c829276b",
+      "image_id": "matted/matted_0105.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\matted\\matted_0105.jpg",
+      "sha256": "3055efb606cf28472602a0a8d29222a9c89aa325631482e832ecd74840b18ba4",
+      "size": [
+        310,
+        356
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 132,
+      "review_id": "31235f8f0ec6",
+      "image_id": "striped/striped_0103.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\striped\\striped_0103.jpg",
+      "sha256": "3e93d15313299014a549ab632fa162ed16956e2ce0ffdf741ebea24bc1241c0a",
+      "size": [
+        640,
+        513
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 133,
+      "review_id": "923b9f3da7df",
+      "image_id": "matted/matted_0111.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\matted\\matted_0111.jpg",
+      "sha256": "d345dff091ac598614fd94b72261b09753b8d7ee2fa49a2f6cebc5a80941db58",
+      "size": [
+        302,
+        441
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 134,
+      "review_id": "d246383afd7f",
+      "image_id": "sprinkled/sprinkled_0081.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\sprinkled\\sprinkled_0081.jpg",
+      "sha256": "188856a5b9b3bbb123bb31907b5f98bc64bd934dc41399812ba4cd2566f97025",
+      "size": [
+        400,
+        335
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 135,
+      "review_id": "484214db6536",
+      "image_id": "meshed/meshed_0150.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\meshed\\meshed_0150.jpg",
+      "sha256": "8c195607c25d46b03c38037d716788f101fb1865429d4bbf00df7f354d9bca5e",
+      "size": [
+        536,
+        369
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 136,
+      "review_id": "e40f6c1771ef",
+      "image_id": "smeared/smeared_0066.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\smeared\\smeared_0066.jpg",
+      "sha256": "336ce459eb62ba70ece050d17f31e9b35b24f6ecec0aabd0287d150c8bf41f95",
+      "size": [
+        639,
+        424
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 137,
+      "review_id": "3c7f1a869442",
+      "image_id": "smeared/smeared_0045.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\smeared\\smeared_0045.jpg",
+      "sha256": "dca19fe79e1581c593fbeabcc7dddede78ba675ec0f210bd6a047d54ba9e49b6",
+      "size": [
+        512,
+        490
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 138,
+      "review_id": "fcfce6cebcf8",
+      "image_id": "stained/stained_0140.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\stained\\stained_0140.jpg",
+      "sha256": "5c60073c8daa449cdbfbe2b366fe03d55cc9aa8a7a3958a2968d6646f73715a4",
+      "size": [
+        640,
+        531
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 139,
+      "review_id": "33742c49bfdc",
+      "image_id": "grid/grid_0124.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\grid\\grid_0124.jpg",
+      "sha256": "9b7f5fdc408ba0d074e9ec96b4fbce538fad4437fbc5062e50ed347b1c6ef713",
+      "size": [
+        351,
+        379
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 140,
+      "review_id": "f81e98a45056",
+      "image_id": "bumpy/bumpy_0112.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\bumpy\\bumpy_0112.jpg",
+      "sha256": "b5d250018f5d24e709280a6d611695f8ee9766a5559a29d5dced78e90a2da25a",
+      "size": [
+        318,
+        365
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 141,
+      "review_id": "6de2ec5147c3",
+      "image_id": "meshed/meshed_0149.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\meshed\\meshed_0149.jpg",
+      "sha256": "6e9a58457fb23abcad7e59e6d17f60532b87b6e5a5dd18184920a24cc95d729d",
+      "size": [
+        640,
+        640
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 142,
+      "review_id": "db8c2ae93b54",
+      "image_id": "crystalline/crystalline_0112.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\crystalline\\crystalline_0112.jpg",
+      "sha256": "9501a2a2cb03d6e1bafe61e868951fc67fa96f6b1054bb3ae20627053f6759fc",
+      "size": [
+        556,
+        547
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 143,
+      "review_id": "da3b1ae81977",
+      "image_id": "banded/banded_0151.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\banded\\banded_0151.jpg",
+      "sha256": "b083827b906e43454ba49b049cb4e9003fbc92febf2d3430b6f01cd38992d47f",
+      "size": [
+        312,
+        312
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 144,
+      "review_id": "a9509e481cc4",
+      "image_id": "fibrous/fibrous_0127.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\fibrous\\fibrous_0127.jpg",
+      "sha256": "4379929b76ff88039984ade8111de5c96a8cd632308b72338e8662d298e5f0db",
+      "size": [
+        473,
+        426
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 145,
+      "review_id": "1b56f3bb44e2",
+      "image_id": "polka-dotted/polka-dotted_0130.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\polka-dotted\\polka-dotted_0130.jpg",
+      "sha256": "5e6897e8d621dc6cc79a4a9a7f3a5cced3bc8c2692a4e672316eccfca0834ef5",
+      "size": [
+        451,
+        339
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 146,
+      "review_id": "a8d65f5ebbb7",
+      "image_id": "studded/studded_0113.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\studded\\studded_0113.jpg",
+      "sha256": "c275a099dc3f82bc3705c3fbe7c0b991b89ebc488d061a09d6f59dd55d68f89f",
+      "size": [
+        341,
+        363
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 147,
+      "review_id": "48a2860aa426",
+      "image_id": "studded/studded_0162.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\studded\\studded_0162.jpg",
+      "sha256": "8ddcc2e542c29fade4a0148ea261d04a152893cae94747c50e3f1b954efe2ab6",
+      "size": [
+        305,
+        316
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 148,
+      "review_id": "3b5aeaeaa0a7",
+      "image_id": "grid/grid_0126.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\grid\\grid_0126.jpg",
+      "sha256": "c64611eac6763e58f68ba12bb5f21f67f9c1cdf1d56834f79581355cd9a0c15e",
+      "size": [
+        402,
+        366
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 149,
+      "review_id": "91e8eefe1d81",
+      "image_id": "stained/stained_0099.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\stained\\stained_0099.jpg",
+      "sha256": "76f7c4119a7b9b10cc943854981069970ac7529e97ac2e9a87908ef56bbd95ab",
+      "size": [
+        640,
+        537
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 150,
+      "review_id": "e4c5e1dfe544",
+      "image_id": "chequered/chequered_0205.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\chequered\\chequered_0205.jpg",
+      "sha256": "8468c846da77081c35dcf52846130d17a8147e642b4d684699f72018d135f6f1",
+      "size": [
+        393,
+        427
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 151,
+      "review_id": "22247de2ddf8",
+      "image_id": "braided/braided_0152.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\braided\\braided_0152.jpg",
+      "sha256": "90df31dfac5957add36b9851055537dd6d9c04e2ca6990342dc9287a41c51f8b",
+      "size": [
+        391,
+        374
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 152,
+      "review_id": "af14d7f45e4b",
+      "image_id": "chequered/chequered_0049.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\chequered\\chequered_0049.jpg",
+      "sha256": "e78498b38e59d71457f6f009d38915ea3e9c27dbd693cb30226970408f2e9460",
+      "size": [
+        622,
+        622
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 153,
+      "review_id": "067a39fff493",
+      "image_id": "dotted/dotted_0061.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\dotted\\dotted_0061.jpg",
+      "sha256": "d16d373869560bdd51b59fc328325153fdbb3b2d4e88078eeacfa83d65783c65",
+      "size": [
+        639,
+        346
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 154,
+      "review_id": "b18472fecdda",
+      "image_id": "crystalline/crystalline_0217.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\crystalline\\crystalline_0217.jpg",
+      "sha256": "a0a99e7798f09128783c6eb1eef0d2baabe467eee42df05a0f75a14886928154",
+      "size": [
+        344,
+        349
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 155,
+      "review_id": "3646dda4c594",
+      "image_id": "freckled/freckled_0088.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\freckled\\freckled_0088.jpg",
+      "sha256": "b1e99985e289a93848f9fbe15f55c7f018af55cd906ccfc415c74c037e0de678",
+      "size": [
+        580,
+        387
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 156,
+      "review_id": "00af9ff4236e",
+      "image_id": "frilly/frilly_0059.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\frilly\\frilly_0059.jpg",
+      "sha256": "1943f54036714bf6b7049580a40b6838e90cad91527c4dabf2cbc8e53d68f533",
+      "size": [
+        640,
+        480
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 157,
+      "review_id": "f1daabc43e37",
+      "image_id": "dotted/dotted_0112.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\dotted\\dotted_0112.jpg",
+      "sha256": "abd2a73b8f8280ddc7f49b5f6bd424c2adaa85f2ecc40538c781d3a7aec71fa6",
+      "size": [
+        476,
+        468
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 158,
+      "review_id": "3dc94d1cd601",
+      "image_id": "interlaced/interlaced_0156.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\interlaced\\interlaced_0156.jpg",
+      "sha256": "fa5a2133d542a04c1f4eb23c72a882f43ad1a7c26dfd27f8c847aa013461fdee",
+      "size": [
+        300,
+        302
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 159,
+      "review_id": "5eb51105e014",
+      "image_id": "chequered/chequered_0115.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\chequered\\chequered_0115.jpg",
+      "sha256": "f87e9b14d6e9c921edb8eb8b221a4cac5ca24d8139933b0a0cf4b967bd6ffb79",
+      "size": [
+        375,
+        385
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 160,
+      "review_id": "935c8bc63a6d",
+      "image_id": "porous/porous_0082.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\porous\\porous_0082.jpg",
+      "sha256": "dad0d5f439050ab9f7912cc08914a76edaa132032a248cfcc353e25b1c289164",
+      "size": [
+        639,
+        426
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 161,
+      "review_id": "a6e6f97239c3",
+      "image_id": "banded/banded_0108.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\banded\\banded_0108.jpg",
+      "sha256": "baa96b24faef1cd276069d08b45db7c73419d633e77d9e1c82f1a5f42f94609a",
+      "size": [
+        336,
+        339
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 162,
+      "review_id": "fed60d76f04b",
+      "image_id": "perforated/perforated_0068.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\perforated\\perforated_0068.jpg",
+      "sha256": "7fc3f2e3bea89858bd3b8c67a2f8350f8bf4bb5302b07bc05322c1a7b3bdf934",
+      "size": [
+        639,
+        574
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 163,
+      "review_id": "633665e1dea3",
+      "image_id": "waffled/waffled_0053.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\waffled\\waffled_0053.jpg",
+      "sha256": "8a4699a0b5289c5ea60dfc2749e0caa581749b2fb50f7140616c0b9ebcca37b8",
+      "size": [
+        450,
+        364
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 164,
+      "review_id": "3f5e7f6fdcb3",
+      "image_id": "scaly/scaly_0164.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\scaly\\scaly_0164.jpg",
+      "sha256": "06408c5f6363b85c3c09d8a0a18313899f40c00881442a78e292200b42c5216e",
+      "size": [
+        640,
+        495
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 165,
+      "review_id": "c7b7518f01e0",
+      "image_id": "wrinkled/wrinkled_0024.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\wrinkled\\wrinkled_0024.jpg",
+      "sha256": "fa9e21ac54ec93ae84df22ef2e35639190ac54ff5180112a053ee385faa5b557",
+      "size": [
+        500,
+        333
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 166,
+      "review_id": "31c357819239",
+      "image_id": "scaly/scaly_0146.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\scaly\\scaly_0146.jpg",
+      "sha256": "be3214d48e057204947688cf9c4406bdcdf75e3a2f93b56828d8f47544720b6f",
+      "size": [
+        320,
+        325
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 167,
+      "review_id": "cbbd2bd12f7c",
+      "image_id": "waffled/waffled_0188.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\waffled\\waffled_0188.jpg",
+      "sha256": "7873a9ca6da6c1912d689c21af69f2f2b7c89cec29ceab0482ca3d783082e672",
+      "size": [
+        640,
+        468
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 168,
+      "review_id": "70dedc0d61e4",
+      "image_id": "blotchy/blotchy_0131.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\blotchy\\blotchy_0131.jpg",
+      "sha256": "c34711162e8b0025cf790f2ede2e8d1106442d518d92cf014a8d034055954b9f",
+      "size": [
+        315,
+        313
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 169,
+      "review_id": "59518766b6f0",
+      "image_id": "pitted/pitted_0083.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\pitted\\pitted_0083.jpg",
+      "sha256": "dee4ace511ee7b0c27f0644b9552f4457ab5c189bf2f9a07e9fc565a1f486a25",
+      "size": [
+        639,
+        426
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 170,
+      "review_id": "f0e89f442907",
+      "image_id": "lined/lined_0112.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\lined\\lined_0112.jpg",
+      "sha256": "049cc44738b89a990ce28e7f7febb7051debbf1661196ef750f47151e3e3f960",
+      "size": [
+        481,
+        451
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 171,
+      "review_id": "553c3a686f7d",
+      "image_id": "perforated/perforated_0051.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\perforated\\perforated_0051.jpg",
+      "sha256": "9844ac2afd163e28d4ff8a22a203e991c6d9584aa08e80be2656c52f1e30ab72",
+      "size": [
+        448,
+        336
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 172,
+      "review_id": "9943ed6e3e81",
+      "image_id": "spiralled/spiralled_0076.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\spiralled\\spiralled_0076.jpg",
+      "sha256": "6b934675157a617acf1f7357800434108a3255eb354cc317c69fa591e308395f",
+      "size": [
+        640,
+        480
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 173,
+      "review_id": "64278ec082a7",
+      "image_id": "polka-dotted/polka-dotted_0180.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\polka-dotted\\polka-dotted_0180.jpg",
+      "sha256": "7c1d39e60bfe2f31971acdf7ddcf5d575f5a25313d28b21b68468d68c5cc7548",
+      "size": [
+        422,
+        456
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 174,
+      "review_id": "9ba2b29ea386",
+      "image_id": "braided/braided_0007.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\braided\\braided_0007.jpg",
+      "sha256": "7ce96c8469fb4616269cdd89f212d5244e4253e2a3bccc6d8e44cdf57f044e9b",
+      "size": [
+        639,
+        426
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 175,
+      "review_id": "ad6509fdc158",
+      "image_id": "perforated/perforated_0131.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\perforated\\perforated_0131.jpg",
+      "sha256": "ba6e41736b438ba45970dbf16a66f02e61520355f52e7743f1e6453432b7c272",
+      "size": [
+        640,
+        480
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 176,
+      "review_id": "e81df5be50d2",
+      "image_id": "stratified/stratified_0162.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\stratified\\stratified_0162.jpg",
+      "sha256": "3ce1006905e55c5f8b47d2f88fb10e5ad54674acc3aa968062d1189a9d6d89be",
+      "size": [
+        640,
+        593
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 177,
+      "review_id": "8f6fd63cf2e2",
+      "image_id": "frilly/frilly_0064.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\frilly\\frilly_0064.jpg",
+      "sha256": "90a3cb7e839dced65b090dcc1d95520956d193cd7387bab0e154463c74461fc9",
+      "size": [
+        640,
+        480
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 178,
+      "review_id": "4ea9313123c3",
+      "image_id": "grooved/grooved_0081.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\grooved\\grooved_0081.jpg",
+      "sha256": "58a48de08b2c8406911ebf54d28ff7f1cadaacf970b75a611eb90e1179e0101a",
+      "size": [
+        428,
+        639
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 179,
+      "review_id": "d78034a30892",
+      "image_id": "smeared/smeared_0033.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\smeared\\smeared_0033.jpg",
+      "sha256": "88e9cd56486e9d9dfc3f89167ddc1e09c65362b46c243d0f1b9b1164bd0e0c29",
+      "size": [
+        332,
+        500
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 180,
+      "review_id": "fb60784b1390",
+      "image_id": "pleated/pleated_0060.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\pleated\\pleated_0060.jpg",
+      "sha256": "90790bf026a976e813549b41e474c65ff1205b322a0a962d27298f54a1cc5109",
+      "size": [
+        639,
+        426
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 181,
+      "review_id": "83e9ff76decc",
+      "image_id": "woven/woven_0030.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\woven\\woven_0030.jpg",
+      "sha256": "799f57e28de17b4a894117f879ea8ef004cb5cc59aade799583e4597abc6d499",
+      "size": [
+        640,
+        480
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 182,
+      "review_id": "f1f87f57aa6e",
+      "image_id": "honeycombed/honeycombed_0148.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\honeycombed\\honeycombed_0148.jpg",
+      "sha256": "4822a2dd15f6b97508cc654d90e924891cc65e7de6693784f5843b79f1a38dff",
+      "size": [
+        434,
+        353
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 183,
+      "review_id": "d51481def0e5",
+      "image_id": "crystalline/crystalline_0160.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\crystalline\\crystalline_0160.jpg",
+      "sha256": "aa450e93199502842b269488029afb9390ce3b01fd013f08baf1f3fb11391e23",
+      "size": [
+        465,
+        314
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 184,
+      "review_id": "c322477637bb",
+      "image_id": "honeycombed/honeycombed_0053.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\honeycombed\\honeycombed_0053.jpg",
+      "sha256": "842412c5f3fb43bfe49d4955e279dded0f9cf7f6605e82c96b82be9e131dbce2",
+      "size": [
+        516,
+        640
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 185,
+      "review_id": "2c6d453fca4a",
+      "image_id": "freckled/freckled_0060.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\freckled\\freckled_0060.jpg",
+      "sha256": "4dfbc632811ac0518235e5c7c929c5fe28213343c609d74539ea9b2a92f3901d",
+      "size": [
+        400,
+        300
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 186,
+      "review_id": "9ee8ce38f2be",
+      "image_id": "scaly/scaly_0179.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\scaly\\scaly_0179.jpg",
+      "sha256": "784e082ac769a86557545413d1f095e408805894c673c397fc32a8c12b107260",
+      "size": [
+        538,
+        394
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 187,
+      "review_id": "2d084b0c4d65",
+      "image_id": "bumpy/bumpy_0122.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\bumpy\\bumpy_0122.jpg",
+      "sha256": "ec11dc0d35ffc5beae445ee48644178aae2b7b5fca51a2fe88a6f30891696771",
+      "size": [
+        513,
+        532
+      ],
+      "official_split": "train1"
+    },
+    {
+      "index": 188,
+      "review_id": "f67f6dd48a48",
+      "image_id": "lacelike/lacelike_0094.jpg",
+      "path": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\archive (23)\\dtd\\images\\lacelike\\lacelike_0094.jpg",
+      "sha256": "387b992bee9afbcadb1813ba4e889af3249c33a24e10d4d919358fea256d0444",
+      "size": [
+        500,
+        500
+      ],
+      "official_split": "train1"
+    }
+  ]
+}

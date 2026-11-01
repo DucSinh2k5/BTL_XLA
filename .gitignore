@@ -1,1 +1,61 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches and temporary test directories
+.pytest_cache/
+.pytest_tmp/
+.cache/
+pytest-of-*/
+torchinductor_*/
+tmp/
+mtacs_caption_*/
+.runtime/
+.ipynb_checkpoints/
+*.tmp
+
+# Virtual environments & local configuration
 .venv/
+env/
+venv/
+.env
+configs/paths.local.json
+configs/web.local.json
+
+# Model weights, checkpoints, embeddings & archives (strictly forbidden on GitHub)
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.h5
+*.msgpack
+*.onnx
+*.engine
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Unpacked large experiment results & runs
+dtd_study*_results_*/
+artifacts/**/*
+!artifacts/**/
+!artifacts/README.md
+experiments/running/**/*
+!experiments/running/**/
+outputs/
+
+# Raw and processed datasets (keep folder structure via .gitkeep)
+data/raw/**/*
+!data/raw/**/
+data/processed/**/*
+!data/processed/**/
+data/archives/**/*
+!data/archives/**/
+
+# Preserve gitkeep files
+!**/.gitkeep

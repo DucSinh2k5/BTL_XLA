@@ -1,0 +1,6 @@
+# Only for an isolated legacy Florence caption runtime; not the web environment.
+-r base.txt
+transformers==4.49.0
+accelerate
+einops
+timm

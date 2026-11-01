@@ -1,0 +1,1304 @@
+[
+  {
+    "path": "experiments/completed/caption_decoder_lora/dtd/caption-cai-tien.ipynb",
+    "old_path": "caption-cai-tien.ipynb",
+    "dataset": "dtd",
+    "method": "full_both_with_decoder_lora_captions",
+    "status": "saved_execution",
+    "note": "",
+    "cells_with_outputs": 7,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"full_both\"",
+      "SEED = int(os.getenv(\"DTD_POOL_SEED\", \"42\"))",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 47  # DTD texture attributes",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False"
+    ],
+    "sha256": "f0546addc051698f59aef6d47c4f9cc1e0fc6f741d54d794ac661e4d6eb59695"
+  },
+  {
+    "path": "experiments/completed/text_context_ablation/dtd/both-fusion.ipynb",
+    "old_path": "output_ablation/both-fusion.ipynb",
+    "dataset": "dtd",
+    "method": "both_fusion",
+    "status": "saved_execution",
+    "note": "Saved outputs; never rerun as part of migration.",
+    "cells_with_outputs": 7,
+    "configuration_evidence": [],
+    "sha256": "593d7ae37801c658081a5d3682d4ec4c73bd70d1bd52e3d079a560d93675b85f"
+  },
+  {
+    "path": "experiments/completed/text_context_ablation/dtd/candidate-only.ipynb",
+    "old_path": "output_ablation/candidate-only.ipynb",
+    "dataset": "dtd",
+    "method": "candidate_only",
+    "status": "saved_execution",
+    "note": "Saved outputs; never rerun as part of migration.",
+    "cells_with_outputs": 7,
+    "configuration_evidence": [],
+    "sha256": "819570ed54c6732e32561781efa8ec8f8af273a51123bf18e5c0abf88c9cb3de"
+  },
+  {
+    "path": "experiments/completed/text_context_ablation/dtd/full-both.ipynb",
+    "old_path": "output_ablation/full-both.ipynb",
+    "dataset": "dtd",
+    "method": "full_both",
+    "status": "saved_execution",
+    "note": "Saved outputs; never rerun as part of migration.",
+    "cells_with_outputs": 7,
+    "configuration_evidence": [],
+    "sha256": "63d4fde22c48b688e3c52a7ce952f7758c00e52d4856a03c1cf597c03df46ffe"
+  },
+  {
+    "path": "experiments/completed/text_context_ablation/dtd/full-redacted.ipynb",
+    "old_path": "output_ablation/full-redacted.ipynb",
+    "dataset": "dtd",
+    "method": "full_redacted",
+    "status": "saved_execution",
+    "note": "Saved outputs; never rerun as part of migration.",
+    "cells_with_outputs": 7,
+    "configuration_evidence": [],
+    "sha256": "8df99e4facef9c3893638b174fc74a381860d5920198683a1ebdf3e1ade4ad02"
+  },
+  {
+    "path": "experiments/completed/text_context_ablation/dtd/full-shuffle-both.ipynb",
+    "old_path": "output_ablation/full-shuffle-both.ipynb",
+    "dataset": "dtd",
+    "method": "full_shuffle_both",
+    "status": "saved_execution",
+    "note": "Saved outputs; never rerun as part of migration.",
+    "cells_with_outputs": 7,
+    "configuration_evidence": [],
+    "sha256": "97ac91be9833cd0be223fd724645e91368d9ae6cc2c4b954b41b156eb38c047a"
+  },
+  {
+    "path": "experiments/completed/text_context_ablation/dtd/full-unscreened.ipynb",
+    "old_path": "output_ablation/full-unscreened.ipynb",
+    "dataset": "dtd",
+    "method": "full_unscreened",
+    "status": "saved_execution",
+    "note": "Saved outputs; never rerun as part of migration.",
+    "cells_with_outputs": 7,
+    "configuration_evidence": [],
+    "sha256": "2fe54095ce42f3e16da25c1935143f96229d2523e9b89ea996685ed5f2bab271"
+  },
+  {
+    "path": "experiments/completed/text_context_ablation/dtd/query-only.ipynb",
+    "old_path": "output_ablation/query-only.ipynb",
+    "dataset": "dtd",
+    "method": "query_only",
+    "status": "saved_execution",
+    "note": "Saved outputs; never rerun as part of migration.",
+    "cells_with_outputs": 7,
+    "configuration_evidence": [],
+    "sha256": "e0546e4c4c57d53a41999998fa412c35a36f3a93ce6d56066737f0db8104fe52"
+  },
+  {
+    "path": "experiments/completed/text_context_ablation/dtd/visual-only.ipynb",
+    "old_path": "output_ablation/visual-only.ipynb",
+    "dataset": "dtd",
+    "method": "visual_only",
+    "status": "saved_execution",
+    "note": "Saved outputs; never rerun as part of migration.",
+    "cells_with_outputs": 6,
+    "configuration_evidence": [],
+    "sha256": "92645810ae7622da38e6c3b49097bd7f0d0bf593adef480e186d5668213bf7dd"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/feature_averaged_context/stanford_cars/baseline_feature_averaged_context_cars.ipynb",
+    "old_path": "baseline_feature_averaged_context_cars.ipynb",
+    "dataset": "stanford_cars",
+    "method": "feature_averaged_context",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 196",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "59e3b59ae09e9505f58b5c56578f259aeabfaed69dc5e5365d85f4af0fc56a91"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/frozen_dino_similarity/stanford_cars/ban-cuoi-frozen-dino-car.ipynb",
+    "old_path": "ban-cuoi-frozen-dino-car.ipynb",
+    "dataset": "stanford_cars",
+    "method": "frozen_dino_similarity",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 7,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 196",
+      "CONTEXT_TOP_K = 4",
+      "TRAIN_ON_FULL_TRAIN = True",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "3e380a1415a44b2cc24d15fe46228195dd1f32b0db5238733eb325088d4807fb"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/frozen_dino_similarity/stanford_cars/baseline_frozen_dino_similarity_ret_cars.ipynb",
+    "old_path": "baseline_frozen_dino_similarity_ret_cars.ipynb",
+    "dataset": "stanford_cars",
+    "method": "frozen_dino_similarity",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 196",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "3019fda654ed95964121db605253ca8bfc10623f8a6fb2832f6104886046585e"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/frozen_dino_similarity/stanford_cars/notebook7dcd2fd8f0.ipynb",
+    "old_path": "notebook7dcd2fd8f0.ipynb",
+    "dataset": "stanford_cars",
+    "method": "frozen_dino_similarity",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 196",
+      "CONTEXT_TOP_K = 4",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "d6b3cb99d246cbe7c8bc5fe996981f3a5b522ab2aa5a72a5e568b8d4637c9dd9"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/no_context/cub200/baseline_no_tacs_image_classification (seed42).ipynb",
+    "old_path": "CUB/baseline_no_tacs_image_classification (seed42).ipynb",
+    "dataset": "cub200",
+    "method": "no_context",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 14,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 200"
+    ],
+    "sha256": "6d62d8ba43a14cf67a727beab8370d4d6fdca46f866a985ae7618ff2219bd73d"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/no_context/cub200/baseline_no_tacs_image_classification (seed43).ipynb",
+    "old_path": "CUB/baseline_no_tacs_image_classification (seed43).ipynb",
+    "dataset": "cub200",
+    "method": "no_context",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 14,
+    "configuration_evidence": [
+      "SEED = 43",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 200"
+    ],
+    "sha256": "b4161763c29916f743b07c3872ba2a4ccd4bbb02017d93ce1a81f1595ae45f7f"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/no_context/cub200/baseline_no_tacs_image_classification.ipynb",
+    "old_path": "baseline_no_tacs_image_classification.ipynb",
+    "dataset": "cub200",
+    "method": "no_context",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 14,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 200"
+    ],
+    "sha256": "235828325fdc7ab5ea0ff78111834652113a3e80133bdc72cb603de4210f4651"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/no_context/cub200/baseline_no_tacs_image_classification_(seed_44).ipynb",
+    "old_path": "CUB/baseline_no_tacs_image_classification_(seed_44).ipynb",
+    "dataset": "cub200",
+    "method": "no_context",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 15,
+    "configuration_evidence": [
+      "SEED = 44",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 200"
+    ],
+    "sha256": "080cb0462974b290c27df71e2a9a975573214de274465d9e1e7d6c4607a2ee65"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/no_context/stanford_cars/seed44-car.ipynb",
+    "old_path": "CARS/seed44-car.ipynb",
+    "dataset": "stanford_cars",
+    "method": "no_context",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 13,
+    "configuration_evidence": [
+      "SEED = 44",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 196",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "64d0d172b406132f3669c70d19be0dacb6b071be2aa7981ea0baf21e90e13863"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/no_context/sun397/baseline_no_tacs_cars.ipynb",
+    "old_path": "SUN/table2/baseline_no_tacs_cars.ipynb",
+    "dataset": "sun397",
+    "method": "no_context",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol. Original filename/folder is misleading; dataset follows notebook configuration.",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 397",
+      "NUM_CLASSES = len(class_names)",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "fe7525988becbbaebdfb7759ad78f74b65006ed65026162df3a3da83ad5ac085"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/random_context/stanford_cars/ban-cuoi-Random Context Retrieval baseline.ipynb",
+    "old_path": "SUN/table2/ban-cuoi-Random Context Retrieval baseline.ipynb",
+    "dataset": "stanford_cars",
+    "method": "random_context",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol. Original filename/folder is misleading; dataset follows notebook configuration.",
+    "cells_with_outputs": 8,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 196",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = True",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "a23d12798b23a5230f65a31db44aab613e40b2b122ca6eef9794f892ab4f7885"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/random_context/stanford_cars/ban-cuoi-random-context-ret-car.ipynb",
+    "old_path": "ban-cuoi-random-context-ret-car.ipynb",
+    "dataset": "stanford_cars",
+    "method": "random_context",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 196",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = True",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "6b26d858b788ba7579b72bd8b5a8528929f532fe38de01af1bd6ff5c2c149d00"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/random_context/stanford_cars/baseline_random_context_ret_cars.ipynb",
+    "old_path": "baseline_random_context_ret_cars.ipynb",
+    "dataset": "stanford_cars",
+    "method": "random_context",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 10,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 196",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "b94fa912e0e6b6cc5a136cf438b25d0e099b20ed8f13045d4f896f67d94f9d67"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/stanford_cars/ban-cuoi-frozen-dino-car.ipynb",
+    "old_path": "SUN/table2/ban-cuoi-frozen-dino-car.ipynb",
+    "dataset": "stanford_cars",
+    "method": "tacs",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol. Original filename/folder is misleading; dataset follows notebook configuration. Learned TACS selector, not the frozen retriever suggested by its filename.",
+    "cells_with_outputs": 8,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 196",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = True",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "55b2ca30348d4c1167380d6cd03bbfeaee824464cd71e5b32f11923343529b54"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/stanford_cars/ban-cuoi-tacs-car.ipynb",
+    "old_path": "ban-cuoi-tacs-car.ipynb",
+    "dataset": "stanford_cars",
+    "method": "tacs",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 196",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = True",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "36cdb53287d0adb0ac9bf7e56ed430ca5b78c54d66f2dc84cd84b40b01b88714"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/stanford_cars/baseline_tacs_cars.ipynb",
+    "old_path": "baseline_tacs_cars.ipynb",
+    "dataset": "stanford_cars",
+    "method": "tacs",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 196",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "869c30471d190504e10843b7e1cdb6f15722df9697cf240dab528790db62a338"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/stanford_cars/notebook05aceb61b4.ipynb",
+    "old_path": "notebook05aceb61b4.ipynb",
+    "dataset": "stanford_cars",
+    "method": "tacs",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 43",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 196",
+      "NUM_CLASSES = len(class_names)",
+      "DINOV3_MODEL_NAME = DINOV3_MODEL_NAME"
+    ],
+    "sha256": "05e21dc458f6a80fb4880ccbe8d7d286efef99b2633baea45bb39d4afe3c0a0c"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/stanford_cars/tacs-chuanpaper-car-b16.ipynb",
+    "old_path": "tacs-chuanpaper-car-b16.ipynb",
+    "dataset": "stanford_cars",
+    "method": "tacs",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vitb16'",
+      "NUM_CLASSES = 196  # Stanford Cars has 196 classes",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "a5ed81d627b9a83700c678c3eee69967926ca08c4b059b98ac2d351dfa5cf3b5"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/stanford_cars/tacs-chuanpaper-car-l16.ipynb",
+    "old_path": "tacs-chuanpaper-car-l16.ipynb",
+    "dataset": "stanford_cars",
+    "method": "tacs",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 196  # Stanford Cars has 196 classes",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "dce736035e9181c4146a08d26a402e17e102dbcf5eb038383988ba52079f148d"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/stanford_cars/tacs-chuanpaper-sun-b16 (2).ipynb",
+    "old_path": "tacs-chuanpaper-sun-b16 (2).ipynb",
+    "dataset": "stanford_cars",
+    "method": "tacs",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol. Original filename/folder is misleading; dataset follows notebook configuration.",
+    "cells_with_outputs": 7,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vitb16'",
+      "NUM_CLASSES = 196  # Stanford Cars has 196 classes",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "88b279f809ecdc68ee517fa4d1832111e32300ccdc9f19d9905c9b1d1cf663ac"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/sun397/ban-cuoi-tacs-sun.ipynb",
+    "old_path": "ban-cuoi-tacs-sun.ipynb",
+    "dataset": "sun397",
+    "method": "tacs",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = True",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "400ddd7b8781f706750de8923dede2aa3119ca756d7c2a1d894aa3b3e7ca6823"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/sun397/tacs-chuanpaper-sun-b16 (1).ipynb",
+    "old_path": "tacs-chuanpaper-sun-b16 (1).ipynb",
+    "dataset": "sun397",
+    "method": "tacs",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 7,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vitb16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "da37638654c20515fabe1ef2e62dde05c79bd73f20e465ec0760218363020f60"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/sun397/tacs-sun-da-sua (1).ipynb",
+    "old_path": "tacs-sun-da-sua (1).ipynb",
+    "dataset": "sun397",
+    "method": "tacs",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 8,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = True",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "f29aafc6f2332ae1bad97dc566fb137925fc76f4756065c9f04e700289e0639b"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/sun397/tacs-sun-da-sua (2).ipynb",
+    "old_path": "tacs-sun-da-sua (2).ipynb",
+    "dataset": "sun397",
+    "method": "tacs",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 8,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "af78117eeb950a31a2d85cd1d0d8bc47f724c76649a4c1f5b53b3499ba7e831a"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/sun397/tacs-sun-true-val-split.ipynb",
+    "old_path": "tacs-sun-true-val-split.ipynb",
+    "dataset": "sun397",
+    "method": "tacs",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "3e455bba289e56f4fffca1f4e1db02d6d29d9fcd2799b7aa996d74e7fbb7ea83"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_02_main_results/tacs/sun397/tacs-vitb16-sun-true-val-split.ipynb",
+    "old_path": "tacs-vitb16-sun-true-val-split.ipynb",
+    "dataset": "sun397",
+    "method": "tacs",
+    "status": "research_variant",
+    "note": "Paper-related implementation; not a certification of matching the paper protocol.",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vitb16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "e8fbd6392fa9a54f0c6427c926304a7fa4ee828835cc22171b36cef37736dc59"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_04_context_pairs/blank_image/sun397/table4_blank_image_sun.ipynb",
+    "old_path": "table4_blank_image_sun.ipynb",
+    "dataset": "sun397",
+    "method": "blank_image",
+    "status": "research_variant",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "f82c63e607bb5743dab3df1998c08bcf1d123085be754201b112475332775233"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_04_context_pairs/duplicate_query/sun397/table4_duplicate_query_sun.ipynb",
+    "old_path": "table4_duplicate_query_sun.ipynb",
+    "dataset": "sun397",
+    "method": "duplicate_query",
+    "status": "research_variant",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "53fef23e026ae0dac85a0839a4cdaae39b09e132bbcc99090e87617e523f80cf"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/classification/table_04_context_pairs/noisy_query/sun397/table4_noisy_query_sun.ipynb",
+    "old_path": "table4_noisy_query_sun.ipynb",
+    "dataset": "sun397",
+    "method": "noisy_query",
+    "status": "research_variant",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "f304d0bb8bc722abea7c8787f8c11b098751d390eb829816528c941aa1b2c8fc"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/figure_04_attention/tacs/sun397/tacs_train_with_checkpoints.ipynb",
+    "old_path": "tacs_train_with_checkpoints.ipynb",
+    "dataset": "sun397",
+    "method": "tacs_attention_checkpoint_export",
+    "status": "research_variant",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "6a5d029333d7c6e7febc8901f2e8ed4d85df6a081f3fd2f4e26ca1984bcc3c1d"
+  },
+  {
+    "path": "notebooks/01_paper_reproduction/segmentation/table_03_main_results/tacs/isic2017/tacs_isic2017_segmentation.ipynb",
+    "old_path": "tacs_isic2017_segmentation.ipynb",
+    "dataset": "isic2017",
+    "method": "tacs_segmentation",
+    "status": "research_variant",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = \"dinov3_vits16\""
+    ],
+    "sha256": "3b7261d88a7c1075ef4c475e1932eb6fe08528af44bfb1cec4bd8d0ccac2981c"
+  },
+  {
+    "path": "notebooks/02_improvements/adaptive_context/sun397/tacs-adaptive-sun-dinov3-vitb-l.ipynb",
+    "old_path": "tacs-adaptive-sun-dinov3-vitb-l.ipynb",
+    "dataset": "sun397",
+    "method": "adaptive_context",
+    "status": "research_variant",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = _BACKBONE['model_name']",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 3  # So context toi da",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "d445c636bebc02dab222219afc42f0e327620aefaf9f9cc1ba3ca2a842e84e8a"
+  },
+  {
+    "path": "notebooks/02_improvements/adaptive_context/sun397/tacs-adaptive-sun.ipynb",
+    "old_path": "tacs-adaptive-sun.ipynb",
+    "dataset": "sun397",
+    "method": "adaptive_context",
+    "status": "research_variant",
+    "note": "",
+    "cells_with_outputs": 8,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 3  # So context toi da",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "fa57d9762ae6a1e6bb23b16e395074f2383b34dc2d1c85cce245fc083b6ee999"
+  },
+  {
+    "path": "notebooks/02_improvements/adaptive_context/sun397/tacs_adaptive_diverse_context_sun.ipynb",
+    "old_path": "tacs_adaptive_diverse_context_sun.ipynb",
+    "dataset": "sun397",
+    "method": "adaptive_context",
+    "status": "research_variant",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 3  # So context toi da",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "8a45cb381743b02c485260fe645004db0e1036e7c88b648eb06e4ec16f29e26f"
+  },
+  {
+    "path": "notebooks/02_improvements/caption_ablation/01_florence_prefix/dtd/mtacs-train-vitl16-dtd-caption-ablation-01-florence-prefix.ipynb",
+    "old_path": "all_4_captions/mtacs-train-vitl16-dtd-caption-ablation-01-florence-prefix.ipynb",
+    "dataset": "dtd",
+    "method": "florence_prefix",
+    "status": "standalone_template",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"full_both\"",
+      "SEED = int(os.getenv(\"DTD_POOL_SEED\", \"42\"))",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 47  # DTD texture attributes",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False"
+    ],
+    "sha256": "5db34bbcde0020e331671a1965da57518d1557c3c83215903aac8c0641a0ac03"
+  },
+  {
+    "path": "notebooks/02_improvements/caption_ablation/02_florence_firstvalid/dtd/mtacs-train-vitl16-dtd-caption-ablation-02-florence-firstvalid.ipynb",
+    "old_path": "all_4_captions/mtacs-train-vitl16-dtd-caption-ablation-02-florence-firstvalid.ipynb",
+    "dataset": "dtd",
+    "method": "florence_firstvalid",
+    "status": "standalone_template",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"full_both\"",
+      "SEED = int(os.getenv(\"DTD_POOL_SEED\", \"42\"))",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 47  # DTD texture attributes",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False"
+    ],
+    "sha256": "78f7259f8878b74a3ae1637c5d1cf76ed45fd2050c679b242859733c7fc199da"
+  },
+  {
+    "path": "notebooks/02_improvements/caption_ablation/03_florence_singlegrounded/dtd/mtacs-train-vitl16-dtd-caption-ablation-03-florence-singlegrounded.ipynb",
+    "old_path": "all_4_captions/mtacs-train-vitl16-dtd-caption-ablation-03-florence-singlegrounded.ipynb",
+    "dataset": "dtd",
+    "method": "florence_singlegrounded",
+    "status": "standalone_template",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"full_both\"",
+      "SEED = int(os.getenv(\"DTD_POOL_SEED\", \"42\"))",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 47  # DTD texture attributes",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False"
+    ],
+    "sha256": "7762594d83fbe7b8042d5accd13f92159c206779e6ea94abc9947555b0c5247b"
+  },
+  {
+    "path": "notebooks/02_improvements/caption_ablation/04_florence_multigrounded/dtd/mtacs-train-vitl16-dtd-caption-ablation-04-florence-multigrounded.ipynb",
+    "old_path": "all_4_captions/mtacs-train-vitl16-dtd-caption-ablation-04-florence-multigrounded.ipynb",
+    "dataset": "dtd",
+    "method": "florence_multigrounded",
+    "status": "standalone_template",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"full_both\"",
+      "SEED = int(os.getenv(\"DTD_POOL_SEED\", \"42\"))",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 47  # DTD texture attributes",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False"
+    ],
+    "sha256": "e3b0886f6697a926a5ea147953e447e0609ed3cb97d108341f1c97debf04b082"
+  },
+  {
+    "path": "notebooks/02_improvements/caption_generation/decoder_lora/dtd/florence2-dtd-caption-finetune.ipynb",
+    "old_path": "florence2-dtd-caption-finetune.ipynb",
+    "dataset": "dtd",
+    "method": "caption_generation/decoder_lora",
+    "status": "research_variant",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [],
+    "sha256": "710aa2574536e1d0d20cc16e23431e817dc8058da1fdf0ec14b8f4721e55938c"
+  },
+  {
+    "path": "notebooks/02_improvements/caption_generation/grounded_rerank/dtd/florence2-dtd-caption-grounded-rerank.ipynb",
+    "old_path": "florence2-dtd-caption-grounded-rerank.ipynb",
+    "dataset": "dtd",
+    "method": "caption_generation/grounded_rerank",
+    "status": "research_variant",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42"
+    ],
+    "sha256": "88a08ba978ff770b9827d9c427f654e764a6c6a1c26c81f36521a8ed1d2fb49b"
+  },
+  {
+    "path": "notebooks/02_improvements/multimodal_top3/context_text_fusion/sun397/mtacs-train-captions-vitl16-multimodal-top3-context-text.ipynb",
+    "old_path": "mtacs-train-captions-vitl16-multimodal-top3-context-text.ipynb",
+    "dataset": "sun397",
+    "method": "multimodal_top3/context_text_fusion",
+    "status": "research_variant",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"mtacs_dual_top3_context_text\"  # no_context | original_tacs | text_only | mtacs | mtacs_shuffled | mtacs_dual_top3 | mtacs_dual_top3_context_text",
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 3",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "53820aeb76c0295d41a69cb7015311369fc514e2dfd86090084acb5075f10420"
+  },
+  {
+    "path": "notebooks/02_improvements/multimodal_top3/selector_text_only/sun397/mtacs-train-captions-vitl16-multimodal-top3.ipynb",
+    "old_path": "mtacs-train-captions-vitl16-multimodal-top3.ipynb",
+    "dataset": "sun397",
+    "method": "multimodal_top3/selector_text_only",
+    "status": "research_variant",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"mtacs_dual_top3\"  # no_context | original_tacs | text_only | mtacs | mtacs_shuffled | mtacs_dual_top3",
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 3",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "0751efdb631e4524c9c787c86173bdd53cd246cfe987ace7aa1c001ba924025c"
+  },
+  {
+    "path": "notebooks/02_improvements/query_candidate_text/sun397/mtacs-train-captions-vitl16-context-text.ipynb",
+    "old_path": "mtacs-train-captions-vitl16-context-text.ipynb",
+    "dataset": "sun397",
+    "method": "query_candidate_text",
+    "status": "research_variant",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"mtacs_dual_context_text\"  # no_context | original_tacs | text_only | mtacs | mtacs_shuffled | mtacs_dual_top3 | mtacs_dual_context_text",
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "7f2b1d465c3fd8edf91881df66a3b0246b561cfcd21be80147b9eb3fd3c81959"
+  },
+  {
+    "path": "notebooks/02_improvements/query_text/dtd/mtacs-train-captions-vitl16-dtd.ipynb",
+    "old_path": "mtacs-train-captions-vitl16-dtd.ipynb",
+    "dataset": "dtd",
+    "method": "query_text",
+    "status": "research_variant",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"mtacs\"  # no_context | original_tacs | text_only | mtacs | mtacs_shuffled",
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 47  # DTD texture attributes",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False"
+    ],
+    "sha256": "fb78dfd1029f890e98f317aff8e9323cd1e3c6dde729fb37f37eef9ff27a8f3d"
+  },
+  {
+    "path": "notebooks/02_improvements/query_text/sun397/mtacs-train-captions-vitl16.ipynb",
+    "old_path": "mtacs-train-captions-vitl16.ipynb",
+    "dataset": "sun397",
+    "method": "query_text",
+    "status": "research_variant",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"mtacs\"  # no_context | original_tacs | text_only | mtacs | mtacs_shuffled",
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "2b7245443b3cc8696f1bc02a42eccef63fcf815483a36bac4b12b46cc4d1bf40"
+  },
+  {
+    "path": "notebooks/02_improvements/query_text/sun397/mtacs-train-captions.ipynb",
+    "old_path": "mtacs-train-captions.ipynb",
+    "dataset": "sun397",
+    "method": "query_text",
+    "status": "research_variant",
+    "note": "",
+    "cells_with_outputs": 9,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"mtacs\"  # no_context | original_tacs | text_only | mtacs | mtacs_shuffled",
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "34c1c5990561c4cfe1cc36a0cde546f363eb4fb2124a0f8da515cb7a0b62d822"
+  },
+  {
+    "path": "notebooks/02_improvements/query_text/sun397/mtacs_sun397_visual_text_context.ipynb",
+    "old_path": "mtacs_sun397_visual_text_context.ipynb",
+    "dataset": "sun397",
+    "method": "query_text",
+    "status": "research_variant",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"mtacs\"  # no_context | original_tacs | text_only | mtacs | mtacs_shuffled",
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "92bb4752a841d9477a9d330fdb66497899bcbc4499bcbdff219ee317c254abb8"
+  },
+  {
+    "path": "notebooks/02_improvements/query_text/sun397/mtacs_sun397_visual_text_context_offline.ipynb",
+    "old_path": "mtacs_sun397_visual_text_context_offline.ipynb",
+    "dataset": "sun397",
+    "method": "query_text",
+    "status": "research_variant",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"mtacs\"  # no_context | original_tacs | text_only | mtacs | mtacs_shuffled",
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "f715fa52d1449ed287b7f4656528d57eecc304cd4d345c4048d98ac1f6a9169e"
+  },
+  {
+    "path": "notebooks/02_improvements/text_context_ablation/01_visual_only/dtd/mtacs-train-vitl16-dtd-ablation-01-visual-only.ipynb",
+    "old_path": "mtacs-train-vitl16-dtd-ablation-01-visual-only.ipynb",
+    "dataset": "dtd",
+    "method": "visual_only",
+    "status": "standalone_template",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"visual_only\"",
+      "SEED = int(os.getenv(\"DTD_POOL_SEED\", \"42\"))",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 47  # DTD texture attributes",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False"
+    ],
+    "sha256": "9feb38f112520a1395ab385eab711c95eb59bb6e7348621b0fa69809148c9bb4"
+  },
+  {
+    "path": "notebooks/02_improvements/text_context_ablation/02_query_only/dtd/mtacs-train-vitl16-dtd-ablation-02-query-only.ipynb",
+    "old_path": "mtacs-train-vitl16-dtd-ablation-02-query-only.ipynb",
+    "dataset": "dtd",
+    "method": "query_only",
+    "status": "standalone_template",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"query_only\"",
+      "SEED = int(os.getenv(\"DTD_POOL_SEED\", \"42\"))",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 47  # DTD texture attributes",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False"
+    ],
+    "sha256": "fe152c80f69aff6c57c38c3b137c82688d61310e6ad2377edbc008be4058054e"
+  },
+  {
+    "path": "notebooks/02_improvements/text_context_ablation/03_candidate_only/dtd/mtacs-train-vitl16-dtd-ablation-03-candidate-only.ipynb",
+    "old_path": "mtacs-train-vitl16-dtd-ablation-03-candidate-only.ipynb",
+    "dataset": "dtd",
+    "method": "candidate_only",
+    "status": "standalone_template",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"candidate_only\"",
+      "SEED = int(os.getenv(\"DTD_POOL_SEED\", \"42\"))",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 47  # DTD texture attributes",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False"
+    ],
+    "sha256": "bb4010ceeafcffd51a6c8e761ec60b1a9d587fdfb23c47f937bcb9f6280bd69e"
+  },
+  {
+    "path": "notebooks/02_improvements/text_context_ablation/04_both_fusion/dtd/mtacs-train-vitl16-dtd-ablation-04-both-fusion.ipynb",
+    "old_path": "mtacs-train-vitl16-dtd-ablation-04-both-fusion.ipynb",
+    "dataset": "dtd",
+    "method": "both_fusion",
+    "status": "standalone_template",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"both_fusion\"",
+      "SEED = int(os.getenv(\"DTD_POOL_SEED\", \"42\"))",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 47  # DTD texture attributes",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False"
+    ],
+    "sha256": "443c49c1064038064ddb91f3f8f6954ac6ec67734678391d79efd197c20a2059"
+  },
+  {
+    "path": "notebooks/02_improvements/text_context_ablation/05_full_both/dtd/mtacs-train-vitl16-dtd-ablation-05-full-both.ipynb",
+    "old_path": "mtacs-train-vitl16-dtd-ablation-05-full-both.ipynb",
+    "dataset": "dtd",
+    "method": "full_both",
+    "status": "standalone_template",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"full_both\"",
+      "SEED = int(os.getenv(\"DTD_POOL_SEED\", \"42\"))",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 47  # DTD texture attributes",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False"
+    ],
+    "sha256": "1a5a1532969d19a996501c79b513234c8d7ca052ec1b221553f2b536809ffe9f"
+  },
+  {
+    "path": "notebooks/02_improvements/text_context_ablation/06_full_shuffle_both/dtd/mtacs-train-vitl16-dtd-ablation-06-full-shuffle-both.ipynb",
+    "old_path": "mtacs-train-vitl16-dtd-ablation-06-full-shuffle-both.ipynb",
+    "dataset": "dtd",
+    "method": "full_shuffle_both",
+    "status": "standalone_template",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"full_shuffle_both\"",
+      "SEED = int(os.getenv(\"DTD_POOL_SEED\", \"42\"))",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 47  # DTD texture attributes",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False"
+    ],
+    "sha256": "047186644c74d14e4c746697791d99f684396257f695a480b172fce001c2eaf2"
+  },
+  {
+    "path": "notebooks/02_improvements/text_context_ablation/07_full_unscreened/dtd/mtacs-train-vitl16-dtd-ablation-07-full-unscreened.ipynb",
+    "old_path": "mtacs-train-vitl16-dtd-ablation-07-full-unscreened.ipynb",
+    "dataset": "dtd",
+    "method": "full_unscreened",
+    "status": "standalone_template",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"full_unscreened\"",
+      "SEED = int(os.getenv(\"DTD_POOL_SEED\", \"42\"))",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 47  # DTD texture attributes",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False"
+    ],
+    "sha256": "6d0a9309c1e10bb1653752e4ce784a5be85907b96cee672604b9f494320fb0ef"
+  },
+  {
+    "path": "notebooks/02_improvements/text_context_ablation/08_full_redacted/dtd/mtacs-train-vitl16-dtd-ablation-08-full-redacted.ipynb",
+    "old_path": "mtacs-train-vitl16-dtd-ablation-08-full-redacted.ipynb",
+    "dataset": "dtd",
+    "method": "full_redacted",
+    "status": "standalone_template",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"full_redacted\"",
+      "SEED = int(os.getenv(\"DTD_POOL_SEED\", \"42\"))",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 47  # DTD texture attributes",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False"
+    ],
+    "sha256": "589aa0711adc1f8450404eb419aa13609aec7bace845ff717d29f00b1ffe6091"
+  },
+  {
+    "path": "notebooks/02_improvements/visual_top3/sun397/tacs_top3_context_sun.ipynb",
+    "old_path": "tacs_top3_context_sun.ipynb",
+    "dataset": "sun397",
+    "method": "visual_top3",
+    "status": "research_variant",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 3  # Moi query nhan 3 context khac nhau",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "89c138ca8fb783200a69b9a94322714d3ce2ebbdc05b28ae122d82060e90c34d"
+  },
+  {
+    "path": "notebooks/02_improvements/zero_shot_siglip/sun397/siglip2_zero_shot_tacs_fusion_sun397.ipynb",
+    "old_path": "siglip2_zero_shot_tacs_fusion_sun397.ipynb",
+    "dataset": "sun397",
+    "method": "zero_shot_siglip",
+    "status": "research_variant",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 3  # So context toi da",
+      "TRAIN_ON_FULL_TRAIN = False",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "db63c9739bdba329b63ce162251ed80fbd90dbdf020e079f778bed621a4bf816"
+  },
+  {
+    "path": "notebooks/90_archive/dtd/combined_ablation_suite/mtacs-train-captions-vitl16-dtd-text-ablation.ipynb",
+    "old_path": "mtacs-train-captions-vitl16-dtd-text-ablation.ipynb",
+    "dataset": "dtd",
+    "method": "combined_ablation_suite",
+    "status": "builder_dependency",
+    "note": "Preserved as a builder source; use standalone notebooks for new runs.",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"dtd_text_ablation_suite\"",
+      "SEED = int(os.getenv(\"DTD_POOL_SEED\", \"42\"))",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 47  # DTD texture attributes",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False"
+    ],
+    "sha256": "5c100f3f2ba9edb58a76e523c844357a56426953f46f49ba694075934ade815a"
+  },
+  {
+    "path": "notebooks/90_archive/dtd/combined_ablation_suite/notebookb7a9dba884.ipynb",
+    "old_path": "notebookb7a9dba884.ipynb",
+    "dataset": "dtd",
+    "method": "combined_ablation_suite",
+    "status": "builder_dependency",
+    "note": "Preserved as a builder source; use standalone notebooks for new runs.",
+    "cells_with_outputs": 3,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"dtd_text_ablation_suite\"",
+      "SEED = int(os.getenv(\"DTD_POOL_SEED\", \"42\"))",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 47  # DTD texture attributes",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False"
+    ],
+    "sha256": "4e16f28a7254e4958c9558637884c11d572326e9a3dfe417c6a9d664fe65b7dd"
+  },
+  {
+    "path": "notebooks/90_archive/dtd/historical_versions/notebookb7a9dba884.before-50-epochs.ipynb",
+    "old_path": "tmp/notebookb7a9dba884.before-50-epochs.ipynb",
+    "dataset": "dtd",
+    "method": "combined_ablation_100_epochs",
+    "status": "archived",
+    "note": "",
+    "cells_with_outputs": 11,
+    "configuration_evidence": [
+      "EXPERIMENT_MODE = \"dtd_text_ablation_suite\"",
+      "SEED = int(os.getenv(\"DTD_POOL_SEED\", \"42\"))",
+      "DINOV3_MODEL_NAME = 'dinov3_vitl16'",
+      "NUM_CLASSES = 47  # DTD texture attributes",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = False"
+    ],
+    "sha256": "a3ab08b511a3e9acc279f1a671386b2aee791c5820b136224395f893518bf9a7"
+  },
+  {
+    "path": "notebooks/90_archive/isic2017/historical_versions/tacs_isic2017_segmentation_before_paper_faithful.ipynb",
+    "old_path": "tacs_isic2017_segmentation_before_paper_faithful.ipynb",
+    "dataset": "isic2017",
+    "method": "historical",
+    "status": "archived",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = \"dinov3_vits16\""
+    ],
+    "sha256": "ceb64cf337921a3b63f2eae04e65c630ce1d25465ea2a8aff1b5b7e6ed3659c0"
+  },
+  {
+    "path": "notebooks/90_archive/stanford_cars/historical_versions/notebook05aceb61b4_before_tacs_fix.ipynb",
+    "old_path": "notebook05aceb61b4_before_tacs_fix.ipynb",
+    "dataset": "stanford_cars",
+    "method": "historical",
+    "status": "archived",
+    "note": "",
+    "cells_with_outputs": 9,
+    "configuration_evidence": [
+      "SEED = 43",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 196",
+      "NUM_CLASSES = len(class_names)",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'"
+    ],
+    "sha256": "6da959f7159c053fb073473ea32fb7bc56d9930306620dd94eea571d93d9ca94"
+  },
+  {
+    "path": "notebooks/90_archive/stanford_cars/historical_versions/notebook7dcd2fd8f0_before_context_prior_fulltrain_epoch100.ipynb",
+    "old_path": "notebook7dcd2fd8f0_before_context_prior_fulltrain_epoch100.ipynb",
+    "dataset": "stanford_cars",
+    "method": "historical",
+    "status": "archived",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 196",
+      "CONTEXT_TOP_K = 4",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "63040c6fc9addcfe52a9882d1d1adfa0d842e6bf4d9c46d56b46e2af37d75c7c"
+  },
+  {
+    "path": "notebooks/90_archive/stanford_cars/historical_versions/notebook7dcd2fd8f0_before_overfit_regularization.ipynb",
+    "old_path": "notebook7dcd2fd8f0_before_overfit_regularization.ipynb",
+    "dataset": "stanford_cars",
+    "method": "historical",
+    "status": "archived",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 196",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "ec3f5f5e08be2a8b73aef18cb8f56bfea35037766bd937e33792832848be25b0"
+  },
+  {
+    "path": "notebooks/90_archive/stanford_cars/historical_versions/notebook7dcd2fd8f0_before_topk_attention_optimization.ipynb",
+    "old_path": "notebook7dcd2fd8f0_before_topk_attention_optimization.ipynb",
+    "dataset": "stanford_cars",
+    "method": "historical",
+    "status": "archived",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 196",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "376d9d93aa81904a4697e3c0ae8244742b9f1b5c69835a829f41fa9df538bea5"
+  },
+  {
+    "path": "notebooks/90_archive/stanford_cars/historical_versions/notebook7dcd2fd8f0_before_val_split.ipynb",
+    "old_path": "notebook7dcd2fd8f0_before_val_split.ipynb",
+    "dataset": "stanford_cars",
+    "method": "historical",
+    "status": "archived",
+    "note": "",
+    "cells_with_outputs": 8,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 196",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "f73d84556b1c715834addf407f18cad9bd338f3c7eddc980e60a5b0a2578c1f7"
+  },
+  {
+    "path": "notebooks/90_archive/sun397/historical_versions/ban-cuoi-tacs-sun_before_full_candidate_pool.ipynb",
+    "old_path": "ban-cuoi-tacs-sun_before_full_candidate_pool.ipynb",
+    "dataset": "sun397",
+    "method": "historical",
+    "status": "archived",
+    "note": "",
+    "cells_with_outputs": 0,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = True",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "b4531636e7cc3075c2896941e9247f998938dc7a0a7c28cf0cf7df76f5ff7ca4"
+  },
+  {
+    "path": "notebooks/90_archive/sun397/historical_versions/ban-cuoi-tacs-sun_before_selector_paper_faithful.ipynb",
+    "old_path": "ban-cuoi-tacs-sun_before_selector_paper_faithful.ipynb",
+    "dataset": "sun397",
+    "method": "historical",
+    "status": "archived",
+    "note": "",
+    "cells_with_outputs": 6,
+    "configuration_evidence": [
+      "SEED = 42",
+      "DINOV3_MODEL_NAME = 'dinov3_vits16'",
+      "NUM_CLASSES = 397  # SUN397 có 397 scene categories",
+      "CONTEXT_TOP_K = 1",
+      "TRAIN_ON_FULL_TRAIN = True",
+      "NUM_CLASSES = len(class_names)"
+    ],
+    "sha256": "10c7e77e673bc96cfb3b6b98077a25525cef68404dac0e12eb1d5d40b762f7fd"
+  }
+]

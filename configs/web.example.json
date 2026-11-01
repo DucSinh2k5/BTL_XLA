@@ -1,0 +1,7 @@
+{
+  "device": "auto",
+  "autoload": true,
+  "threads": 4,
+  "startup_timeout": 1800,
+  "prediction_timeout": 600
+}

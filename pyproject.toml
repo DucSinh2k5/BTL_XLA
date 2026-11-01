@@ -1,0 +1,5 @@
+[tool.pytest.ini_options]
+testpaths = ["tests", "apps/sun397_demo/tests"]
+pythonpath = [".", "src/captioning", "src/training", "tools/notebook_builders", "apps", "tests"]
+norecursedirs = ["data", "artifacts", "experiments", "notebooks"]
+addopts = "--import-mode=importlib --basetemp=.pytest_tmp"

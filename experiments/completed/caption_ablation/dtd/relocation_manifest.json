@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-24",
+  "notebook_content_changed": false,
+  "verified_after_move": true,
+  "files": [
+    {
+      "old": "notebooks/caption-cai-tien-prefix.ipynb",
+      "new": "experiments/completed/caption_ablation/dtd/01_florence_prefix/mtacs-dtd-full-both-florence-prefix-split1-seed42-50ep.ipynb",
+      "sha256_before": "011cc79d3182f447e75af962dc3c30a6fcee66e6ecab85efc991e15f91c23999",
+      "bytes": 2042182,
+      "saved_outputs_sha256_before": "c9669a6d7bd2dbb31f5c8ad174df57dd962e6f85d919b15e9a5e0b9d00ddbf94"
+    },
+    {
+      "old": "notebooks/caption-cai-tien-first-valid.ipynb",
+      "new": "experiments/completed/caption_ablation/dtd/02_florence_firstvalid/mtacs-dtd-full-both-florence-firstvalid-split1-seed42-50ep.ipynb",
+      "sha256_before": "d9491ba1b8b38b57e1d025994675263167c1c7bdb532baf71d287e05d815b1d4",
+      "bytes": 2088138,
+      "saved_outputs_sha256_before": "add5eca63824593e1659e4cdc2d60ac5a2e3531b330d75a3fe0c67fafec86935"
+    },
+    {
+      "old": "notebooks/caption-cai-tien-single.ipynb",
+      "new": "experiments/completed/caption_ablation/dtd/03_florence_singlegrounded/mtacs-dtd-full-both-florence-singlegrounded-split1-seed42-50ep.ipynb",
+      "sha256_before": "ee978fafa0d472fc9f392fdb2084f7f6c2ca486f73736c2e5254cd141809c01f",
+      "bytes": 2012359,
+      "saved_outputs_sha256_before": "29c65cb90569c46e211e99a4702fba49c9792236c3761085e36fa2435297d839"
+    },
+    {
+      "old": "notebooks/caption-cai-tien-first-multi.ipynb",
+      "new": "experiments/completed/caption_ablation/dtd/04_florence_multigrounded/mtacs-dtd-full-both-florence-multigrounded-split1-seed42-50ep.ipynb",
+      "sha256_before": "fee4d7a6c2b7693b8da5d8975655cd2edf47cffbc483727c5e28f0bc34b78432",
+      "bytes": 2015136,
+      "saved_outputs_sha256_before": "002ff8530ff1737b4f03203a60d5fe0fe99588feb442dffa952729814605d304"
+    },
+    {
+      "old": "notebooks/qwen_8b.ipynb",
+      "new": "experiments/completed/caption_ablation/dtd/05_qwen3_vl_8b/mtacs-dtd-full-both-qwen3-vl-8b-split1-seed42-50ep.ipynb",
+      "sha256_before": "0069d8c9ab0b1d7ce169550b371c4d200d76505f4803b5145a04b7622890ada6",
+      "bytes": 2034381,
+      "saved_outputs_sha256_before": "fdc6f1581e2b7bda4db8dc83bd62dca092a27870218fbb767b02c3dc6c584ff1"
+    },
+    {
+      "old": "notebooks/qwen_32b.ipynb",
+      "new": "experiments/completed/caption_ablation/dtd/06_qwen3_vl_32b/mtacs-dtd-full-both-qwen3-vl-32b-split1-seed42-50ep.ipynb",
+      "sha256_before": "2eff756906e518f7f5470d12c9bc5e1b85646d317a70349c175203818f39633b",
+      "bytes": 286231,
+      "saved_outputs_sha256_before": "05a69c2f061663b8b9f6fbfb0da276de0128d0caec9f94313d573eb48b989f0c"
+    }
+  ]
+}

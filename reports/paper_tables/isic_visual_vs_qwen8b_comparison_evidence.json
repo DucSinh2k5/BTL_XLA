@@ -1,0 +1,998 @@
+{
+  "schema": "isic_visual_vs_qwen8b_saved_outputs_v1",
+  "audit_date": "2026-10-25",
+  "source_notebook": "isic-segmen-captions.ipynb",
+  "notebook_sha256": "32779936c8509b0d45c201d6139d06dcea2bfcc591a8409e7ed2240fa5758847",
+  "saved_outputs_sha256": "ff2ee3d9f92142e11456f1753d809d9c24f85a159fa6f4e04b5cfa71720a042c",
+  "source_notebook_modified": false,
+  "cells_executed_by_auditor": false,
+  "visual_reference": {
+    "source_notebook": "tacs_isic_segement_448.ipynb",
+    "notebook_sha256": "052b4edf0110f2caf6d1b2e9a1d8619dfdfb57d56d97c8768553b9a566215599",
+    "metrics": {
+      "test_dice": {
+        "value_displayed": 0.856,
+        "decimal_places": 4,
+        "percent_displayed": 85.6
+      },
+      "test_iou": {
+        "value_displayed": 0.7738,
+        "decimal_places": 4,
+        "percent_displayed": 77.38
+      }
+    },
+    "epochs_observed": 64,
+    "best_epoch": 49,
+    "best_validation_row_displayed": {
+      "epoch": 49,
+      "epoch_limit": 100,
+      "line": "Epoch 049/100 | train_loss=0.0217 train_dice=0.9610 train_iou=0.9257 reward=0.3377 policy=-0.0026 | val_loss=0.3688 val_dice=0.8731 val_iou=0.7959 best_dice=0.8731@049 bad=0/15",
+      "train_loss": 0.0217,
+      "train_dice": 0.961,
+      "train_iou": 0.9257,
+      "val_loss": 0.3688,
+      "val_dice": 0.8731,
+      "val_iou": 0.7959
+    }
+  },
+  "caption_run": {
+    "metrics": {
+      "test_dice": {
+        "value_displayed": 0.848689,
+        "decimal_places": 6,
+        "percent_displayed": 84.87
+      },
+      "test_iou": {
+        "value_displayed": 0.765407,
+        "decimal_places": 6,
+        "percent_displayed": 76.54
+      }
+    },
+    "test_cell_index_zero_based": 16,
+    "test_stdout": "test_dice: 0.848689 (84.87%)\ntest_iou: 0.765407 (76.54%)\nHistorical reference is rounded stdout, not a newly rerun baseline or a three-seed mean.\n",
+    "test_loss": null,
+    "epochs_observed": 41,
+    "best_epoch_from_logs": 26,
+    "best_validation_row_displayed": {
+      "val_dice": 0.8755,
+      "val_iou": 0.7974,
+      "q_gate": 0.1315,
+      "c_gate": 0.0048,
+      "semantic_mix": 0.5026,
+      "epoch": 26,
+      "best_epoch": 26,
+      "bad_epochs": 0,
+      "patience": 15,
+      "line": "full_both epoch=026 val_dice=0.8755 val_iou=0.7974 q_gate=0.1315 c_gate=0.0048 semantic_mix=0.5026 best=026 bad=0/15"
+    },
+    "training_logs": [
+      {
+        "val_dice": 0.7949,
+        "val_iou": 0.6927,
+        "q_gate": 0.0206,
+        "c_gate": 0.0176,
+        "semantic_mix": 0.4999,
+        "epoch": 1,
+        "best_epoch": 1,
+        "bad_epochs": 0,
+        "patience": 15,
+        "line": "full_both epoch=001 val_dice=0.7949 val_iou=0.6927 q_gate=0.0206 c_gate=0.0176 semantic_mix=0.4999 best=001 bad=0/15"
+      },
+      {
+        "val_dice": 0.7825,
+        "val_iou": 0.6743,
+        "q_gate": 0.0283,
+        "c_gate": 0.018,
+        "semantic_mix": 0.5001,
+        "epoch": 2,
+        "best_epoch": 1,
+        "bad_epochs": 1,
+        "patience": 15,
+        "line": "full_both epoch=002 val_dice=0.7825 val_iou=0.6743 q_gate=0.0283 c_gate=0.0180 semantic_mix=0.5001 best=001 bad=1/15"
+      },
+      {
+        "val_dice": 0.8102,
+        "val_iou": 0.7197,
+        "q_gate": 0.0383,
+        "c_gate": 0.0171,
+        "semantic_mix": 0.4999,
+        "epoch": 3,
+        "best_epoch": 3,
+        "bad_epochs": 0,
+        "patience": 15,
+        "line": "full_both epoch=003 val_dice=0.8102 val_iou=0.7197 q_gate=0.0383 c_gate=0.0171 semantic_mix=0.4999 best=003 bad=0/15"
+      },
+      {
+        "val_dice": 0.8295,
+        "val_iou": 0.7383,
+        "q_gate": 0.0561,
+        "c_gate": 0.015,
+        "semantic_mix": 0.4998,
+        "epoch": 4,
+        "best_epoch": 4,
+        "bad_epochs": 0,
+        "patience": 15,
+        "line": "full_both epoch=004 val_dice=0.8295 val_iou=0.7383 q_gate=0.0561 c_gate=0.0150 semantic_mix=0.4998 best=004 bad=0/15"
+      },
+      {
+        "val_dice": 0.83,
+        "val_iou": 0.7436,
+        "q_gate": 0.0565,
+        "c_gate": 0.0121,
+        "semantic_mix": 0.5001,
+        "epoch": 5,
+        "best_epoch": 5,
+        "bad_epochs": 0,
+        "patience": 15,
+        "line": "full_both epoch=005 val_dice=0.8300 val_iou=0.7436 q_gate=0.0565 c_gate=0.0121 semantic_mix=0.5001 best=005 bad=0/15"
+      },
+      {
+        "val_dice": 0.8328,
+        "val_iou": 0.7455,
+        "q_gate": 0.0556,
+        "c_gate": 0.0112,
+        "semantic_mix": 0.5004,
+        "epoch": 6,
+        "best_epoch": 6,
+        "bad_epochs": 0,
+        "patience": 15,
+        "line": "full_both epoch=006 val_dice=0.8328 val_iou=0.7455 q_gate=0.0556 c_gate=0.0112 semantic_mix=0.5004 best=006 bad=0/15"
+      },
+      {
+        "val_dice": 0.8285,
+        "val_iou": 0.7396,
+        "q_gate": 0.0642,
+        "c_gate": 0.0113,
+        "semantic_mix": 0.4998,
+        "epoch": 7,
+        "best_epoch": 6,
+        "bad_epochs": 1,
+        "patience": 15,
+        "line": "full_both epoch=007 val_dice=0.8285 val_iou=0.7396 q_gate=0.0642 c_gate=0.0113 semantic_mix=0.4998 best=006 bad=1/15"
+      },
+      {
+        "val_dice": 0.8392,
+        "val_iou": 0.7532,
+        "q_gate": 0.09,
+        "c_gate": 0.0117,
+        "semantic_mix": 0.4996,
+        "epoch": 8,
+        "best_epoch": 8,
+        "bad_epochs": 0,
+        "patience": 15,
+        "line": "full_both epoch=008 val_dice=0.8392 val_iou=0.7532 q_gate=0.0900 c_gate=0.0117 semantic_mix=0.4996 best=008 bad=0/15"
+      },
+      {
+        "val_dice": 0.8509,
+        "val_iou": 0.7675,
+        "q_gate": 0.0889,
+        "c_gate": 0.0108,
+        "semantic_mix": 0.5,
+        "epoch": 9,
+        "best_epoch": 9,
+        "bad_epochs": 0,
+        "patience": 15,
+        "line": "full_both epoch=009 val_dice=0.8509 val_iou=0.7675 q_gate=0.0889 c_gate=0.0108 semantic_mix=0.5000 best=009 bad=0/15"
+      },
+      {
+        "val_dice": 0.8574,
+        "val_iou": 0.7743,
+        "q_gate": 0.0894,
+        "c_gate": 0.011,
+        "semantic_mix": 0.5001,
+        "epoch": 10,
+        "best_epoch": 10,
+        "bad_epochs": 0,
+        "patience": 15,
+        "line": "full_both epoch=010 val_dice=0.8574 val_iou=0.7743 q_gate=0.0894 c_gate=0.0110 semantic_mix=0.5001 best=010 bad=0/15"
+      },
+      {
+        "val_dice": 0.8297,
+        "val_iou": 0.7427,
+        "q_gate": 0.0874,
+        "c_gate": 0.0104,
+        "semantic_mix": 0.5002,
+        "epoch": 11,
+        "best_epoch": 10,
+        "bad_epochs": 1,
+        "patience": 15,
+        "line": "full_both epoch=011 val_dice=0.8297 val_iou=0.7427 q_gate=0.0874 c_gate=0.0104 semantic_mix=0.5002 best=010 bad=1/15"
+      },
+      {
+        "val_dice": 0.8378,
+        "val_iou": 0.7546,
+        "q_gate": 0.107,
+        "c_gate": 0.0097,
+        "semantic_mix": 0.4998,
+        "epoch": 12,
+        "best_epoch": 10,
+        "bad_epochs": 2,
+        "patience": 15,
+        "line": "full_both epoch=012 val_dice=0.8378 val_iou=0.7546 q_gate=0.1070 c_gate=0.0097 semantic_mix=0.4998 best=010 bad=2/15"
+      },
+      {
+        "val_dice": 0.8331,
+        "val_iou": 0.7443,
+        "q_gate": 0.1031,
+        "c_gate": 0.007,
+        "semantic_mix": 0.4994,
+        "epoch": 13,
+        "best_epoch": 10,
+        "bad_epochs": 3,
+        "patience": 15,
+        "line": "full_both epoch=013 val_dice=0.8331 val_iou=0.7443 q_gate=0.1031 c_gate=0.0070 semantic_mix=0.4994 best=010 bad=3/15"
+      },
+      {
+        "val_dice": 0.8488,
+        "val_iou": 0.7679,
+        "q_gate": 0.0993,
+        "c_gate": 0.0063,
+        "semantic_mix": 0.4996,
+        "epoch": 14,
+        "best_epoch": 10,
+        "bad_epochs": 4,
+        "patience": 15,
+        "line": "full_both epoch=014 val_dice=0.8488 val_iou=0.7679 q_gate=0.0993 c_gate=0.0063 semantic_mix=0.4996 best=010 bad=4/15"
+      },
+      {
+        "val_dice": 0.86,
+        "val_iou": 0.7753,
+        "q_gate": 0.0977,
+        "c_gate": 0.0067,
+        "semantic_mix": 0.5002,
+        "epoch": 15,
+        "best_epoch": 15,
+        "bad_epochs": 0,
+        "patience": 15,
+        "line": "full_both epoch=015 val_dice=0.8600 val_iou=0.7753 q_gate=0.0977 c_gate=0.0067 semantic_mix=0.5002 best=015 bad=0/15"
+      },
+      {
+        "val_dice": 0.8637,
+        "val_iou": 0.7824,
+        "q_gate": 0.106,
+        "c_gate": 0.0063,
+        "semantic_mix": 0.5002,
+        "epoch": 16,
+        "best_epoch": 16,
+        "bad_epochs": 0,
+        "patience": 15,
+        "line": "full_both epoch=016 val_dice=0.8637 val_iou=0.7824 q_gate=0.1060 c_gate=0.0063 semantic_mix=0.5002 best=016 bad=0/15"
+      },
+      {
+        "val_dice": 0.8686,
+        "val_iou": 0.786,
+        "q_gate": 0.1264,
+        "c_gate": 0.0058,
+        "semantic_mix": 0.5005,
+        "epoch": 17,
+        "best_epoch": 17,
+        "bad_epochs": 0,
+        "patience": 15,
+        "line": "full_both epoch=017 val_dice=0.8686 val_iou=0.7860 q_gate=0.1264 c_gate=0.0058 semantic_mix=0.5005 best=017 bad=0/15"
+      },
+      {
+        "val_dice": 0.8544,
+        "val_iou": 0.7728,
+        "q_gate": 0.1342,
+        "c_gate": 0.0057,
+        "semantic_mix": 0.5006,
+        "epoch": 18,
+        "best_epoch": 17,
+        "bad_epochs": 1,
+        "patience": 15,
+        "line": "full_both epoch=018 val_dice=0.8544 val_iou=0.7728 q_gate=0.1342 c_gate=0.0057 semantic_mix=0.5006 best=017 bad=1/15"
+      },
+      {
+        "val_dice": 0.8597,
+        "val_iou": 0.7797,
+        "q_gate": 0.1237,
+        "c_gate": 0.0049,
+        "semantic_mix": 0.5004,
+        "epoch": 19,
+        "best_epoch": 17,
+        "bad_epochs": 2,
+        "patience": 15,
+        "line": "full_both epoch=019 val_dice=0.8597 val_iou=0.7797 q_gate=0.1237 c_gate=0.0049 semantic_mix=0.5004 best=017 bad=2/15"
+      },
+      {
+        "val_dice": 0.8603,
+        "val_iou": 0.7764,
+        "q_gate": 0.1352,
+        "c_gate": 0.0049,
+        "semantic_mix": 0.5006,
+        "epoch": 20,
+        "best_epoch": 17,
+        "bad_epochs": 3,
+        "patience": 15,
+        "line": "full_both epoch=020 val_dice=0.8603 val_iou=0.7764 q_gate=0.1352 c_gate=0.0049 semantic_mix=0.5006 best=017 bad=3/15"
+      },
+      {
+        "val_dice": 0.8542,
+        "val_iou": 0.7698,
+        "q_gate": 0.1241,
+        "c_gate": 0.0042,
+        "semantic_mix": 0.5013,
+        "epoch": 21,
+        "best_epoch": 17,
+        "bad_epochs": 4,
+        "patience": 15,
+        "line": "full_both epoch=021 val_dice=0.8542 val_iou=0.7698 q_gate=0.1241 c_gate=0.0042 semantic_mix=0.5013 best=017 bad=4/15"
+      },
+      {
+        "val_dice": 0.85,
+        "val_iou": 0.7703,
+        "q_gate": 0.1219,
+        "c_gate": 0.0042,
+        "semantic_mix": 0.5018,
+        "epoch": 22,
+        "best_epoch": 17,
+        "bad_epochs": 5,
+        "patience": 15,
+        "line": "full_both epoch=022 val_dice=0.8500 val_iou=0.7703 q_gate=0.1219 c_gate=0.0042 semantic_mix=0.5018 best=017 bad=5/15"
+      },
+      {
+        "val_dice": 0.8556,
+        "val_iou": 0.7756,
+        "q_gate": 0.1282,
+        "c_gate": 0.0047,
+        "semantic_mix": 0.5023,
+        "epoch": 23,
+        "best_epoch": 17,
+        "bad_epochs": 6,
+        "patience": 15,
+        "line": "full_both epoch=023 val_dice=0.8556 val_iou=0.7756 q_gate=0.1282 c_gate=0.0047 semantic_mix=0.5023 best=017 bad=6/15"
+      },
+      {
+        "val_dice": 0.8595,
+        "val_iou": 0.7766,
+        "q_gate": 0.1333,
+        "c_gate": 0.004,
+        "semantic_mix": 0.5023,
+        "epoch": 24,
+        "best_epoch": 17,
+        "bad_epochs": 7,
+        "patience": 15,
+        "line": "full_both epoch=024 val_dice=0.8595 val_iou=0.7766 q_gate=0.1333 c_gate=0.0040 semantic_mix=0.5023 best=017 bad=7/15"
+      },
+      {
+        "val_dice": 0.8621,
+        "val_iou": 0.782,
+        "q_gate": 0.134,
+        "c_gate": 0.0041,
+        "semantic_mix": 0.5022,
+        "epoch": 25,
+        "best_epoch": 17,
+        "bad_epochs": 8,
+        "patience": 15,
+        "line": "full_both epoch=025 val_dice=0.8621 val_iou=0.7820 q_gate=0.1340 c_gate=0.0041 semantic_mix=0.5022 best=017 bad=8/15"
+      },
+      {
+        "val_dice": 0.8755,
+        "val_iou": 0.7974,
+        "q_gate": 0.1315,
+        "c_gate": 0.0048,
+        "semantic_mix": 0.5026,
+        "epoch": 26,
+        "best_epoch": 26,
+        "bad_epochs": 0,
+        "patience": 15,
+        "line": "full_both epoch=026 val_dice=0.8755 val_iou=0.7974 q_gate=0.1315 c_gate=0.0048 semantic_mix=0.5026 best=026 bad=0/15"
+      },
+      {
+        "val_dice": 0.8738,
+        "val_iou": 0.7937,
+        "q_gate": 0.1341,
+        "c_gate": 0.0042,
+        "semantic_mix": 0.5027,
+        "epoch": 27,
+        "best_epoch": 26,
+        "bad_epochs": 1,
+        "patience": 15,
+        "line": "full_both epoch=027 val_dice=0.8738 val_iou=0.7937 q_gate=0.1341 c_gate=0.0042 semantic_mix=0.5027 best=026 bad=1/15"
+      },
+      {
+        "val_dice": 0.8699,
+        "val_iou": 0.79,
+        "q_gate": 0.1407,
+        "c_gate": 0.0041,
+        "semantic_mix": 0.503,
+        "epoch": 28,
+        "best_epoch": 26,
+        "bad_epochs": 2,
+        "patience": 15,
+        "line": "full_both epoch=028 val_dice=0.8699 val_iou=0.7900 q_gate=0.1407 c_gate=0.0041 semantic_mix=0.5030 best=026 bad=2/15"
+      },
+      {
+        "val_dice": 0.8572,
+        "val_iou": 0.776,
+        "q_gate": 0.1377,
+        "c_gate": 0.004,
+        "semantic_mix": 0.5031,
+        "epoch": 29,
+        "best_epoch": 26,
+        "bad_epochs": 3,
+        "patience": 15,
+        "line": "full_both epoch=029 val_dice=0.8572 val_iou=0.7760 q_gate=0.1377 c_gate=0.0040 semantic_mix=0.5031 best=026 bad=3/15"
+      },
+      {
+        "val_dice": 0.8677,
+        "val_iou": 0.7866,
+        "q_gate": 0.1443,
+        "c_gate": 0.0041,
+        "semantic_mix": 0.5036,
+        "epoch": 30,
+        "best_epoch": 26,
+        "bad_epochs": 4,
+        "patience": 15,
+        "line": "full_both epoch=030 val_dice=0.8677 val_iou=0.7866 q_gate=0.1443 c_gate=0.0041 semantic_mix=0.5036 best=026 bad=4/15"
+      },
+      {
+        "val_dice": 0.8676,
+        "val_iou": 0.7873,
+        "q_gate": 0.1284,
+        "c_gate": 0.0044,
+        "semantic_mix": 0.5036,
+        "epoch": 31,
+        "best_epoch": 26,
+        "bad_epochs": 5,
+        "patience": 15,
+        "line": "full_both epoch=031 val_dice=0.8676 val_iou=0.7873 q_gate=0.1284 c_gate=0.0044 semantic_mix=0.5036 best=026 bad=5/15"
+      },
+      {
+        "val_dice": 0.869,
+        "val_iou": 0.794,
+        "q_gate": 0.1479,
+        "c_gate": 0.0045,
+        "semantic_mix": 0.5044,
+        "epoch": 32,
+        "best_epoch": 26,
+        "bad_epochs": 6,
+        "patience": 15,
+        "line": "full_both epoch=032 val_dice=0.8690 val_iou=0.7940 q_gate=0.1479 c_gate=0.0045 semantic_mix=0.5044 best=026 bad=6/15"
+      },
+      {
+        "val_dice": 0.8672,
+        "val_iou": 0.7886,
+        "q_gate": 0.1345,
+        "c_gate": 0.0045,
+        "semantic_mix": 0.5046,
+        "epoch": 33,
+        "best_epoch": 26,
+        "bad_epochs": 7,
+        "patience": 15,
+        "line": "full_both epoch=033 val_dice=0.8672 val_iou=0.7886 q_gate=0.1345 c_gate=0.0045 semantic_mix=0.5046 best=026 bad=7/15"
+      },
+      {
+        "val_dice": 0.8636,
+        "val_iou": 0.7851,
+        "q_gate": 0.1332,
+        "c_gate": 0.0045,
+        "semantic_mix": 0.5048,
+        "epoch": 34,
+        "best_epoch": 26,
+        "bad_epochs": 8,
+        "patience": 15,
+        "line": "full_both epoch=034 val_dice=0.8636 val_iou=0.7851 q_gate=0.1332 c_gate=0.0045 semantic_mix=0.5048 best=026 bad=8/15"
+      },
+      {
+        "val_dice": 0.8629,
+        "val_iou": 0.7868,
+        "q_gate": 0.147,
+        "c_gate": 0.0044,
+        "semantic_mix": 0.5045,
+        "epoch": 35,
+        "best_epoch": 26,
+        "bad_epochs": 9,
+        "patience": 15,
+        "line": "full_both epoch=035 val_dice=0.8629 val_iou=0.7868 q_gate=0.1470 c_gate=0.0044 semantic_mix=0.5045 best=026 bad=9/15"
+      },
+      {
+        "val_dice": 0.8659,
+        "val_iou": 0.7866,
+        "q_gate": 0.1357,
+        "c_gate": 0.0052,
+        "semantic_mix": 0.5046,
+        "epoch": 36,
+        "best_epoch": 26,
+        "bad_epochs": 10,
+        "patience": 15,
+        "line": "full_both epoch=036 val_dice=0.8659 val_iou=0.7866 q_gate=0.1357 c_gate=0.0052 semantic_mix=0.5046 best=026 bad=10/15"
+      },
+      {
+        "val_dice": 0.8669,
+        "val_iou": 0.7897,
+        "q_gate": 0.1414,
+        "c_gate": 0.006,
+        "semantic_mix": 0.5046,
+        "epoch": 37,
+        "best_epoch": 26,
+        "bad_epochs": 11,
+        "patience": 15,
+        "line": "full_both epoch=037 val_dice=0.8669 val_iou=0.7897 q_gate=0.1414 c_gate=0.0060 semantic_mix=0.5046 best=026 bad=11/15"
+      },
+      {
+        "val_dice": 0.8678,
+        "val_iou": 0.7933,
+        "q_gate": 0.1387,
+        "c_gate": 0.0045,
+        "semantic_mix": 0.505,
+        "epoch": 38,
+        "best_epoch": 26,
+        "bad_epochs": 12,
+        "patience": 15,
+        "line": "full_both epoch=038 val_dice=0.8678 val_iou=0.7933 q_gate=0.1387 c_gate=0.0045 semantic_mix=0.5050 best=026 bad=12/15"
+      },
+      {
+        "val_dice": 0.8595,
+        "val_iou": 0.7771,
+        "q_gate": 0.1453,
+        "c_gate": 0.0045,
+        "semantic_mix": 0.5052,
+        "epoch": 39,
+        "best_epoch": 26,
+        "bad_epochs": 13,
+        "patience": 15,
+        "line": "full_both epoch=039 val_dice=0.8595 val_iou=0.7771 q_gate=0.1453 c_gate=0.0045 semantic_mix=0.5052 best=026 bad=13/15"
+      },
+      {
+        "val_dice": 0.8641,
+        "val_iou": 0.7868,
+        "q_gate": 0.1379,
+        "c_gate": 0.0054,
+        "semantic_mix": 0.5049,
+        "epoch": 40,
+        "best_epoch": 26,
+        "bad_epochs": 14,
+        "patience": 15,
+        "line": "full_both epoch=040 val_dice=0.8641 val_iou=0.7868 q_gate=0.1379 c_gate=0.0054 semantic_mix=0.5049 best=026 bad=14/15"
+      },
+      {
+        "val_dice": 0.8644,
+        "val_iou": 0.786,
+        "q_gate": 0.1372,
+        "c_gate": 0.0044,
+        "semantic_mix": 0.505,
+        "epoch": 41,
+        "best_epoch": 26,
+        "bad_epochs": 15,
+        "patience": 15,
+        "line": "full_both epoch=041 val_dice=0.8644 val_iou=0.7860 q_gate=0.1372 c_gate=0.0044 semantic_mix=0.5050 best=026 bad=15/15"
+      }
+    ],
+    "coverage": {
+      "train": {
+        "images": 2000,
+        "usable_captions": 2000,
+        "usable_rate_displayed": 1.0
+      },
+      "val": {
+        "images": 150,
+        "usable_captions": 150,
+        "usable_rate_displayed": 1.0
+      },
+      "test": {
+        "images": 600,
+        "usable_captions": 600,
+        "usable_rate_displayed": 1.0
+      },
+      "candidate_pool": {
+        "images": 400,
+        "usable_captions": 400,
+        "usable_rate_displayed": 1.0
+      }
+    },
+    "caption_csv_sha256_from_runtime": "d57ac29301254cd2bc2ee369a6f23ff0318a56065f884ebe83e529c7c052ced2",
+    "caption_csv_independently_audited": false,
+    "generation_status_from_runtime": {
+      "complete": true,
+      "rows": 2750,
+      "expected": 2750,
+      "identity": "1c624b6c3b41e1ed296159c934af2a4f06a67661039f4042ca7cf51a03d56fd0",
+      "csv_path": "/kaggle/working/outputs/mtacs_isic2017_448_qwen8b_full_both/caption_generation/captions.csv",
+      "csv_sha256": "d57ac29301254cd2bc2ee369a6f23ff0318a56065f884ebe83e529c7c052ced2",
+      "valid_by_split": {
+        "train": 2000,
+        "val": 150,
+        "test": 600
+      }
+    },
+    "configuration_from_source": {
+      "SEED": 42,
+      "DINOV3_MODEL_NAME": "dinov3_vits16",
+      "FEATURE_DIM": 384,
+      "PATCH_SIZE": 16,
+      "IMAGE_SIZE": 448,
+      "EPOCHS": 100,
+      "BATCH_SIZE": 8,
+      "NUM_WORKERS": 4,
+      "LEARNING_RATE": 0.0001,
+      "WEIGHT_DECAY": 0.0001,
+      "WARMUP_EPOCHS": 5,
+      "PATIENCE": 15,
+      "GRAD_CLIP_NORM": 1.0,
+      "CANDIDATE_POOL_FRACTION": 0.2,
+      "TACS_GUMBEL_TAU": 0.1,
+      "TACS_POLICY_WEIGHT": 1.0,
+      "TACS_ENTROPY_WEIGHT": 0.01,
+      "TACS_SELECTOR_DROPOUT": 0.1,
+      "TACS_SELECTOR_TEMPERATURE": 1.0,
+      "NUM_CROSS_ATTENTION_LAYERS": 2,
+      "CROSS_ATTENTION_HEADS": 6,
+      "DECODER_DROPOUT": 0.1,
+      "DICE_LOSS_WEIGHT": 1.0,
+      "BCE_LOSS_WEIGHT": 1.0,
+      "THRESHOLD": 0.5
+    },
+    "training_protocol_id_from_runtime": [
+      "06ca20c679a8221b9bc1939dfd6d23e697bdde41fa6e56c1c8904596de0c6a01"
+    ],
+    "metadata": {
+      "schema": 1,
+      "dataset": "ISIC2017",
+      "caption_model": "Qwen/Qwen3-VL-8B-Instruct",
+      "experiment": "full_both",
+      "caption_generation": true,
+      "image_size": 448,
+      "seed": 42,
+      "epoch_limit": 100,
+      "patience": 15,
+      "context_k": 1,
+      "baseline_notebook": "tacs_isic_segement_448.ipynb",
+      "baseline_notebook_sha256": "052b4edf0110f2caf6d1b2e9a1d8619dfdfb57d56d97c8768553b9a566215599",
+      "baseline_metrics_are_rounded_stdout": {
+        "dice": 0.856,
+        "iou": 0.7738
+      },
+      "training_code_sha256": "2302feb9f128f9c4ccb6bccdff9cdb9576b4bb695101a5398f1a9fa999425a3a",
+      "caption_policy": "isic_visible_attributes_v1"
+    },
+    "raw_runtime_lines": [
+      "{\"transformers\": \"5.0.0\", \"torch\": \"2.10.0+cu128\", \"cuda\": true, \"gpu\": \"NVIDIA RTX PRO 6000 Blackwell Server Edition\"}",
+      "ISIC captions: cached=0, queued=2750",
+      "CLIP vectors: (2750, 512) valid: 2750"
+    ]
+  },
+  "comparison": {
+    "deltas": {
+      "dice": {
+        "from_rounded_metric_stdout_percentage_points": -0.7311,
+        "comparison_table_displayed_percentage_points": -0.731123
+      },
+      "iou": {
+        "from_rounded_metric_stdout_percentage_points": -0.8393,
+        "comparison_table_displayed_percentage_points": -0.839338
+      }
+    },
+    "raw_table_rows": [
+      {
+        "method": "Visual TACS variant 448, historical seed42",
+        "test_dice": "0.856000",
+        "test_iou": "0.773800",
+        "new_run": "False",
+        "dice_delta_percentage_points": "0.000000",
+        "iou_delta_percentage_points": "0.000000"
+      },
+      {
+        "method": "Qwen3-VL-8B full_both 448",
+        "test_dice": "0.848689",
+        "test_iou": "0.765407",
+        "new_run": "True",
+        "dice_delta_percentage_points": "-0.731123",
+        "iou_delta_percentage_points": "-0.839338"
+      }
+    ],
+    "same_source_config_keys": [
+      "BATCH_SIZE",
+      "BCE_LOSS_WEIGHT",
+      "CANDIDATE_POOL_FRACTION",
+      "CROSS_ATTENTION_HEADS",
+      "DECODER_DROPOUT",
+      "DICE_LOSS_WEIGHT",
+      "DINOV3_MODEL_NAME",
+      "EPOCHS",
+      "FEATURE_DIM",
+      "GRAD_CLIP_NORM",
+      "IMAGE_SIZE",
+      "LEARNING_RATE",
+      "NUM_CROSS_ATTENTION_LAYERS",
+      "NUM_WORKERS",
+      "PATCH_SIZE",
+      "PATIENCE",
+      "SEED",
+      "TACS_ENTROPY_WEIGHT",
+      "TACS_GUMBEL_TAU",
+      "TACS_POLICY_WEIGHT",
+      "TACS_SELECTOR_DROPOUT",
+      "TACS_SELECTOR_TEMPERATURE",
+      "THRESHOLD",
+      "WARMUP_EPOCHS",
+      "WEIGHT_DECAY"
+    ],
+    "trainable_parameters_from_stdout": {
+      "visual": 6306754,
+      "caption": 6704325,
+      "additional": 397571
+    },
+    "different_source_config_values": {},
+    "common_baseline_definitions": 22,
+    "different_common_baseline_definitions": [],
+    "reviewed_template_shared_definitions": 63,
+    "reviewed_template_definitions_identical": true,
+    "embedded_worker_sha256": "6f695ddfb51ab2a97d9f56d8776ee53258d8f79e7f2e49ee62b95030c4564947",
+    "embedded_worker_matches_template": true
+  },
+  "limits": [
+    "One training seed only; no statistical significance or universal text benefit/harm established.",
+    "Baseline is the separately audited historical notebook, not rerun alongside this caption experiment.",
+    "Source/runtime image counts agree; full split/pool and old/new weight-byte identities are not independently compared.",
+    "Caption CSV, text vectors, protocol, full predictions and checkpoints were not separately supplied for independent audit.",
+    "Text gates are validation values at epoch 26, not printed best-checkpoint test gates or causal contribution percentages.",
+    "100% caption policy coverage is not human-verified correctness or proof of no shortcut/leakage.",
+    "Test Dice/IoU are six-decimal stdout; baseline uses four decimals; comparison-table deltas use more internal precision.",
+    "Text fusion, semantic retrieval, parameter count and training trajectory change together."
+  ],
+  "generic_output_audit": {
+    "path": "isic-segmen-captions.ipynb",
+    "sha256": "32779936c8509b0d45c201d6139d06dcea2bfcc591a8409e7ed2240fa5758847",
+    "configurations": [
+      {
+        "name": "SEED",
+        "expression": "42",
+        "cell_index": 2,
+        "line": 25
+      },
+      {
+        "name": "DINOV3_MODEL_NAME",
+        "expression": "\"dinov3_vits16\"",
+        "cell_index": 2,
+        "line": 51
+      },
+      {
+        "name": "IMAGE_SIZE",
+        "expression": "448",
+        "cell_index": 2,
+        "line": 66
+      },
+      {
+        "name": "EPOCHS",
+        "expression": "100",
+        "cell_index": 2,
+        "line": 68
+      },
+      {
+        "name": "BATCH_SIZE",
+        "expression": "8",
+        "cell_index": 2,
+        "line": 69
+      },
+      {
+        "name": "PATIENCE",
+        "expression": "15",
+        "cell_index": 2,
+        "line": 74
+      },
+      {
+        "name": "CANDIDATE_POOL_FRACTION",
+        "expression": "0.20",
+        "cell_index": 2,
+        "line": 77
+      },
+      {
+        "name": "TACS_POLICY_WEIGHT",
+        "expression": "1.0",
+        "cell_index": 2,
+        "line": 80
+      }
+    ],
+    "metric_lines": [
+      {
+        "cell_index": 14,
+        "text": "Early stopping at epoch 41"
+      },
+      {
+        "cell_index": 16,
+        "text": "test_dice: 0.848689 (84.87%)"
+      },
+      {
+        "cell_index": 16,
+        "text": "test_iou: 0.765407 (76.54%)"
+      },
+      {
+        "cell_index": 16,
+        "text": "                                       method  test_dice  test_iou  new_run  \\"
+      }
+    ],
+    "tables": [
+      {
+        "cell_index": 14,
+        "rows": [
+          [
+            "",
+            "epoch",
+            "train_loss",
+            "train_dice",
+            "train_iou",
+            "train_reward",
+            "train_policy_loss",
+            "train_q_gate",
+            "train_c_gate",
+            "val_loss",
+            "val_dice",
+            "val_iou",
+            "val_soft_dice",
+            "val_soft_iou",
+            "val_q_gate",
+            "val_c_gate",
+            "val_query_caption_rate",
+            "val_candidate_caption_rate",
+            "lr"
+          ],
+          [
+            "36",
+            "37",
+            "0.039060",
+            "0.955779",
+            "0.916493",
+            "0.281934",
+            "0.002112",
+            "0.152048",
+            "0.004967",
+            "0.357038",
+            "0.866932",
+            "0.789672",
+            "0.864827",
+            "0.785857",
+            "0.141402",
+            "0.005978",
+            "1.0",
+            "1.0",
+            "0.000075"
+          ],
+          [
+            "37",
+            "38",
+            "0.037642",
+            "0.956044",
+            "0.916954",
+            "0.278800",
+            "0.001149",
+            "0.151919",
+            "0.004655",
+            "0.347431",
+            "0.867795",
+            "0.793271",
+            "0.864447",
+            "0.787505",
+            "0.138671",
+            "0.004504",
+            "1.0",
+            "1.0",
+            "0.000073"
+          ],
+          [
+            "38",
+            "39",
+            "0.031729",
+            "0.957174",
+            "0.918891",
+            "0.306577",
+            "-0.002062",
+            "0.152849",
+            "0.004822",
+            "0.371799",
+            "0.859540",
+            "0.777126",
+            "0.856516",
+            "0.772143",
+            "0.145346",
+            "0.004457",
+            "1.0",
+            "1.0",
+            "0.000072"
+          ],
+          [
+            "39",
+            "40",
+            "0.032752",
+            "0.958279",
+            "0.920938",
+            "0.294132",
+            "0.001137",
+            "0.152566",
+            "0.004966",
+            "0.359848",
+            "0.864115",
+            "0.786786",
+            "0.861439",
+            "0.781848",
+            "0.137944",
+            "0.005350",
+            "1.0",
+            "1.0",
+            "0.000070"
+          ],
+          [
+            "40",
+            "41",
+            "0.027957",
+            "0.959403",
+            "0.922858",
+            "0.307002",
+            "-0.000657",
+            "0.150989",
+            "0.004998",
+            "0.354086",
+            "0.864401",
+            "0.785983",
+            "0.862423",
+            "0.782005",
+            "0.137164",
+            "0.004376",
+            "1.0",
+            "1.0",
+            "0.000069"
+          ]
+        ]
+      },
+      {
+        "cell_index": 16,
+        "rows": [
+          [
+            "",
+            "method",
+            "test_dice",
+            "test_iou",
+            "new_run",
+            "dice_delta_percentage_points",
+            "iou_delta_percentage_points"
+          ],
+          [
+            "0",
+            "Visual TACS variant 448, historical seed42",
+            "0.856000",
+            "0.773800",
+            "False",
+            "0.000000",
+            "0.000000"
+          ],
+          [
+            "1",
+            "Qwen3-VL-8B full_both 448",
+            "0.848689",
+            "0.765407",
+            "True",
+            "-0.731123",
+            "-0.839338"
+          ]
+        ]
+      }
+    ],
+    "errors": [],
+    "runtime_lines": [
+      {
+        "cell_index": 2,
+        "text": "DEVICE: cuda"
+      },
+      {
+        "cell_index": 3,
+        "text": "Test images: 600"
+      },
+      {
+        "cell_index": 3,
+        "text": "Candidate pool: 400/2,000 train images (20%)"
+      }
+    ],
+    "cells_with_outputs": 13,
+    "image_outputs": 2,
+    "saved_outputs_sha256": "ff2ee3d9f92142e11456f1753d809d9c24f85a159fa6f4e04b5cfa71720a042c",
+    "source_indicators": {
+      "val_copy_of_train": false,
+      "val_copy_of_test": false,
+      "gumbel_softmax_present": true,
+      "policy_loss_present": true,
+      "candidate_self_exclusion_text_present": true,
+      "full_train_monitor_subset_pattern": false
+    },
+    "source_caution": "Static indicators/config declarations are review leads, not proof of the actual executed runtime or complete method equivalence."
+  }
+}

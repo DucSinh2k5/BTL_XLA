@@ -1,0 +1,123 @@
+{
+  "verified_on": "2026-11-01 Asia/Saigon",
+  "server": "http://127.0.0.1:8000",
+  "readiness": {
+    "ready": true,
+    "models": {
+      "tacs": {
+        "available": true,
+        "code": "ready",
+        "message": "Model đã nạp sẵn, có thể dự đoán.",
+        "device": "cpu",
+        "backbone": "dinov3_vitl16",
+        "image_size": 384,
+        "candidate_count": 3573,
+        "caption_models_loaded": false
+      },
+      "mtacs": {
+        "available": true,
+        "code": "ready",
+        "message": "Model đã nạp sẵn, có thể dự đoán.",
+        "device": "cpu",
+        "backbone": "dinov3_vitl16",
+        "image_size": 384,
+        "candidate_count": 3573,
+        "caption_models_loaded": true
+      }
+    }
+  },
+  "startup_loading": true,
+  "weights_policy": "unchanged float32; strict mapped loading with initialized nonpersistent buffers",
+  "unit_tests": {
+    "passed": 20,
+    "warnings": [
+      "Starlette TestClient httpx deprecation"
+    ]
+  },
+  "models": {
+    "tacs": {
+      "bundle": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\TACS\\artifacts\\deployment\\sun397\\tacs_visual",
+      "model_sha256": "1c83da6c394a60e8cf7811f15fbd9887f838fc5f7c3dbfc389fdc4941c14d79e",
+      "prediction": {
+        "class_id": 85,
+        "label": "c/cathedral/outdoor",
+        "confidence": 0.3424721658229828
+      },
+      "same_class_and_candidate_as_export": true,
+      "confidence_difference": 5.066394805908203e-07,
+      "query_caption": {
+        "text": null,
+        "status": "not_used"
+      },
+      "selected_candidate_id": "p/palace/sun_bhmesxjrrlbjpjpz.jpg",
+      "attention": {
+        "query_classifier": {
+          "status": "ready",
+          "method": "last_block_cls_to_patch_attention_mean_heads",
+          "grid_shape": [
+            24,
+            24
+          ],
+          "class_conditional": false
+        },
+        "candidate_selector": {
+          "status": "ready",
+          "method": "last_block_cls_to_patch_attention_mean_heads",
+          "grid_shape": [
+            24,
+            24
+          ],
+          "class_conditional": false
+        }
+      },
+      "timing": {
+        "inference_seconds": 22.268
+      },
+      "evidence_json": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\TACS\\tmp\\web_live_tacs_prediction_20261101.json"
+    },
+    "mtacs": {
+      "bundle": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\TACS\\artifacts\\deployment\\sun397\\mtacs_full_both",
+      "model_sha256": "40f8a915f8177d93ca3361b99d91dd2cd05b4b8d7c656dfd57d31e173c22ff74",
+      "prediction": {
+        "class_id": 85,
+        "label": "c/cathedral/outdoor",
+        "confidence": 0.4531163275241852
+      },
+      "same_class_and_candidate_as_export": true,
+      "confidence_difference": 1.4007091522216797e-06,
+      "query_caption": {
+        "text": "of a large Gothic style cathedral with a",
+        "raw_text": "The image is of a large, Gothic-style cathedral with a high façade. The cathedral is made of stone and has multiple levels with arched windows and pointed spires. The façades are decorated with intricate car",
+        "valid": false,
+        "status": "masked",
+        "source": "fresh_florence",
+        "policy": "sun397_lexical_clip_audit_v1"
+      },
+      "selected_candidate_id": "p/palace/sun_bhmesxjrrlbjpjpz.jpg",
+      "attention": {
+        "query_classifier": {
+          "status": "ready",
+          "grid_shape": [
+            24,
+            24
+          ],
+          "method": "last_block_cls_to_patch_attention_mean_heads",
+          "class_conditional": false
+        },
+        "candidate_selector": {
+          "status": "ready",
+          "grid_shape": [
+            24,
+            24
+          ],
+          "method": "last_block_cls_to_patch_attention_mean_heads",
+          "class_conditional": false
+        }
+      },
+      "timing": {
+        "inference_seconds": 28.438
+      },
+      "evidence_json": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\TACS\\tmp\\web_live_mtacs_fresh_prediction_20261101.json"
+    }
+  }
+}

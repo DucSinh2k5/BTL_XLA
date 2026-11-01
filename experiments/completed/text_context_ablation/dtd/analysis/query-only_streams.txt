@@ -1,0 +1,1471 @@
+Offline query-only preflight passed; caption cell can create/resume CSV with local Florence.
+
+DEVICE: cuda
+GPU memory: 95.0 GiB; ViT-L batch sizes: train=32, retrieval=128, feature-refresh=64
+DATASET_ROOT: /kaggle/input/datasets/jmexpert/describable-textures-dataset-dtd/dtd
+IMAGE_ROOT: /kaggle/input/datasets/jmexpert/describable-textures-dataset-dtd/dtd/images
+OUT_PUT_DIR: /kaggle/working/outputs/mtacs_dtd_split1_ablation_02_query_only_vitl16
+Standard train images: 1,880
+Actual train images: 1,880
+Validation images: 1,880
+Train on full train: False
+Standard test images: 1,880
+Candidate pool: 376/1,880 actual-train images (20%)
+TACS selected context per query: 1
+TACS uses full candidate pool during training: True
+TACS Gumbel tau: 0.1, policy weight: 1.0
+BBox crop enabled: False
+Train label range: 0..46
+Test label range: 0..46
+
+Training-only caption diagnostics; rejection counts overlap:
+
+Stored CLIP score range: 0.620865 .. 0.930087 | median: 0.913577
+Stored CLIP scores refer to the original CSV text where semantic_score_matches_input=False; they are legacy diagnostics, not scores for the cleaned model input.
+Audited DTD captions ready: /kaggle/working/outputs/mtacs_dtd_split1_ablation_02_query_only_vitl16/shared/captions.csv
+Caption input policy: dtd_lexical_v2
+
+Query-caption vectors: (5640, 512)
+
+DINOv3 assets đã sẵn sàng từ Kaggle Input.
+
+Only query_only will run: 50 epochs; seed(s): [42]
+Output: /kaggle/working/outputs/mtacs_dtd_split1_ablation_02_query_only_vitl16
+
+Training each configuration to 50 epochs; LR schedule horizon=50.
+
+Exception ignored in: <function _ConnectionBase.__del__ at 0x7fbc0dbd8220>
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/multiprocessing/connection.py", line 138, in __del__
+    self._close()
+  File "/usr/lib/python3.13/multiprocessing/connection.py", line 382, in _close
+    _close(self._handle)
+OSError: [Errno 9] Bad file descriptor
+
+Downloading: "file:///kaggle/input/datasets/quctriunguyn/dinov3-vitl16/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth" to /root/.cache/torch/hub/checkpoints/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth
+
+100%|██████████| 1.13G/1.13G [00:07<00:00, 159MB/s]
+
+query_only seed=42 epoch=1 val_f1=0.0625 val_loss=3.7495 q_gate=0.289 c_gate=0.000
+
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1655, in _shutdown_workers
+    self._pin_memory_thread.join()
+  File "/usr/lib/python3.13/threading.py", line 1088, in join
+    raise RuntimeError("cannot join current thread")
+RuntimeError: cannot join current thread
+assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+
+query_only seed=42 epoch=2 val_f1=0.2447 val_loss=3.3633 q_gate=0.263 c_gate=0.000
+
+query_only seed=42 epoch=3 val_f1=0.3954 val_loss=2.9334 q_gate=0.086 c_gate=0.000
+
+query_only seed=42 epoch=4 val_f1=0.5067 val_loss=2.4847 q_gate=0.106 c_gate=0.000
+
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+self._shutdown_workers()Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+
+query_only seed=42 epoch=5 val_f1=0.5649 val_loss=2.1822 q_gate=0.085 c_gate=0.000
+
+query_only seed=42 epoch=6 val_f1=0.6099 val_loss=1.9820 q_gate=0.062 c_gate=0.000
+
+query_only seed=42 epoch=7 val_f1=0.6642 val_loss=1.8230 q_gate=0.041 c_gate=0.000
+
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+
+AssertionError: can only test a child processException ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+can only test a child process  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: 
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: self._shutdown_workers()<function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+
+query_only seed=42 epoch=8 val_f1=0.6862 val_loss=1.7275 q_gate=0.036 c_gate=0.000
+
+query_only seed=42 epoch=9 val_f1=0.7179 val_loss=1.6218 q_gate=0.032 c_gate=0.000
+
+query_only seed=42 epoch=10 val_f1=0.7248 val_loss=1.5669 q_gate=0.030 c_gate=0.000
+
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child processException ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+
+query_only seed=42 epoch=11 val_f1=0.7515 val_loss=1.5025 q_gate=0.025 c_gate=0.000
+
+query_only seed=42 epoch=12 val_f1=0.7682 val_loss=1.4677 q_gate=0.023 c_gate=0.000
+
+query_only seed=42 epoch=13 val_f1=0.7676 val_loss=1.4468 q_gate=0.023 c_gate=0.000
+
+query_only seed=42 epoch=14 val_f1=0.7759 val_loss=1.4241 q_gate=0.021 c_gate=0.000
+
+query_only seed=42 epoch=15 val_f1=0.7895 val_loss=1.3940 q_gate=0.020 c_gate=0.000
+
+query_only seed=42 epoch=16 val_f1=0.7962 val_loss=1.3639 q_gate=0.018 c_gate=0.000
+
+query_only seed=42 epoch=17 val_f1=0.8025 val_loss=1.3390 q_gate=0.014 c_gate=0.000
+
+query_only seed=42 epoch=18 val_f1=0.7983 val_loss=1.3561 q_gate=0.018 c_gate=0.000
+
+query_only seed=42 epoch=19 val_f1=0.8052 val_loss=1.3282 q_gate=0.014 c_gate=0.000
+
+query_only seed=42 epoch=20 val_f1=0.7943 val_loss=1.3429 q_gate=0.018 c_gate=0.000
+
+query_only seed=42 epoch=21 val_f1=0.8061 val_loss=1.3214 q_gate=0.014 c_gate=0.000
+
+query_only seed=42 epoch=22 val_f1=0.8043 val_loss=1.3343 q_gate=0.017 c_gate=0.000
+
+query_only seed=42 epoch=23 val_f1=0.8128 val_loss=1.3100 q_gate=0.013 c_gate=0.000
+
+query_only seed=42 epoch=24 val_f1=0.7933 val_loss=1.3278 q_gate=0.016 c_gate=0.000
+
+query_only seed=42 epoch=25 val_f1=0.8022 val_loss=1.3211 q_gate=0.015 c_gate=0.000
+
+query_only seed=42 epoch=26 val_f1=0.8103 val_loss=1.3095 q_gate=0.014 c_gate=0.000
+
+query_only seed=42 epoch=27 val_f1=0.8006 val_loss=1.3218 q_gate=0.015 c_gate=0.000
+
+query_only seed=42 epoch=28 val_f1=0.8005 val_loss=1.3176 q_gate=0.015 c_gate=0.000
+
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+Exception ignored in:     if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+<function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>AssertionError
+: Traceback (most recent call last):
+can only test a child process  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+
+    self._shutdown_workers()
+Exception ignored in:   File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+<function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+    Traceback (most recent call last):
+if w.is_alive():
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+        self._shutdown_workers()assert self._parent_pid == os.getpid(), 'can only test a child process'
+
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+AssertionError: can only test a child process
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+Exception ignored in:   File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+<function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+    Traceback (most recent call last):
+self._shutdown_workers()  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    self._shutdown_workers()    
+if w.is_alive():  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+
+      File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+if w.is_alive():    
+assert self._parent_pid == os.getpid(), 'can only test a child process'  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+
+    assert self._parent_pid == os.getpid(), 'can only test a child process'AssertionError
+: AssertionErrorcan only test a child process: 
+can only test a child process
+Exception ignored in: Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0><function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+        self._shutdown_workers()self._shutdown_workers()
+
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():    
+if w.is_alive():  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'    
+assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionErrorAssertionError: : can only test a child processcan only test a child process
+
+Exception ignored in: Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0><function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+        self._shutdown_workers()self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    
+if w.is_alive():  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+        if w.is_alive():assert self._parent_pid == os.getpid(), 'can only test a child process'
+
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+AssertionError    : assert self._parent_pid == os.getpid(), 'can only test a child process'can only test a child process
+
+AssertionError: can only test a child process
+Exception ignored in: Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0><function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+
+    if w.is_alive():  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    
+if w.is_alive():  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+
+    assert self._parent_pid == os.getpid(), 'can only test a child process'  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+
+AssertionError:     can only test a child process
+assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child processException ignored in: 
+<function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+Exception ignored in:   File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+<function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>    
+if w.is_alive():Traceback (most recent call last):
+
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+        assert self._parent_pid == os.getpid(), 'can only test a child process'self._shutdown_workers()
+
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+AssertionError: can only test a child process
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    Exception ignored in: assert self._parent_pid == os.getpid(), 'can only test a child process'<function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+
+Traceback (most recent call last):
+AssertionError  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+:     can only test a child processself._shutdown_workers()
+
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fbc0e52c9a0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1709, in __del__
+    self._shutdown_workers()
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 1692, in _shutdown_workers
+    if w.is_alive():
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'
+AssertionError: can only test a child process
+
+query_only seed=42 epoch=29 val_f1=0.8064 val_loss=1.2987 q_gate=0.012 c_gate=0.000
+
+query_only seed=42 epoch=30 val_f1=0.8031 val_loss=1.3056 q_gate=0.013 c_gate=0.000
+
+query_only seed=42 epoch=31 val_f1=0.8012 val_loss=1.3116 q_gate=0.014 c_gate=0.000
+
+query_only seed=42 epoch=32 val_f1=0.8048 val_loss=1.3069 q_gate=0.014 c_gate=0.000
+
+query_only seed=42 epoch=33 val_f1=0.8034 val_loss=1.3026 q_gate=0.013 c_gate=0.000
+
+query_only seed=42 epoch=34 val_f1=0.8004 val_loss=1.3040 q_gate=0.013 c_gate=0.000
+
+query_only seed=42 epoch=35 val_f1=0.8082 val_loss=1.2994 q_gate=0.013 c_gate=0.000
+
+query_only seed=42 epoch=36 val_f1=0.8054 val_loss=1.3042 q_gate=0.013 c_gate=0.000
+
+query_only seed=42 epoch=37 val_f1=0.8045 val_loss=1.3049 q_gate=0.014 c_gate=0.000
+
+query_only seed=42 epoch=38 val_f1=0.8066 val_loss=1.3013 q_gate=0.014 c_gate=0.000
+
+query_only seed=42 epoch=39 val_f1=0.8057 val_loss=1.2998 q_gate=0.013 c_gate=0.000
+
+query_only seed=42 epoch=40 val_f1=0.8071 val_loss=1.3027 q_gate=0.013 c_gate=0.000
+
+query_only seed=42 epoch=41 val_f1=0.8074 val_loss=1.3026 q_gate=0.013 c_gate=0.000
+
+IOPub message rate exceeded.
+The Jupyter server will temporarily stop sending output
+to the client in order to avoid crashing it.
+To change this limit, set the config variable
+`--ServerApp.iopub_msg_rate_limit`.
+
+Current values:
+ServerApp.iopub_msg_rate_limit=10000.0 (msgs/sec)
+ServerApp.rate_limit_window=1.0 (secs)
+
+
+Saved results: /kaggle/working/outputs/mtacs_dtd_split1_ablation_02_query_only_vitl16/query_only_results.csv
+Saved report: /kaggle/working/outputs/mtacs_dtd_split1_ablation_02_query_only_vitl16/query_only_report.md

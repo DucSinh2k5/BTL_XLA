@@ -1,0 +1,748 @@
+Offline candidate-only preflight passed; caption cell can create/resume CSV with local Florence.
+
+DEVICE: cuda
+GPU memory: 95.0 GiB; ViT-L batch sizes: train=32, retrieval=128, feature-refresh=64
+DATASET_ROOT: /kaggle/input/datasets/jmexpert/describable-textures-dataset-dtd/dtd
+IMAGE_ROOT: /kaggle/input/datasets/jmexpert/describable-textures-dataset-dtd/dtd/images
+OUT_PUT_DIR: /kaggle/working/outputs/mtacs_dtd_split1_ablation_03_candidate_only_vitl16
+Standard train images: 1,880
+Actual train images: 1,880
+Validation images: 1,880
+Train on full train: False
+Standard test images: 1,880
+Candidate pool: 376/1,880 actual-train images (20%)
+TACS selected context per query: 1
+TACS uses full candidate pool during training: True
+TACS Gumbel tau: 0.1, policy weight: 1.0
+BBox crop enabled: False
+Train label range: 0..46
+Test label range: 0..46
+
+Preparing isolated Florence dependencies from attached offline wheels; the notebook kernel is unchanged.
+Isolated caption subprocess Transformers: 4.49.0
+Creating/resuming captions from image pixels only: /kaggle/working/outputs/mtacs_dtd_split1_ablation_03_candidate_only_vitl16/shared/captions.csv
+DTD captions: cached=0, remaining=5,640, output=/kaggle/working/outputs/mtacs_dtd_split1_ablation_03_candidate_only_vitl16/shared/captions.csv
+Using local Florence-2 (legacy): /kaggle/input/notebooks/nguyenducxu/notebook-mt-moi/Florence-2-base
+Using local CLIP auditor: /kaggle/input/datasets/nguyenducxu/vit-32/model_clip_vit
+
+DTD Florence-2 captions:   0%|          | 0/353 [00:00<?, ?it/s]/kaggle/working/outputs/mtacs_dtd_split1_ablation_03_candidate_only_vitl16/shared/caption_runtime/legacy_packages/transformers/generation/configuration_utils.py:677: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+
+DTD Florence-2 captions:   0%|          | 1/353 [00:02<15:49,  2.70s/it]
+DTD Florence-2 captions:   1%|          | 2/353 [00:03<08:12,  1.40s/it]
+DTD Florence-2 captions:   1%|          | 3/353 [00:03<05:48,  1.01it/s]
+DTD Florence-2 captions:   1%|          | 4/353 [00:04<04:40,  1.24it/s]
+DTD Florence-2 captions:   1%|▏         | 5/353 [00:04<04:00,  1.45it/s]
+DTD Florence-2 captions:   2%|▏         | 6/353 [00:05<03:34,  1.62it/s]
+DTD Florence-2 captions:   2%|▏         | 7/353 [00:05<03:16,  1.76it/s]
+DTD Florence-2 captions:   2%|▏         | 8/353 [00:06<03:07,  1.84it/s]
+DTD Florence-2 captions:   3%|▎         | 9/353 [00:06<03:17,  1.74it/s]
+DTD Florence-2 captions:   3%|▎         | 10/353 [00:07<03:06,  1.84it/s]
+DTD Florence-2 captions:   3%|▎         | 11/353 [00:07<03:01,  1.89it/s]
+DTD Florence-2 captions:   3%|▎         | 12/353 [00:08<02:56,  1.93it/s]
+DTD Florence-2 captions:   4%|▎         | 13/353 [00:08<02:53,  1.96it/s]
+DTD Florence-2 captions:   4%|▍         | 14/353 [00:09<02:50,  1.99it/s]
+DTD Florence-2 captions:   4%|▍         | 15/353 [00:09<02:46,  2.02it/s]
+DTD Florence-2 captions:   5%|▍         | 16/353 [00:10<02:48,  2.00it/s]
+DTD Florence-2 captions:   5%|▍         | 17/353 [00:10<02:46,  2.02it/s]
+DTD Florence-2 captions:   5%|▌         | 18/353 [00:11<02:47,  2.00it/s]
+DTD Florence-2 captions:   5%|▌         | 19/353 [00:11<02:47,  2.00it/s]
+DTD Florence-2 captions:   6%|▌         | 20/353 [00:12<02:46,  2.01it/s]
+DTD Florence-2 captions:   6%|▌         | 21/353 [00:12<02:46,  1.99it/s]
+DTD Florence-2 captions:   6%|▌         | 22/353 [00:13<02:43,  2.02it/s]
+DTD Florence-2 captions:   7%|▋         | 23/353 [00:13<02:41,  2.04it/s]
+DTD Florence-2 captions:   7%|▋         | 24/353 [00:14<02:39,  2.06it/s]
+DTD Florence-2 captions:   7%|▋         | 25/353 [00:14<02:38,  2.07it/s]
+DTD Florence-2 captions:   7%|▋         | 26/353 [00:15<02:40,  2.03it/s]
+DTD Florence-2 captions:   8%|▊         | 27/353 [00:15<02:40,  2.04it/s]
+DTD Florence-2 captions:   8%|▊         | 28/353 [00:16<02:39,  2.04it/s]
+DTD Florence-2 captions:   8%|▊         | 29/353 [00:16<02:42,  2.00it/s]
+DTD Florence-2 captions:   8%|▊         | 30/353 [00:17<02:39,  2.02it/s]
+DTD Florence-2 captions:   9%|▉         | 31/353 [00:17<02:42,  1.98it/s]
+DTD Florence-2 captions:   9%|▉         | 32/353 [00:18<02:39,  2.01it/s]
+DTD Florence-2 captions:   9%|▉         | 33/353 [00:18<02:39,  2.01it/s]
+DTD Florence-2 captions:  10%|▉         | 34/353 [00:19<02:37,  2.02it/s]
+DTD Florence-2 captions:  10%|▉         | 35/353 [00:19<02:35,  2.04it/s]
+DTD Florence-2 captions:  10%|█         | 36/353 [00:20<02:42,  1.95it/s]
+DTD Florence-2 captions:  10%|█         | 37/353 [00:20<02:47,  1.89it/s]
+DTD Florence-2 captions:  11%|█         | 38/353 [00:21<02:43,  1.93it/s]
+DTD Florence-2 captions:  11%|█         | 39/353 [00:21<02:39,  1.97it/s]
+DTD Florence-2 captions:  11%|█▏        | 40/353 [00:22<02:36,  2.00it/s]
+DTD Florence-2 captions:  12%|█▏        | 41/353 [00:22<02:36,  1.99it/s]
+DTD Florence-2 captions:  12%|█▏        | 42/353 [00:23<02:38,  1.96it/s]
+DTD Florence-2 captions:  12%|█▏        | 43/353 [00:23<02:41,  1.92it/s]
+DTD Florence-2 captions:  12%|█▏        | 44/353 [00:24<02:42,  1.91it/s]
+DTD Florence-2 captions:  13%|█▎        | 45/353 [00:24<02:37,  1.96it/s]
+DTD Florence-2 captions:  13%|█▎        | 46/353 [00:25<02:38,  1.94it/s]
+DTD Florence-2 captions:  13%|█▎        | 47/353 [00:25<02:35,  1.97it/s]
+DTD Florence-2 captions:  14%|█▎        | 48/353 [00:26<02:34,  1.97it/s]
+DTD Florence-2 captions:  14%|█▍        | 49/353 [00:26<02:31,  2.01it/s]
+DTD Florence-2 captions:  14%|█▍        | 50/353 [00:27<02:30,  2.01it/s]
+DTD Florence-2 captions:  14%|█▍        | 51/353 [00:27<02:30,  2.01it/s]
+DTD Florence-2 captions:  15%|█▍        | 52/353 [00:28<02:29,  2.01it/s]
+DTD Florence-2 captions:  15%|█▌        | 53/353 [00:28<02:29,  2.00it/s]
+DTD Florence-2 captions:  15%|█▌        | 54/353 [00:29<02:33,  1.95it/s]
+DTD Florence-2 captions:  16%|█▌        | 55/353 [00:29<02:33,  1.94it/s]
+DTD Florence-2 captions:  16%|█▌        | 56/353 [00:30<02:32,  1.95it/s]
+DTD Florence-2 captions:  16%|█▌        | 57/353 [00:30<02:28,  1.99it/s]
+DTD Florence-2 captions:  16%|█▋        | 58/353 [00:31<02:31,  1.95it/s]
+DTD Florence-2 captions:  17%|█▋        | 59/353 [00:31<02:28,  1.98it/s]
+DTD Florence-2 captions:  17%|█▋        | 60/353 [00:32<02:26,  2.01it/s]
+DTD Florence-2 captions:  17%|█▋        | 61/353 [00:32<02:27,  1.98it/s]
+DTD Florence-2 captions:  18%|█▊        | 62/353 [00:33<02:25,  2.00it/s]
+DTD Florence-2 captions:  18%|█▊        | 63/353 [00:33<02:26,  1.98it/s]
+DTD Florence-2 captions:  18%|█▊        | 64/353 [00:34<02:27,  1.96it/s]
+DTD Florence-2 captions:  18%|█▊        | 65/353 [00:34<02:24,  2.00it/s]
+DTD Florence-2 captions:  19%|█▊        | 66/353 [00:35<02:26,  1.96it/s]
+DTD Florence-2 captions:  19%|█▉        | 67/353 [00:35<02:24,  1.98it/s]
+DTD Florence-2 captions:  19%|█▉        | 68/353 [00:36<02:22,  2.00it/s]
+DTD Florence-2 captions:  20%|█▉        | 69/353 [00:36<02:22,  1.99it/s]
+DTD Florence-2 captions:  20%|█▉        | 70/353 [00:37<02:20,  2.02it/s]
+DTD Florence-2 captions:  20%|██        | 71/353 [00:37<02:21,  2.00it/s]
+DTD Florence-2 captions:  20%|██        | 72/353 [00:38<02:20,  2.00it/s]
+DTD Florence-2 captions:  21%|██        | 73/353 [00:38<02:18,  2.02it/s]
+DTD Florence-2 captions:  21%|██        | 74/353 [00:39<02:19,  2.00it/s]
+DTD Florence-2 captions:  21%|██        | 75/353 [00:39<02:20,  1.98it/s]
+DTD Florence-2 captions:  22%|██▏       | 76/353 [00:40<02:19,  1.99it/s]
+DTD Florence-2 captions:  22%|██▏       | 77/353 [00:40<02:20,  1.97it/s]
+DTD Florence-2 captions:  22%|██▏       | 78/353 [00:41<02:18,  1.99it/s]
+DTD Florence-2 captions:  22%|██▏       | 79/353 [00:41<02:20,  1.95it/s]
+DTD Florence-2 captions:  23%|██▎       | 80/353 [00:42<02:20,  1.95it/s]
+DTD Florence-2 captions:  23%|██▎       | 81/353 [00:42<02:18,  1.97it/s]
+DTD Florence-2 captions:  23%|██▎       | 82/353 [00:43<02:19,  1.94it/s]
+DTD Florence-2 captions:  24%|██▎       | 83/353 [00:43<02:15,  1.99it/s]
+DTD Florence-2 captions:  24%|██▍       | 84/353 [00:44<02:12,  2.03it/s]
+DTD Florence-2 captions:  24%|██▍       | 85/353 [00:44<02:11,  2.04it/s]
+DTD Florence-2 captions:  24%|██▍       | 86/353 [00:45<02:13,  2.01it/s]
+DTD Florence-2 captions:  25%|██▍       | 87/353 [00:45<02:12,  2.01it/s]
+DTD Florence-2 captions:  25%|██▍       | 88/353 [00:46<02:14,  1.96it/s]
+DTD Florence-2 captions:  25%|██▌       | 89/353 [00:46<02:18,  1.91it/s]
+DTD Florence-2 captions:  25%|██▌       | 90/353 [00:47<02:16,  1.92it/s]
+DTD Florence-2 captions:  26%|██▌       | 91/353 [00:48<02:15,  1.93it/s]
+DTD Florence-2 captions:  26%|██▌       | 92/353 [00:48<02:16,  1.92it/s]
+DTD Florence-2 captions:  26%|██▋       | 93/353 [00:49<02:13,  1.95it/s]
+DTD Florence-2 captions:  27%|██▋       | 94/353 [00:49<02:11,  1.97it/s]
+DTD Florence-2 captions:  27%|██▋       | 95/353 [00:50<02:09,  2.00it/s]
+DTD Florence-2 captions:  27%|██▋       | 96/353 [00:50<02:09,  1.98it/s]
+DTD Florence-2 captions:  27%|██▋       | 97/353 [00:51<02:07,  2.01it/s]
+DTD Florence-2 captions:  28%|██▊       | 98/353 [00:51<02:05,  2.03it/s]
+DTD Florence-2 captions:  28%|██▊       | 99/353 [00:51<02:03,  2.06it/s]
+DTD Florence-2 captions:  28%|██▊       | 100/353 [00:52<02:02,  2.07it/s]
+DTD Florence-2 captions:  29%|██▊       | 101/353 [00:52<02:00,  2.09it/s]
+DTD Florence-2 captions:  29%|██▉       | 102/353 [00:53<01:59,  2.10it/s]
+DTD Florence-2 captions:  29%|██▉       | 103/353 [00:53<01:59,  2.10it/s]
+DTD Florence-2 captions:  29%|██▉       | 104/353 [00:54<02:03,  2.02it/s]
+DTD Florence-2 captions:  30%|██▉       | 105/353 [00:54<02:04,  2.00it/s]
+DTD Florence-2 captions:  30%|███       | 106/353 [00:55<02:04,  1.99it/s]
+DTD Florence-2 captions:  30%|███       | 107/353 [00:55<02:02,  2.01it/s]
+DTD Florence-2 captions:  31%|███       | 108/353 [00:56<02:01,  2.01it/s]
+DTD Florence-2 captions:  31%|███       | 109/353 [00:56<02:00,  2.02it/s]
+DTD Florence-2 captions:  31%|███       | 110/353 [00:57<01:59,  2.03it/s]
+DTD Florence-2 captions:  31%|███▏      | 111/353 [00:57<02:01,  1.99it/s]
+DTD Florence-2 captions:  32%|███▏      | 112/353 [00:58<02:02,  1.96it/s]
+DTD Florence-2 captions:  32%|███▏      | 113/353 [00:58<02:00,  1.99it/s]
+DTD Florence-2 captions:  32%|███▏      | 114/353 [00:59<02:01,  1.97it/s]
+DTD Florence-2 captions:  33%|███▎      | 115/353 [00:59<01:59,  2.00it/s]
+DTD Florence-2 captions:  33%|███▎      | 116/353 [01:00<02:00,  1.97it/s]
+DTD Florence-2 captions:  33%|███▎      | 117/353 [01:00<02:02,  1.93it/s]
+DTD Florence-2 captions:  33%|███▎      | 118/353 [01:01<01:59,  1.96it/s]
+DTD Florence-2 captions:  34%|███▎      | 119/353 [01:01<02:00,  1.94it/s]
+DTD Florence-2 captions:  34%|███▍      | 120/353 [01:02<01:57,  1.98it/s]
+DTD Florence-2 captions:  34%|███▍      | 121/353 [01:02<01:58,  1.96it/s]
+DTD Florence-2 captions:  35%|███▍      | 122/353 [01:03<01:57,  1.96it/s]
+DTD Florence-2 captions:  35%|███▍      | 123/353 [01:03<01:56,  1.98it/s]
+DTD Florence-2 captions:  35%|███▌      | 124/353 [01:04<01:53,  2.02it/s]
+DTD Florence-2 captions:  35%|███▌      | 125/353 [01:04<01:51,  2.05it/s]
+DTD Florence-2 captions:  36%|███▌      | 126/353 [01:05<01:50,  2.05it/s]
+DTD Florence-2 captions:  36%|███▌      | 127/353 [01:05<01:50,  2.05it/s]
+DTD Florence-2 captions:  36%|███▋      | 128/353 [01:06<01:49,  2.05it/s]
+DTD Florence-2 captions:  37%|███▋      | 129/353 [01:06<01:48,  2.06it/s]
+DTD Florence-2 captions:  37%|███▋      | 130/353 [01:07<01:47,  2.07it/s]
+DTD Florence-2 captions:  37%|███▋      | 131/353 [01:07<01:50,  2.00it/s]
+DTD Florence-2 captions:  37%|███▋      | 132/353 [01:08<01:48,  2.03it/s]
+DTD Florence-2 captions:  38%|███▊      | 133/353 [01:08<01:48,  2.03it/s]
+DTD Florence-2 captions:  38%|███▊      | 134/353 [01:09<01:48,  2.01it/s]
+DTD Florence-2 captions:  38%|███▊      | 135/353 [01:09<01:47,  2.04it/s]
+DTD Florence-2 captions:  39%|███▊      | 136/353 [01:10<01:48,  2.01it/s]
+DTD Florence-2 captions:  39%|███▉      | 137/353 [01:10<01:46,  2.03it/s]
+DTD Florence-2 captions:  39%|███▉      | 138/353 [01:11<01:46,  2.03it/s]
+DTD Florence-2 captions:  39%|███▉      | 139/353 [01:11<01:47,  2.00it/s]
+DTD Florence-2 captions:  40%|███▉      | 140/353 [01:12<01:44,  2.03it/s]
+DTD Florence-2 captions:  40%|███▉      | 141/353 [01:12<01:43,  2.04it/s]
+DTD Florence-2 captions:  40%|████      | 142/353 [01:13<01:41,  2.07it/s]
+DTD Florence-2 captions:  41%|████      | 143/353 [01:13<01:44,  2.01it/s]
+DTD Florence-2 captions:  41%|████      | 144/353 [01:14<01:43,  2.02it/s]
+DTD Florence-2 captions:  41%|████      | 145/353 [01:14<01:42,  2.03it/s]
+DTD Florence-2 captions:  41%|████▏     | 146/353 [01:15<01:41,  2.04it/s]
+DTD Florence-2 captions:  42%|████▏     | 147/353 [01:15<01:40,  2.04it/s]
+DTD Florence-2 captions:  42%|████▏     | 148/353 [01:16<01:44,  1.97it/s]
+DTD Florence-2 captions:  42%|████▏     | 149/353 [01:16<01:45,  1.94it/s]
+DTD Florence-2 captions:  42%|████▏     | 150/353 [01:17<01:42,  1.98it/s]
+DTD Florence-2 captions:  43%|████▎     | 151/353 [01:17<01:41,  1.99it/s]
+DTD Florence-2 captions:  43%|████▎     | 152/353 [01:18<01:39,  2.02it/s]
+DTD Florence-2 captions:  43%|████▎     | 153/353 [01:18<01:39,  2.01it/s]
+DTD Florence-2 captions:  44%|████▎     | 154/353 [01:19<01:39,  1.99it/s]
+DTD Florence-2 captions:  44%|████▍     | 155/353 [01:19<01:39,  1.99it/s]
+DTD Florence-2 captions:  44%|████▍     | 156/353 [01:20<01:40,  1.96it/s]
+DTD Florence-2 captions:  44%|████▍     | 157/353 [01:20<01:38,  2.00it/s]
+DTD Florence-2 captions:  45%|████▍     | 158/353 [01:21<01:38,  1.98it/s]
+DTD Florence-2 captions:  45%|████▌     | 159/353 [01:21<01:38,  1.97it/s]
+DTD Florence-2 captions:  45%|████▌     | 160/353 [01:22<01:38,  1.96it/s]
+DTD Florence-2 captions:  46%|████▌     | 161/353 [01:22<01:41,  1.89it/s]
+DTD Florence-2 captions:  46%|████▌     | 162/353 [01:23<01:38,  1.95it/s]
+DTD Florence-2 captions:  46%|████▌     | 163/353 [01:23<01:38,  1.94it/s]
+DTD Florence-2 captions:  46%|████▋     | 164/353 [01:24<01:36,  1.95it/s]
+DTD Florence-2 captions:  47%|████▋     | 165/353 [01:24<01:33,  2.01it/s]
+DTD Florence-2 captions:  47%|████▋     | 166/353 [01:25<01:32,  2.03it/s]
+DTD Florence-2 captions:  47%|████▋     | 167/353 [01:25<01:32,  2.02it/s]
+DTD Florence-2 captions:  48%|████▊     | 168/353 [01:26<01:31,  2.03it/s]
+DTD Florence-2 captions:  48%|████▊     | 169/353 [01:26<01:29,  2.06it/s]
+DTD Florence-2 captions:  48%|████▊     | 170/353 [01:27<01:28,  2.08it/s]
+DTD Florence-2 captions:  48%|████▊     | 171/353 [01:27<01:29,  2.04it/s]
+DTD Florence-2 captions:  49%|████▊     | 172/353 [01:28<01:34,  1.91it/s]
+DTD Florence-2 captions:  49%|████▉     | 173/353 [01:28<01:34,  1.90it/s]
+DTD Florence-2 captions:  49%|████▉     | 174/353 [01:29<01:33,  1.91it/s]
+DTD Florence-2 captions:  50%|████▉     | 175/353 [01:29<01:30,  1.96it/s]
+DTD Florence-2 captions:  50%|████▉     | 176/353 [01:30<01:32,  1.92it/s]
+DTD Florence-2 captions:  50%|█████     | 177/353 [01:30<01:29,  1.96it/s]
+DTD Florence-2 captions:  50%|█████     | 178/353 [01:31<01:30,  1.93it/s]
+DTD Florence-2 captions:  51%|█████     | 179/353 [01:32<01:30,  1.91it/s]
+DTD Florence-2 captions:  51%|█████     | 180/353 [01:32<01:28,  1.95it/s]
+DTD Florence-2 captions:  51%|█████▏    | 181/353 [01:33<01:26,  1.98it/s]
+DTD Florence-2 captions:  52%|█████▏    | 182/353 [01:33<01:25,  2.01it/s]
+DTD Florence-2 captions:  52%|█████▏    | 183/353 [01:33<01:23,  2.03it/s]
+DTD Florence-2 captions:  52%|█████▏    | 184/353 [01:34<01:23,  2.03it/s]
+DTD Florence-2 captions:  52%|█████▏    | 185/353 [01:34<01:23,  2.02it/s]
+DTD Florence-2 captions:  53%|█████▎    | 186/353 [01:35<01:22,  2.02it/s]
+DTD Florence-2 captions:  53%|█████▎    | 187/353 [01:35<01:21,  2.03it/s]
+DTD Florence-2 captions:  53%|█████▎    | 188/353 [01:36<01:23,  1.98it/s]
+DTD Florence-2 captions:  54%|█████▎    | 189/353 [01:37<01:24,  1.95it/s]
+DTD Florence-2 captions:  54%|█████▍    | 190/353 [01:37<01:25,  1.90it/s]
+DTD Florence-2 captions:  54%|█████▍    | 191/353 [01:38<01:24,  1.91it/s]
+DTD Florence-2 captions:  54%|█████▍    | 192/353 [01:38<01:25,  1.89it/s]
+DTD Florence-2 captions:  55%|█████▍    | 193/353 [01:39<01:23,  1.93it/s]
+DTD Florence-2 captions:  55%|█████▍    | 194/353 [01:39<01:21,  1.95it/s]
+DTD Florence-2 captions:  55%|█████▌    | 195/353 [01:40<01:20,  1.95it/s]
+DTD Florence-2 captions:  56%|█████▌    | 196/353 [01:40<01:21,  1.94it/s]
+DTD Florence-2 captions:  56%|█████▌    | 197/353 [01:41<01:18,  1.98it/s]
+DTD Florence-2 captions:  56%|█████▌    | 198/353 [01:41<01:17,  1.99it/s]
+DTD Florence-2 captions:  56%|█████▋    | 199/353 [01:42<01:16,  2.01it/s]
+DTD Florence-2 captions:  57%|█████▋    | 200/353 [01:42<01:14,  2.05it/s]
+DTD Florence-2 captions:  57%|█████▋    | 201/353 [01:43<01:13,  2.07it/s]
+DTD Florence-2 captions:  57%|█████▋    | 202/353 [01:43<01:12,  2.09it/s]
+DTD Florence-2 captions:  58%|█████▊    | 203/353 [01:44<01:12,  2.06it/s]
+DTD Florence-2 captions:  58%|█████▊    | 204/353 [01:44<01:14,  2.01it/s]
+DTD Florence-2 captions:  58%|█████▊    | 205/353 [01:45<01:12,  2.04it/s]
+DTD Florence-2 captions:  58%|█████▊    | 206/353 [01:45<01:13,  1.99it/s]
+DTD Florence-2 captions:  59%|█████▊    | 207/353 [01:46<01:13,  1.98it/s]
+DTD Florence-2 captions:  59%|█████▉    | 208/353 [01:46<01:12,  1.99it/s]
+DTD Florence-2 captions:  59%|█████▉    | 209/353 [01:47<01:12,  1.98it/s]
+DTD Florence-2 captions:  59%|█████▉    | 210/353 [01:47<01:11,  2.01it/s]
+DTD Florence-2 captions:  60%|█████▉    | 211/353 [01:48<01:09,  2.04it/s]
+DTD Florence-2 captions:  60%|██████    | 212/353 [01:48<01:08,  2.05it/s]
+DTD Florence-2 captions:  60%|██████    | 213/353 [01:49<01:08,  2.04it/s]
+DTD Florence-2 captions:  61%|██████    | 214/353 [01:49<01:07,  2.05it/s]
+DTD Florence-2 captions:  61%|██████    | 215/353 [01:49<01:06,  2.06it/s]
+DTD Florence-2 captions:  61%|██████    | 216/353 [01:50<01:05,  2.09it/s]
+DTD Florence-2 captions:  61%|██████▏   | 217/353 [01:50<01:05,  2.09it/s]
+DTD Florence-2 captions:  62%|██████▏   | 218/353 [01:51<01:04,  2.11it/s]
+DTD Florence-2 captions:  62%|██████▏   | 219/353 [01:51<01:03,  2.12it/s]
+DTD Florence-2 captions:  62%|██████▏   | 220/353 [01:52<01:02,  2.14it/s]
+DTD Florence-2 captions:  63%|██████▎   | 221/353 [01:52<01:03,  2.07it/s]
+DTD Florence-2 captions:  63%|██████▎   | 222/353 [01:53<01:04,  2.02it/s]
+DTD Florence-2 captions:  63%|██████▎   | 223/353 [01:53<01:04,  2.02it/s]
+DTD Florence-2 captions:  63%|██████▎   | 224/353 [01:54<01:03,  2.03it/s]
+DTD Florence-2 captions:  64%|██████▎   | 225/353 [01:54<01:02,  2.05it/s]
+DTD Florence-2 captions:  64%|██████▍   | 226/353 [01:55<01:01,  2.07it/s]
+DTD Florence-2 captions:  64%|██████▍   | 227/353 [01:55<01:00,  2.07it/s]
+DTD Florence-2 captions:  65%|██████▍   | 228/353 [01:56<01:01,  2.02it/s]
+DTD Florence-2 captions:  65%|██████▍   | 229/353 [01:56<01:02,  1.99it/s]
+DTD Florence-2 captions:  65%|██████▌   | 230/353 [01:57<01:01,  2.00it/s]
+DTD Florence-2 captions:  65%|██████▌   | 231/353 [01:57<01:02,  1.95it/s]
+DTD Florence-2 captions:  66%|██████▌   | 232/353 [01:58<01:01,  1.98it/s]
+DTD Florence-2 captions:  66%|██████▌   | 233/353 [01:58<01:00,  1.99it/s]
+DTD Florence-2 captions:  66%|██████▋   | 234/353 [01:59<01:00,  1.96it/s]
+DTD Florence-2 captions:  67%|██████▋   | 235/353 [01:59<01:00,  1.96it/s]
+DTD Florence-2 captions:  67%|██████▋   | 236/353 [02:00<00:59,  1.97it/s]
+DTD Florence-2 captions:  67%|██████▋   | 237/353 [02:00<00:57,  2.00it/s]
+DTD Florence-2 captions:  67%|██████▋   | 238/353 [02:01<00:57,  1.98it/s]
+DTD Florence-2 captions:  68%|██████▊   | 239/353 [02:01<00:59,  1.91it/s]
+DTD Florence-2 captions:  68%|██████▊   | 240/353 [02:02<00:57,  1.97it/s]
+DTD Florence-2 captions:  68%|██████▊   | 241/353 [02:02<00:56,  1.99it/s]
+DTD Florence-2 captions:  69%|██████▊   | 242/353 [02:03<00:54,  2.03it/s]
+DTD Florence-2 captions:  69%|██████▉   | 243/353 [02:03<00:54,  2.03it/s]
+DTD Florence-2 captions:  69%|██████▉   | 244/353 [02:04<00:53,  2.05it/s]
+DTD Florence-2 captions:  69%|██████▉   | 245/353 [02:04<00:53,  2.04it/s]
+DTD Florence-2 captions:  70%|██████▉   | 246/353 [02:05<00:52,  2.05it/s]
+DTD Florence-2 captions:  70%|██████▉   | 247/353 [02:05<00:51,  2.06it/s]
+DTD Florence-2 captions:  70%|███████   | 248/353 [02:06<00:51,  2.05it/s]
+DTD Florence-2 captions:  71%|███████   | 249/353 [02:06<00:50,  2.04it/s]
+DTD Florence-2 captions:  71%|███████   | 250/353 [02:07<00:49,  2.06it/s]
+DTD Florence-2 captions:  71%|███████   | 251/353 [02:07<00:50,  2.03it/s]
+DTD Florence-2 captions:  71%|███████▏  | 252/353 [02:08<00:49,  2.05it/s]
+DTD Florence-2 captions:  72%|███████▏  | 253/353 [02:08<00:51,  1.96it/s]
+DTD Florence-2 captions:  72%|███████▏  | 254/353 [02:09<00:50,  1.94it/s]
+DTD Florence-2 captions:  72%|███████▏  | 255/353 [02:09<00:49,  1.97it/s]
+DTD Florence-2 captions:  73%|███████▎  | 256/353 [02:10<00:50,  1.93it/s]
+DTD Florence-2 captions:  73%|███████▎  | 257/353 [02:10<00:48,  1.98it/s]
+DTD Florence-2 captions:  73%|███████▎  | 258/353 [02:11<00:47,  2.01it/s]
+DTD Florence-2 captions:  73%|███████▎  | 259/353 [02:11<00:46,  2.03it/s]
+DTD Florence-2 captions:  74%|███████▎  | 260/353 [02:12<00:45,  2.03it/s]
+DTD Florence-2 captions:  74%|███████▍  | 261/353 [02:12<00:44,  2.05it/s]
+DTD Florence-2 captions:  74%|███████▍  | 262/353 [02:13<00:44,  2.05it/s]
+DTD Florence-2 captions:  75%|███████▍  | 263/353 [02:13<00:43,  2.05it/s]
+DTD Florence-2 captions:  75%|███████▍  | 264/353 [02:14<00:43,  2.05it/s]
+DTD Florence-2 captions:  75%|███████▌  | 265/353 [02:14<00:42,  2.07it/s]
+DTD Florence-2 captions:  75%|███████▌  | 266/353 [02:15<00:42,  2.05it/s]
+DTD Florence-2 captions:  76%|███████▌  | 267/353 [02:15<00:41,  2.06it/s]
+DTD Florence-2 captions:  76%|███████▌  | 268/353 [02:16<00:41,  2.06it/s]
+DTD Florence-2 captions:  76%|███████▌  | 269/353 [02:16<00:40,  2.07it/s]
+DTD Florence-2 captions:  76%|███████▋  | 270/353 [02:17<00:40,  2.05it/s]
+DTD Florence-2 captions:  77%|███████▋  | 271/353 [02:17<00:41,  1.96it/s]
+DTD Florence-2 captions:  77%|███████▋  | 272/353 [02:18<00:41,  1.97it/s]
+DTD Florence-2 captions:  77%|███████▋  | 273/353 [02:18<00:39,  2.00it/s]
+DTD Florence-2 captions:  78%|███████▊  | 274/353 [02:19<00:38,  2.03it/s]
+DTD Florence-2 captions:  78%|███████▊  | 275/353 [02:19<00:37,  2.06it/s]
+DTD Florence-2 captions:  78%|███████▊  | 276/353 [02:20<00:38,  2.00it/s]
+DTD Florence-2 captions:  78%|███████▊  | 277/353 [02:20<00:38,  1.98it/s]
+DTD Florence-2 captions:  79%|███████▉  | 278/353 [02:21<00:38,  1.96it/s]
+DTD Florence-2 captions:  79%|███████▉  | 279/353 [02:21<00:36,  2.01it/s]
+DTD Florence-2 captions:  79%|███████▉  | 280/353 [02:22<00:35,  2.04it/s]
+DTD Florence-2 captions:  80%|███████▉  | 281/353 [02:22<00:35,  2.03it/s]
+DTD Florence-2 captions:  80%|███████▉  | 282/353 [02:23<00:35,  2.00it/s]
+DTD Florence-2 captions:  80%|████████  | 283/353 [02:23<00:34,  2.02it/s]
+DTD Florence-2 captions:  80%|████████  | 284/353 [02:24<00:33,  2.04it/s]
+DTD Florence-2 captions:  81%|████████  | 285/353 [02:24<00:32,  2.07it/s]
+DTD Florence-2 captions:  81%|████████  | 286/353 [02:25<00:32,  2.07it/s]
+DTD Florence-2 captions:  81%|████████▏ | 287/353 [02:25<00:31,  2.08it/s]
+DTD Florence-2 captions:  82%|████████▏ | 288/353 [02:26<00:31,  2.07it/s]
+DTD Florence-2 captions:  82%|████████▏ | 289/353 [02:26<00:31,  2.00it/s]
+DTD Florence-2 captions:  82%|████████▏ | 290/353 [02:27<00:31,  2.03it/s]
+DTD Florence-2 captions:  82%|████████▏ | 291/353 [02:27<00:31,  1.99it/s]
+DTD Florence-2 captions:  83%|████████▎ | 292/353 [02:28<00:30,  2.02it/s]
+DTD Florence-2 captions:  83%|████████▎ | 293/353 [02:28<00:30,  1.98it/s]
+DTD Florence-2 captions:  83%|████████▎ | 294/353 [02:29<00:29,  2.01it/s]
+DTD Florence-2 captions:  84%|████████▎ | 295/353 [02:29<00:28,  2.03it/s]
+DTD Florence-2 captions:  84%|████████▍ | 296/353 [02:30<00:28,  2.03it/s]
+DTD Florence-2 captions:  84%|████████▍ | 297/353 [02:30<00:27,  2.05it/s]
+DTD Florence-2 captions:  84%|████████▍ | 298/353 [02:31<00:27,  2.01it/s]
+DTD Florence-2 captions:  85%|████████▍ | 299/353 [02:31<00:27,  1.98it/s]
+DTD Florence-2 captions:  85%|████████▍ | 300/353 [02:32<00:26,  1.99it/s]
+DTD Florence-2 captions:  85%|████████▌ | 301/353 [02:32<00:25,  2.01it/s]
+DTD Florence-2 captions:  86%|████████▌ | 302/353 [02:33<00:25,  2.03it/s]
+DTD Florence-2 captions:  86%|████████▌ | 303/353 [02:33<00:24,  2.06it/s]
+DTD Florence-2 captions:  86%|████████▌ | 304/353 [02:34<00:24,  2.04it/s]
+DTD Florence-2 captions:  86%|████████▋ | 305/353 [02:34<00:23,  2.06it/s]
+DTD Florence-2 captions:  87%|████████▋ | 306/353 [02:35<00:23,  2.00it/s]
+DTD Florence-2 captions:  87%|████████▋ | 307/353 [02:35<00:22,  2.04it/s]
+DTD Florence-2 captions:  87%|████████▋ | 308/353 [02:35<00:21,  2.05it/s]
+DTD Florence-2 captions:  88%|████████▊ | 309/353 [02:36<00:21,  2.05it/s]
+DTD Florence-2 captions:  88%|████████▊ | 310/353 [02:36<00:20,  2.06it/s]
+DTD Florence-2 captions:  88%|████████▊ | 311/353 [02:37<00:20,  2.01it/s]
+DTD Florence-2 captions:  88%|████████▊ | 312/353 [02:37<00:20,  2.02it/s]
+DTD Florence-2 captions:  89%|████████▊ | 313/353 [02:38<00:20,  1.98it/s]
+DTD Florence-2 captions:  89%|████████▉ | 314/353 [02:38<00:19,  2.01it/s]
+DTD Florence-2 captions:  89%|████████▉ | 315/353 [02:39<00:18,  2.05it/s]
+DTD Florence-2 captions:  90%|████████▉ | 316/353 [02:39<00:18,  2.04it/s]
+DTD Florence-2 captions:  90%|████████▉ | 317/353 [02:40<00:17,  2.03it/s]
+DTD Florence-2 captions:  90%|█████████ | 318/353 [02:40<00:16,  2.06it/s]
+DTD Florence-2 captions:  90%|█████████ | 319/353 [02:41<00:16,  2.08it/s]
+DTD Florence-2 captions:  91%|█████████ | 320/353 [02:41<00:15,  2.08it/s]
+DTD Florence-2 captions:  91%|█████████ | 321/353 [02:42<00:15,  2.04it/s]
+DTD Florence-2 captions:  91%|█████████ | 322/353 [02:42<00:15,  2.05it/s]
+DTD Florence-2 captions:  92%|█████████▏| 323/353 [02:43<00:14,  2.05it/s]
+DTD Florence-2 captions:  92%|█████████▏| 324/353 [02:43<00:14,  1.99it/s]
+DTD Florence-2 captions:  92%|█████████▏| 325/353 [02:44<00:13,  2.03it/s]
+DTD Florence-2 captions:  92%|█████████▏| 326/353 [02:44<00:13,  2.02it/s]
+DTD Florence-2 captions:  93%|█████████▎| 327/353 [02:45<00:12,  2.00it/s]
+DTD Florence-2 captions:  93%|█████████▎| 328/353 [02:45<00:12,  2.03it/s]
+DTD Florence-2 captions:  93%|█████████▎| 329/353 [02:46<00:11,  2.05it/s]
+DTD Florence-2 captions:  93%|█████████▎| 330/353 [02:46<00:11,  2.06it/s]
+DTD Florence-2 captions:  94%|█████████▍| 331/353 [02:47<00:10,  2.03it/s]
+DTD Florence-2 captions:  94%|█████████▍| 332/353 [02:47<00:10,  2.06it/s]
+DTD Florence-2 captions:  94%|█████████▍| 333/353 [02:48<00:09,  2.08it/s]
+DTD Florence-2 captions:  95%|█████████▍| 334/353 [02:48<00:09,  2.10it/s]
+DTD Florence-2 captions:  95%|█████████▍| 335/353 [02:49<00:08,  2.11it/s]
+DTD Florence-2 captions:  95%|█████████▌| 336/353 [02:49<00:08,  2.12it/s]
+DTD Florence-2 captions:  95%|█████████▌| 337/353 [02:50<00:07,  2.12it/s]
+DTD Florence-2 captions:  96%|█████████▌| 338/353 [02:50<00:07,  2.09it/s]
+DTD Florence-2 captions:  96%|█████████▌| 339/353 [02:51<00:06,  2.07it/s]
+DTD Florence-2 captions:  96%|█████████▋| 340/353 [02:51<00:06,  2.07it/s]
+DTD Florence-2 captions:  97%|█████████▋| 341/353 [02:52<00:05,  2.04it/s]
+DTD Florence-2 captions:  97%|█████████▋| 342/353 [02:52<00:05,  2.05it/s]
+DTD Florence-2 captions:  97%|█████████▋| 343/353 [02:53<00:04,  2.06it/s]
+DTD Florence-2 captions:  97%|█████████▋| 344/353 [02:53<00:04,  2.06it/s]
+DTD Florence-2 captions:  98%|█████████▊| 345/353 [02:54<00:03,  2.04it/s]
+DTD Florence-2 captions:  98%|█████████▊| 346/353 [02:54<00:03,  1.96it/s]
+DTD Florence-2 captions:  98%|█████████▊| 347/353 [02:55<00:03,  1.98it/s]
+DTD Florence-2 captions:  99%|█████████▊| 348/353 [02:55<00:02,  2.00it/s]
+DTD Florence-2 captions:  99%|█████████▉| 349/353 [02:56<00:02,  1.97it/s]
+DTD Florence-2 captions:  99%|█████████▉| 350/353 [02:56<00:01,  1.99it/s]
+DTD Florence-2 captions:  99%|█████████▉| 351/353 [02:57<00:01,  1.95it/s]
+DTD Florence-2 captions: 100%|█████████▉| 352/353 [02:57<00:00,  1.94it/s]
+DTD Florence-2 captions: 100%|██████████| 353/353 [02:58<00:00,  1.36it/s]
+DTD Florence-2 captions: 100%|██████████| 353/353 [02:58<00:00,  1.97it/s]
+Complete DTD captions: 5640
+CSV legacy strict-audit valid captions: 0
+Training-only caption diagnostics; rejection counts overlap:
+
+Stored CLIP score range: 0.646487 .. 0.918694 | median: 0.913577
+Stored CLIP scores refer to the original CSV text where semantic_score_matches_input=False; they are legacy diagnostics, not scores for the cleaned model input.
+Audited DTD captions ready: /kaggle/working/outputs/mtacs_dtd_split1_ablation_03_candidate_only_vitl16/shared/captions.csv
+Caption input policy: dtd_lexical_v2
+
+CLIPTextModelWithProjection LOAD REPORT from: /kaggle/input/datasets/nguyenducxu/vit-32/model_clip_vit
+Key                                                            | Status     |  | 
+---------------------------------------------------------------+------------+--+-
+vision_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+vision_model.post_layernorm.weight                             | UNEXPECTED |  | 
+vision_model.embeddings.position_ids                           | UNEXPECTED |  | 
+vision_model.embeddings.patch_embedding.weight                 | UNEXPECTED |  | 
+vision_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+logit_scale                                                    | UNEXPECTED |  | 
+vision_model.pre_layrnorm.weight                               | UNEXPECTED |  | 
+visual_projection.weight                                       | UNEXPECTED |  | 
+vision_model.embeddings.class_embedding                        | UNEXPECTED |  | 
+vision_model.post_layernorm.bias                               | UNEXPECTED |  | 
+text_model.embeddings.position_ids                             | UNEXPECTED |  | 
+vision_model.pre_layrnorm.bias                                 | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+
+Training-pool candidate-caption vectors: (376, 512)
+
+DINOv3 assets đã sẵn sàng từ Kaggle Input.
+
+Only candidate_only will run: 50 epochs; seed(s): [42]
+Output: /kaggle/working/outputs/mtacs_dtd_split1_ablation_03_candidate_only_vitl16
+
+Training each configuration to 50 epochs; LR schedule horizon=50.
+
+Exception in thread QueueFeederThread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 259, in _feed
+Exception ignored in: <function _ConnectionBase.__del__ at 0x7f7979864220>
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/connection.py", line 133, in __del__
+    reader_close()
+  File "/usr/lib/python3.12/multiprocessing/connection.py", line 178, in close
+    self._close()
+  File "/usr/lib/python3.12/multiprocessing/connection.py", line 377, in _close
+    self._close()
+  File "/usr/lib/python3.12/multiprocessing/connection.py", line 377, in _close
+    _close(self._handle)
+OSError: [Errno 9] Bad file descriptor
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    _close(self._handle)
+OSError: [Errno 9] Bad file descriptor
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 291, in _feed
+    queue_sem.release()
+ValueError: semaphore or lock released too many times
+
+Downloading: "file:///kaggle/input/datasets/nguyenducxu/dinov3-vitl16/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth" to /root/.cache/torch/hub/checkpoints/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth
+
+100%|██████████| 1.13G/1.13G [00:08<00:00, 136MB/s] 
+
+candidate_only seed=42 epoch=1 val_f1=0.0478 val_loss=3.8183 q_gate=0.000 c_gate=0.089
+
+candidate_only seed=42 epoch=2 val_f1=0.1924 val_loss=3.4725 q_gate=0.000 c_gate=0.041
+
+candidate_only seed=42 epoch=3 val_f1=0.3750 val_loss=3.0163 q_gate=0.000 c_gate=0.022
+
+candidate_only seed=42 epoch=4 val_f1=0.5539 val_loss=2.4955 q_gate=0.000 c_gate=0.016
+
+candidate_only seed=42 epoch=5 val_f1=0.6728 val_loss=2.0228 q_gate=0.000 c_gate=0.014
+
+candidate_only seed=42 epoch=6 val_f1=0.7259 val_loss=1.7346 q_gate=0.000 c_gate=0.006
+
+candidate_only seed=42 epoch=7 val_f1=0.7567 val_loss=1.5420 q_gate=0.000 c_gate=0.007
+
+candidate_only seed=42 epoch=8 val_f1=0.7785 val_loss=1.4212 q_gate=0.000 c_gate=0.006
+
+candidate_only seed=42 epoch=9 val_f1=0.7998 val_loss=1.3504 q_gate=0.000 c_gate=0.005
+
+candidate_only seed=42 epoch=10 val_f1=0.8081 val_loss=1.3030 q_gate=0.000 c_gate=0.005
+
+candidate_only seed=42 epoch=11 val_f1=0.8110 val_loss=1.2734 q_gate=0.000 c_gate=0.004
+
+candidate_only seed=42 epoch=12 val_f1=0.8218 val_loss=1.2568 q_gate=0.000 c_gate=0.003
+
+candidate_only seed=42 epoch=13 val_f1=0.8210 val_loss=1.2391 q_gate=0.000 c_gate=0.003
+
+candidate_only seed=42 epoch=14 val_f1=0.8259 val_loss=1.2258 q_gate=0.000 c_gate=0.002
+
+candidate_only seed=42 epoch=15 val_f1=0.8290 val_loss=1.2178 q_gate=0.000 c_gate=0.003
+
+candidate_only seed=42 epoch=16 val_f1=0.8300 val_loss=1.2085 q_gate=0.000 c_gate=0.003
+
+candidate_only seed=42 epoch=17 val_f1=0.8279 val_loss=1.2048 q_gate=0.000 c_gate=0.002
+
+candidate_only seed=42 epoch=18 val_f1=0.8326 val_loss=1.1977 q_gate=0.000 c_gate=0.002
+
+candidate_only seed=42 epoch=19 val_f1=0.8384 val_loss=1.1920 q_gate=0.000 c_gate=0.002
+
+candidate_only seed=42 epoch=20 val_f1=0.8384 val_loss=1.1898 q_gate=0.000 c_gate=0.002
+
+candidate_only seed=42 epoch=21 val_f1=0.8389 val_loss=1.1929 q_gate=0.000 c_gate=0.002
+
+candidate_only seed=42 epoch=22 val_f1=0.8355 val_loss=1.1875 q_gate=0.000 c_gate=0.002
+
+candidate_only seed=42 epoch=23 val_f1=0.8345 val_loss=1.1856 q_gate=0.000 c_gate=0.002
+
+candidate_only seed=42 epoch=24 val_f1=0.8383 val_loss=1.1836 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=25 val_f1=0.8366 val_loss=1.1818 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=26 val_f1=0.8389 val_loss=1.1826 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=27 val_f1=0.8386 val_loss=1.1839 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=28 val_f1=0.8406 val_loss=1.1792 q_gate=0.000 c_gate=0.002
+
+candidate_only seed=42 epoch=29 val_f1=0.8397 val_loss=1.1816 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=30 val_f1=0.8395 val_loss=1.1810 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=31 val_f1=0.8390 val_loss=1.1819 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=32 val_f1=0.8400 val_loss=1.1864 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=33 val_f1=0.8380 val_loss=1.1843 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=34 val_f1=0.8388 val_loss=1.1828 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=35 val_f1=0.8363 val_loss=1.1825 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=36 val_f1=0.8351 val_loss=1.1820 q_gate=0.000 c_gate=0.001
+
+Exception ignored in: Exception ignored in: Exception ignored in: Exception ignored in: Exception ignored in: Exception ignored in: Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7f797a4af100><function _MultiProcessingDataLoaderIter.__del__ at 0x7f797a4af100><function _MultiProcessingDataLoaderIter.__del__ at 0x7f797a4af100><function _MultiProcessingDataLoaderIter.__del__ at 0x7f797a4af100><function _MultiProcessingDataLoaderIter.__del__ at 0x7f797a4af100><function _MultiProcessingDataLoaderIter.__del__ at 0x7f797a4af100><function _MultiProcessingDataLoaderIter.__del__ at 0x7f797a4af100>
+
+
+
+
+
+Traceback (most recent call last):
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1707, in __del__
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1707, in __del__
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1707, in __del__
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1707, in __del__
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1707, in __del__
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1707, in __del__
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1707, in __del__
+                    self._shutdown_workers()        self._shutdown_workers()self._shutdown_workers()self._shutdown_workers()self._shutdown_workers()self._shutdown_workers()
+self._shutdown_workers()
+
+
+
+
+
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1690, in _shutdown_workers
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1690, in _shutdown_workers
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1690, in _shutdown_workers
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1690, in _shutdown_workers
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1690, in _shutdown_workers
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1690, in _shutdown_workers
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1690, in _shutdown_workers
+                            if w.is_alive():if w.is_alive():if w.is_alive():if w.is_alive():if w.is_alive():if w.is_alive():
+if w.is_alive():
+
+
+
+
+ 
+                    Exception ignored in:        <function _MultiProcessingDataLoaderIter.__del__ at 0x7f797a4af100>       
+       Traceback (most recent call last):
+     ^   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1707, in __del__
+ ^^^^^^    ^^^^^^^^^self._shutdown_workers()^^^^^^^
+^^^^^^^  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1690, in _shutdown_workers
+^^^^^^^^    ^^^^^^^if w.is_alive():^^^^^^^
+^^^^^^^^ ^^^^^^ ^^^^^^^ ^^^^^^^ ^^
+^
+
+ ^
+
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 160, in is_alive
+
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 160, in is_alive
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 160, in is_alive
+ 
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 160, in is_alive
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 160, in is_alive
+      File "/usr/lib/python3.12/multiprocessing/process.py", line 160, in is_alive
+           File "/usr/lib/python3.12/multiprocessing/process.py", line 160, in is_alive
+    assert self._parent_pid == os.getpid(), 'can only test a child process'    assert self._parent_pid == os.getpid(), 'can only test a child process'assert self._parent_pid == os.getpid(), 'can only test a child process'        assert self._parent_pid == os.getpid(), 'can only test a child process'assert self._parent_pid == os.getpid(), 'can only test a child process'^
+
+
+assert self._parent_pid == os.getpid(), 'can only test a child process'assert self._parent_pid == os.getpid(), 'can only test a child process'
+
+^   
+
+  ^        ^       ^      ^      ^       ^       ^       ^       ^       ^       
+^^ ^^ ^  File "/usr/lib/python3.12/multiprocessing/process.py", line 160, in is_alive
+^^ ^^^^^    ^^^^^^assert self._parent_pid == os.getpid(), 'can only test a child process'^^^^^^^
+^^^^^^^^ ^^^^^^^ ^^^^^^^ ^^^^^^^ ^^^^^ ^^^^^^^^ ^^^^^ ^^^^^^^^^ ^^^^^^^ ^^^^^^^ ^^^^^^^ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^
+AssertionError
+^
+^
+
+AssertionError: ^AssertionErrorAssertionErrorAssertionError^AssertionError: can only test a child process: 
+: : ^: can only test a child process
+can only test a child processcan only test a child processAssertionErrorcan only test a child process^can only test a child process
+
+
+: 
+^
+can only test a child process^^
+^^^^^^^^
+AssertionError: can only test a child process
+
+candidate_only seed=42 epoch=37 val_f1=0.8357 val_loss=1.1810 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=38 val_f1=0.8398 val_loss=1.1791 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=39 val_f1=0.8379 val_loss=1.1808 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=40 val_f1=0.8385 val_loss=1.1804 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=41 val_f1=0.8375 val_loss=1.1818 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=42 val_f1=0.8369 val_loss=1.1811 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=43 val_f1=0.8364 val_loss=1.1821 q_gate=0.000 c_gate=0.001
+
+Exception ignored in: Exception ignored in: Exception ignored in: Exception ignored in: Exception ignored in: Exception ignored in: Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7f797a4af100><function _MultiProcessingDataLoaderIter.__del__ at 0x7f797a4af100><function _MultiProcessingDataLoaderIter.__del__ at 0x7f797a4af100><function _MultiProcessingDataLoaderIter.__del__ at 0x7f797a4af100><function _MultiProcessingDataLoaderIter.__del__ at 0x7f797a4af100><function _MultiProcessingDataLoaderIter.__del__ at 0x7f797a4af100><function _MultiProcessingDataLoaderIter.__del__ at 0x7f797a4af100>
+
+
+
+
+
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1707, in __del__
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1707, in __del__
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1707, in __del__
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1707, in __del__
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1707, in __del__
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1707, in __del__
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1707, in __del__
+                    self._shutdown_workers()self._shutdown_workers()    self._shutdown_workers()self._shutdown_workers()self._shutdown_workers()
+    
+
+self._shutdown_workers()
+
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1690, in _shutdown_workers
+self._shutdown_workers()  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1690, in _shutdown_workers
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1690, in _shutdown_workers
+
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1690, in _shutdown_workers
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1690, in _shutdown_workers
+
+          File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1690, in _shutdown_workers
+        if w.is_alive():      File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1690, in _shutdown_workers
+if w.is_alive():if w.is_alive():    if w.is_alive():if w.is_alive():
+
+
+if w.is_alive():    
+
+   
+if w.is_alive():      
+                                     ^^^  ^^^^^ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^Exception ignored in: ^^^^^^^<function _MultiProcessingDataLoaderIter.__del__ at 0x7f797a4af100>^^^^^^^
+^^^^^^^Traceback (most recent call last):
+^^^^^
+
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1707, in __del__
+
+
+
+^^  File "/usr/lib/python3.12/multiprocessing/process.py", line 160, in is_alive
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 160, in is_alive
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 160, in is_alive
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 160, in is_alive
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 160, in is_alive
+    
+
+                    self._shutdown_workers()  File "/usr/lib/python3.12/multiprocessing/process.py", line 160, in is_alive
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 160, in is_alive
+assert self._parent_pid == os.getpid(), 'can only test a child process'assert self._parent_pid == os.getpid(), 'can only test a child process'assert self._parent_pid == os.getpid(), 'can only test a child process'assert self._parent_pid == os.getpid(), 'can only test a child process'assert self._parent_pid == os.getpid(), 'can only test a child process'
+        
+
+
+
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 1690, in _shutdown_workers
+
+assert self._parent_pid == os.getpid(), 'can only test a child process'assert self._parent_pid == os.getpid(), 'can only test a child process'     
+
+           if w.is_alive():       
+                                                              ^^ ^ ^^^^ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^  File "/usr/lib/python3.12/multiprocessing/process.py", line 160, in is_alive
+^^^^^^^^    ^^^^^^^assert self._parent_pid == os.getpid(), 'can only test a child process'^^^^^^^^^
+^^^^^^^ ^^^^^^^^ ^^^^^^^^ ^^^^^^^ ^^^^^^^^^^^ ^^^^^^ ^^^^^^^ ^^^^^^^^^ ^^^^^^^ ^^^^^^^^ ^^^^^^^^ ^^^^^
+
+^^^^
+^AssertionErrorAssertionError^^
+AssertionError
+^: ^
+: AssertionErrorAssertionError^: can only test a child process^AssertionErrorcan only test a child process: : 
+can only test a child process^
+: can only test a child process
+can only test a child processAssertionError
+^can only test a child process
+
+: 
+^can only test a child process^
+^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: can only test a child process
+
+candidate_only seed=42 epoch=44 val_f1=0.8375 val_loss=1.1809 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=45 val_f1=0.8363 val_loss=1.1813 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=46 val_f1=0.8353 val_loss=1.1816 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=47 val_f1=0.8358 val_loss=1.1815 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=48 val_f1=0.8357 val_loss=1.1812 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=49 val_f1=0.8357 val_loss=1.1812 q_gate=0.000 c_gate=0.001
+
+candidate_only seed=42 epoch=50 val_f1=0.8363 val_loss=1.1812 q_gate=0.000 c_gate=0.001
+
+Saved results: /kaggle/working/outputs/mtacs_dtd_split1_ablation_03_candidate_only_vitl16/candidate_only_results.csv
+Saved report: /kaggle/working/outputs/mtacs_dtd_split1_ablation_03_candidate_only_vitl16/candidate_only_report.md

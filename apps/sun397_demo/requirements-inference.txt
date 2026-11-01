@@ -1,0 +1,14 @@
+# Install a matching torch/torchvision pair for the host OS/CUDA first.
+# Reference export environment: torch 2.10.0 + torchvision 0.25.0.
+-r requirements.txt
+torch>=2.10,<2.14
+torchvision>=0.25,<0.29
+numpy
+tqdm
+transformers==4.49.0
+tokenizers>=0.21,<0.22
+huggingface-hub>=0.26,<1
+safetensors>=0.4.3
+accelerate
+einops
+timm
