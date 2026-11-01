@@ -1,0 +1,49 @@
+name: Auto Commit Schedule
+
+on:
+  schedule:
+    # 07:00, 10:00, 13:00, 16:00, 19:00 (Giờ VN UTC+7) = 00:00, 03:00, 06:00, 09:00, 12:00 UTC
+    - cron: '0 0,3,6,9,12 * * *'
+
+  workflow_dispatch:
+    inputs:
+      commits_per_run:
+        description: 'Số lượng commit muốn tạo trong lần chạy này'
+        required: false
+        default: '1'
+
+permissions:
+  contents: write
+
+env:
+  DEFAULT_COMMITS_PER_RUN: 1
+  # Thông tin tài khoản GitHub để tính vào Contribution Graph
+  GIT_USER_NAME: "DucSinh2k5"
+  GIT_USER_EMAIL: "ducsinh1008@gmail.com"
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Create automated commits
+        run: |
+          git config user.name "${{ env.GIT_USER_NAME }}"
+          git config user.email "${{ env.GIT_USER_EMAIL }}"
+
+          COUNT="${{ github.event.inputs.commits_per_run || env.DEFAULT_COMMITS_PER_RUN }}"
+
+          for i in $(seq 1 $COUNT); do
+            TIMESTAMP=$(TZ='Asia/Ho_Chi_Minh' date '+%Y-%m-%d %H:%M:%S %Z')
+            echo "[$TIMESTAMP] Auto-sync project activity (#$i)" >> .activity_log.txt
+            git add .activity_log.txt
+            git commit -m "chore: update daily activity log ($TIMESTAMP - #$i)"
+            sleep 1
+          done
+
+          git pull --rebase origin main
+          git push origin main
