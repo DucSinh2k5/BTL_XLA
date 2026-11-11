@@ -98,6 +98,12 @@ def test_home_and_assets_are_served():
     assert 'id="candidate-image"' in page.text
     assert 'id="candidate-attention-image"' in page.text
     assert 'id="candidate-caption-text"' in page.text
+    assert 'id="query-caption-state"' in page.text
+    assert 'id="query-caption-source"' in page.text
+    assert 'id="query-caption-image-id"' in page.text
+    assert 'id="query-caption-raw-details"' in page.text
+    assert 'id="candidate-caption-state"' in page.text
+    assert 'id="candidate-caption-source"' in page.text
     assert 'id="candidate-class-label"' in page.text
     assert 'id="result-ground-truth"' in page.text
     assert 'id="prediction-confidence"' in page.text

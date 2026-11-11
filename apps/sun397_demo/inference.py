@@ -54,6 +54,7 @@ class Settings:
     threads: int = 4
     caption_weight_cache: Path | None = None
     shared_process: bool = False
+    caption_override: Path | None = None
 
     @classmethod
     def from_environment(cls):

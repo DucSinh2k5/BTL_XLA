@@ -1,7 +1,13 @@
 // Each model owns its DOM, File object, requests, previews and results.
 // A detached page keeps running; nothing is persisted across a real reload.
 function createModelPage(root, modelId) {
+  root.dataset.mode = modelId;
   const elements = {
+    empty: root.querySelector("#upload-empty"),
+    previewTopline: root.querySelector("#preview-topline"),
+    resultModel: root.querySelector("#result-model"),
+    classifyLabel: root.querySelector("#classify-label"),
+    resultPane: root.querySelector("#result-state"),
     badge: root.querySelector("#model-badge"),
     brandModel: root.querySelector("#brand-model"),
     brandMarkLetter: root.querySelector("#brand-mark-letter"),
@@ -51,6 +57,11 @@ function createModelPage(root, modelId) {
     queryAttentionNote: root.querySelector("#query-attention-note"),
     queryCaption: root.querySelector("#query-caption-text"),
     queryCaptionNote: root.querySelector("#query-caption-note"),
+    queryCaptionState: root.querySelector("#query-caption-state"),
+    queryCaptionImageId: root.querySelector("#query-caption-image-id"),
+    queryCaptionSource: root.querySelector("#query-caption-source"),
+    queryCaptionRawDetails: root.querySelector("#query-caption-raw-details"),
+    queryCaptionRaw: root.querySelector("#query-caption-raw"),
     candidateImage: root.querySelector("#candidate-image"),
     candidateImageEmpty: root.querySelector("#candidate-image-empty"),
     candidateImageId: root.querySelector("#candidate-image-id"),
@@ -60,6 +71,10 @@ function createModelPage(root, modelId) {
     candidateAttentionNote: root.querySelector("#candidate-attention-note"),
     candidateCaption: root.querySelector("#candidate-caption-text"),
     candidateCaptionNote: root.querySelector("#candidate-caption-note"),
+    candidateCaptionState: root.querySelector("#candidate-caption-state"),
+    candidateCaptionSource: root.querySelector("#candidate-caption-source"),
+    candidateCaptionRawDetails: root.querySelector("#candidate-caption-raw-details"),
+    candidateCaptionRaw: root.querySelector("#candidate-caption-raw"),
   };
   
   const page = modelId === "tacs" ? {
@@ -75,8 +90,8 @@ function createModelPage(root, modelId) {
     waiting: "Model đang được nạp. Bạn có thể chọn ảnh trong lúc chờ.",
     missingCandidate: "Chưa có ảnh context được truy hồi",
     missingReason: "Cần checkpoint TACS và candidate pool để chọn ảnh context.",
-    queryAttentionMissing: "Cần checkpoint và ảnh context được chọn để xuất classifier attention trên query.",
-    candidateAttentionMissing: "Cần checkpoint và candidate pool để xuất selector attention trên candidate.",
+    queryAttentionMissing: "Sau dự đoán, hiển thị self-attention của classifier trên query.",
+    candidateAttentionMissing: "Sau dự đoán, hiển thị self-attention của selector trên context.",
   } : {
     title: "SUN397 | M-TACS + CLIP",
     brand: "M-TACS",
@@ -90,8 +105,8 @@ function createModelPage(root, modelId) {
     waiting: "Đang nạp model phân loại, Florence-2 và CLIP. Bạn có thể chọn ảnh trong lúc chờ.",
     missingCandidate: "Chưa có ảnh candidate được truy hồi",
     missingReason: "Cần checkpoint và candidate pool để chọn ảnh cùng caption tương ứng.",
-    queryAttentionMissing: "Cần checkpoint và context để xuất classifier attention trên query.",
-    candidateAttentionMissing: "Cần checkpoint và candidate pool để xuất attention của nhánh ảnh trong selector; heatmap này không biểu diễn điểm CLIP.",
+    queryAttentionMissing: "Sau dự đoán, hiển thị self-attention của classifier trên query.",
+    candidateAttentionMissing: "Self-attention của nhánh ảnh trong selector; heatmap không biểu diễn điểm CLIP.",
   };
   
   const sampleUrl = "/assets/sample-library.png";
@@ -110,10 +125,11 @@ function createModelPage(root, modelId) {
     elements.brandModel.textContent = page.brand;
     elements.brandMarkLetter.textContent = modelId === "tacs" ? "T" : "M";
     elements.pageEyebrow.textContent = page.eyebrow;
-    elements.pageHeading.textContent = page.heading;
+    // Keep the two-line editorial heading; the model-specific description follows it.
+    elements.resultModel.textContent = page.brand;
     elements.pageDetail.textContent = page.detail;
     elements.resultDescription.textContent = page.intro;
-    elements.evidenceTitle.textContent = page.evidence;
+    elements.evidenceTitle.textContent = "Ngữ cảnh phía sau dự đoán";
     elements.architectureTitle.textContent = page.architecture;
     elements.architectureFooter.textContent = page.footer;
     elements.candidateImageEmpty.textContent = page.missingCandidate;
@@ -136,6 +152,8 @@ function createModelPage(root, modelId) {
   }
   
   function updateClassifyButton() {
+    root.dataset.busy = String(classifyController !== null);
+    elements.classifyLabel.textContent = classifyController ? "Đang dự đoán" : "Dự đoán";
     elements.classify.disabled = !backendOnline || !inferenceAvailable || !selectedFile ||
       elements.fileStatus.dataset.state !== "ready" || classifyController !== null;
     elements.referenceClass.disabled = !classesLoaded || !selectedFile ||
@@ -146,8 +164,36 @@ function createModelPage(root, modelId) {
     hasPrediction = false;
     elements.comparison.hidden = true;
     elements.candidateClass.textContent = "Chưa chọn context";
-    elements.evidence.hidden = true;
+    root.dataset.prediction = "false";
+    elements.evidence.hidden = false;
+    elements.evidenceStatus.textContent = "Chờ suy luận";
+    elements.evidenceStatus.dataset.state = "missing";
+    elements.queryEvidenceImage.hidden = true;
     elements.queryEvidenceImage.removeAttribute("src");
+    elements.candidateImage.hidden = true;
+    elements.candidateImage.removeAttribute("src");
+    elements.candidateImageEmpty.hidden = false;
+    elements.candidateImageId.hidden = true;
+    elements.candidateImageId.textContent = "";
+    elements.queryCaption.textContent = "Chờ caption của ảnh query.";
+    elements.queryCaption.dataset.state = "missing";
+    elements.queryCaptionNote.textContent = "Florence-2 sinh mô tả; CLIP mã hóa thành vector text.";
+    elements.candidateCaption.textContent = "Chờ caption của context.";
+    elements.candidateCaption.dataset.state = "missing";
+    elements.candidateCaptionNote.textContent = "Ảnh và caption thuộc cùng một candidate được chọn.";
+    for (const badge of [elements.queryCaptionState, elements.candidateCaptionState]) {
+      badge.textContent = "Chờ dự đoán";
+      badge.dataset.state = "missing";
+    }
+    elements.queryCaptionImageId.textContent = "Chưa có ảnh query.";
+    elements.queryCaptionSource.textContent = "Ảnh có trong CSV dùng caption đã lưu; ảnh mới được Florence-2 sinh caption.";
+    elements.candidateCaptionSource.textContent = "Caption sẽ được lấy từ captions.csv theo ID context được chọn.";
+    elements.queryCaptionRaw.textContent = "";
+    elements.queryCaptionRawDetails.hidden = true;
+    elements.queryCaptionRawDetails.open = false;
+    elements.candidateCaptionRaw.textContent = "";
+    elements.candidateCaptionRawDetails.hidden = true;
+    elements.candidateCaptionRawDetails.open = false;
     renderAttention(null);
     elements.resultHeading.textContent = inferenceAvailable ? "Sẵn sàng phân loại" : "Đang chuẩn bị mô hình";
     elements.resultDescription.textContent = page.intro;
@@ -170,6 +216,7 @@ function createModelPage(root, modelId) {
     const prediction = result.prediction;
     const truth = result.ground_truth;
     const state = result.comparison?.status || "unavailable";
+    root.dataset.prediction = "true";
     elements.comparison.hidden = false;
     elements.predictionLabel.textContent = prediction.label;
     elements.predictionConfidence.textContent = `${(prediction.confidence * 100).toFixed(2)}%`;
@@ -231,7 +278,7 @@ function createModelPage(root, modelId) {
     }
   }
   
-  function renderEvidence(evidence, available) {
+  function renderEvidence(evidence, available, groundTruth = null) {
     const queryCaption = evidence?.query_caption?.text;
     const candidate = evidence?.candidate;
     const candidateCaption = candidate?.caption;
@@ -241,7 +288,8 @@ function createModelPage(root, modelId) {
     elements.evidence.hidden = false;
     elements.evidenceStatus.dataset.state = available ? "ready" : "missing";
     elements.evidenceStatus.textContent = available ? "Đã truy hồi context" : "Chưa có dữ liệu suy luận";
-    elements.queryEvidenceImage.src = previewUrl;
+    elements.queryEvidenceImage.hidden = !previewUrl;
+    if (previewUrl) elements.queryEvidenceImage.src = previewUrl;
     renderAttention(evidence?.attention);
     const queryValid = evidence?.query_caption?.valid === true;
     const queryUnused = evidence?.query_caption?.status === "not_used";
@@ -265,6 +313,37 @@ function createModelPage(root, modelId) {
       ? candidateValid ? "Caption hợp lệ của chính ảnh candidate được chọn."
         : "Caption của candidate đã chọn bị mask; ảnh context vẫn được sử dụng."
       : modelId === "tacs" ? "TACS visual chỉ sử dụng ảnh context." : page.missingReason;
+
+    function captionBadge(badge, text, valid, unused = false) {
+      const state = unused ? "unused" : !text ? "missing" : valid ? "ready" : "masked";
+      badge.dataset.state = state;
+      badge.textContent = {unused:"Không dùng text", missing:"Chưa có caption", ready:"Được dùng trong mô hình", masked:"Bị mask · không dùng text"}[state];
+    }
+    captionBadge(elements.queryCaptionState, queryCaption, queryValid, modelId === "tacs" || queryUnused);
+    captionBadge(elements.candidateCaptionState, candidateCaption, candidateValid, modelId === "tacs");
+    // Dataset identity is content-verified metadata; never infer it from the filename or prediction.
+    const truth = groundTruth || selectedGroundTruth;
+    const queryId = truth?.verified === true ? truth.image_id : null;
+    elements.queryCaptionImageId.textContent = queryId ? `ID ảnh: ${queryId}`
+      : selectedFile ? `Ảnh tải lên: ${selectedFile.name} · chưa xác minh ID trong dataset`
+        : "Chưa xác minh ID ảnh query trong dataset.";
+    elements.queryCaptionSource.textContent = evidence?.query_caption?.source === "verified_cache"
+      ? "Nguồn: captions.csv · ảnh khớp nội dung đã lưu."
+      : evidence?.query_caption?.source === "fresh_florence"
+        ? "Nguồn: Florence-2 · caption sinh từ ảnh trong lần suy luận này."
+        : queryUnused || modelId === "tacs" ? "TACS visual không sử dụng caption."
+          : queryCaption ? "Nguồn: bộ sinh caption của mô hình." : "Chưa có dữ liệu caption từ mô hình.";
+    elements.candidateCaptionSource.textContent = candidateCaption && candidate?.image_id && modelId === "mtacs"
+      ? "Nguồn: captions.csv · đúng ID context hiển thị phía trên."
+      : modelId === "tacs" ? "TACS visual không sử dụng caption context." : "Chưa có caption của context được chọn.";
+    const raw = evidence?.query_caption?.raw_text;
+    elements.queryCaptionRawDetails.hidden = modelId !== "mtacs" || !raw || raw === queryCaption;
+    elements.queryCaptionRawDetails.open = !elements.queryCaptionRawDetails.hidden;
+    elements.queryCaptionRaw.textContent = typeof raw === "string" ? raw : "";
+    const candidateRaw = candidate?.raw_text;
+    elements.candidateCaptionRawDetails.hidden = modelId !== "mtacs" || !candidateRaw || candidateRaw === candidateCaption;
+    elements.candidateCaptionRawDetails.open = !elements.candidateCaptionRawDetails.hidden;
+    elements.candidateCaptionRaw.textContent = typeof candidateRaw === "string" ? candidateRaw : "";
   }
   
   function renderArchitecture(architecture) {
@@ -354,8 +433,11 @@ function createModelPage(root, modelId) {
     if (previewUrl) URL.revokeObjectURL(previewUrl);
     previewUrl = null;
     elements.input.value = "";
-    elements.preview.src = sampleUrl;
-    elements.preview.alt = "Ảnh minh họa thư viện, không thuộc bộ SUN397";
+    elements.preview.removeAttribute("src");
+    elements.preview.hidden = true;
+    elements.empty.hidden = false;
+    elements.previewTopline.hidden = true;
+    elements.preview.alt = "Ảnh query đã chọn";
     elements.previewLabel.textContent = "ẢNH MINH HỌA";
     elements.previewFormat.textContent = "CHƯA CHỌN ẢNH";
     elements.fileName.textContent = "Chưa chọn ảnh";
@@ -384,6 +466,9 @@ function createModelPage(root, modelId) {
     selectedFile = file;
     previewUrl = URL.createObjectURL(file);
     elements.preview.src = previewUrl;
+    elements.preview.hidden = false;
+    elements.empty.hidden = true;
+    elements.previewTopline.hidden = false;
     elements.preview.alt = illustrative ? "Ảnh thư viện minh họa đã chọn" : `Ảnh đã chọn: ${file.name}`;
     elements.previewLabel.textContent = illustrative ? "ẢNH MINH HỌA" : "ẢNH ĐÃ CHỌN";
     elements.previewFormat.textContent = "ĐANG KIỂM TRA";
@@ -407,6 +492,8 @@ function createModelPage(root, modelId) {
       elements.previewFormat.textContent = data.format;
       setFileStatus("Ảnh hợp lệ", "ready");
       renderQueryGroundTruth(data.ground_truth);
+      elements.queryCaptionImageId.textContent = data.ground_truth?.verified && data.ground_truth.image_id
+        ? `ID ảnh: ${data.ground_truth.image_id}` : `Ảnh tải lên: ${file.name} · chưa xác minh ID trong dataset`;
       setMessage(modelId === "tacs"
         ? "Ảnh đã được kiểm tra. Chưa chạy selector hoặc classifier TACS."
         : "Ảnh đã được kiểm tra. Chưa chạy caption hoặc mô hình phân loại.");
@@ -473,15 +560,19 @@ function createModelPage(root, modelId) {
     elements.classifyReason.textContent = modelId === "mtacs"
       ? "Đang tạo/kiểm tra caption, chọn context và phân loại…"
       : "Đang chọn context, phân loại và tạo heatmap…";
+    elements.resultHeading.textContent = `Đang phân loại với ${page.brand}`;
+    elements.resultDescription.textContent = "Mô hình đang xử lý ảnh. Bạn có thể chuyển tác vụ; kết quả sẽ được giữ trong phiên này.";
+    setMessage("Đã gửi ảnh đến mô hình để suy luận.");
     try {
       const response = await fetch(`/api/classify?model=${modelId}`, { method: "POST", body, signal: controller.signal });
       const result = await response.json();
       if (classifyController !== controller || selectedFile !== requestFile) return;
       if (response.ok && result.model !== modelId) throw new Error("Backend trả kết quả của mô hình khác.");
-      renderEvidence(result.evidence, response.ok && Boolean(result.prediction));
+      renderEvidence(result.evidence, response.ok && Boolean(result.prediction), result.ground_truth);
       if (response.ok && result.prediction) {
         hasPrediction = true;
         elements.resultHeading.textContent = "Đã có kết quả phân loại";
+        setMessage(`Đã suy luận ảnh bằng ${page.brand}.`);
         renderComparison(result);
         const duration = result.timing?.inference_seconds;
         elements.resultDescription.textContent = typeof duration === "number" ? `Thời gian suy luận: ${duration.toFixed(1)} giây` : "Kết quả từ mô hình đã nạp.";
@@ -490,19 +581,23 @@ function createModelPage(root, modelId) {
           : "Caption query và candidate context nằm ở phần dữ liệu bên dưới.";
       } else {
         elements.resultHeading.textContent = "Chưa thể dự đoán";
+        root.dataset.prediction = "false";
+        hasPrediction = false;
         elements.comparison.hidden = true;
         elements.resultDescription.textContent = result.message || (typeof result.detail === "string" ? result.detail : "Không thể xử lý yêu cầu.");
         elements.classifyReason.textContent = modelId === "tacs"
           ? "Chưa chọn context; không có kết quả giả."
           : "Chưa tạo caption hay chọn candidate; không có kết quả giả.";
       }
-      if (root.isConnected) elements.evidence.scrollIntoView({
+      if (root.isConnected) elements.resultPane.scrollIntoView({
         behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
         block: "start",
       });
     } catch (error) {
       if (error.name === "AbortError" || classifyController !== controller) return;
       renderEvidence(null, false);
+      root.dataset.prediction = "false";
+      hasPrediction = false;
       elements.comparison.hidden = true;
       elements.resultHeading.textContent = "Chưa thể phân loại";
       elements.resultDescription.textContent = error.message;

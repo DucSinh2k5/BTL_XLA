@@ -120,7 +120,7 @@ class ReadonlySafeWeights:
 
 
 @contextmanager
-def caption_weight_loading(payload, directory, expected_sha, checkpoint_loader, progress=None):
+def caption_weight_loading(payload, directory, expected_sha, checkpoint_loader, progress=None, clip_classes=None):
     """Retain original HF constructors/checks, replacing only CPU storage loading."""
     import torch
     from transformers import CLIPModel
@@ -128,7 +128,8 @@ def caption_weight_loading(payload, directory, expected_sha, checkpoint_loader, 
     florence_file = (Path(payload["florence"]) / "model.safetensors").resolve()
     clip_file = (Path(payload["clip"]) / "pytorch_model.bin").resolve()
     original_safe, original_safe_load = modeling_utils.safe_open, modeling_utils.safe_load_file
-    original_torch_load, original_clip = torch.load, CLIPModel.from_pretrained
+    original_torch_load = torch.load
+    classes = clip_classes or (CLIPModel,)
     safe_weights, clip_weights = None, None
     def weights():
         nonlocal safe_weights
@@ -152,12 +153,15 @@ def caption_weight_loading(payload, directory, expected_sha, checkpoint_loader, 
                 clip_weights = checkpoint_loader(clip_file, load=original_torch_load)
             return clip_weights
         return original_torch_load(filename, *args, **kwargs)
-    def clip_from_pretrained(cls, *args, **kwargs):
-        kwargs["low_cpu_mem_usage"] = True
-        return original_clip(*args, **kwargs)
+    def efficient_clip(original):
+        def clip_from_pretrained(cls, *args, **kwargs):
+            kwargs["low_cpu_mem_usage"] = True
+            return original(*args, **kwargs)
+        return classmethod(clip_from_pretrained)
     with ExitStack() as stack:
         stack.enter_context(patch.object(modeling_utils, "safe_open", safe_open))
         stack.enter_context(patch.object(modeling_utils, "safe_load_file", safe_load))
         stack.enter_context(patch.object(torch, "load", torch_load))
-        stack.enter_context(patch.object(CLIPModel, "from_pretrained", classmethod(clip_from_pretrained)))
+        for clip_class in classes:
+            stack.enter_context(patch.object(clip_class, "from_pretrained", efficient_clip(clip_class.from_pretrained)))
         yield

@@ -16,6 +16,7 @@ from PIL import Image, ImageOps, UnidentifiedImageError
 
 from .inference import InferenceManager, InferenceUnavailable
 from .labels import LabelCatalog
+from .isic_backend import SegmentationManager, create_router
 
 
 ROOT = Path(__file__).resolve().parent
@@ -126,12 +127,15 @@ async def lifespan(application):
         yield
     finally:
         await application.state.inference.close()
+        await application.state.segmentation.close()
 
 
 app = FastAPI(title="SUN397 TACS / M-TACS Demo", version="1.0.0", lifespan=lifespan)
 app.state.inference = InferenceManager()
 app.state.labels = LabelCatalog(app.state.inference.settings.bundles)
+app.state.segmentation = SegmentationManager(gate=app.state.inference._inference_lock)
 app.mount("/assets", StaticFiles(directory=ASSETS), name="assets")
+app.mount("/isic/assets", StaticFiles(directory=ROOT / "isic/assets"), name="isic-assets")
 
 
 @app.get("/")
@@ -281,3 +285,6 @@ async def classify(request: Request, file: UploadFile = File(...), model: ModelI
             },
         },
     )
+
+
+app.include_router(create_router(_image_metadata))

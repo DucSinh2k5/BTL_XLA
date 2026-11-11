@@ -222,6 +222,13 @@ def main():
             started = time.perf_counter()
             with redirect_stdout(sys.stderr):
                 result = predictor.predict(str(image), explain=True)
+            if selected_model == "mtacs":
+                evidence = result.get("evidence", {})
+                candidate = evidence.get("candidate", {})
+                caption_rows = getattr(predictor, "caption_rows", {})
+                candidate_caption = caption_rows.get(candidate.get("image_id"), {})
+                if isinstance(candidate_caption, dict):
+                    candidate["raw_text"] = candidate_caption.get("raw_caption", "")
             result["timing"] = {"inference_seconds": round(time.perf_counter() - started, 3)}
             output.write_text(json.dumps(result, ensure_ascii=False, allow_nan=False), encoding="utf-8")
             emit("result")
