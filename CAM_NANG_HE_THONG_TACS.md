@@ -2,7 +2,7 @@
 
 > **Mục đích tài liệu:** Cẩm nang định hướng toàn diện dành cho thành viên mới tiếp cận dự án `TACS/`. Đọc xong tài liệu này, bạn sẽ nắm được: **(1)** kiến thức nền tảng cần biết, **(2)** cấu trúc mã nguồn, **(3)** lộ trình phát triển từ bài báo TACS gốc sang M-TACS đa phương thức và ứng dụng Web, **(4)** toàn bộ điểm số thực nghiệm đã xác minh, **(5)** các kỹ thuật tối ưu hệ thống thực chiến, và **(6)** ranh giới rõ ràng giữa phần đã đo đạc, phần mới có mã nguồn và phần đề xuất tương lai.
 >
-> **Nguyên tắc biên soạn:** 100% thông tin và con số dưới đây được trích xuất từ mã nguồn, báo cáo kiểm toán và log/output lưu trữ thực tế trong kho mã `TACS/` tính đến tháng 10/2026. Không suy diễn hay làm tròn thành tuyên bố vượt quá bằng chứng thực nghiệm.
+> **Nguyên tắc biên soạn:** 100% thông tin và con số dưới đây được trích xuất từ mã nguồn, báo cáo kiểm toán và log/output lưu trữ thực tế trong kho mã `TACS/` tính đến tháng 10/2026; mục 5.6 và mục 7 được bổ sung ngày 11/11/2026 từ các notebook và web bundle tháng 11. Không suy diễn hay làm tròn thành tuyên bố vượt quá bằng chứng thực nghiệm.
 
 ---
 
@@ -76,7 +76,7 @@ Kho mã `TACS/` được chuẩn hóa và di trú bảo toàn byte từ thư m�
 
 ```text
 TACS/
-├── apps/sun397_demo/        # Ứng dụng Web FastAPI + giao diện đối chiếu TACS Visual vs M-TACS trên SUN397
+├── apps/sun397_demo/        # Ứng dụng Web FastAPI: đối chiếu TACS Visual vs M-TACS trên SUN397 + trang phân đoạn ISIC (isic_*.py, isic/)
 ├── artifacts/               # Nơi đặt model bundle cho web & các checkpoint lịch sử (imported_unverified)
 ├── configs/                 # Mẫu cấu hình đường dẫn cục bộ (paths.local.example.json) & prompt SUN397
 ├── data/
@@ -102,7 +102,7 @@ TACS/
 
 **Lưu ý thêm về các file thực thi đặt tại thư mục gốc `TACS/`:**
 Trong quá trình tải kết quả từ Kaggle về máy cục bộ, một số bản chạy hoàn chỉnh nằm trực tiếp ở gốc `TACS/`:
-- Chuỗi kiến trúc DTD: `dtd-architecture-study-01.ipynb` (`S01`), `stydu2_da_train.ipynb` (`S02`), `study3_datrain.ipynb` (`S03`), `study4.ipynb` (`S04`).
+- Chuỗi kiến trúc DTD: `dtd-architecture-study-01.ipynb` (`S01`), `stydu2_da_train.ipynb` (`S02`), `study3_datrain.ipynb` (`S03`). Bản `S04` (trước là `study4.ipynb` ở gốc) đã được chuyển ngày 04/11/2026 sang `notebooks/02_improvements/multimodal_architecture_ablation/04_candidate_only_semantic_selector/dtd/study04-dtd-prefix-aligned-image-caption-selector-executed.ipynb` (xem `notebooks/IMPORTS_2026-11-04.md`).
 - Chuỗi phân đoạn ISIC 2017: `tacs_isic_segement_448.ipynb` (`I01` Visual), `isic-segmen-captions.ipynb` (`I02` Qwen3-VL-8B).
 - File `tacs_web.ipynb` ở gốc hiện là bản notebook đã vá lỗi bộ nhớ nhưng **chưa có output chạy GPU**.
 
@@ -184,13 +184,19 @@ Khóa cố định file caption `captions_prefix_control.csv` bằng mã băm SH
 - **`S01` Baseline (`dtd-architecture-study-01.ipynb`):** Phát hiện lý do cổng văn bản `mean_c_gate` chỉ đạt `~0.0011`: vector đặc trưng thị giác đã chuẩn hóa đơn vị (`norm = 1`), trong khi vector văn bản sau lớp chiếu tuyến tính có chuẩn lớn gấp `~32` lần (`norm ~ 32`), buộc mô hình phải giữ cổng cực nhỏ để không làm nổ biên độ.
 - **`S02` Norm-Calibrated Fusion (`stydu2_da_train.ipynb`):** Chuẩn hóa L2 vector văn bản đã chiếu trước khi nhân với cổng phần dư. Cổng `mean_c_gate` lập tức mở lên `~0.0624` (tăng hơn 55 lần). Tuy nhiên, bài kiểm tra can thiệp trên cùng checkpoint cho thấy tắt văn bản (`text_off`) hoặc tráo văn bản (`text_shuffled`) trên tập val không làm giảm Macro-F1 (dù `aligned` có CE loss thấp hơn) — nghĩa là phép cộng phần dư ở cấp vector toàn cục vẫn chưa tạo ra đặc trưng phân lớp vượt trội.
 - **`S03` Auxiliary m-LTM Alignment (`study3_datrain.ipynb`):** Bổ sung hàm mất mát phụ **Optimal Transport cân bằng (log-Sinkhorn KL, trọng số `0.05`)** với metric đường chéo Mahalanobis dương (`+1,024` tham số) và gom nhóm các caption trùng nhau trên kho ứng viên. Không gian chung học rất tốt trên pool (caption-group top-1 đạt `74.69%`, KL giảm từ `3.41` xuống `0.859`), nhưng nếu chỉ dùng làm loss phụ cho nhánh fusion thì Test F1 (`84.87%`) vẫn đi ngang so với `S02` (`84.93%`).
-- **`S04` Aligned Semantic Selector (`study4.ipynb`):** Tận dụng trực tiếp không gian căn chỉnh m-LTM của `S03` để chấm điểm **ảnh truy vấn DINO CLS với caption ứng viên CLIP** ngay bên trong **Selector**:
+- **`S04` Aligned Semantic Selector (`study04-dtd-prefix-aligned-image-caption-selector-executed.ipynb`):** Tận dụng trực tiếp không gian căn chỉnh m-LTM của `S03` để chấm điểm **ảnh truy vấn DINO CLS với caption ứng viên CLIP** ngay bên trong **Selector**:
   $$s_{\text{total}}(x_q, x_c^j) = z_{\text{vis}}(x_q, x_c^j) + \alpha \cdot \text{clip}\big(z_{\text{masked}}(s_{\text{sem}}(x_q, t_c^j)), -3, 3\big), \quad \alpha \in [0, 0.25]$$
   Với lịch khởi động 5 epoch đầu thuần thị giác + 5 epoch tăng dần, trọng số học được hội tụ ở $\alpha \approx 0.131$, kéo kết quả phục hồi lên **`85.16%` Acc / `85.07%` F1** (vượt qua cả `S02` và `S03`). Đặc biệt, phép thử can thiệp Selector xác nhận khi tắt hoặc tráo caption trong Selector, `5.21%–10.59%` truy vấn bị đổi ảnh ngữ cảnh và cả Val F1 lẫn Val Loss đều suy giảm nhẹ — lần đầu tiên chứng minh **Selector thực sự khai thác tín hiệu ngữ nghĩa của caption ứng viên**.
 
 ### Bước 6 — Mở rộng sang Phân đoạn Y sinh ISIC 2017 & Đóng gói Web SUN397
 - **ISIC 2017 (`isic-segmen-captions.ipynb`):** Xây dựng chính sách lọc thuộc tính da liễu `isic_visible_attributes_v1` (mô tả màu sắc, đường viền, cấu trúc bề mặt nhìn thấy được, cấm hoàn toàn thuật ngữ chẩn đoán bệnh lý như *melanoma/nevus*, đạt độ phủ hợp lệ **100%** trên `2,750` ảnh với Qwen3-VL-8B) và tích hợp vào mô hình phân đoạn `448x448`.
 - **Triển khai Web SUN397 (`notebooks/04_deployment/` & `apps/sun397_demo/`):** Thiết kế kiến trúc mô hình đóng gói độc lập (`TACSVisualWebModel`, `MTACSMultimodalWebModel`) xuất ra một gói `.zip` tự chứa toàn bộ checkpoint, mã nguồn DINOv3 vendored, ảnh & đặc trưng kho ứng viên, bản đồ nhiệt chú ý thực (*last-block CLS-to-patch attention*) và tự kiểm tra nạp nguội (*cold-reload verification*) trước khi gắn vào giao diện FastAPI.
+
+### Bước 7 — Nâng backbone lên `ViT-L/16` cho bản Web SUN397 & ISIC 2017 (31/10 – 04/11/2026)
+- **SUN397 (31/10):** Huấn luyện bằng engine tiết kiệm bộ nhớ `memory_bounded_two_pass_v2` (batch logic 64 / batch tính toán 8, xem mục 6.4) và xuất hai bundle `sun397_tacs_visual_vitl16_web_bundle.zip` và `sun397_mtacs_full_both_vitl16_web_bundle.zip`.
+- **ISIC 2017 (02/11):** Xuất bundle `isic2017_tacs_vitl16_448_web_bundle.zip` (chỉ ảnh) và `isic2017_mtacs_vitl16_448_web_bundle.zip` (M-TACS `full_both`, caption Florence-prefix). Cả hai đều qua smoke test (`state_reload`, `trained_model_parity`, `attention_parity`, `selected_context_parity`, `cold_offline_reload` đều `true`).
+- **Web ISIC & giao diện studio (04/11 trở đi):** Thêm `apps/sun397_demo/isic_backend.py`, `isic_worker.py`, `isic_caption_override.py`, trang `apps/sun397_demo/isic/` và `assets/studio.*`. Phần này **chưa commit** vào Git tính đến 11/11/2026.
+- Số liệu của cả bốn bundle nằm ở mục 5.6; tất cả **chỉ có điểm val**, chưa chạy test.
 
 ---
 
@@ -221,6 +227,7 @@ Khóa cố định file caption `captions_prefix_control.csv` bằng mã băm SH
 | **SUN397** | `TACS` (`ViT-S/16`, tách val chuẩn, early stop ep 23) | `256x256` | 74.01 | 73.85 | Cùng cỡ backbone & ảnh với paper (`71.8%`), có tách tập validation thật. |
 | **SUN397** | `TACS` (`ViT-B/16`, tách val chuẩn) | `384x384` | 79.42 | 79.27 | Tăng mạnh nhờ nâng cấp lên `ViT-B/16` và ảnh `384x384`. |
 | **SUN397** | `M-TACS lịch sử` (`ViT-S/16`, query-caption, cov 60.55%) | `384x384` | 76.12 | 76.02 | Khác độ phân giải với bản `ViT-S/16` `256x256` nên chưa kết luận thuần do caption. |
+| **SUN397** | `TACS Adaptive` (`ViT-S/16`, số ngữ cảnh thay đổi theo ảnh, tối đa 3, trung bình ~2) | `384x384` | 75.88 | 75.80 | `notebooks/02_improvements/adaptive_context/sun397/tacs-adaptive-sun.ipynb`; không dùng caption, `K` khác chuẩn `K=1` của paper. |
 
 ---
 
@@ -276,7 +283,22 @@ Khóa cố định file caption `captions_prefix_control.csv` bằng mã băm SH
 | **I01** | **Visual TACS Variant (`448x448`)** | Không dùng văn bản | 49 (64) | 87.31 | **85.60** | **77.38** | Cao hơn con số `85.0% / 76.5%` ở `256x256` của paper, nhưng khác độ phân giải, số tầng cross-attention và chưa có `No-Context 448x448` đối chứng. |
 | **I02** | **M-TACS `full_both` + `Qwen3-VL-8B`** | `isic_visible_attributes_v1` (`100%` trên `2,750` ảnh) | 26 (41) | **87.55** | 84.87 | 76.54 | Hội tụ sớm hơn và nhỉnh hơn `+0.24` điểm % trên Val (`150` ảnh), nhưng thấp hơn `-0.73` điểm % Dice / `-0.84` điểm % IoU trên Test (`600` ảnh). |
 
-### 5.6 Bốn bài học khoa học đúc kết từ toàn bộ thực nghiệm
+### 5.6 Chuỗi W — Các bundle Web `DINOv3 ViT-L/16` (tháng 11/2026, CHỈ CÓ ĐIỂM VAL)
+*Nguồn:* `metrics.json`, `training_snapshot.json` và `provenance/original_run/history.csv` bên trong bốn file `.zip` ở gốc `TACS/`; `results (3)/outputs/isic2017_tacs_vitl16_448_web_v2/history.csv`. Mọi bundle đều ghi `"test": null`, `"test_status": "not_run_export_only"` và **không có lượt nào chạy đủ 100 epoch**. Seed 42, `K=1`, kho ứng viên 20%.
+
+| Mã | Bundle | Độ phân giải | Epoch đã chạy / Best Ep | Val Acc hoặc Dice (%) | Val Macro-F1 hoặc IoU (%) | Gate (val) | Ghi chú |
+| :---: | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
+| **W01** | SUN397 `TACS_visual` | `384x384` | 43 / 29 | Acc **81.11** | F1 **80.82** | — | Val 1,985 ảnh, pool 3,573. `history.csv` có val acc cao nhất 81.46% ở epoch 43, nhưng checkpoint đóng gói là epoch 29 vì best checkpoint được chọn theo **val loss nhỏ nhất** (0.6946 tại epoch 29, đã đối chiếu với `history.csv`). |
+| **W02** | SUN397 `M_TACS_full_both` | `384x384` | 42 / 19 | Acc 80.20 | F1 79.84 | q 0.149 / c 0.008, `semantic_mix` 0.511 | Caption `sun397_lexical_clip_audit_v1`. Checkpoint epoch 19 = val loss nhỏ nhất (0.7322); val acc cao nhất trong `history.csv` là 80.71% ở epoch 36. Thấp hơn W01 −0.91 điểm % Acc / −0.98 điểm % F1 trên val, cùng chiều với kết luận DTD (`full_both` < `visual_only`). |
+| **W03** | ISIC 2017 `tacs` (chỉ ảnh) | `448x448` | 94 / 49 | Dice **88.62** | IoU 81.32 | 0 / 0 | Split 2,000 / 149 / 597 (đã loại ảnh trùng pixel). |
+| **W04** | ISIC 2017 `mtacs` `full_both` + Florence-prefix | `448x448` | 93 / 22 | Dice **88.83** | IoU 81.43 | q 0.427 / c 0.029 | Split 2,000 / 150 / 600. Caption hợp lệ: train 1,958/2,000, val 144/150, test 589/600, pool 388/400. |
+
+> [!WARNING]
+> - W03 và W04 **không cùng tập val** (149 so với 150 ảnh) và mới có 1 seed, nên chênh lệch +0.21 điểm % Dice **chưa phải kết luận**. Trước đây I02 cũng nhỉnh hơn trên val rồi thua I01 trên test (mục 5.5).
+> - W03/W04 dùng `ViT-L/16`, khác `ViT-S/16` của I01/I02 → không đặt chung cột với chuỗi I.
+> - Muốn đưa vào báo cáo cần chạy đánh giá test trên GPU cho cả bốn bundle.
+
+### 5.7 Bốn bài học khoa học đúc kết từ toàn bộ thực nghiệm
 1. **Thêm văn bản vào mọi nơi (`full_both`) không mặc nhiên tốt hơn thuần thị giác:** Khi đặc trưng thị giác `DINOv3 ViT-L/16` đã rất mạnh, việc trộn thẳng vector văn bản toàn cục (CLIP 512-d) vào ảnh truy vấn gây nhiễu quá trình tối ưu hóa.
 2. **Vị trí đưa văn bản quan trọng hơn số lượng văn bản:** Chỉ đưa văn bản ở phía ứng viên (`candidate_only`) và đưa tín hiệu ngữ nghĩa đã căn chỉnh vào **khâu chọn ứng viên (`Study 04`)** là hướng kiến trúc hợp lý nhất đã được kiểm chứng.
 3. **Chất lượng VLM tạo khác biệt rõ rệt, nhưng ép độ phủ 100% bằng CLIP rerank là phản tác dụng:** Qwen3-VL-8B vượt toàn bộ biến thể Florence-2 hơn 1 điểm % F1 dù độ phủ thấp hơn (`74.66%` vs `84.20%–100%`), nhờ cơ chế mặt nạ an toàn cho phép bỏ qua các câu mô tả mơ hồ thay vì cố chọn câu kém.
@@ -319,10 +341,11 @@ Dự án giải quyết nhiều bài toán kỹ thuật khắt khe khi chạy c�
 
 | Cấp độ trạng thái | Các hạng mục cụ thể trong kho mã `TACS/` |
 | :--- | :--- |
-| **1. Đã chạy & Xác minh Output lưu trữ** *(Dùng trực tiếp cho báo cáo)* | • **Chuỗi A (8 thực nghiệm DTD vai trò văn bản):** Đủ 8 notebook hoàn chỉnh trong `experiments/completed/text_context_ablation/dtd/`.<br>• **Chuỗi C (8 phương pháp caption DTD `full_both`):** Đủ LoRA, 4 Florence controls và Qwen3-VL 8B/32B trong `experiments/completed/caption_ablation/dtd/`.<br>• **Chuỗi S (4 nghiên cứu kiến trúc DTD `candidate_only`):** Đủ `S01`–`S04` (`dtd-architecture-study-01.ipynb`, `stydu2_da_train.ipynb`, `study3_datrain.ipynb`, `study4.ipynb`).<br>• **Chuỗi I (Phân đoạn ISIC 2017 `448x448`):** Đã có `I01` Visual (`tacs_isic_segement_448.ipynb`) và `I02` Qwen3-VL-8B (`isic-segmen-captions.ipynb`).<br>• **Các bản chạy Visual lịch sử:** CUB No-Context (3 seeds), các bản chạy riêng lẻ trên Cars & SUN397. |
-| **2. Đã hoàn thiện Code & Test nhưng CHƯA có Output chạy GPU** | • **ISIC 2017 `Florence-Prefix` `full_both`:** Đã có module `src/captioning/isic_florence_prefix.py` và notebook mẫu trong `notebooks/02_improvements/segmentation/full_both/florence_prefix/isic2017/`.<br>• **Notebook huấn luyện & xuất Bundle Web SUN397 đã vá OOM:** `notebooks/04_deployment/sun397/01_tacs_visual/`, `02_mtacs_full_both/` và `tacs_web.ipynb` tại gốc đã vượt qua toàn bộ unit test cục bộ, chờ chạy hết trên GPU để xuất file `.zip` bundle.<br>• **Các mẫu notebook Top-3 / Context-text chung** trong `notebooks/02_improvements/multimodal_context_selection/`. |
-| **3. Prototype Đang Hoạt động Chờ Nối Trọng số** | • **Ứng dụng Web `apps/sun397_demo/app.py`:** Giao diện đối chiếu `/` (TACS) và `/mtacs` (M-TACS), API `/healthz` và `/api/status` hoạt động đầy đủ (`HTTP 200`). Khi chưa trỏ biến môi trường tới thư mục model bundle đã giải nén, `/api/predict` chủ động trả về `HTTP 503` (thiết kế tường minh, không giả lập kết quả). |
-| **4. Đề xuất Nghiên cứu Tiếp theo** *(Chưa cài đặt/chưa đo)* | • Chạy lặp **3 seeds (`42, 43, 44`)** cho các cấu hình chủ lực trên DTD (`A01`, `S01`, `S04`, `C05`) để có độ lệch chuẩn.<br>• Chạy baseline **`No-Context` ở đúng độ phân giải `448x448`** trên ISIC 2017 để lượng hóa lợi ích ròng của ngữ cảnh thị giác.<br>• Thử hợp nhất **cấp độ patch/token (Cross-Attention với token văn bản)** thay vì cộng một vector CLIP toàn cục duy nhất vào đầu phân loại.<br>• Khảo sát **ASWP (*Adaptive Sharpness-Aware Weight Perturbation*)** sau khi chốt xong kiến trúc biểu diễn (hiện cờ `aswp_enabled=False` trong mọi bản chạy). |
+| **1. Đã chạy & Xác minh Output lưu trữ** *(Dùng trực tiếp cho báo cáo)* | • **Chuỗi A (8 thực nghiệm DTD vai trò văn bản):** Đủ 8 notebook hoàn chỉnh trong `experiments/completed/text_context_ablation/dtd/`.<br>• **Chuỗi C (8 phương pháp caption DTD `full_both`):** Đủ LoRA, 4 Florence controls và Qwen3-VL 8B/32B trong `experiments/completed/caption_ablation/dtd/`.<br>• **Chuỗi S (4 nghiên cứu kiến trúc DTD `candidate_only`):** Đủ `S01`–`S04` (`dtd-architecture-study-01.ipynb`, `stydu2_da_train.ipynb`, `study3_datrain.ipynb`, `study04-dtd-prefix-aligned-image-caption-selector-executed.ipynb`).<br>• **Chuỗi I (Phân đoạn ISIC 2017 `448x448`):** Đã có `I01` Visual (`tacs_isic_segement_448.ipynb`) và `I02` Qwen3-VL-8B (`isic-segmen-captions.ipynb`).<br>• **Các bản chạy Visual lịch sử:** CUB No-Context (3 seeds), các bản chạy riêng lẻ trên Cars & SUN397, TACS Adaptive SUN397 (`tacs-adaptive-sun.ipynb`). |
+| **1b. Đã xuất bundle Web, CHỈ CÓ ĐIỂM VAL** *(Chưa dùng làm kết quả test trong báo cáo)* | • **Chuỗi W (mục 5.6):** 4 bundle `ViT-L/16`: SUN397 TACS & M-TACS (`notebooks/04_deployment/sun397/03_export_only/`), ISIC 2017 TACS & M-TACS Florence-prefix (`notebooks/04_deployment/isic2017/03_export_only/`, run snapshot 93/100 trong `notebooks/04_deployment/isic2017/02_mtacs_full_both/`). Train dừng giữa chừng (42–94/100 epoch), smoke test đạt, test chưa chạy. |
+| **2. Đã hoàn thiện Code & Test nhưng CHƯA có Output chạy GPU** | • **ISIC 2017 `Florence-Prefix` `full_both`:** Đã có module `src/captioning/isic_florence_prefix.py` và notebook mẫu trong `notebooks/02_improvements/segmentation/full_both/florence_prefix/isic2017/`.<br>• **Notebook huấn luyện & xuất Bundle Web SUN397 đã vá OOM:** `notebooks/04_deployment/sun397/01_tacs_visual/`, `02_mtacs_full_both/` và `tacs_web.ipynb` tại gốc đã vượt qua toàn bộ unit test cục bộ, chờ chạy hết trên GPU để xuất file `.zip` bundle.<br>• **Các notebook tháng 11 chưa có output:** SUN397 `sun397-mtacs-full-both-vitl16-caption-redaction-v2-train-export-web.ipynb`, `mtacs-sun.ipynb` ở gốc, ISIC `florence_attributes_v2` (`notebooks/02_improvements/segmentation/full_both/florence_attributes_v2/`) và bộ sinh caption `florence_attributes_firstvalid_v3` (`notebooks/02_improvements/segmentation/caption_generation/`).<br>• **Các mẫu notebook Top-3 / Context-text chung** trong `notebooks/02_improvements/multimodal_top3/` và `notebooks/02_improvements/query_candidate_text/`. |
+| **3. Prototype Đang Hoạt động Chờ Nối Trọng số** | • **Ứng dụng Web `apps/sun397_demo/app.py`:** Giao diện đối chiếu `/` (TACS) và `/mtacs` (M-TACS), API `/healthz` và `/api/status` hoạt động đầy đủ (`HTTP 200`). Khi chưa trỏ biến môi trường tới thư mục model bundle đã giải nén, `/api/predict` chủ động trả về `HTTP 503` (thiết kế tường minh, không giả lập kết quả).<br>• **Trang phân đoạn ISIC + giao diện studio** (`isic_backend.py`, `isic_worker.py`, `isic/`, `assets/studio.*`): chưa commit; ngày 11/11/2026 bộ test `apps/sun397_demo/tests` đạt 51 passed / 4 skipped (pytest) và 4/4 file test JS. |
+| **4. Đề xuất Nghiên cứu Tiếp theo** *(Chưa cài đặt/chưa đo)* | • Chạy lặp **3 seeds (`42, 43, 44`)** cho các cấu hình chủ lực trên DTD (`A01`, `S01`, `S04`, `C05`) để có độ lệch chuẩn.<br>• **Chạy đánh giá test cho 4 bundle chuỗi W** (mục 5.6) trên đúng split đã lưu; nếu được, train tiếp cho đủ 100 epoch.<br>• Chạy baseline **`No-Context` ở đúng độ phân giải `448x448`** trên ISIC 2017 để lượng hóa lợi ích ròng của ngữ cảnh thị giác.<br>• Thử hợp nhất **cấp độ patch/token (Cross-Attention với token văn bản)** thay vì cộng một vector CLIP toàn cục duy nhất vào đầu phân loại.<br>• Khảo sát **ASWP (*Adaptive Sharpness-Aware Weight Perturbation*)** sau khi chốt xong kiến trúc biểu diễn (hiện cờ `aswp_enabled=False` trong mọi bản chạy). |
 
 ---
 
