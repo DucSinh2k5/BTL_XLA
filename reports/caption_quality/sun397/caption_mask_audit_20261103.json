@@ -1,0 +1,53 @@
+{
+  "dataset": "SUN397",
+  "source_csv": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\TACS\\artifacts\\deployment\\sun397\\mtacs_full_both\\captions.csv",
+  "rows": 39700,
+  "by_split": {
+    "train": {
+      "images": 17865,
+      "masked": 10721,
+      "usable": 7144,
+      "masked_percent": 60.0112
+    },
+    "val": {
+      "images": 1985,
+      "masked": 1215,
+      "usable": 770,
+      "masked_percent": 61.2091
+    },
+    "test": {
+      "images": 19850,
+      "masked": 11936,
+      "usable": 7914,
+      "masked_percent": 60.131
+    }
+  },
+  "masked_reason_counts": {
+    "all": {
+      "lexical_only": 23872
+    },
+    "candidate_pool": {
+      "lexical_only": 2157
+    }
+  },
+  "all": {
+    "images": 39700,
+    "masked": 23872,
+    "usable": 15828,
+    "masked_percent": 60.131,
+    "usable_percent": 39.869,
+    "masked_with_lexical_flag": 23872,
+    "masked_without_lexical_flag": 0,
+    "masked_with_semantic_audit_flag": 23872
+  },
+  "candidate_pool": {
+    "images": 3573,
+    "masked": 2157,
+    "usable": 1416,
+    "masked_percent": 60.3694,
+    "usable_percent": 39.6306,
+    "masked_with_lexical_flag": 2157,
+    "masked_without_lexical_flag": 0,
+    "masked_with_semantic_audit_flag": 2157
+  }
+}
