@@ -378,8 +378,8 @@ python -m pytest -q -k "not catalog_is_complete"
 & "..\.venv\Scripts\python.exe" -m uvicorn --app-dir apps sun397_demo.app:app --host 127.0.0.1 --port 8000
 
 # 4. Khi đã tải và giải nén các gói bundle SUN397 từ notebook 04_deployment, nạp vào Web bằng biến môi trường:
-$env:SUN397_TACS_BUNDLE_DIR = "F:\duong_dan\sun397_tacs_visual_vitl16_384_web_bundle"
-$env:SUN397_MTACS_BUNDLE_DIR = "F:\duong_dan\sun397_mtacs_full_both_vitl16_384_web_bundle"
+$env:SUN397_TACS_BUNDLE = "F:\duong_dan\sun397_tacs_visual_vitl16_384_web_bundle"
+$env:SUN397_MTACS_BUNDLE = "F:\duong_dan\sun397_mtacs_full_both_vitl16_384_web_bundle"
 & "..\.venv\Scripts\python.exe" -m uvicorn --app-dir apps sun397_demo.app:app --host 127.0.0.1 --port 8000
 ```
 
