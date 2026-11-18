@@ -320,6 +320,7 @@ function createModelPage(root, modelId) {
       badge.textContent = {unused:"Không dùng text", missing:"Chưa có caption", ready:"Được dùng trong mô hình", masked:"Bị mask · không dùng text"}[state];
     }
     captionBadge(elements.queryCaptionState, queryCaption, queryValid, modelId === "tacs" || queryUnused);
+    elements.queryCaptionState.hidden = elements.queryCaptionState.dataset.state === "masked";
     captionBadge(elements.candidateCaptionState, candidateCaption, candidateValid, modelId === "tacs");
     // Dataset identity is content-verified metadata; never infer it from the filename or prediction.
     const truth = groundTruth || selectedGroundTruth;

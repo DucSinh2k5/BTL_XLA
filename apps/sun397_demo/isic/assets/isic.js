@@ -231,7 +231,8 @@ function createISICView(root, model) {
     $('context-id').textContent = candidate?.image_id || 'Chưa có context';
     $('context-note').textContent = candidate?.image_id ? 'Ảnh thật do selector chọn từ candidate pool train.' : 'Backend chưa trả ảnh context.';
     $('query-caption').textContent = evidence.query_caption?.text || 'Không có caption query.';
-    $('query-caption-state').textContent = evidence.query_caption?.valid ? 'ĐANG SỬ DỤNG' : 'BỊ MASK / KHÔNG DÙNG';
+    $('query-caption-state').textContent = evidence.query_caption?.valid ? '' : 'BỊ MASK / KHÔNG DÙNG';
+    $('query-caption-state').hidden = Boolean(evidence.query_caption?.valid);
     $('query-caption-note').textContent = evidence.query_caption?.valid ? 'Caption hợp lệ được encode bằng CLIP.' : 'Nhánh text này không đóng góp vào dự đoán.';
     if (result.caption_experiment) {
       $('query-caption-note').textContent += ' FirstValid v3 · thử caption mới với checkpoint hiện có; chưa train lại segmentation.';
