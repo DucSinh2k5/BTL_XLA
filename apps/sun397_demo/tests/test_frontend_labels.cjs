@@ -16,7 +16,7 @@ for (const mode of ["tacs", "mtacs"]) {
   }
   const context = vm.createContext({
     document: { getElementById: element, body: {dataset: {}}, title: "", createElement: () => element(Symbol()) },
-    root: { querySelector: selector => element(selector.slice(1)), isConnected: true },
+    root: { dataset: {}, querySelector: selector => element(selector.slice(1)), isConnected: true },
     mode,
     window: { location: { pathname: mode === "mtacs" ? "/mtacs" : "/" } },
     fetch: () => new Promise(() => {}), setTimeout: () => 0, clearTimeout() {},
@@ -51,5 +51,35 @@ for (const mode of ["tacs", "mtacs"]) {
   assert.equal(element("result-ground-truth").textContent, "Chưa xác định");
   assert.equal(element("comparison-status").dataset.state, "unknown");
   assert.doesNotMatch(element("comparison-status").textContent, /^Đúng|^Sai/);
+
+  context.captionEvidence = {
+    query_caption: {text:"brown walls under bright cloudy skies", raw_text:"The image shows brown walls under bright cloudy skies.",
+      valid:true, source:"verified_cache"},
+    candidate: {image_id:"p/palace/context.jpg", caption:"rows of tall pale stone columns", caption_valid:false},
+  };
+  context.identity = {verified:true, image_id:"a/abbey/query.jpg"};
+  vm.runInContext("view.renderEvidence(captionEvidence, true, identity)", context);
+  assert.equal(element("query-caption-text").textContent, context.captionEvidence.query_caption.text);
+  assert.equal(element("candidate-caption-text").textContent, mode === "tacs" ? "Không dùng caption" : context.captionEvidence.candidate.caption);
+  assert.equal(element("query-caption-state").dataset.state, mode === "tacs" ? "unused" : "ready");
+  assert.equal(element("candidate-caption-state").dataset.state, mode === "tacs" ? "unused" : "masked");
+  assert.equal(element("query-caption-image-id").textContent, "ID ảnh: a/abbey/query.jpg");
+  assert.equal(element("query-caption-raw-details").hidden, mode !== "mtacs");
+  assert.equal(element("query-caption-raw").textContent, context.captionEvidence.query_caption.raw_text);
+  assert.match(element("query-caption-source").textContent, /captions.csv/);
+  if (mode === "mtacs") assert.match(element("candidate-caption-source").textContent, /captions.csv/);
+
+  context.captionEvidence.query_caption = {text:"visible blocked caption for inspection only", valid:false, source:"fresh_florence"};
+  context.identity = {verified:false, image_id:"do-not-trust-this-id.jpg"};
+  vm.runInContext("view.renderEvidence(captionEvidence, true, identity)", context);
+  assert.equal(element("query-caption-state").dataset.state, mode === "tacs" ? "unused" : "masked");
+  assert.equal(element("query-caption-text").textContent, context.captionEvidence.query_caption.text);
+  assert.doesNotMatch(element("query-caption-image-id").textContent, /do-not-trust/);
+  assert.match(element("query-caption-source").textContent, /Florence-2/);
+  assert.equal(element("query-caption-raw-details").hidden, true);
+  vm.runInContext("view.resetPrediction()", context);
+  for (const id of ["query-caption-state", "candidate-caption-state"]) assert.equal(element(id).dataset.state, "missing");
+  assert.equal(element("query-caption-raw").textContent, "");
+  assert.equal(element("query-caption-image-id").textContent, "Chưa có ảnh query.");
 }
 console.log("Frontend label/comparison checks passed for TACS and M-TACS.");

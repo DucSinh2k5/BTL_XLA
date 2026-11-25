@@ -1,199 +1,54 @@
 <!doctype html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f8f7">
-  <title>SUN397 | TACS gốc</title>
-  <link rel="stylesheet" href="/assets/styles.css">
-  <script src="/assets/page.js?v=model-sessions-1" defer></script>
-  <script src="/assets/app.js?v=model-sessions-1" defer></script>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#282d23">
+  <title>SUN397 Studio · TACS</title>
+  <link rel="stylesheet" href="/assets/studio.css?v=caption-evidence-1"><link rel="stylesheet" href="/assets/styles.css?v=font-fix-1"><link rel="stylesheet" href="/isic/assets/isic.css?v=caption-evidence-1">
+  <script src="/assets/page.js?v=full-caption-1" defer></script><script src="/assets/app.js?v=caption-evidence-1" defer></script><script src="/isic/assets/isic.js?v=caption-evidence-1" defer></script><script src="/assets/studio.js?v=caption-evidence-1" defer></script>
 </head>
-<body data-mode="tacs">
-  <div id="demo-page">
-  <header class="topbar">
-    <div class="topbar-inner">
-      <div class="brand" aria-label="SUN397 demo">
-        <span class="brand-mark" aria-hidden="true"><span id="brand-mark-letter">T</span><span>·</span></span>
-        <span class="brand-name"><span id="brand-model">TACS</span> <span class="brand-separator">/</span> SUN397</span>
-      </div>
-      <div class="topbar-right">
-        <span class="topbar-caption">DEMO PHÂN LOẠI CẢNH</span>
-        <span id="model-badge" class="status-badge" data-state="loading"><span class="status-dot"></span>Đang kiểm tra</span>
-      </div>
-    </div>
-    <nav class="model-nav" aria-label="Chọn phiên bản mô hình">
-      <div class="model-nav-inner">
-        <a id="nav-tacs" href="/" aria-current="page">01 · TACS gốc</a>
-        <a id="nav-mtacs" href="/mtacs">02 · M-TACS + CLIP</a>
-      </div>
+<body data-mode="tacs" data-studio="true">
+<div id="demo-page" class="studio-page classification-page" data-mode="tacs">
+  <a class="studio-skip" href="#workspace">Đến phần thử nghiệm</a>
+  <aside class="studio-sidebar" aria-label="Điều hướng Vision Lab">
+    <a class="studio-brand" href="/" data-studio-route aria-label="Vision Lab · SUN397"><span class="studio-monogram" aria-hidden="true">T</span><span><strong>TACS</strong><small>VISION LAB</small></span></a>
+    <div class="studio-rail-label">CHỌN TÁC VỤ</div>
+    <nav class="studio-datasets" aria-label="Chọn tác vụ và dataset">
+      <a href="/" data-studio-task="sun397" aria-current="page"><span class="studio-task-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" stroke="currentColor"/><rect x="14" y="3" width="7" height="7" stroke="currentColor"/><rect x="3" y="14" width="7" height="7" stroke="currentColor"/><rect x="14" y="14" width="7" height="7" stroke="currentColor"/></svg></span><span><strong>SUN397</strong><small>Phân loại cảnh</small></span><span class="studio-arrow" aria-hidden="true">↗</span></a>
+      <a id="nav-isic" href="/isic" data-studio-task="isic"><span class="studio-task-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 3c4-2 5 2 9 2s6 4 4 8-2 7-7 8S3 19 3 14 4 5 8 3Z" stroke="currentColor" stroke-width="1.3"/><path d="M9 8c3-2 7 1 7 4s-3 5-6 4-4-6-1-8Z" stroke="currentColor"/></svg></span><span><strong>ISIC 2017</strong><small>Phân đoạn ảnh</small></span><span class="studio-arrow" aria-hidden="true">↗</span></a>
     </nav>
-  </header>
-
-  <main class="shell">
-    <div class="page-heading">
-      <div>
-        <p id="page-eyebrow" class="eyebrow">SUN397 / TACS GỐC</p>
-        <h1 id="page-heading">Phân loại cảnh với TACS</h1>
-      </div>
-      <p id="page-detail" class="heading-detail">Selector học chọn một ảnh context hữu ích từ candidate pool; classifier xử lý cặp ảnh query và context.</p>
-    </div>
-
-    <div class="work-grid">
-      <section class="query-pane" aria-labelledby="query-title">
-        <div class="section-head">
-          <div>
-            <span class="step-number">01</span>
-            <h2 id="query-title">Ảnh đầu vào</h2>
-          </div>
-          <span class="section-note">JPG · PNG · WebP / tối đa 12 MB</span>
-        </div>
-
-        <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Chọn hoặc kéo thả ảnh để kiểm tra">
-          <img id="preview-image" class="preview-image" src="/assets/sample-library.png" alt="Ảnh minh họa thư viện, không thuộc bộ SUN397">
-          <div class="preview-topline"><span id="preview-label" class="photo-label">ẢNH MINH HỌA</span><span id="preview-format" class="photo-format">CHƯA CHỌN ẢNH</span></div>
-          <div class="drop-hint"><span class="drop-icon" aria-hidden="true">+</span><span>Kéo ảnh vào đây hoặc chọn từ thiết bị</span></div>
-        </div>
+    <nav class="studio-section-nav" aria-label="Các phần trên trang"><a href="#workspace"><span>01</span>Ảnh &amp; phân loại</a><a href="#evidence"><span>02</span>Context &amp; vùng chú ý</a></nav>
+    <div class="studio-rail-footer"><strong><i></i>DEMO NGHIÊN CỨU</strong><p>Một ảnh đầu vào.<br>Một ngữ cảnh hữu ích.<br>Một dự đoán có đối chiếu.</p><small>SUN397 / CLASSIFICATION</small></div>
+  </aside>
+  <main class="studio-main">
+    <header class="studio-topbar"><div class="studio-breadcrumb">VISION LAB <span>/</span><strong>Phân loại cảnh</strong></div><span id="model-badge" class="status-badge" data-state="loading"><span class="status-dot"></span>Đang kết nối</span></header>
+    <section class="scene-hero" aria-labelledby="page-heading"><div class="scene-intro"><p id="page-eyebrow" class="eyebrow">SUN397 / TACS VISUAL</p><h1 id="page-heading" tabindex="-1">Đọc một khung hình.<br><em>Hiểu cả bối cảnh.</em></h1><p id="page-detail" class="hero-description">TACS tìm một ảnh context hữu ích từ tập train, rồi kết hợp với ảnh query để phân loại cảnh.</p></div><div class="model-spec" hidden><span class="spec-index">THIẾT LẬP / 01</span><strong>ViT-L<span>/16</span></strong><div class="spec-tags"><span>384 × 384</span><span>Context K = 1</span></div><div class="spec-footer"><span id="brand-model">TACS</span><span>397 nhãn cảnh</span></div></div><span id="brand-mark-letter" hidden>T</span></section>
+    <div class="studio-model-toolbar"><nav class="studio-model-switch" aria-label="Chọn mô hình SUN397"><a id="nav-tacs" href="/" data-studio-route aria-current="page"><span class="studio-mode-dot"></span>TACS <small>Visual</small></a><a id="nav-mtacs" href="/mtacs" data-studio-route><span class="studio-mode-dot"></span>M-TACS <small>Ảnh + text</small></a></nav></div>
+    <div class="caption-guide"><span>NGỮ CẢNH VĂN BẢN</span><a href="#query-caption-section">Caption ảnh query ↓</a><a href="#evidence">Caption context ↓</a></div>
+    <section id="workspace" class="scene-workspace" aria-label="Thử nghiệm phân loại">
+      <article class="scene-panel query-pane" aria-labelledby="query-title">
+        <div class="section-head"><div><span class="section-index">01 / INPUT</span><h2 id="query-title">Ảnh query</h2></div><span class="section-note">JPG · PNG · WEBP</span></div>
+        <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Chọn hoặc kéo thả ảnh để phân loại"><div id="upload-empty" class="upload-empty"><span class="upload-glyph" aria-hidden="true"><svg viewBox="0 0 50 50" fill="none"><path d="M9 19V9h10m12 0h10v10M9 31v10h10m12 0h10V31" stroke="currentColor" stroke-width="1.5"/><path d="m16 32 8-10 6 6 4-4" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2" fill="currentColor"/></svg></span><strong>Đặt một khung hình vào đây</strong><span>Kéo thả hoặc chọn ảnh từ thiết bị</span><small>JPEG, PNG, WebP · tối đa 12 MB</small></div><img id="preview-image" class="preview-image" alt="Ảnh query đã chọn" hidden><div id="preview-topline" class="preview-topline" hidden><span id="preview-label" class="photo-label">ẢNH QUERY</span><span id="preview-format" class="photo-format">ĐANG KIỂM TRA</span></div></div>
         <input id="file-input" class="visually-hidden" type="file" accept="image/jpeg,image/png,image/webp" aria-label="Chọn ảnh SUN397 hoặc ảnh mới">
-
-        <div class="input-actions">
-          <button id="choose-button" class="button button-primary" type="button">Chọn ảnh</button>
-          <button id="sample-button" class="button button-secondary" type="button">Dùng ảnh minh họa</button>
-          <button id="clear-button" class="button button-quiet" type="button" hidden>Xóa ảnh</button>
-        </div>
-
-        <div class="file-summary" aria-live="polite">
-          <div><span class="field-label">Tên file</span><strong id="file-name">Chưa chọn ảnh</strong></div>
-          <div><span class="field-label">Kích thước</span><strong id="file-dimensions">—</strong></div>
-          <div><span class="field-label">Dung lượng</span><strong id="file-size">—</strong></div>
-          <div><span class="field-label">Trạng thái</span><strong id="file-status" data-state="idle">Chưa kiểm tra</strong></div>
-        </div>
-        <p id="upload-message" class="upload-message" role="status" aria-live="polite">Ảnh không được lưu trên máy chủ sau khi kiểm tra.</p>
-        <div class="query-label-panel">
-          <span class="field-label">NHÃN THẬT CỦA ẢNH QUERY</span>
-          <strong id="query-ground-truth">Chưa chọn ảnh</strong>
-          <p id="query-ground-truth-note" class="evidence-note">Nhãn SUN397 được đối chiếu từ nội dung ảnh khi có trong dữ liệu đã lưu.</p>
-          <label class="reference-label" for="reference-class">Nhãn đối chiếu tùy chọn</label>
-          <select id="reference-class" disabled><option value="">Chưa cung cấp nhãn</option></select>
-          <p class="evidence-note">Với ảnh chưa xác định được nhãn thật, bạn có thể chọn nhãn nếu biết. Web sẽ ghi rõ đây là nhãn do bạn cung cấp.</p>
-        </div>
-      </section>
-
-      <section class="result-pane" aria-labelledby="result-title">
-        <div class="section-head">
-          <div>
-            <span class="step-number">02</span>
-            <h2 id="result-title">Kết quả phân loại</h2>
-          </div>
-          <span class="section-note">397 nhãn cảnh</span>
-        </div>
-        <div class="result-state" id="result-state">
-          <div class="result-symbol" aria-hidden="true">—</div>
-          <p class="result-kicker">TRẠNG THÁI MÔ HÌNH</p>
-          <h3 id="result-heading">Đang nạp mô hình</h3>
-          <p id="result-description">Model được nạp khi máy chủ khởi động. Bạn có thể chọn ảnh trong lúc chờ.</p>
-          <div id="prediction-comparison" class="prediction-comparison" hidden>
-            <dl class="comparison-fields">
-              <div><dt>Nhãn mô hình dự đoán</dt><dd id="prediction-label">—</dd></div>
-              <div><dt>Độ tin cậy</dt><dd id="prediction-confidence">—</dd></div>
-              <div><dt id="ground-truth-heading">Nhãn thật (ground truth)</dt><dd id="result-ground-truth">Chưa xác định</dd></div>
-            </dl>
-            <progress id="confidence-bar" class="confidence-bar" max="1" value="0" aria-label="Độ tin cậy của nhãn dự đoán"></progress>
-            <p id="result-ground-truth-note" class="evidence-note"></p>
-            <p id="comparison-status" class="comparison-status" data-state="unknown" role="status">Chưa có nhãn để đối chiếu</p>
-          </div>
-        </div>
-        <div class="result-bottom">
-          <button id="classify-button" class="button button-primary classify-button" type="button" disabled>Dự đoán</button>
-          <p id="classify-reason">Chọn một ảnh để xem trạng thái dự đoán và dữ liệu context.</p>
-        </div>
-      </section>
-    </div>
-
-    <section id="evidence" class="evidence" aria-labelledby="evidence-title" hidden>
-      <div class="evidence-header">
-        <div>
-          <p class="eyebrow">PREDICTION EVIDENCE</p>
-          <h2 id="evidence-title">Cặp ảnh dùng để dự đoán</h2>
-        </div>
-        <span id="evidence-status" class="evidence-status" role="status" aria-live="polite">Chưa có dữ liệu suy luận</span>
-      </div>
-      <div class="evidence-grid">
-        <div class="evidence-block">
-          <div class="evidence-block-head"><span class="evidence-index">01 / QUERY</span><h3>Ảnh query</h3></div>
-          <div class="attention-comparison">
-            <div class="attention-media">
-              <span class="attention-label">Ảnh query</span>
-              <div class="candidate-image-frame">
-                <img id="query-evidence-image" alt="Ảnh query đã chọn">
-              </div>
-            </div>
-            <div class="attention-media">
-              <span class="attention-label">Classifier attention</span>
-              <div class="candidate-image-frame attention-frame">
-                <img id="query-attention-image" alt="Bản đồ chú ý của classifier trên ảnh query" hidden>
-                <span id="query-attention-empty">Chưa có heatmap</span>
-              </div>
-            </div>
-          </div>
-          <p id="query-attention-note" class="attention-note">Classifier attention trên query cần checkpoint và context được chọn.</p>
-          <div class="caption-section">
-            <span class="candidate-caption-label">CAPTION QUERY</span>
-            <p id="query-caption-text" class="caption-text">Chưa có caption.</p>
-            <p id="query-caption-note" class="evidence-note">Caption sẽ được tạo từ ảnh đã chọn khi Florence-2 được kết nối.</p>
-          </div>
-        </div>
-        <div class="evidence-block">
-          <div class="evidence-block-head"><span class="evidence-index">02 / CONTEXT</span><h3>Context được chọn</h3></div>
-          <div class="attention-comparison">
-            <div class="attention-media">
-              <span class="attention-label">Ảnh candidate</span>
-              <div class="candidate-image-frame">
-                <img id="candidate-image" alt="Ảnh candidate được chọn từ pool" hidden>
-                <span id="candidate-image-empty">Chưa có ảnh candidate được truy hồi</span>
-              </div>
-            </div>
-            <div class="attention-media">
-              <span class="attention-label">Selector attention</span>
-              <div class="candidate-image-frame attention-frame">
-                <img id="candidate-attention-image" alt="Bản đồ chú ý của selector trên ảnh candidate" hidden>
-                <span id="candidate-attention-empty">Chưa có heatmap</span>
-              </div>
-            </div>
-          </div>
-          <p id="candidate-attention-note" class="attention-note">Selector attention trên candidate cần checkpoint và candidate pool.</p>
-          <p id="candidate-image-id" class="candidate-image-id" hidden></p>
-          <div class="context-class-panel">
-            <span class="field-label">NHÃN THẬT CỦA CONTEXT ĐƯỢC CHỌN</span>
-            <strong id="candidate-class-label">Chưa chọn context</strong>
-            <p class="evidence-note">Nhãn từ annotation của candidate pool, không phải nhãn mô hình dự đoán cho query.</p>
-          </div>
-          <div class="caption-section">
-            <span class="candidate-caption-label">CAPTION CANDIDATE</span>
-            <p id="candidate-caption-text" class="caption-text">Chưa có caption candidate.</p>
-            <p id="candidate-caption-note" class="evidence-note">Ảnh và caption sẽ lấy từ cùng một candidate trong pool khi mô hình sẵn sàng.</p>
-          </div>
-        </div>
-      </div>
+        <div class="input-actions"><button id="choose-button" class="button button-secondary" type="button">+ Chọn ảnh</button><strong id="file-name">Chưa chọn ảnh</strong><button id="clear-button" class="button button-quiet" type="button" hidden>Xóa ảnh</button></div>
+        <div class="file-summary"><span id="file-dimensions">Kích thước —</span><span id="file-size">Dung lượng —</span><strong id="file-status" data-state="idle">Chưa kiểm tra</strong></div><p id="upload-message" class="upload-message" role="status" aria-live="polite">Chọn ảnh SUN397 hoặc một ảnh cảnh mới để thử nghiệm.</p>
+        <details class="reference-details"><summary>Nhãn đối chiếu <span id="query-ground-truth">Chưa chọn ảnh</span></summary><div class="reference-content"><p id="query-ground-truth-note" class="evidence-note">Nhãn thật được xác minh từ nội dung ảnh nếu có trong dữ liệu.</p><label class="reference-label" for="reference-class">Nhãn do bạn cung cấp (tùy chọn)</label><select id="reference-class" disabled><option value="">Chưa cung cấp nhãn</option></select><p class="evidence-note">Nhãn này chỉ để đối chiếu, không được đưa vào mô hình.</p></div></details>
+        <section id="query-caption-section" class="caption-section query-caption-section" aria-label="Caption của ảnh query"><div class="caption-card-heading"><span class="candidate-caption-label"><i></i>CAPTION ẢNH QUERY</span><span id="query-caption-state" class="caption-status" data-state="missing">Chờ dự đoán</span></div><p id="query-caption-image-id" class="caption-image-id">Chưa có ảnh query.</p><blockquote id="query-caption-text" class="caption-text" data-state="missing">Chờ caption của ảnh query.</blockquote><p id="query-caption-source" class="caption-source">Ảnh có trong CSV dùng caption đã lưu; ảnh mới được Florence-2 sinh caption.</p><p id="query-caption-note" class="evidence-note">Caption sau xử lý được mã hóa bằng CLIP khi hợp lệ.</p><details id="query-caption-raw-details" class="caption-raw" hidden><summary>Caption gốc đầy đủ từ Florence-2 · chỉ để xem, không đưa vào mô hình</summary><p id="query-caption-raw"></p></details></section>
+        <details class="sample-details"><summary>Chưa có ảnh để thử?</summary><p>Ảnh minh họa chỉ để thử giao diện, không thuộc SUN397.</p><button id="sample-button" class="button button-quiet" type="button">Chọn ảnh minh họa thư viện ↗</button></details>
+      </article>
+      <article class="scene-panel result-pane" aria-labelledby="result-title">
+        <div class="section-head"><div><span class="section-index">02 / OUTPUT</span><h2 id="result-title">Kết quả phân loại</h2></div><span id="result-model" class="model-label">TACS</span></div>
+        <div class="result-state" id="result-state" aria-live="polite"><div class="result-idle"><div class="result-symbol" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><path d="M13 24V13h11m16 0h11v11M13 40v11h11m16 0h11V40" stroke="currentColor" stroke-width="1.2"/><path d="M24 32h16M32 24v16" stroke="currentColor" stroke-width="1.2"/></svg></div><p class="result-kicker">397 KHẢ NĂNG · MỘT KHUNG HÌNH</p><h3 id="result-heading">Đang chuẩn bị mô hình</h3><p id="result-description">Bạn có thể chọn ảnh trong lúc mô hình được nạp.</p></div><div id="prediction-comparison" class="prediction-comparison" hidden><div class="prediction-primary"><span class="field-label">NHÃN MÔ HÌNH DỰ ĐOÁN</span><strong id="prediction-label">—</strong><div class="confidence-heading"><span>Độ tin cậy</span><strong id="prediction-confidence">—</strong></div><progress id="confidence-bar" class="confidence-bar" max="1" value="0" aria-label="Độ tin cậy của nhãn dự đoán"></progress></div><div class="truth-result"><span id="ground-truth-heading" class="field-label">Nhãn thật (ground truth)</span><strong id="result-ground-truth">Chưa xác định</strong><p id="result-ground-truth-note" class="evidence-note"></p></div><p id="comparison-status" class="comparison-status" data-state="unknown" role="status">Chưa có nhãn để đối chiếu</p></div></div>
+        <div class="result-footnote"><span class="footnote-square" aria-hidden="true"></span>Độ tin cậy là điểm của mô hình, không bảo đảm dự đoán đúng.</div>
+      </article>
     </section>
-
-    <section class="architecture" aria-labelledby="architecture-title">
-      <div class="architecture-header">
-        <div>
-          <p class="eyebrow">MODEL PIPELINE</p>
-          <h2 id="architecture-title">Cấu trúc TACS gốc</h2>
-        </div>
-        <div class="architecture-key" aria-label="Chú giải đường dữ liệu">
-          <span><i class="key-dot image-key"></i>Ảnh</span>
-          <span class="text-legend"><i class="key-dot text-key"></i>Văn bản</span>
-          <span><i class="key-dot fusion-key"></i>Kết hợp</span>
-        </div>
-      </div>
-      <div class="pipeline-meta" id="pipeline-meta" aria-live="polite">Đang tải cấu hình mô hình…</div>
-      <div id="architecture-lanes" class="architecture-lanes" aria-live="polite"></div>
-      <div id="architecture-footer" class="architecture-footer">TACS visual dùng DINOv3 ViT-L/16, ảnh 384 × 384 và một ảnh context.</div>
-    </section>
+    <div id="run-bar" class="scene-run-bar"><div class="run-copy"><span class="run-indicator" aria-hidden="true"></span><div><strong>Chọn ảnh. Chạy mô hình. Đối chiếu.</strong><p id="classify-reason" role="status" aria-live="polite">Chọn một ảnh để bắt đầu.</p></div></div><button id="classify-button" class="button button-primary classify-button" type="button" disabled><span class="button-spinner" aria-hidden="true"></span><span id="classify-label">Dự đoán</span><span aria-hidden="true">↗</span></button></div>
+    <section id="evidence" class="evidence" aria-labelledby="evidence-title"><div class="evidence-header"><h2 id="evidence-title">Ngữ cảnh phía sau dự đoán</h2><span id="evidence-status" class="evidence-status" role="status">Chờ suy luận</span></div><div class="evidence-grid">
+      <article class="scene-panel context-panel"><div class="section-head"><div><span class="section-index">03 / CONTEXT</span><h3>Ảnh hỗ trợ được chọn</h3></div><span class="section-note">TOP 1</span></div><div class="context-body"><div class="candidate-image-frame"><img id="candidate-image" alt="Ảnh context thật được selector chọn" hidden><span id="candidate-image-empty">Chờ selector<br>chọn context</span></div><div class="context-detail"><span class="candidate-kicker">CANDIDATE POOL · TRAIN ONLY</span><span class="field-label">Nhãn của ảnh context</span><strong id="candidate-class-label">Chưa chọn context</strong><p id="candidate-image-id" class="candidate-image-id" hidden></p><p class="evidence-note">Ảnh context thuộc pool cố định từ 20% tập train. Đây không phải nhãn dự đoán cho query.</p><section id="candidate-caption-section" class="caption-section context-caption-section" aria-label="Caption của context được chọn"><div class="caption-card-heading"><span class="candidate-caption-label"><i></i>CAPTION ẢNH CONTEXT</span><span id="candidate-caption-state" class="caption-status" data-state="missing">Chờ dự đoán</span></div><blockquote id="candidate-caption-text" class="caption-text" data-state="missing">Chờ caption của context.</blockquote><p id="candidate-caption-source" class="caption-source">Caption sẽ được lấy từ captions.csv theo ID context được chọn.</p><p id="candidate-caption-note" class="evidence-note">Ảnh và caption thuộc cùng một candidate được chọn.</p><details id="candidate-caption-raw-details" class="caption-raw" hidden><summary>Caption gốc đầy đủ từ Florence-2 · chỉ để xem, không đưa vào mô hình</summary><p id="candidate-caption-raw"></p></details></section></div></div></article>
+      <article class="scene-panel attention-panel"><div class="section-head"><div><span class="section-index">04 / ATTENTION</span><h3>Mô hình nhìn vào đâu?</h3></div><img id="query-evidence-image" class="query-evidence-thumb" alt="Ảnh query của lần suy luận này" hidden></div><div class="attention-comparison"><div><div class="attention-frame"><img id="query-attention-image" alt="Self-attention của classifier trên query" hidden><span id="query-attention-empty">Chờ attention</span></div><span class="attention-label">QUERY <small>Classifier</small></span><p id="query-attention-note" class="attention-note">Attention của query sau khi kết hợp context.</p></div><div><div class="attention-frame"><img id="candidate-attention-image" alt="Self-attention của selector trên context" hidden><span id="candidate-attention-empty">Chờ attention</span></div><span class="attention-label">CONTEXT <small>Selector</small></span><p id="candidate-attention-note" class="attention-note">Attention trên ảnh context được chọn.</p></div></div><p class="attention-foot">Heatmap biểu diễn self-attention của nhánh ảnh, không phải mức đóng góp của từng từ.</p></article>
+    </div></section>
+    <section id="architecture" class="scene-panel architecture" aria-labelledby="architecture-title" hidden><div class="architecture-header"><div><span class="section-index">MODEL / PIPELINE</span><h2 id="architecture-title">Bên trong TACS visual</h2></div><div class="architecture-key"><span><i class="key-dot image-key"></i>Ảnh</span><span class="text-legend"><i class="key-dot text-key"></i>Text</span><span><i class="key-dot fusion-key"></i>Kết hợp</span></div></div><div id="pipeline-meta" class="pipeline-meta">Đang tải cấu hình.</div><div id="architecture-lanes" class="architecture-lanes"></div><p id="architecture-footer" class="architecture-footer">DINOv3 ViT-L/16 · 384 × 384 · Một ảnh context.</p></section>
+    <footer class="scene-footer"><span>VISION LAB <i>/</i> SUN397</span><span>Khám phá ngữ cảnh. Đọc kết quả có đối chiếu.</span></footer>
   </main>
-  </div>
+</div>
 </body>
 </html>

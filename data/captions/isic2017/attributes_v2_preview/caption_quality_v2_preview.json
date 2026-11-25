@@ -1,0 +1,61 @@
+{
+  "status": "review_preview_only_not_a_training_csv_or_ground_truth",
+  "source_csv_sha256": "433cfe116505cb29d999a6fd51d5ab0fac923db8051922d8f88bf729b7e6606d",
+  "policy": "isic_visible_attributes_v2",
+  "method": "florence_extractive_attributes_v2",
+  "rows": 2750,
+  "old_valid": 2691,
+  "new_valid": 2473,
+  "old_unique_valid": 617,
+  "new_unique_valid": 1069,
+  "old_dominant": [
+    [
+      "person's skin The skin appears to be",
+      812
+    ],
+    [
+      "person's skin specifically the skin around a",
+      178
+    ],
+    [
+      "person's skin specifically the skin around their",
+      123
+    ],
+    [
+      "person's skin specifically the skin around the",
+      89
+    ],
+    [
+      "petri dish with a small brown substance on",
+      31
+    ]
+  ],
+  "new_dominant": [
+    [
+      "light pink and rough texture",
+      111
+    ],
+    [
+      "irregularly shaped and rough texture",
+      66
+    ],
+    [
+      "pinkish red and rough texture",
+      65
+    ],
+    [
+      "light beige and rough texture",
+      50
+    ],
+    [
+      "large central brown circular area",
+      48
+    ]
+  ],
+  "old_generic_count": 814,
+  "new_generic_count": 0,
+  "does_not_measure_caption_factual_accuracy": true,
+  "segmentation_metrics": null,
+  "deployed_bundle_modified": false,
+  "notebook": "F:\\Documents\\CODE\\Python\\cv_project\\XLA\\TACS\\notebooks\\02_improvements\\segmentation\\full_both\\florence_attributes_v2\\isic2017\\mtacs-isic2017-vitl16-448-florence-attributes-v2.ipynb"
+}

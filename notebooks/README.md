@@ -9,6 +9,9 @@ for original/new names, metrics and preservation hashes.
 Read configuration evidence in [notebook_catalog.json](../manifests/notebook_catalog.json).
 Empty method/dataset folders contain only `.gitkeep`; they are planned slots, not experiments.
 
+
+Later notebook imports and duplicate handling are recorded in [Imported Notebook Reorganization](IMPORTS_2026-11-04.md).
+
 ## Quick Start
 
 - ISIC segmentation **ViT-L/16, 448**: [TACS visual và M-TACS full_both train/export cho web](04_deployment/isic2017/README.md), bản M-TACS tự tạo/resume caption Florence-Prefix.

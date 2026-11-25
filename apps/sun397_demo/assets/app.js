@@ -47,4 +47,6 @@ function createSessionNavigation(browser, doc, createPage) {
   return { show, currentModel: () => activeModel };
 }
 
-const navigation = createSessionNavigation(window, document, createModelPage);
+if (!document.body.dataset.studio) {
+  createSessionNavigation(window, document, createModelPage);
+}

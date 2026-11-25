@@ -48,6 +48,7 @@ function fixture(start = "/") {
   const document = { body: { dataset: {} }, title: "", createElement: () => new Element() };
   class Root {
     constructor() {
+      this.dataset = {};
       this.nodes = new Map(tags.filter(tag => tag[2] !== "demo-page").map(tag => [tag[2], new Element(tag[1])]));
     }
     querySelector(selector) {
@@ -124,7 +125,7 @@ function prediction(model, label) {
   return { model, prediction: { label, class_id: 0, confidence: model === "tacs" ? 0.8 : 0.9 },
     ground_truth: { label: "a/abbey", source: "user_provided", verified: false },
     comparison: { status: "matches_reference" }, timing: { inference_seconds: 1 },
-    evidence: { query_caption: { text: `${model} query caption`, valid: true },
+    evidence: { query_caption: { text: `${model} query caption`, raw_text:`Full ${model} query caption before processing`, valid: true, source:"fresh_florence" },
       candidate: { image_id: `${model}/context.jpg`, image_url: image, label: `${model} context`,
         caption: `${model} context caption`, caption_valid: true },
       attention: { query_classifier: {image_url: image}, candidate_selector: {image_url: image} } } };
@@ -182,6 +183,11 @@ test("each model retains its upload, reference, result, captions, heatmaps and s
   assert.equal(f.node("prediction-confidence").textContent, "90.00%");
   assert.equal(f.node("query-caption-text").textContent, "mtacs query caption");
   assert.equal(f.node("candidate-caption-text").textContent, "mtacs context caption");
+  assert.equal(f.node("query-caption-state").dataset.state, "ready");
+  assert.equal(f.node("candidate-caption-state").dataset.state, "ready");
+  assert.match(f.node("query-caption-source").textContent, /Florence-2/);
+  assert.match(f.node("candidate-caption-source").textContent, /captions.csv/);
+  assert.equal(f.node("query-caption-raw").textContent, "Full mtacs query caption before processing");
   assert.equal(f.node("candidate-class-label").textContent, "mtacs context");
   assert.equal(f.node("candidate-image-id").textContent, "mtacs/context.jpg");
   for (const id of ["candidate-image", "query-attention-image", "candidate-attention-image"])
@@ -203,6 +209,9 @@ test("each model retains its upload, reference, result, captions, heatmaps and s
   assert.match(f.node("result-description").textContent, /1\.0/);
   f.node("clear-button").click();
   assert.equal(f.node("prediction-comparison").hidden, true);
+  assert.equal(f.node("candidate-image").hidden, true);
+  assert.equal(f.node("query-attention-image").hidden, true);
+  assert.equal(f.node("candidate-caption-text").textContent, "Chờ caption của context.");
   f.node("nav-tacs").click();
   assert.equal(f.node("prediction-label").textContent, "TACS result", "Clear only resets its own page");
 });

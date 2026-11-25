@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#132d40">
+  <title>ISIC Studio · TACS</title>
+  <link rel="stylesheet" href="/assets/studio.css?v=caption-evidence-1"><link rel="stylesheet" href="/assets/styles.css?v=caption-evidence-1"><link rel="stylesheet" href="/isic/assets/isic.css?v=caption-evidence-1">
+  <script src="/assets/page.js?v=caption-evidence-1" defer></script><script src="/assets/app.js?v=caption-evidence-1" defer></script><script src="/isic/assets/isic.js?v=firstvalid-v3-1" defer></script><script src="/assets/studio.js?v=caption-evidence-1" defer></script>
+</head>
+<body data-model="tacs" data-studio="true">
+<div id="isic-page" class="studio-page isic-page" data-model="tacs">
+  <aside class="studio-sidebar" aria-label="Điều hướng Vision Lab">
+    <a class="studio-brand" href="/isic" data-studio-route aria-label="Vision Lab · ISIC"><span class="studio-monogram" aria-hidden="true">T</span><span><strong>TACS</strong><small>VISION LAB</small></span></a>
+    <div class="studio-rail-label">CHỌN TÁC VỤ</div>
+    <nav class="studio-datasets" aria-label="Chọn tác vụ và dataset">
+      <a href="/" data-studio-task="sun397"><span class="studio-task-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" stroke="currentColor"/><rect x="14" y="3" width="7" height="7" stroke="currentColor"/><rect x="3" y="14" width="7" height="7" stroke="currentColor"/><rect x="14" y="14" width="7" height="7" stroke="currentColor"/></svg></span><span><strong>SUN397</strong><small>Phân loại cảnh</small></span><span class="studio-arrow" aria-hidden="true">↗</span></a>
+      <a href="/isic" data-studio-task="isic" aria-current="page"><span class="studio-task-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 3c4-2 5 2 9 2s6 4 4 8-2 7-7 8S3 19 3 14 4 5 8 3Z" stroke="currentColor" stroke-width="1.3"/><path d="M9 8c3-2 7 1 7 4s-3 5-6 4-4-6-1-8Z" stroke="currentColor"/></svg></span><span><strong>ISIC 2017</strong><small>Phân đoạn ảnh</small></span><span class="studio-arrow" aria-hidden="true">↗</span></a>
+    </nav>
+    <nav class="studio-section-nav" aria-label="Các phần trên trang"><a href="#workspace"><span>01</span>Ảnh &amp; phân đoạn</a><a href="#context-section"><span>02</span>Context &amp; vùng chú ý</a></nav>
+    <div class="studio-rail-footer"><strong><i></i>DEMO NGHIÊN CỨU</strong><p>Một ảnh đầu vào.<br>Một ngữ cảnh hữu ích.<br>Một vùng phân đoạn.</p><small>ISIC 2017 / SEGMENTATION</small></div>
+  </aside>
+
+  <main class="studio-main">
+    <header class="studio-topbar">
+      <div class="studio-breadcrumb">VISION LAB <span>/</span> <strong>Phân đoạn ảnh</strong></div>
+      <span id="backend-status" class="status-pill" data-state="loading"><i></i><span>Đang kết nối</span></span>
+    </header>
+    <section class="hero">
+      <div><div class="eyebrow"><span class="small-line"></span> ISIC 2017 · SEGMENTATION</div><h1 tabindex="-1">Từ hình ảnh đến<br><span>vùng phân đoạn.</span></h1><p id="hero-description">Khám phá cách TACS chọn một ảnh context để hỗ trợ xác định vùng tổn thương.</p></div>
+      <div class="experiment-card" hidden><div class="experiment-label">THIẾT LẬP MÔ HÌNH</div><strong>ViT-L<span>/16</span></strong><div class="experiment-tags"><span>448 × 448</span><span>Context K = 1</span></div><div class="experiment-foot">Backbone frozen · Binary mask</div></div>
+    </section>
+    <div class="studio-model-toolbar"><nav class="studio-model-switch" aria-label="Chọn mô hình ISIC"><a id="isic-tacs" href="/isic" data-studio-route aria-current="page"><span class="studio-mode-dot"></span>TACS <small>Visual</small></a><a id="isic-mtacs" href="/isic/mtacs" data-studio-route><span class="studio-mode-dot"></span>M-TACS <small>Ảnh + text</small></a></nav></div>
+
+    <section id="workspace" class="workspace" aria-label="Phân đoạn ảnh">
+      <article class="panel query-panel">
+        <div class="panel-heading"><div><span class="section-index">01 / INPUT</span><h2>Ảnh query</h2></div><span id="image-format" class="subtle-tag">JPG · PNG · WEBP</span></div>
+        <div id="upload-zone" class="upload-zone" role="button" tabindex="0" aria-label="Chọn hoặc kéo thả ảnh ISIC">
+          <div id="upload-empty" class="upload-empty"><span class="upload-icon"><svg width="29" height="29" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="9" r="1.5" fill="currentColor"/><path d="m4 17 5-5 4 4 3-3 5 5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span><strong>Đặt một ảnh vào đây</strong><span>Kéo thả hoặc chọn từ thiết bị</span><small>JPEG, PNG, WebP · tối đa 12 MB</small></div>
+          <img id="query-preview" alt="Ảnh query đã chọn" hidden>
+          <span id="preview-badge" class="preview-badge" hidden>ẢNH QUERY</span>
+        </div>
+        <input id="query-input" type="file" accept="image/jpeg,image/png,image/webp" class="visually-hidden" aria-label="Chọn ảnh query ISIC">
+        <div class="file-row"><button id="choose-image" class="button secondary" type="button">＋ Chọn ảnh</button><span id="image-name">Chưa chọn ảnh</span><button id="clear-image" class="icon-button" type="button" aria-label="Xóa ảnh query" hidden>×</button></div>
+        <div class="file-meta"><span id="image-dimensions">Kích thước —</span><span id="image-size">Dung lượng —</span></div>
+        <div class="reference-row"><div><strong>Mask đối chiếu</strong><small>Không bắt buộc · PNG nhị phân, cùng kích thước ảnh</small></div><button id="choose-reference" class="text-button" type="button" disabled>Thêm mask ↗</button></div>
+        <input id="reference-input" type="file" accept="image/png" class="visually-hidden" aria-label="Chọn mask đối chiếu">
+        <div id="reference-file" class="reference-file" hidden><span id="reference-name"></span><button id="clear-reference" type="button" aria-label="Xóa mask đối chiếu">×</button></div>
+        <div id="query-text-section" class="query-text-section text-feature" hidden><div class="caption-label"><span class="text-dot"></span> CAPTION QUERY <span id="query-caption-state" class="caption-state">CHỜ SUY LUẬN</span></div><p id="query-caption">Caption sẽ được tạo từ ảnh bằng Florence-2.</p><small id="query-caption-note">Vector CLIP hợp lệ tham gia selector và text fusion.</small></div>
+      </article>
+
+      <article class="panel result-panel">
+        <div class="panel-heading"><div><span class="section-index">02 / OUTPUT</span><h2>Kết quả phân đoạn</h2></div><span id="result-model" class="model-label">TACS</span></div>
+        <div class="view-tabs" role="tablist" aria-label="Chế độ xem kết quả"><button data-view="overlay" role="tab" aria-selected="true">Overlay</button><button data-view="mask" role="tab" aria-selected="false">Mask</button><button data-view="probability" role="tab" aria-selected="false">Xác suất</button><button data-view="truth" role="tab" aria-selected="false">Đối chiếu</button></div>
+        <div id="result-frame" class="result-frame"><div id="result-empty" class="result-empty"><svg class="contour-icon" width="76" height="76" viewBox="0 0 76 76" fill="none" aria-hidden="true"><path d="M25 10c9-5 16 3 23 5s17 2 18 14-5 14-8 22-10 18-22 15S10 57 10 44s5-28 15-34Z" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 5"/><path d="M29 24c7-4 10 1 16 3s9 5 8 13-5 15-12 14-18-4-18-12 0-15 6-18Z" stroke="currentColor" stroke-width="1.5"/></svg><strong>Không gian kết quả</strong><span id="result-empty-note">Chọn ảnh để bắt đầu thử nghiệm.</span></div><canvas id="result-canvas" hidden aria-label="Kết quả phân đoạn"></canvas><span id="view-label" class="view-label" hidden>OVERLAY</span><div id="probability-legend" class="probability-legend" hidden><span>0</span><i></i><span>1</span></div></div>
+        <div class="result-controls"><label for="opacity">Độ phủ overlay</label><input id="opacity" type="range" min="0" max="100" value="45" disabled><output id="opacity-value" for="opacity">45%</output><a id="download-mask" class="text-button disabled" aria-disabled="true">Tải mask ↓</a></div>
+        <div class="metrics"><div><span>DICE</span><strong id="dice-value">—</strong></div><div><span>IOU</span><strong id="iou-value">—</strong></div><div><span>DIỆN TÍCH VÙNG</span><strong id="area-value">—</strong></div><div><span>THỜI GIAN</span><strong id="time-value">—</strong></div></div>
+        <p id="comparison-note" class="comparison-note">Dice / IoU được tính khi có mask đối chiếu.</p>
+      </article>
+    </section>
+    <div class="run-bar"><div class="run-message"><span id="run-indicator" class="run-indicator"></span><div><strong id="run-title">Đang kiểm tra kết nối</strong><p id="run-note" role="status" aria-live="polite">Bạn có thể chọn ảnh trong lúc chờ.</p></div></div><button id="segment-button" class="button primary" type="button" disabled><span class="button-spinner"></span><span id="segment-button-label">Phân đoạn ảnh</span><span aria-hidden="true">→</span></button></div>
+
+    <section id="context-section" class="evidence-layout">
+      <article class="panel context-panel"><div class="panel-heading"><div><span class="section-index">03 / CONTEXT</span><h2>Ảnh hỗ trợ được chọn</h2></div><span class="subtle-tag">TOP 1</span></div><div class="context-body"><div class="context-image-frame"><img id="context-image" alt="Ảnh context thật được selector chọn" hidden><span id="context-empty">Chờ selector<br>chọn context</span></div><div class="context-detail"><div class="detail-kicker">CANDIDATE POOL · TRAIN ONLY</div><strong id="context-id">Chưa chọn context</strong><p id="context-note">Selector tìm một ảnh hữu ích từ pool cố định gồm 20% tập train.</p><div class="text-feature" hidden><div class="caption-label"><span class="text-dot"></span> CAPTION CONTEXT</div><p id="context-caption">Caption của chính ảnh được chọn sẽ xuất hiện ở đây.</p><span id="context-caption-state" class="caption-state">CHỜ SUY LUẬN</span></div></div></div></article>
+      <article id="attention-section" class="panel attention-panel"><div class="panel-heading"><div><span class="section-index">04 / ATTENTION</span><h2>Mô hình nhìn vào đâu?</h2></div><span class="subtle-tag">28 × 28 PATCHES</span></div><div class="attention-pair"><div><div class="attention-frame"><img id="query-attention" alt="Attention của segmentor trên query" hidden><span id="query-attention-empty">Chờ attention</span></div><span class="attention-label">QUERY <small>Segmentor</small></span></div><div><div class="attention-frame"><img id="context-attention" alt="Attention của selector trên context" hidden><span id="context-attention-empty">Chờ attention</span></div><span class="attention-label">CONTEXT <small>Selector</small></span></div></div><p class="attention-foot">Self-attention từ mô hình, trung bình các head. Heatmap không phải mask phân đoạn.</p></article>
+    </section>
+
+    <section id="architecture-section" class="panel architecture-panel" hidden><div class="architecture-heading"><div><span class="section-index">MODEL / PIPELINE</span><h2 id="pipeline-title">Bên trong TACS visual</h2></div><span id="pipeline-type" class="pipeline-type">IMAGE → CONTEXT → MASK</span></div><div id="pipeline" class="pipeline"></div><div id="text-pipeline" class="text-pipeline text-feature" hidden><span class="text-dot"></span><strong>Florence-2 → CLIP</strong><span>Caption query + candidate → semantic selector &amp; gated text fusion</span><div id="gate-values" class="gate-values"></div></div><div class="architecture-foot"><span>Backbone đóng băng</span><span>Cross-attention sau mỗi block</span><span>DPT từ 4 độ sâu</span></div></section>
+    <footer class="page-footer"><span>ISIC STUDIO <i>·</i> TACS / M-TACS</span><span>Chỉ hiển thị kết quả được suy luận thực tế</span></footer>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+scope,images,masked,usable,masked_percent
+all,39700,23872,15828,60.131
+train,17865,10721,7144,60.0112
+val,1985,1215,770,61.2091
+test,19850,11936,7914,60.131
+candidate_pool,3573,2157,1416,60.3694
