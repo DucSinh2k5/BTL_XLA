@@ -1,13 +1,32 @@
 # TACS / M-TACS Research Project
 
-Project nghiên cứu **Task-Aligned Context Selection**: tái lập paper, mở rộng ngữ cảnh ảnh-văn bản, đánh giá ablation và demo phân loại SUN397.
+Project nghiên cứu **Task-Aligned Context Selection** (TACS, Guo et al., CVPR 2026): tái lập paper, mở rộng ngữ cảnh ảnh–văn bản (M-TACS), đánh giá ablation và demo web phân loại SUN397 + phân đoạn ISIC 2017.
 
-Thư mục này được tổ chức lại từ `XLA`. **78 notebook giữ nguyên nội dung, tên gốc và output**. Những thư mục chưa có triển khai chỉ có `.gitkeep`, không có notebook, checkpoint hay metrics giả.
+## Tóm tắt nhanh (dành cho người chấm)
+
+- **TACS:** một bộ chọn học được lấy 1 ảnh ngữ cảnh (K = 1) từ kho 20% tập train, ghép với ảnh truy vấn rồi đưa vào ViT (DINOv3). Bộ chọn học bằng Gumbel-Softmax + REINFORCE, phần thưởng = loss khi không có ngữ cảnh − loss khi có ngữ cảnh.
+- **Cải tiến 1:** nâng backbone ViT-S → **ViT-L/16** và ảnh 256 → **384/448**, kèm cách tiết kiệm bộ nhớ (batch logic 64 / batch tính 8, phát lại RNG, gradient checkpointing).
+- **Cải tiến 2 (M-TACS):** thêm caption (Florence-2 / Qwen3-VL → CLIP) của ảnh ngữ cảnh, trộn qua cổng học được; bộ lọc chống lộ nhãn `dtd_lexical_v2`.
+
+| Kết quả chính (DTD split 1, ViT-L/16, 384, seed 42) | Test Macro-F1 (%) |
+| --- | :---: |
+| TACS chỉ dùng ảnh (A01) | 84.82 |
+| M-TACS tốt nhất, caption ứng viên + gated residual (S01) | **85.30** |
+| Caption ở cả ảnh truy vấn (A05, `full_both`) | 80.91 |
+
+Mức chênh 0.48 điểm mới đo với 1 seed, chưa đủ để khẳng định. Kết luận chính của phần ablation: văn bản chỉ có ích khi gắn với ảnh ứng viên; gắn vào ảnh truy vấn làm giảm điểm. Toàn bộ bảng số liệu đã đối chiếu output có trong [Cẩm nang hệ thống](CAM_NANG_HE_THONG_TACS.md), mục 5.
+
+Nguyên tắc của repo: notebook đã chạy giữ nguyên tên gốc và output. Thư mục chưa có triển khai chỉ có `.gitkeep`; không có checkpoint hay metric giả. Mọi kết quả chưa chạy test (ví dụ bundle web, study06) đều được ghi rõ là chưa có.
 
 ## Bắt đầu từ đâu?
 
 | Nhu cầu | Điểm bắt đầu |
 | --- | --- |
+| Hiểu toàn bộ hệ thống và mọi điểm số | [Cẩm nang hệ thống TACS & M-TACS](CAM_NANG_HE_THONG_TACS.md) |
+| Slide, kịch bản thuyết trình, kiến thức ôn tập | [reports/presentation/](reports/presentation/) |
+| Bảng mọi notebook theo thời gian (cấu hình + điểm) | [Tổng hợp notebook](reports/presentation/TONG_HOP_NOTEBOOK_THEO_THOI_GIAN.md) |
+| Sáu nghiên cứu kiến trúc M-TACS trên DTD (S01–S06) | [Multimodal architecture ablation](notebooks/02_improvements/multimodal_architecture_ablation/README.md) |
+| Khảo sát độ mới so với các công trình liên quan | [Khảo sát độ mới của M-TACS](reports/Khảo%20sát%20độ%20mới%20của%20M%20TACS.md) |
 | Tìm notebook theo task / method / dataset | [Danh mục notebook](notebooks/README.md) |
 | Tái lập từng bảng trong paper | [Bản đồ các bảng 2–5, Figure 4](notebooks/01_paper_reproduction/README.md) |
 | Chọn thí nghiệm cần chạy để viết báo cáo | [Rà soát kết quả và kế hoạch train ưu tiên](reports/paper_readiness/KE_HOACH_KET_QUA_BAO_CAO_TACS.md) |
@@ -24,42 +43,77 @@ Thư mục này được tổ chức lại từ `XLA`. **78 notebook giữ nguy�
 
 ## Cấu trúc
 
+Quy ước đặt tên: số đầu tên thư mục notebook là **thứ tự công việc** (00 chuẩn bị dữ liệu → 01 tái lập paper → 02 cải tiến → 03 phân tích → 04 triển khai web, 90 lưu trữ). Bên trong luôn đi theo `nhiệm vụ / phương pháp / dataset / notebook`.
+
 ```text
 TACS/
-  apps/                    Web demo FastAPI: phân loại SUN397 + phân đoạn ISIC (TACS và M-TACS)
-  configs/                 Config có sẵn, ví dụ đường dẫn dataset/model
-  data/
-    raw/                   Chỗ dành cho dataset; dữ liệu lớn hiện để ngoài project
-    processed/             Chỗ dành cho dữ liệu đã xử lý
-    captions/dtd/          CSV caption, tách decoder LoRA và grounded controls
-    annotations/dtd/       Reference caption và thông tin nguồn gán nhãn
-    archives/              Bundle đầu vào cũ
-  docs/                    Paper, quy trình, hướng dẫn, lịch sử và tiến độ
-  notebooks/
-    00_data_preparation/   Dành cho notebook chuẩn bị dữ liệu theo dataset
-    01_paper_reproduction/
-      classification/     table -> method -> dataset -> notebook
-      segmentation/       table -> method -> dataset -> notebook
-      figure_04_attention/
-    02_improvements/       hướng cải tiến -> method -> dataset -> notebook
-    03_analysis_and_evaluation/
-    90_archive/            Bản lịch sử; một số vẫn là source của builder
-  src/
-    captioning/            Code Florence, screening, fine-tune, grounded rerank
-    training/              Code nguồn các cell ablation
-    models/                Chưa tách model khỏi notebook
-    selection/             Chưa tách selector khỏi notebook
-    evaluation/            Chưa tách evaluator khỏi notebook
-  tools/                   Builder, caption CLI, Figure 4, quản lý cấu trúc
-  experiments/
-    planned/               Chưa có run cụ thể
-    running/               Chưa nhập tiến trình Kaggle đang chạy
-    completed/             Notebook đã có output và bằng chứng phân tích
-  artifacts/               Checkpoint / feature bank / embedding / captioner
-  reports/                 Tổng hợp nghiên cứu, hình và bằng chứng kiểm duyệt
-  tests/                   Regression tests của caption và ablation
-  manifests/               Catalog, SHA-256, migration và kết quả kiểm tra
+  CAM_NANG_HE_THONG_TACS.md  Cẩm nang: kiến trúc, lịch sử cải tiến, MỌI điểm số đã xác minh
+  README.md                  File này
+  start_web.ps1              Khởi động web demo
+  *.ipynb (ở gốc)            Notebook chạy gần đây, giữ nguyên chỗ để không gãy đường dẫn (bảng bên dưới)
+
+  notebooks/                 Toàn bộ notebook, chia theo giai đoạn
+    00_data_preparation/       Chuẩn bị dữ liệu theo dataset (hiện mới có chỗ trống)
+    01_paper_reproduction/     Tái lập paper TACS: classification / segmentation theo đúng số bảng
+                               trong paper (table_02_main_results, ...), figure_04_attention
+    02_improvements/           Các hướng cải tiến (M-TACS), mỗi thư mục là một hướng:
+      text_context_ablation/     Chuỗi A: đặt caption ở đâu (truy vấn / ứng viên / cả hai), 8 bản
+      caption_ablation/          Chuỗi C: so sánh nguồn caption (Florence, Qwen3-VL, LoRA)
+      caption_generation/        Sinh và fine-tune caption
+      multimodal_architecture_ablation/  Chuỗi S: cách trộn văn bản, study 01–06 (candidate_only)
+      segmentation/              M-TACS cho phân đoạn ISIC 2017
+      adaptive_context/, visual_top3/, multimodal_top3/, query_text/, query_candidate_text/,
+      zero_shot_siglip/          Các hướng thử phụ (K = 3, ngữ cảnh thích nghi, zero-shot)
+    03_analysis_and_evaluation/  Dành cho notebook phân tích riêng (hiện trống)
+    04_deployment/             Train + xuất bundle cho web (sun397/, isic2017/)
+    90_archive/                Bản lịch sử; một số vẫn là nguồn của builder
+
+  experiments/               Bằng chứng chạy thí nghiệm
+    completed/                 Notebook đã chạy có output + CSV + phân tích (chuỗi A, C, LoRA)
+    planned/, running/         Chỗ trống dành cho thí nghiệm dự kiến / đang chạy
+
+  src/                       Code Python dùng chung, được nhúng vào notebook
+    captioning/                Sinh caption Florence/Qwen, bộ lọc chống lộ nhãn, rerank CLIP
+    training/                  Code các cell ablation DTD (A, S01–S06), train ISIC, train web SUN397 + bản vá bộ nhớ
+    models/, deployment/       Dựng model và kiểm tra bundle cho web
+    selection/, evaluation/    Chưa tách khỏi notebook
+  tools/                     Script hỗ trợ
+    notebook_builders/         Sinh notebook từ src/ (mỗi study có một builder, có test đi kèm)
+    captioning/, visualization/, deployment/, project_management/  CLI caption, vẽ attention, kiểm tra cấu trúc
+  tests/                     Test tự động cho builder, caption và ablation
+  apps/sun397_demo/          Web demo FastAPI: phân loại SUN397 + phân đoạn ISIC (TACS và M-TACS)
+
+  data/                      Caption CSV và reference (dataset lớn để ngoài repo)
+    captions/, annotations/    Caption đã sinh và caption tham chiếu
+    raw/, processed/, archives/  Chỗ dành cho dataset gốc / đã xử lý / bundle đầu vào cũ
+  artifacts/                 Checkpoint, feature bank, embedding, bundle web (không đưa lên GitHub vì quá lớn)
+  configs/                   Đường dẫn dataset/model, cấu hình web và train
+
+  reports/                   Báo cáo và bằng chứng
+    presentation/              Slide chuẩn, kịch bản người nói, kiến thức ôn tập, bảng notebook theo thời gian
+    bao_cao_bai_tap_lon/       Đề cương và nội dung báo cáo bài tập lớn (md + docx)
+    cam_nang_nhom/             Cẩm nang học tập và bàn giao cho nhóm (md + docx)
+    multimodal_architecture_ablation/, caption_ablation/, caption_quality/, caption_decoder_lora/
+                               Báo cáo đánh giá của từng chuỗi thí nghiệm (kèm JSON bằng chứng)
+    paper_tables/, paper_readiness/  Bảng so sánh kiểu paper, kế hoạch kết quả cho báo cáo
+    annotation_review/, figures/     Kiểm duyệt caption tham chiếu, hình
+    Khảo sát độ mới của M TACS.md    Khảo sát công trình liên quan
+  research_notes/            Ghi chú nguồn của bài khảo sát
+  docs/                      Paper gốc, giao thức, hướng dẫn (spec kiến trúc, sửa lỗi bộ nhớ), tiến độ
+  manifests/                 Danh mục notebook, SHA-256, nhật ký di chuyển thư mục
 ```
+
+Các notebook ở thư mục gốc (5 bản đầu đã chạy và giữ output; mã là tên gọi dùng trong cẩm nang):
+
+| Notebook | Nội dung | Mã |
+| --- | --- | :---: |
+| `dtd-architecture-study-01.ipynb` | DTD, caption ứng viên + gated residual: **bản tốt nhất 85.30** | S01 |
+| `stydu2_da_train.ipynb` | DTD, S01 + chuẩn hóa L2 vector caption | S02 |
+| `study3_datrain.ipynb` | DTD, S02 + loss căn chỉnh Sinkhorn (m-LTM) | S03 |
+| `tacs_isic_segement_448.ipynb` | ISIC 2017, TACS chỉ dùng ảnh, ảnh 448 | I01 |
+| `isic-segmen-captions.ipynb` | ISIC 2017, M-TACS `full_both` + caption Qwen3-VL-8B | I02 |
+| `tacs_web.ipynb` | SUN397, train TACS ViT-L/16 và xuất bundle web (đã vá lỗi bộ nhớ; bản này chưa có output) | — |
+| `mtacs-sun.ipynb` | SUN397, M-TACS cho web (chưa có output) | — |
 
 ## Quy ước quan trọng
 

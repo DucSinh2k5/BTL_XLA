@@ -240,4 +240,102 @@ Tên cấu hình: `visual_only` (không văn bản nhưng **vẫn có ảnh ng�
 2. Tự vẽ lại sơ đồ TACS (kho 20% → bộ chọn → cặp ảnh → mạng tác vụ) và viết công thức phần thưởng.
 3. Nhớ 5 con số: **82.42** (CUB), **84.82** (TACS ViT-L), **85.30** (M-TACS tốt nhất), **−2.5** (caption ở truy vấn), **+1.93** (bộ lọc).
 4. Nói được 3 câu về hạn chế và 3 hướng phát triển.
-5. Đọc lại bảng câu hỏi khó ở mục 7.
+5. Đọc lại bảng câu hỏi khó ở mục 7 và tự trả lời bộ câu hỏi luyện tập ở mục 10.
+
+---
+
+## 10. Bộ câu hỏi luyện tập theo mức độ (dễ → cực khó)
+Bổ sung cho mục 7, không trùng câu. Phần **in đậm** là ý chính phải nói ra.
+
+### 10.1 Mức 1: Dễ (nắm khái niệm)
+
+**1. Ngữ cảnh (context) trong TACS là gì?**
+Ngữ cảnh là một ảnh khác lấy từ tập train. Ảnh này được ghép cùng ảnh cần phân loại rồi đưa chung vào ViT. Mô hình nhìn **cả hai ảnh cùng lúc**, nên có thêm một "ví dụ tham khảo" để quyết định.
+
+**2. K = 1 nghĩa là gì?**
+Mỗi ảnh truy vấn chỉ được ghép với **1 ảnh ngữ cảnh**. Bài báo dùng K = 1 làm cấu hình chính. Em giữ nguyên để so sánh được với bài báo, và vì mỗi ảnh ngữ cảnh thêm vào sẽ làm số token tăng lên tương ứng.
+
+**3. DTD có gì đặc biệt?**
+DTD gồm 47 lớp kết cấu bề mặt (sọc, chấm, vân gỗ...), tổng 5,640 ảnh, chia đều 1880 train / 1880 val / 1880 test. Bộ này nhỏ và cân bằng lớp, nên phù hợp để chạy nhiều ablation với cùng một giao thức.
+
+**4. Vì sao kho ứng viên trên DTD là 376 ảnh?**
+376 là 20% của 1880 ảnh train, đúng tỷ lệ bài báo dùng. Kho này **cố định trong suốt quá trình huấn luyện**, và lúc test cũng chỉ chọn ngữ cảnh từ kho này.
+
+**5. Caption là gì và lấy từ đâu?**
+Caption là một câu mô tả ảnh do mô hình VLM sinh ra (Florence-2 hoặc Qwen3-VL). Câu đó được mã hóa bằng CLIP thành vector 512 chiều. CLIP được **đóng băng**, không huấn luyện thêm.
+
+### 10.2 Mức 2: Trung bình (hiểu cách vận hành)
+
+**6. Lúc huấn luyện và lúc test, bộ chọn hoạt động khác nhau thế nào?**
+Lúc **huấn luyện**, bộ chọn **lấy mẫu** theo xác suất (phân phối Categorical) để còn khám phá các ứng viên khác. Lúc **test**, nó lấy **argmax**, tức chọn ứng viên có điểm cao nhất, nên kết quả tất định và lặp lại được.
+
+**7. Vì sao cần thêm số hạng entropy (−0.01·entropy) vào loss?**
+Để chống **sụp đổ lựa chọn**. Nếu không có nó, bộ chọn sớm dồn hết xác suất vào vài ảnh quen thuộc và ngừng thử các ứng viên khác. Entropy thưởng cho việc giữ phân phối còn "mở" lúc đầu.
+
+**8. Đặc trưng của kho ứng viên được cập nhật khi nào?**
+Đặc trưng được tính lại (không lưu đạo hàm) ở **đầu mỗi epoch** và **trước mỗi lần đánh giá val**. Trong một epoch, đặc trưng hơi "cũ" so với trọng số hiện tại. Đó là đánh đổi để không phải chạy lại 376 ảnh ở mỗi bước, giống ý tưởng memory bank.
+
+**9. Vì sao learning rate của backbone (3e-6) nhỏ hơn của các head (1e-4) khoảng 30 lần?**
+Backbone DINOv3 đã được huấn luyện trước rất tốt. LR lớn sẽ phá vỡ đặc trưng có sẵn, nhất là trên tập nhỏ 1880 ảnh. Các head thì khởi tạo mới nên cần học nhanh. Lịch học là warmup 5 epoch rồi giảm theo cosine.
+
+**10. Vì sao chọn checkpoint theo val loss nhỏ nhất, không theo val F1 cao nhất?**
+Val loss **mượt và ổn định hơn**. F1 trên 1880 ảnh có thể nhảy vài ảnh giữa các epoch. Quy tắc này được cố định **trước** khi xem kết quả test để không "chọn ngẫu nhiên may mắn". Ví dụ: ở bundle SUN397 W01, epoch 43 có val acc cao nhất, nhưng checkpoint được đóng gói là epoch 29 vì đó là epoch có loss nhỏ nhất.
+
+### 10.3 Mức 3: Khó (bảo vệ thiết kế và kết quả)
+
+**11. A06 (caption bị xáo trộn, 83.34) lại cao hơn A05 (caption đúng, 80.91). Giải thích thế nào?**
+Khi bị xáo, caption không còn liên quan tới ảnh, nên mô hình **học cách bỏ qua văn bản** và kết quả tiến gần bản chỉ dùng ảnh (84.82). Còn caption đúng đặt ở ảnh truy vấn thì "trông có vẻ hữu ích", nên mô hình dựa vào nó và bị overfit trên tập train nhỏ. Đây là bằng chứng rằng **văn bản ở nhánh truy vấn gây hại**, không phải nhờ nó có nội dung đúng.
+
+**12. Gate của S01 chỉ khoảng 0.001. Như vậy có phải văn bản vô dụng?**
+Cần nói kỹ hai ý.
+- **Không thể đọc gate một mình.** Vector văn bản sau LayerNorm có độ lớn khoảng 32, trong khi đặc trưng ảnh có độ lớn khoảng 1. Gate nhỏ một phần là để bù độ lệch này: đóng góp thực của văn bản xấp xỉ 0.001 × 32 ≈ 3% so với đặc trưng ảnh, nhỏ nhưng khác 0.
+- **Nhưng em không né sự thật.** Thí nghiệm tắt hoặc xáo văn bản trên val gần như không làm đổi kết quả. Vì vậy em kết luận ở **khâu trộn**, văn bản đóng góp rất ít. Tác dụng rõ ràng duy nhất đo được nằm ở **khâu chọn** (S04).
+
+**13. 85.30 so với 84.82, tức chênh 0.48 điểm, tương đương bao nhiêu ảnh?**
+Khoảng **9 ảnh** trên 1880 ảnh test. Mức này nằm trong dao động thường gặp giữa các seed. Muốn khẳng định cần chạy 3 seed và làm kiểm định cặp (McNemar trên cùng tập test). Em trình bày con số này là **"một tín hiệu cùng chiều với ablation"**, không phải "cải tiến đã được chứng minh".
+
+**14. Làm sao biết bộ lọc caption thật sự chặn được việc lộ nhãn?**
+Em chạy một **probe**: dùng chính caption đã lọc để đoán lớp. Kết quả là **2.13%**, bằng đúng mức đoán ngẫu nhiên 1/47. Ngoài ra, bản dùng caption chưa lọc (A07) thấp hơn, cho thấy bộ lọc có tác dụng thật.
+
+**15. Study06 dùng nhãn của ảnh ứng viên. Đó có phải gian lận không?**
+**Không**, vì ảnh ứng viên đều lấy từ tập train, nên nhãn của nó đã biết sẵn lúc suy luận, giống hệt cách kNN hoặc RAC (CVPR 2022) hoạt động. **Nhãn của ảnh truy vấn không bao giờ là đầu vào.** Điều kiện bắt buộc là giữ **self-exclusion**: nếu ảnh train được phép chọn chính nó thì mô hình đọc được nhãn của chính mình, thành lộ nhãn thật. Tuy nhiên đây là biến thể khác giao thức TACS gốc, phải báo cáo riêng và so với baseline kNN.
+
+### 10.4 Mức 4: Rất khó (hiểu sâu toán và lý thuyết)
+
+**16. Vì sao không lan truyền đạo hàm qua argmax được, và Gumbel-ST giải quyết thế nào?**
+Argmax là hàm bậc thang, đạo hàm bằng 0 ở hầu hết mọi điểm, nên bộ chọn không nhận được tín hiệu học. Gumbel-ST làm hai việc:
+- **Lượt tiến** dùng one-hot cứng, nên mô hình thật sự chỉ thấy 1 ảnh.
+- **Lượt lùi** giả vờ đã dùng softmax mềm với nhiệt độ τ = 0.1, nên đạo hàm có thể chảy về bộ chọn.
+
+Cái giá là đạo hàm bị **lệch**, vì lượt lùi không đúng với hàm thật. τ càng nhỏ thì càng sát one-hot nhưng phương sai càng lớn.
+
+**17. Phần thưởng phụ thuộc vào chính mô hình đang học. Gradient của REINFORCE có còn đúng không?**
+Với trọng số tại mỗi bước, REINFORCE ước lượng đúng (không lệch) đạo hàm của "phần thưởng kỳ vọng" theo bộ chọn: ∇E[r] = E[r·∇log π]. Phần thưởng được tính trong eval mode, no_grad và tách khỏi đồ thị, nên nó chỉ là **một con số đánh giá**, không có đạo hàm đi qua nó. Vì mô hình thay đổi liên tục nên bài toán **không dừng**: cùng một ứng viên có thể được thưởng khác nhau theo thời gian. Đó là lý do phải chuẩn hóa phần thưởng theo batch và cập nhật kho ứng viên mỗi epoch.
+
+**18. Vì sao phải chuẩn hóa phần thưởng theo batch (trừ trung bình, chia độ lệch chuẩn)?**
+Có hai lý do.
+- **Trừ trung bình** đóng vai trò baseline: giảm phương sai mà không làm lệch gradient. Nhờ vậy chỉ những lựa chọn **tốt hơn mức trung bình** mới được khuyến khích. Nếu không làm vậy, khi mọi phần thưởng đều dương, mọi lựa chọn đều bị đẩy lên.
+- **Chia độ lệch chuẩn** giữ độ lớn của gradient ổn định khi loss giảm dần trong quá trình train.
+
+Vì thống kê này phụ thuộc kích thước batch, nên em giữ batch logic 64 dù mỗi lần chỉ tính được 8 ảnh.
+
+**19. Ghép 2 ảnh vào ViT tốn thêm bao nhiêu chi phí?**
+Ảnh 384 với patch 16 cho 24 × 24 = 576 token. Ghép 2 ảnh thành khoảng 1152 token, chưa tính CLS và register. Self-attention tốn chi phí theo **bình phương số token**, nên chi phí attention tăng khoảng **4 lần**. Ngoài ra, mỗi bước train còn chạy thêm một lượt không ngữ cảnh để tính phần thưởng, và phải chấm điểm toàn bộ kho ứng viên. Đây là lý do SUN397 bị tràn cả GPU 95 GiB.
+
+### 10.5 Mức 5: Cực khó (câu "bẫy" và câu phản biện)
+
+**20. Nếu cô hỏi: "Có thể TACS tốt hơn chỉ vì mô hình xử lý gấp đôi token (thêm tính toán), chứ không phải vì chọn ngữ cảnh?" thì trả lời sao?**
+Cần trả lời bằng **các phép đối chứng**:
+- **Ngữ cảnh ngẫu nhiên**, cùng số token nhưng không chọn: bài báo đã so sánh và kho mã của em có bản chạy trên Stanford Cars.
+- **Frozen DINO**, chọn theo độ giống nhưng không học: bài báo đạt 75.4 so với 77.7 của TACS trên DTD.
+- **No-context**: không có ảnh ngữ cảnh.
+
+Cả ba đều dùng cùng backbone. Bản chọn bằng cách học tốt hơn bản ngẫu nhiên và bản chọn theo độ giống, nên lợi ích không chỉ đến từ việc có thêm token. Em nên nói thêm một ý trung thực: em chưa tự chạy đủ bộ đối chứng này trên DTD với ViT-L, nên phần này em dựa vào kết quả của bài báo.
+
+**Câu bonus (phản biện mạnh nhất): "Vậy M-TACS của em đóng góp gì, khi văn bản gần như không được dùng?"**
+Đóng góp của em là **một nghiên cứu phân tích có kiểm soát**, không phải tuyên bố "em làm tăng điểm":
+1. Em chỉ ra **văn bản nên đặt ở đâu**: chỉ ở ảnh ứng viên. Đặt ở ảnh truy vấn làm giảm 2.5 điểm.
+2. Em đưa ra **bằng chứng cơ chế**: văn bản tác động ở **khâu chọn** (S04 đổi 5–11% lựa chọn), còn ở khâu trộn thì gần như không.
+3. Em xây **giao thức chống lộ nhãn**: bộ lọc, probe 2.13%, mặt nạ cho caption lỗi.
+
+Câu chốt: **"Kết quả âm cũng là kết quả, miễn là được đo đúng cách và giải thích được."**
